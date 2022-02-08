@@ -1,0 +1,124 @@
+McStas simulation description file for PSI_CAMEA.
+Date:    Tue Oct 26 11:15:22 2021
+Program: McStas 2.7.1 - Oct. 04, 2021
+
+begin instrument: PSI_CAMEA
+  File: slit_pos_1/73/mccode
+  Source: FullInstrument_v4.6_curvature_scan.instr
+  Parameters:  slitwidth(double) virtual_slit_d(double) SourceE(double) DeltaSourceE(double) EI(double) A3(double) A4(double) SAMPLE(double) file_name(string) RV_mono_Bool(double) RH_mono_Bool(double) Be_filter(double) old_mono(double) sampleHeight(double) sampleRadius(double) samplePosY(double)
+  Trace_enabled: yes
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation: slit_pos_1/73
+  Format: McCode with text headers
+  URL: http://www.mccode.org
+  Creator: McStas 2.7.1 - Oct. 04, 2021
+  Instrument: FullInstrument_v4.6_curvature_scan.instr
+  Ncount: 10000000
+  Trace: no
+  Gravitation: no
+  Seed: 1635322035
+  Directory: slit_pos_1/73
+  Param: slitwidth=0.01
+  Param: virtual_slit_d=0.7327
+  Param: SourceE=5
+  Param: DeltaSourceE=2
+  Param: EI=5
+  Param: A3=0
+  Param: A4=-90
+  Param: SAMPLE=3
+  Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+  Param: RV_mono_Bool=0.5
+  Param: RH_mono_Bool=0.5
+  Param: Be_filter=1
+  Param: old_mono=0
+  Param: sampleHeight=0.01
+  Param: sampleRadius=0.005
+  Param: samplePosY=0
+end simulation
+
+begin data
+  Date: Tue Oct 26 11:15:23 2021 (1635239723)
+  type: array_1d(200)
+  Source: PSI_CAMEA (FullInstrument_v4.6_curvature_scan.instr)
+  component: e_monitor_source
+  position: 0 0 0.7337
+  title: Energy monitor
+  Ncount: 10000000
+  filename: e_mon_source.dat
+  statistics: X0=4.10003; dX=0.6362;
+  signal: Min=0; Max=0.000203137; Mean=0.000152844;
+  values: 0.0305688 4.60758e-05 440163
+  xvar: E
+  yvar: (I,I_err)
+  xlabel: Energy [meV]
+  ylabel: Intensity
+  xlimits: 2.7 5.5
+  variables: E I I_err N
+end data
+
+begin data
+  Date: Tue Oct 26 11:15:23 2021 (1635239723)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument_v4.6_curvature_scan.instr)
+  component: SlitMonitor
+  position: 1.44368 0 2.74355
+  title: PSD monitor
+  Ncount: 10000000
+  filename: SlitMonitor.dat
+  statistics: X0=-0.00215168; dX=0.280323; Y0=-0.00931553; dY=0.295266;
+  signal: Min=0; Max=3.47522e-07; Mean=9.53001e-09;
+  values: 9.53001e-05 2.57286e-06 1372
+  xvar: X
+  yvar: Y
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -1 1 -1 1
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Oct 26 11:15:23 2021 (1635239723)
+  type: array_2d(101, 101)
+  Source: PSI_CAMEA (FullInstrument_v4.6_curvature_scan.instr)
+  component: psd_monitor
+  position: 1.5389 0 2.77065
+  title: PSD monitor
+  Ncount: 10000000
+  filename: psd_sampel_pos.dat
+  statistics: X0=0.00804391; dX=0.263583; Y0=-0.0187553; dY=0.270554;
+  signal: Min=0; Max=2.08198e-07; Mean=5.48311e-09;
+  values: 5.59332e-05 1.97139e-06 805
+  xvar: X
+  yvar: Y
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -0.5 0.5 -0.5 0.5
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Oct 26 11:15:23 2021 (1635239723)
+  type: array_1d(200)
+  Source: PSI_CAMEA (FullInstrument_v4.6_curvature_scan.instr)
+  component: e_monitor
+  position: 1.53986 0 2.77092
+  title: Energy monitor
+  Ncount: 10000000
+  filename: e_mon_sample.dat
+  statistics: X0=4.99567; dX=0.0178789;
+  signal: Min=0; Max=1.09099e-05; Mean=2.7793e-07;
+  values: 5.55861e-05 1.96527e-06 800
+  xvar: E
+  yvar: (I,I_err)
+  xlabel: Energy [meV]
+  ylabel: Intensity
+  xlimits: 3.1 5.1
+  variables: E I I_err N
+end data

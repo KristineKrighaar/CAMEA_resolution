@@ -1,0 +1,19 @@
+# Instrument-source: 'FullInstrument_v4_elastic_resolution.instr'
+# Date: Wed Nov 10 11 57 2021
+# Ncount: 10000000
+# Numpoints: 150
+# Param: pds_dist = 0.01
+# type: multiarray_1d(150)
+# title: Scan of pds_dist
+# xlabel: 'pds_dist'
+# ylabel: 'Intensity'
+# xvars: pds_dist
+# yvars: (Vir_SlitMonitor_I,Vir_SlitMonitor_ERR) (SlitMonitor_I,SlitMonitor_ERR) (BackEndMonitor_I,BackEndMonitor_ERR) (psd_tube1_1_1_I,psd_tube1_1_1_ERR) (psd_tube1_1_2_I,psd_tube1_1_2_ERR) (psd_tube1_1_3_I,psd_tube1_1_3_ERR) (psd_tube1_1_4_I,psd_tube1_1_4_ERR) (psd_tube1_1_5_I,psd_tube1_1_5_ERR) (psd_tube1_1_6_I,psd_tube1_1_6_ERR) (psd_tube1_1_7_I,psd_tube1_1_7_ERR) (psd_tube1_2_1_I,psd_tube1_2_1_ERR) (psd_tube1_2_2_I,psd_tube1_2_2_ERR) (psd_tube1_2_3_I,psd_tube1_2_3_ERR) (psd_tube1_2_4_I,psd_tube1_2_4_ERR) (psd_tube1_2_5_I,psd_tube1_2_5_ERR) (psd_tube1_2_6_I,psd_tube1_2_6_ERR)
+# xlimits: 0.01 1.5
+# filename: mccode.dat
+# variables: pds_dist Vir_SlitMonitor_I Vir_SlitMonitor_ERR SlitMonitor_I SlitMonitor_ERR BackEndMonitor_I BackEndMonitor_ERR psd_tube1_1_1_I psd_tube1_1_1_ERR psd_tube1_1_2_I psd_tube1_1_2_ERR psd_tube1_1_3_I psd_tube1_1_3_ERR psd_tube1_1_4_I psd_tube1_1_4_ERR psd_tube1_1_5_I psd_tube1_1_5_ERR psd_tube1_1_6_I psd_tube1_1_6_ERR psd_tube1_1_7_I psd_tube1_1_7_ERR psd_tube1_2_1_I psd_tube1_2_1_ERR psd_tube1_2_2_I psd_tube1_2_2_ERR psd_tube1_2_3_I psd_tube1_2_3_ERR psd_tube1_2_4_I psd_tube1_2_4_ERR psd_tube1_2_5_I psd_tube1_2_5_ERR psd_tube1_2_6_I psd_tube1_2_6_ERR
+0.01 4.79468E+8 296350 9.07394E+6 40611.9 8.15742E+6 3751.59 2912.21 223.339 2892.84 224.615 3427.03 241.745 3115.75 231.151 3287.71 236.877 3406.95 241.867 3145.53 228.47 2455.1 200.162 2685.27 212.188 2816.71 218.756 2600.5 209.186 2975.71 224.993 2608.4 209.329
+0.02 4.79384E+8 296307 8.99216E+6 40430.5 8.06189E+6 3728.87 3330.75 238.064 2973.43 223.741 3351.68 240.045 3277.66 232.416 2841.21 216.843 3833.5 256.194 3287.96 236.24 2452.32 204.883 2377.82 200.035 2637.83 214.972 2569.06 206.004 2829.74 219.771 2587.56 207.981
+0.03 4.79483E+8 296363 9.01524E+6 40538.8 8.09034E+6 3740.68 2515.74 204.107 3015.55 228.758 2806.58 216.427 3496.17 246.148 3463.9 240.174 3738.7 253.49 3363.08 243.392 2700.77 214.021 2830.11 219.79 2454.74 203.21 2492.48 204.521 2707.35 214.964 3036.7 226.114
+0.04 4.79895E+8 296468 9.05063E+6 40595.9 8.12078E+6 3745.69 2619.27 211.503 3300.11 239.967 3169.14 233.838 2926.7 222.816 3227.19 233.514 2965.21 222.918 2655.79 212.805 2228.49 196.296 2655.32 210.924 2506.77 207.565 2522.69 205.472 2441.58 201.629 2833.52 221.793
+0.05 4.79729E+8 296429 9.00034E+6 40510.5 8.08478E+6 3740.07 2691.63 214.173 2992.73 229.188 3116.28 230.421 3645.37 249.406 2916.65 222.493 3409.84 243.482 3093.24 231.964 2334.02 197.742 2419.36 201.421 2597.28 210.046 2849.63 223.17 2838.5 220.125 2952.3 225.028

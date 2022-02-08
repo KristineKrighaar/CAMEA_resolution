@@ -1,0 +1,27 @@
+begin instrument:
+  Creator: mcstas 2.7.1
+  Source: FullInstrument_v4_elastic_resolution.instr
+  Parameters:  pds_dist
+  Trace_enabled: no
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation
+Date: Wed Nov 10 11 57 2021
+Ncount: 10000000
+Numpoints: 2
+Param: pds_dist = 0.01, pds_dist = 1.5
+end simulation
+
+begin data
+type: multiarray_1d(2)
+title: Scan of pds_dist
+xvars: pds_dist
+yvars: (Vir_SlitMonitor_I,Vir_SlitMonitor_ERR) (SlitMonitor_I,SlitMonitor_ERR) (BackEndMonitor_I,BackEndMonitor_ERR) (psd_tube1_1_1_I,psd_tube1_1_1_ERR) (psd_tube1_1_2_I,psd_tube1_1_2_ERR) (psd_tube1_1_3_I,psd_tube1_1_3_ERR) (psd_tube1_1_4_I,psd_tube1_1_4_ERR) (psd_tube1_1_5_I,psd_tube1_1_5_ERR) (psd_tube1_1_6_I,psd_tube1_1_6_ERR) (psd_tube1_1_7_I,psd_tube1_1_7_ERR) (psd_tube1_2_1_I,psd_tube1_2_1_ERR) (psd_tube1_2_2_I,psd_tube1_2_2_ERR) (psd_tube1_2_3_I,psd_tube1_2_3_ERR) (psd_tube1_2_4_I,psd_tube1_2_4_ERR) (psd_tube1_2_5_I,psd_tube1_2_5_ERR) (psd_tube1_2_6_I,psd_tube1_2_6_ERR)
+xlabel: 'pds_dist'
+ylabel: 'Intensity'
+xlimits: 0.01 1.5
+filename: mccode.dat
+variables: pds_dist Vir_SlitMonitor_I Vir_SlitMonitor_ERR SlitMonitor_I SlitMonitor_ERR BackEndMonitor_I BackEndMonitor_ERR psd_tube1_1_1_I psd_tube1_1_1_ERR psd_tube1_1_2_I psd_tube1_1_2_ERR psd_tube1_1_3_I psd_tube1_1_3_ERR psd_tube1_1_4_I psd_tube1_1_4_ERR psd_tube1_1_5_I psd_tube1_1_5_ERR psd_tube1_1_6_I psd_tube1_1_6_ERR psd_tube1_1_7_I psd_tube1_1_7_ERR psd_tube1_2_1_I psd_tube1_2_1_ERR psd_tube1_2_2_I psd_tube1_2_2_ERR psd_tube1_2_3_I psd_tube1_2_3_ERR psd_tube1_2_4_I psd_tube1_2_4_ERR psd_tube1_2_5_I psd_tube1_2_5_ERR psd_tube1_2_6_I psd_tube1_2_6_ERR
+end data

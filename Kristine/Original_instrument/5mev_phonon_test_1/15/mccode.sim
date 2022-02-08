@@ -1,0 +1,2162 @@
+McStas simulation description file for PSI_CAMEA.
+Date:    Mon Sep  6 16:34:05 2021
+Program: McStas 2.7 - Nov. 27, 2020
+
+begin instrument: PSI_CAMEA
+  File: 5mev_phonon_test_1/15/mccode
+  Source: FullInstrument.instr
+  Parameters:  SourceE(double) DeltaSourceE(double) EI(double) A3(double) A4(double) SAMPLE(double) file_name(string) RV_mono_Bool(double) RH_mono_Bool(double) Be_filter(double) old_mono(double) sampleHeight(double) sampleRadius(double) samplePosY(double)
+  Trace_enabled: yes
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation: 5mev_phonon_test_1/15
+  Format: McCode with text headers
+  URL: http://www.mccode.org
+  Creator: McStas 2.7 - Nov. 27, 2020
+  Instrument: FullInstrument.instr
+  Ncount: 10000000
+  Trace: no
+  Gravitation: no
+  Seed: 1630973414
+  Directory: 5mev_phonon_test_1/15
+  Param: SourceE=5
+  Param: DeltaSourceE=0.3
+  Param: EI=5
+  Param: A3=15
+  Param: A4=-150
+  Param: SAMPLE=1
+  Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+  Param: RV_mono_Bool=0
+  Param: RH_mono_Bool=0
+  Param: Be_filter=1
+  Param: old_mono=0
+  Param: sampleHeight=0.01
+  Param: sampleRadius=0.005
+  Param: samplePosY=0
+end simulation
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: SlitMonitor
+  position: 1.44271 0 37.6106
+  title: PSD monitor
+  Ncount: 10000000
+  filename: SlitMonitor.dat
+  statistics: X0=-0.00128026; dX=0.288093; Y0=0.00523799; dY=0.289129;
+  signal: Min=0; Max=1525.05; Mean=69.5848;
+  values: 695848 12162.4 3314
+  xvar: X
+  yvar: Y
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -1 1 -1 1
+  variables: I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: BackEndMonitor
+  position: 1.08173 0 38.0265
+  title: PSD monitor
+  Ncount: 10000000
+  filename: BackEndMonitor.dat
+  statistics: X0=-14.4184; dX=20.2839; Y0=-0.0110774; dY=2.86942;
+  signal: Min=0.00232169; Max=0.122698; Mean=0.0317717;
+  values: 317.717 0.933835 294624
+  xvar: X
+  yvar: Y
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -50 50 -5 5
+  variables: I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_1
+  position: 0.394085 0.7 37.9977
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_1.psd
+  statistics: X0=-0.242613; dX=0.0196509;
+  signal: Min=0; Max=0.0316822; Mean=0.00023046;
+  values: 0.235991 0.032245 58
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_2
+  position: 0.387331 0.7 37.9754
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_2.psd
+  statistics: X0=-0.250029; dX=0.00713237;
+  signal: Min=0; Max=0.0222835; Mean=0.000270374;
+  values: 0.276863 0.0341078 74
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_3
+  position: 0.381009 0.7 37.9531
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_3.psd
+  statistics: X0=-0.257419; dX=0.00885577;
+  signal: Min=0; Max=0.0280959; Mean=0.000335237;
+  values: 0.343283 0.037281 94
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_4
+  position: 0.375122 0.7 37.9306
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_4.psd
+  statistics: X0=-0.262751; dX=0.0100825;
+  signal: Min=0; Max=0.0265673; Mean=0.0003238;
+  values: 0.331572 0.0364028 92
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_5
+  position: 0.369672 0.7 37.908
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_5.psd
+  statistics: X0=-0.272101; dX=0.0169501;
+  signal: Min=0; Max=0.0330704; Mean=0.000333475;
+  values: 0.341478 0.036534 95
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_6
+  position: 0.36466 0.7 37.8853
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_6.psd
+  statistics: X0=-0.293416; dX=0.0324147;
+  signal: Min=0; Max=0.0111274; Mean=0.000163284;
+  values: 0.167203 0.024874 50
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_1_7
+  position: 0.360089 0.7 37.8625
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes11_7.psd
+  statistics: X0=-0.330853; dX=0.0341466;
+  signal: Min=0; Max=0.0121185; Mean=0.000161824;
+  values: 0.165708 0.024198 51
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_2_1
+  position: 0.390654 0.71 37.9866
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes12_1.psd
+  statistics: X0=-0.247959; dX=0.014265;
+  signal: Min=0; Max=0.0185758; Mean=0.000161786;
+  values: 0.165669 0.0268617 72
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_2_2
+  position: 0.384116 0.71 37.9643
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes12_2.psd
+  statistics: X0=-0.253658; dX=0.00644053;
+  signal: Min=0; Max=0.0154034; Mean=0.000143104;
+  values: 0.146539 0.0248875 70
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_2_3
+  position: 0.378011 0.71 37.9418
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes12_3.psd
+  statistics: X0=-0.26114; dX=0.0125554;
+  signal: Min=0; Max=0.026135; Mean=0.000214101;
+  values: 0.219239 0.0304825 84
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_2_4
+  position: 0.372342 0.71 37.9193
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes12_4.psd
+  statistics: X0=-0.265942; dX=0.00677518;
+  signal: Min=0; Max=0.020307; Mean=0.000185491;
+  values: 0.189943 0.0270058 95
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_2_5
+  position: 0.367111 0.71 37.8966
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes12_5.psd
+  statistics: X0=-0.278513; dX=0.023886;
+  signal: Min=0; Max=0.0139346; Mean=0.000161265;
+  values: 0.165135 0.0254087 79
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube1_2_6
+  position: 0.36232 0.71 37.8739
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes12_6.psd
+  statistics: X0=-0.3137; dX=0.0389545;
+  signal: Min=0; Max=0.00665662; Mean=6.96485e-05;
+  values: 0.0713201 0.0157205 45
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_1
+  position: 0.450834 0.7 38.144
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_1.psd
+  statistics: X0=-0.215664; dX=0.0367412;
+  signal: Min=0; Max=0.0228185; Mean=0.000222987;
+  values: 0.228338 0.0348039 46
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_2
+  position: 0.441234 0.7 38.1229
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_2.psd
+  statistics: X0=-0.204707; dX=0.0366989;
+  signal: Min=0; Max=0.0158915; Mean=0.000220993;
+  values: 0.226297 0.0347421 45
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_3
+  position: 0.432046 0.7 38.1015
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_3.psd
+  statistics: X0=-0.187837; dX=0.0334433;
+  signal: Min=0; Max=0.0264506; Mean=0.000164569;
+  values: 0.168518 0.0292948 36
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_4
+  position: 0.423274 0.7 38.08
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_4.psd
+  statistics: X0=-0.182502; dX=0.0308786;
+  signal: Min=0; Max=0.0229997; Mean=0.000212056;
+  values: 0.217145 0.033029 47
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_5
+  position: 0.414921 0.7 38.0583
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_5.psd
+  statistics: X0=-0.178458; dX=0.0287448;
+  signal: Min=0; Max=0.0213375; Mean=0.000227684;
+  values: 0.233149 0.0337709 52
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_6
+  position: 0.406989 0.7 38.0364
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_6.psd
+  statistics: X0=-0.180271; dX=0.0285918;
+  signal: Min=0; Max=0.0275263; Mean=0.000198636;
+  values: 0.203403 0.0325871 41
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_1_7
+  position: 0.399482 0.7 38.0144
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes21_7.psd
+  statistics: X0=-0.178329; dX=0.0253159;
+  signal: Min=0; Max=0.0227427; Mean=0.00020958;
+  values: 0.21461 0.0334518 44
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_2_1
+  position: 0.445983 0.71 38.1335
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes22_1.psd
+  statistics: X0=-0.209288; dX=0.0371141;
+  signal: Min=0; Max=0.0177064; Mean=0.000135976;
+  values: 0.139239 0.026698 44
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_2_2
+  position: 0.436589 0.71 38.1122
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes22_2.psd
+  statistics: X0=-0.193986; dX=0.0341004;
+  signal: Min=0; Max=0.0165484; Mean=0.000142397;
+  values: 0.145815 0.0270878 35
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_2_3
+  position: 0.427608 0.71 38.0908
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes22_3.psd
+  statistics: X0=-0.185384; dX=0.0309843;
+  signal: Min=0; Max=0.0153397; Mean=0.000114483;
+  values: 0.117231 0.0238833 38
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_2_4
+  position: 0.419045 0.71 38.0692
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes22_4.psd
+  statistics: X0=-0.183504; dX=0.0280794;
+  signal: Min=0; Max=0.0195126; Mean=0.000177342;
+  values: 0.181598 0.030361 51
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_2_5
+  position: 0.410902 0.71 38.0474
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes22_5.psd
+  statistics: X0=-0.171357; dX=0.0144473;
+  signal: Min=0; Max=0.0205841; Mean=0.000147903;
+  values: 0.151452 0.0274145 47
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube2_2_6
+  position: 0.403182 0.71 38.0254
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes22_6.psd
+  statistics: X0=-0.169051; dX=0.0142524;
+  signal: Min=0; Max=0.0165219; Mean=0.000151856;
+  values: 0.155501 0.0283064 43
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_1
+  position: 0.5262 0.7 38.2817
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_1.psd
+  statistics: X0=-0.372298; dX=0.0107354;
+  signal: Min=0; Max=0.00852689; Mean=8.10216e-05;
+  values: 0.0829661 0.0185307 22
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_2
+  position: 0.513918 0.7 38.262
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_2.psd
+  statistics: X0=-0.367413; dX=0.0156039;
+  signal: Min=0; Max=0.0145055; Mean=0.000173089;
+  values: 0.177243 0.0263087 50
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_3
+  position: 0.502022 0.7 38.242
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_3.psd
+  statistics: X0=-0.362685; dX=0.0219498;
+  signal: Min=0; Max=0.0175424; Mean=0.000199448;
+  values: 0.204235 0.0298215 50
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_4
+  position: 0.490515 0.7 38.2218
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_4.psd
+  statistics: X0=-0.360755; dX=0.0183925;
+  signal: Min=0; Max=0.0163668; Mean=0.00024672;
+  values: 0.252641 0.033404 61
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_5
+  position: 0.479401 0.7 38.2014
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_5.psd
+  statistics: X0=-0.338691; dX=0.0378965;
+  signal: Min=0; Max=0.0191003; Mean=0.000296354;
+  values: 0.303467 0.0373091 70
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_6
+  position: 0.468685 0.7 38.1808
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_6.psd
+  statistics: X0=-0.311858; dX=0.0445154;
+  signal: Min=0; Max=0.0152096; Mean=0.000246454;
+  values: 0.252369 0.0338146 63
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_1_7
+  position: 0.45837 0.7 38.1599
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes31_7.psd
+  statistics: X0=-0.28971; dX=0.041769;
+  signal: Min=0; Max=0.0133171; Mean=0.000235338;
+  values: 0.240986 0.0334195 56
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_2_1
+  position: 0.520011 0.71 38.2719
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes32_1.psd
+  statistics: X0=-0.367924; dX=0.00401327;
+  signal: Min=0; Max=0.0153861; Mean=5.73525e-05;
+  values: 0.0587289 0.0162807 34
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_2_2
+  position: 0.507922 0.71 38.252
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes32_2.psd
+  statistics: X0=-0.371954; dX=0.0105576;
+  signal: Min=0; Max=0.00986459; Mean=5.44916e-05;
+  values: 0.0557994 0.0154868 44
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_2_3
+  position: 0.496219 0.71 38.2319
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes32_3.psd
+  statistics: X0=-0.357364; dX=0.0271386;
+  signal: Min=0; Max=0.0150846; Mean=0.00012902;
+  values: 0.132117 0.0243768 53
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_2_4
+  position: 0.484908 0.71 38.2116
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes32_4.psd
+  statistics: X0=-0.351412; dX=0.0309683;
+  signal: Min=0; Max=0.0101578; Mean=0.000118011;
+  values: 0.120843 0.0234906 58
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_2_5
+  position: 0.473993 0.71 38.1911
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes32_5.psd
+  statistics: X0=-0.33501; dX=0.0376911;
+  signal: Min=0; Max=0.0150771; Mean=0.000118124;
+  values: 0.120959 0.0234242 62
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube3_2_6
+  position: 0.463477 0.71 38.1704
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes32_6.psd
+  statistics: X0=-0.299657; dX=0.0425218;
+  signal: Min=0; Max=0.00618392; Mean=9.59816e-05;
+  values: 0.0982852 0.0212933 50
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_1
+  position: 0.618893 0.7 38.4084
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_2
+  position: 0.60414 0.7 38.3904
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_3
+  position: 0.589739 0.7 38.3722
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_4
+  position: 0.575693 0.7 38.3537
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_5
+  position: 0.562009 0.7 38.3349
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_6
+  position: 0.548692 0.7 38.3158
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_1_7
+  position: 0.535746 0.7 38.2965
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes41_7.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_2_1
+  position: 0.611473 0.71 38.3995
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes42_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_2_2
+  position: 0.596895 0.71 38.3813
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes42_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_2_3
+  position: 0.582671 0.71 38.363
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes42_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_2_4
+  position: 0.568806 0.71 38.3443
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes42_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_2_5
+  position: 0.555305 0.71 38.3254
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes42_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube4_2_6
+  position: 0.542172 0.71 38.3062
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes42_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_1
+  position: 0.727328 0.7 38.5219
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_2
+  position: 0.710356 0.7 38.506
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_3
+  position: 0.693696 0.7 38.4898
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_4
+  position: 0.677353 0.7 38.4733
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_5
+  position: 0.661333 0.7 38.4564
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_6
+  position: 0.645642 0.7 38.4393
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_1_7
+  position: 0.630287 0.7 38.4218
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes51_7.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_2_1
+  position: 0.718804 0.71 38.514
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes52_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_2_2
+  position: 0.701987 0.71 38.4979
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes52_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_2_3
+  position: 0.685484 0.71 38.4816
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes52_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_2_4
+  position: 0.669302 0.71 38.4649
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes52_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_2_5
+  position: 0.653446 0.71 38.4479
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes52_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube5_2_6
+  position: 0.637922 0.71 38.4306
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes52_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_1
+  position: 0.849649 0.7 38.6203
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_2
+  position: 0.830749 0.7 38.6067
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_3
+  position: 0.812115 0.7 38.5928
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_4
+  position: 0.793753 0.7 38.5786
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_5
+  position: 0.775671 0.7 38.564
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_6
+  position: 0.757876 0.7 38.549
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_1_7
+  position: 0.740374 0.7 38.5337
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes61_7.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_2_1
+  position: 0.840166 0.71 38.6135
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes62_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_2_2
+  position: 0.821398 0.71 38.5998
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes62_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_2_3
+  position: 0.802899 0.71 38.5857
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes62_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_2_4
+  position: 0.784677 0.71 38.5713
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes62_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_2_5
+  position: 0.766737 0.71 38.5565
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes62_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube6_2_6
+  position: 0.749088 0.71 38.5414
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes62_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_1
+  position: 0.983763 0.7 38.7018
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_2
+  position: 0.963258 0.7 38.6909
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_3
+  position: 0.942969 0.7 38.6795
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_4
+  position: 0.922903 0.7 38.6678
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_5
+  position: 0.903069 0.7 38.6557
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_6
+  position: 0.883473 0.7 38.6431
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_1_7
+  position: 0.864124 0.7 38.6303
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes71_7.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_2_1
+  position: 0.973484 0.71 38.6964
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes72_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_2_2
+  position: 0.953086 0.71 38.6852
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes72_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_2_3
+  position: 0.932908 0.71 38.6737
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes72_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_2_4
+  position: 0.912957 0.71 38.6618
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes72_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_2_5
+  position: 0.893241 0.71 38.6494
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes72_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube7_2_6
+  position: 0.873767 0.71 38.6368
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes72_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_1
+  position: 1.12738 0.7 38.7652
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_2
+  position: 1.10562 0.7 38.757
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_3
+  position: 1.08402 0.7 38.7484
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_4
+  position: 1.06259 0.7 38.7394
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_5
+  position: 1.04135 0.7 38.7299
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_6
+  position: 1.02029 0.7 38.7201
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_1_7
+  position: 0.999419 0.7 38.7098
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes81_7.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_2_1
+  position: 1.11648 0.71 38.7611
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes82_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_2_2
+  position: 1.0948 0.71 38.7527
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes82_2.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_2_3
+  position: 1.07328 0.71 38.7439
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes82_3.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_2_4
+  position: 1.05195 0.71 38.7347
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes82_4.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_2_5
+  position: 1.03079 0.71 38.7251
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes82_5.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Mon Sep  6 16:34:53 2021 (1630938893)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument.instr)
+  component: psd_tube8_2_6
+  position: 1.00983 0.71 38.715
+  title: PSD Detector
+  Ncount: 10000000
+  filename: ReuterStokes82_6.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.45 0.45
+  variables: Y I I_err N
+end data

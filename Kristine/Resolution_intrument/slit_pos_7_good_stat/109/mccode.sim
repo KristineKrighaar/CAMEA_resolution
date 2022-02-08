@@ -1,0 +1,104 @@
+McStas simulation description file for PSI_CAMEA.
+Date:    Tue Oct 26 14:59:51 2021
+Program: McStas 2.7.1 - Oct. 04, 2021
+
+begin instrument: PSI_CAMEA
+  File: slit_pos_7/109/mccode
+  Source: FullInstrument_v4.7_frontend.instr
+  Parameters:  slitwidth(double) virtual_slit_d(double) SourceE(double) DeltaSourceE(double) EI(double) A3(double) A4(double) SAMPLE(double) file_name(string) RV_mono_Bool(double) RH_mono_Bool(double) Be_filter(double) old_mono(double) sampleHeight(double) sampleRadius(double) samplePosY(double)
+  Trace_enabled: yes
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation: slit_pos_7/109
+  Format: McCode with text headers
+  URL: http://www.mccode.org
+  Creator: McStas 2.7.1 - Oct. 04, 2021
+  Instrument: FullInstrument_v4.7_frontend.instr
+  Ncount: 10000000
+  Trace: no
+  Gravitation: no
+  Seed: 1635345919
+  Directory: slit_pos_7/109
+  Param: slitwidth=0.2
+  Param: virtual_slit_d=1.1
+  Param: SourceE=5
+  Param: DeltaSourceE=0.3
+  Param: EI=5
+  Param: A3=0
+  Param: A4=-90
+  Param: SAMPLE=3
+  Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+  Param: RV_mono_Bool=0.5
+  Param: RH_mono_Bool=0.5
+  Param: Be_filter=1
+  Param: old_mono=0
+  Param: sampleHeight=0.01
+  Param: sampleRadius=0.005
+  Param: samplePosY=0
+end simulation
+
+begin data
+  Date: Tue Oct 26 15:00:28 2021 (1635253228)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument_v4.7_frontend.instr)
+  component: SlitMonitor
+  position: 0 0 36.671
+  title: PSD monitor
+  Ncount: 10000000
+  filename: SlitMonitor.dat
+  statistics: X0=-0.0503203; dX=1.60873; Y0=0.000858086; dY=2.31086;
+  signal: Min=0; Max=151440; Mean=49259.8;
+  values: 4.92598e+08 301587 3.41468e+06
+  xvar: X
+  yvar: Y
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -5 5 -5 5
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Oct 26 15:00:28 2021 (1635253228)
+  type: array_2d(101, 101)
+  Source: PSI_CAMEA (FullInstrument_v4.7_frontend.instr)
+  component: psd_monitor_sample_pos
+  position: 1.5389 0 37.61
+  title: PSD monitor
+  Ncount: 10000000
+  filename: psd_sampel_pos.dat
+  statistics: X0=0.00346531; dX=0.268028; Y0=0.000126313; dY=0.265756;
+  signal: Min=0; Max=2402.8; Mean=606.462;
+  values: 6.18652e+06 33900.2 42417
+  xvar: X
+  yvar: Y
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -0.5 0.5 -0.5 0.5
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Oct 26 15:00:28 2021 (1635253228)
+  type: array_1d(200)
+  Source: PSI_CAMEA (FullInstrument_v4.7_frontend.instr)
+  component: e_monitor_sample_ps
+  position: 1.53986 0 37.6102
+  title: Energy monitor
+  Ncount: 10000000
+  filename: e_mon_sample.dat
+  statistics: X0=4.99668; dX=0.0390028;
+  signal: Min=0; Max=507924; Mean=30800.3;
+  values: 6.16006e+06 33834.1 42175
+  xvar: E
+  yvar: (I,I_err)
+  xlabel: Energy [meV]
+  ylabel: Intensity
+  xlimits: 3.1 5.1
+  variables: E I I_err N
+end data
