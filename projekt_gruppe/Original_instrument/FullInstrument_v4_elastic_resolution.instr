@@ -113,8 +113,7 @@ double Lambda0;
 double dLambda;
 double var_divreq_x;
 double var_divreq_y;
-double x_div;
-double y_div;
+
 double startxpoint[8][3][3];
 double startypoint[8][3][3];
 double startXdirec[8][3];
@@ -222,7 +221,7 @@ int los_check;
 int ii;
 int los_logic_single[7][8];
 FILE *fp;
-int scat = 0;
+
 // Filter parameters 
 double OUTFILTER_THICK;
 
@@ -253,15 +252,14 @@ int coarse;
 double z_an1[8];
 double y_an1[8];
 double thet_an1[8];
-int Ana1=0;
+
 double z_an2[8];
 double y_an2[8];
 double thet_an2[8];
-int Ana2=0;
+
 double z_an3[8];
 double y_an3[8];
 double thet_an3[8];
-int Ana3=0;
 
 double pixelstart[8];
 double pixelstop[8];
@@ -269,27 +267,22 @@ double pixelstop[8];
 double z_an4[8];
 double y_an4[8];
 double thet_an4[8];
-int Ana4=0;
 
 double z_an5[8];
 double y_an5[8];
 double thet_an5[8];
-int Ana5=0;
 
 double z_an6[8];
 double y_an6[8];
 double thet_an6[8];
-int Ana6=0;
 
 double z_an7[8];
 double y_an7[8];
 double thet_an7[8];
-int Ana7=0;
 
 double z_an8[8];
 double y_an8[8];
 double thet_an8[8];
-int Ana8=0;
 
 // Detector parameters 
 double ang_1[8];
@@ -342,6 +335,40 @@ double RV_mono;
 double RH_mono;
 
 %}
+
+USERVARS %{
+  double x_div;
+  double y_div;
+  double Ana1;
+  double Ana2;
+  double Ana3;
+  double Ana4;
+  double Ana5;
+  double Ana6;
+  double Ana7;
+  double Ana8;
+  int scat;
+
+  /* probability */
+  double res_pi;
+  
+  /* k_i */
+  double res_ki_x;
+  double res_ki_y;
+  double res_ki_z;
+  
+  /* k_f */
+  double res_kf_x;
+  double res_kf_y;
+  double res_kf_z;
+  
+  /* pos */
+  double res_rx;
+  double res_ry;
+  double res_rz;
+
+%}
+
 INITIALIZE
 %{
 /********************************************************************************************/
@@ -1150,7 +1177,6 @@ thet_an1[3]=48.90;
 thet_an1[4]=49.79;
 thet_an1[5]=50.69;
 ana_l[1]=0.0720;
-Ana1=0;
 
 z_an2[1]=0.9744;
 z_an2[2]=0.9843;
@@ -1168,7 +1194,6 @@ thet_an2[3]=47.21;
 thet_an2[4]=48.09;
 thet_an2[5]=48.98;
 ana_l[2]=0.082;
-Ana2=0;
 
 z_an3[1]=1.0354;
 z_an3[2]=1.0462;
@@ -1186,7 +1211,7 @@ thet_an3[3]=45.53;
 thet_an3[4]=46.41;
 thet_an3[5]=47.32;
 ana_l[3]=0.092;
-Ana3=0;
+
 
 z_an4[1]=1.0959;
 z_an4[2]=1.1078;
@@ -1204,7 +1229,7 @@ thet_an4[3]=43.84;
 thet_an4[4]=44.74;
 thet_an4[5]=45.66;
 ana_l[4]=0.103;
-Ana4=0;
+
 
 z_an5[1]=1.1567;
 z_an5[2]=1.1697;
@@ -1222,7 +1247,7 @@ thet_an5[3]=42.16;
 thet_an5[4]=43.05;
 thet_an5[5]=43.97;
 ana_l[5]=0.113;
-Ana5=0;
+
 
 z_an6[1]=1.2170;
 z_an6[2]=1.2313;
@@ -1240,7 +1265,7 @@ thet_an6[3]=40.47;
 thet_an6[4]=41.36;
 thet_an6[5]=42.28;
 ana_l[6]=0.120;
-Ana6=0;
+
 
 z_an7[1]=1.2775;
 z_an7[2]=1.2936;
@@ -1258,7 +1283,7 @@ thet_an7[3]=38.79;
 thet_an7[4]=39.69;
 thet_an7[5]=40.63;
 ana_l[7]=0.129;
-Ana7=0;
+
 
 z_an8[1]=1.3385;
 z_an8[2]=1.3565;
@@ -1276,7 +1301,7 @@ thet_an8[3]=37.10;
 thet_an8[4]=38.01;
 thet_an8[5]=38.95;
 ana_l[8]=0.140;
-Ana8=0;
+
 
 ana_l[1]=ana_l[1]+ana_l_add;
 ana_l[2]=ana_l[2]+ana_l_add;
@@ -2138,7 +2163,7 @@ AT ((detx_1[0]-0.029), dety_1-0.0128, detz_1[0]-0.5) RELATIVE a41
 ROTATED (0, -ang_1[0], 0) RELATIVE a41
 
 COMPONENT res_monitor_edge_0 = Res_monitor( //Ef = 3.20 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_0", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[0]-pixelstart[0])*1.0/1024)
@@ -2146,7 +2171,7 @@ WHEN (EI==3.2) AT (0, 0, pixelstart[0]*1.0/1024+((pixelstop[0]-pixelstart[0])/2)
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_1 = Res_monitor( //Ef = 3.38 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_1", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[1]-pixelstart[1])*1.0/1024)
@@ -2154,7 +2179,7 @@ WHEN (EI==3.38) AT (0, 0, pixelstart[1]*1.0/1024+((pixelstop[1]-pixelstart[1])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_2 = Res_monitor( //Ef = 3.58 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_2", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[2]-pixelstart[2])*1.0/1024)
@@ -2162,7 +2187,7 @@ WHEN (EI==3.58) AT (0, 0, pixelstart[2]*1.0/1024+((pixelstop[2]-pixelstart[2])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_3 = Res_monitor( //Ef = 3.79 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_3", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[3]-pixelstart[3])*1.0/1024)
@@ -2170,7 +2195,7 @@ WHEN (EI==3.79) AT (0, 0, pixelstart[3]*1.0/1024+((pixelstop[3]-pixelstart[3])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_4 = Res_monitor( //Ef = 4.04 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_4", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[4]-pixelstart[4])*1.0/1024)
@@ -2178,7 +2203,7 @@ WHEN (EI==4.04) AT (0, 0, pixelstart[4]*1.0/1024+((pixelstop[4]-pixelstart[4])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_5 = Res_monitor( //Ef = 4.32 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_5", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[5]-pixelstart[5])*1.0/1024)
@@ -2186,7 +2211,7 @@ WHEN (EI==4.32) AT (0, 0, pixelstart[5]*1.0/1024+((pixelstop[5]-pixelstart[5])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_6 = Res_monitor( //Ef = 4.64 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_6", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[6]-pixelstart[6])*1.0/1024)
@@ -2194,7 +2219,7 @@ WHEN (EI==4.64) AT (0, 0, pixelstart[6]*1.0/1024+((pixelstop[6]-pixelstart[6])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_edge
 
 COMPONENT res_monitor_edge_7 = Res_monitor( //Ef = 5 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_edge_7", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[7]-pixelstart[7])*1.0/1024)
@@ -2234,7 +2259,7 @@ AT (detx_1[3], dety_1-0.0128, detz_1[3]-0.5) RELATIVE a41
 ROTATED (0, ang_1[3], 0) RELATIVE a41
 
 COMPONENT res_monitor_mid_0 = Res_monitor( //Ef = 3.20 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_0", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[0]-pixelstart[0])*1.0/1024)
@@ -2242,7 +2267,7 @@ WHEN (EI==3.2) AT (0, 0, pixelstart[0]*1.0/1024+((pixelstop[0]-pixelstart[0])/2)
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_1 = Res_monitor( //Ef = 3.38 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_1", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[1]-pixelstart[1])*1.0/1024)
@@ -2250,7 +2275,7 @@ WHEN (EI==3.38) AT (0, 0, pixelstart[1]*1.0/1024+((pixelstop[1]-pixelstart[1])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_2 = Res_monitor( //Ef = 3.58 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_2", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[2]-pixelstart[2])*1.0/1024)
@@ -2258,7 +2283,7 @@ WHEN (EI==3.58) AT (0, 0, pixelstart[2]*1.0/1024+((pixelstop[2]-pixelstart[2])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_3 = Res_monitor( //Ef = 3.79 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_3", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[3]-pixelstart[3])*1.0/1024)
@@ -2266,7 +2291,7 @@ WHEN (EI==3.79) AT (0, 0, pixelstart[3]*1.0/1024+((pixelstop[3]-pixelstart[3])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_4 = Res_monitor( //Ef = 4.04 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_4", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[4]-pixelstart[4])*1.0/1024)
@@ -2274,7 +2299,7 @@ WHEN (EI==4.04) AT (0, 0, pixelstart[4]*1.0/1024+((pixelstop[4]-pixelstart[4])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_5 = Res_monitor( //Ef = 4.32 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_5", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[5]-pixelstart[5])*1.0/1024)
@@ -2282,7 +2307,7 @@ WHEN (EI==4.32) AT (0, 0, pixelstart[5]*1.0/1024+((pixelstop[5]-pixelstart[5])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_6 = Res_monitor( //Ef = 4.64 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_6", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[6]-pixelstart[6])*1.0/1024)
@@ -2290,7 +2315,7 @@ WHEN (EI==4.64) AT (0, 0, pixelstart[6]*1.0/1024+((pixelstop[6]-pixelstart[6])/2
 ROTATED (-90, 0, 0) RELATIVE arm_res_mon_mid
 
 COMPONENT res_monitor_mid_7 = Res_monitor( //Ef = 5 meV
-    res_sample_comp=res_sample, 
+    res_sample_comp="res_sample", 
     filename="res_mon_mid_7", 
     xwidth=0.0254/2, 
     yheight=(pixelstop[7]-pixelstart[7])*1.0/1024)

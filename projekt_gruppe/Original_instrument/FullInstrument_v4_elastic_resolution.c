@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v4_elastic_resolution.instr (PSI_CAMEA)
- * Date:       Tue Feb 15 13:22:42 2022
+ * Date:       Tue Feb 15 17:20:58 2022
  * File:       ./FullInstrument_v4_elastic_resolution.c
  * CFLAGS=
  */
@@ -68,6 +68,28 @@ struct _struct_particle {
   long _restore;   /* set to true if neutron event must be restored */
   long flag_nocoordschange;   /* set to true if neutron is jumping */
   struct particle_logic_struct _logic;
+  // user variables:
+  double  x_div;
+  double  y_div;
+  double  Ana1;
+  double  Ana2;
+  double  Ana3;
+  double  Ana4;
+  double  Ana5;
+  double  Ana6;
+  double  Ana7;
+  double  Ana8;
+  int  scat;
+  double  res_pi;
+  double  res_ki_x;
+  double  res_ki_y;
+  double  res_ki_z;
+  double  res_kf_x;
+  double  res_kf_y;
+  double  res_kf_z;
+  double  res_rx;
+  double  res_ry;
+  double  res_rz;
 };
 typedef struct _struct_particle _class_particle;
 
@@ -116,6 +138,27 @@ double particle_getvar(_class_particle *p, char *name, int *suc){
   if(!str_comp("sz",name)){rval=p->sz;s=0;}
   if(!str_comp("t",name)){rval=p->t;s=0;}
   if(!str_comp("p",name)){rval=p->p;s=0;}
+  if(!str_comp("x_div",name)){rval=*( (double *)(&(p->x_div)) );s=0;}
+  if(!str_comp("y_div",name)){rval=*( (double *)(&(p->y_div)) );s=0;}
+  if(!str_comp("Ana1",name)){rval=*( (double *)(&(p->Ana1)) );s=0;}
+  if(!str_comp("Ana2",name)){rval=*( (double *)(&(p->Ana2)) );s=0;}
+  if(!str_comp("Ana3",name)){rval=*( (double *)(&(p->Ana3)) );s=0;}
+  if(!str_comp("Ana4",name)){rval=*( (double *)(&(p->Ana4)) );s=0;}
+  if(!str_comp("Ana5",name)){rval=*( (double *)(&(p->Ana5)) );s=0;}
+  if(!str_comp("Ana6",name)){rval=*( (double *)(&(p->Ana6)) );s=0;}
+  if(!str_comp("Ana7",name)){rval=*( (double *)(&(p->Ana7)) );s=0;}
+  if(!str_comp("Ana8",name)){rval=*( (double *)(&(p->Ana8)) );s=0;}
+  if(!str_comp("scat",name)){rval=*( (double *)(&(p->scat)) );s=0;}
+  if(!str_comp("res_pi",name)){rval=*( (double *)(&(p->res_pi)) );s=0;}
+  if(!str_comp("res_ki_x",name)){rval=*( (double *)(&(p->res_ki_x)) );s=0;}
+  if(!str_comp("res_ki_y",name)){rval=*( (double *)(&(p->res_ki_y)) );s=0;}
+  if(!str_comp("res_ki_z",name)){rval=*( (double *)(&(p->res_ki_z)) );s=0;}
+  if(!str_comp("res_kf_x",name)){rval=*( (double *)(&(p->res_kf_x)) );s=0;}
+  if(!str_comp("res_kf_y",name)){rval=*( (double *)(&(p->res_kf_y)) );s=0;}
+  if(!str_comp("res_kf_z",name)){rval=*( (double *)(&(p->res_kf_z)) );s=0;}
+  if(!str_comp("res_rx",name)){rval=*( (double *)(&(p->res_rx)) );s=0;}
+  if(!str_comp("res_ry",name)){rval=*( (double *)(&(p->res_ry)) );s=0;}
+  if(!str_comp("res_rz",name)){rval=*( (double *)(&(p->res_rz)) );s=0;}
   if (suc!=0x0) {*suc=s;}
   return rval;
 }
@@ -125,6 +168,27 @@ double particle_getuservar_byid(_class_particle *p, int id, int *suc){
   int s=1;
   double rval=0;
   switch(id){
+  case 0: { rval=*( (double *)(&(p->x_div)) );s=0;break;}
+  case 1: { rval=*( (double *)(&(p->y_div)) );s=0;break;}
+  case 2: { rval=*( (double *)(&(p->Ana1)) );s=0;break;}
+  case 3: { rval=*( (double *)(&(p->Ana2)) );s=0;break;}
+  case 4: { rval=*( (double *)(&(p->Ana3)) );s=0;break;}
+  case 5: { rval=*( (double *)(&(p->Ana4)) );s=0;break;}
+  case 6: { rval=*( (double *)(&(p->Ana5)) );s=0;break;}
+  case 7: { rval=*( (double *)(&(p->Ana6)) );s=0;break;}
+  case 8: { rval=*( (double *)(&(p->Ana7)) );s=0;break;}
+  case 9: { rval=*( (double *)(&(p->Ana8)) );s=0;break;}
+  case 10: { rval=*( (double *)(&(p->scat)) );s=0;break;}
+  case 11: { rval=*( (double *)(&(p->res_pi)) );s=0;break;}
+  case 12: { rval=*( (double *)(&(p->res_ki_x)) );s=0;break;}
+  case 13: { rval=*( (double *)(&(p->res_ki_y)) );s=0;break;}
+  case 14: { rval=*( (double *)(&(p->res_ki_z)) );s=0;break;}
+  case 15: { rval=*( (double *)(&(p->res_kf_x)) );s=0;break;}
+  case 16: { rval=*( (double *)(&(p->res_kf_y)) );s=0;break;}
+  case 17: { rval=*( (double *)(&(p->res_kf_z)) );s=0;break;}
+  case 18: { rval=*( (double *)(&(p->res_rx)) );s=0;break;}
+  case 19: { rval=*( (double *)(&(p->res_ry)) );s=0;break;}
+  case 20: { rval=*( (double *)(&(p->res_rz)) );s=0;break;}
   }
   if (suc!=0x0) {*suc=s;}
   return rval;
@@ -132,6 +196,27 @@ double particle_getuservar_byid(_class_particle *p, int id, int *suc){
 
 #pragma acc routine
 void particle_uservar_init(_class_particle *p){
+  p->x_div=0;
+  p->y_div=0;
+  p->Ana1=0;
+  p->Ana2=0;
+  p->Ana3=0;
+  p->Ana4=0;
+  p->Ana5=0;
+  p->Ana6=0;
+  p->Ana7=0;
+  p->Ana8=0;
+  p->scat=0;
+  p->res_pi=0;
+  p->res_ki_x=0;
+  p->res_ki_y=0;
+  p->res_ki_z=0;
+  p->res_kf_x=0;
+  p->res_kf_y=0;
+  p->res_kf_z=0;
+  p->res_rx=0;
+  p->res_ry=0;
+  p->res_rz=0;
 }
 
 #define MC_EMBEDDED_RUNTIME
@@ -9687,15 +9772,12 @@ double zridd_gpu(double x1, double x2, double *parms, double xacc)
 #endif
 
 /* Shared user declarations for all components types 'Res_sample'. */
-struct Res_sample_struct
-{
-double ki_x,ki_y,ki_z,kf_x,kf_y,kf_z;
-double rx,ry,rz,pi;
-char   isrect;      /* true when sample is a box */
-double aw,ah;       /* rectangular angular dimensions */
-double xw,yh;       /* rectangular metrical dimensions */
-double tx,ty,tz;    /* target coords */
-};
+  struct res_sample_vars {
+    char   isrect;                     /* true when sample is a box */
+    double awdim, ahdim;               /* rectangular angular dimensions */
+    double xwdim, yhdim;               /* rectangular metrical dimensions */
+    double targetx, targety, targetz;  /* target coords */
+  };
 
 /* Shared user declarations for all components types 'PowderN'. */
 /* used for reading data table from file */
@@ -13607,7 +13689,7 @@ struct _struct_Res_sample_parameters {
   MCNUM zdepth;
   long target_index;
   /* Component type 'Res_sample' private parameters */
-  struct Res_sample_struct  res_struct;
+  struct res_sample_vars  vars;
 }; /* _struct_Res_sample_parameters */
 typedef struct _struct_Res_sample_parameters _class_Res_sample_parameters;
 
@@ -14180,8 +14262,7 @@ double Lambda0;
 double dLambda;
 double var_divreq_x;
 double var_divreq_y;
-double x_div;
-double y_div;
+
 double startxpoint[8][3][3];
 double startypoint[8][3][3];
 double startXdirec[8][3];
@@ -14289,7 +14370,7 @@ int los_check;
 int ii;
 int los_logic_single[7][8];
 FILE *fp;
-int scat = 0;
+
 // Filter parameters 
 double OUTFILTER_THICK;
 
@@ -14320,15 +14401,14 @@ int coarse;
 double z_an1[8];
 double y_an1[8];
 double thet_an1[8];
-int Ana1=0;
+
 double z_an2[8];
 double y_an2[8];
 double thet_an2[8];
-int Ana2=0;
+
 double z_an3[8];
 double y_an3[8];
 double thet_an3[8];
-int Ana3=0;
 
 double pixelstart[8];
 double pixelstop[8];
@@ -14336,27 +14416,22 @@ double pixelstop[8];
 double z_an4[8];
 double y_an4[8];
 double thet_an4[8];
-int Ana4=0;
 
 double z_an5[8];
 double y_an5[8];
 double thet_an5[8];
-int Ana5=0;
 
 double z_an6[8];
 double y_an6[8];
 double thet_an6[8];
-int Ana6=0;
 
 double z_an7[8];
 double y_an7[8];
 double thet_an7[8];
-int Ana7=0;
 
 double z_an8[8];
 double y_an8[8];
 double thet_an8[8];
-int Ana8=0;
 
 // Detector parameters 
 double ang_1[8];
@@ -15834,7 +15909,7 @@ int _powder1_setpos(void)
 /* component res_sample=Res_sample() SETTING, POSITION/ROTATION */
 int _res_sample_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_res_sample_setpos] component res_sample=Res_sample() SETTING [Res_sample.comp:88]");
+  SIG_MESSAGE("[_res_sample_setpos] component res_sample=Res_sample() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:108]");
   stracpy(_res_sample_var._name, "res_sample", 16384);
   stracpy(_res_sample_var._type, "Res_sample", 16384);
   _res_sample_var._index=32;
@@ -18025,8 +18100,8 @@ int _res_monitor_edge_0_setpos(void)
   stracpy(_res_monitor_edge_0_var._name, "res_monitor_edge_0", 16384);
   stracpy(_res_monitor_edge_0_var._type, "Res_monitor", 16384);
   _res_monitor_edge_0_var._index=78;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_0_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_0_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_0_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_0" && strlen("res_mon_edge_0"))
@@ -18083,8 +18158,8 @@ int _res_monitor_edge_1_setpos(void)
   stracpy(_res_monitor_edge_1_var._name, "res_monitor_edge_1", 16384);
   stracpy(_res_monitor_edge_1_var._type, "Res_monitor", 16384);
   _res_monitor_edge_1_var._index=79;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_1_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_1_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_1_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_1" && strlen("res_mon_edge_1"))
@@ -18141,8 +18216,8 @@ int _res_monitor_edge_2_setpos(void)
   stracpy(_res_monitor_edge_2_var._name, "res_monitor_edge_2", 16384);
   stracpy(_res_monitor_edge_2_var._type, "Res_monitor", 16384);
   _res_monitor_edge_2_var._index=80;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_2_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_2_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_2_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_2" && strlen("res_mon_edge_2"))
@@ -18199,8 +18274,8 @@ int _res_monitor_edge_3_setpos(void)
   stracpy(_res_monitor_edge_3_var._name, "res_monitor_edge_3", 16384);
   stracpy(_res_monitor_edge_3_var._type, "Res_monitor", 16384);
   _res_monitor_edge_3_var._index=81;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_3_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_3_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_3_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_3" && strlen("res_mon_edge_3"))
@@ -18257,8 +18332,8 @@ int _res_monitor_edge_4_setpos(void)
   stracpy(_res_monitor_edge_4_var._name, "res_monitor_edge_4", 16384);
   stracpy(_res_monitor_edge_4_var._type, "Res_monitor", 16384);
   _res_monitor_edge_4_var._index=82;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_4_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_4_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_4_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_4" && strlen("res_mon_edge_4"))
@@ -18315,8 +18390,8 @@ int _res_monitor_edge_5_setpos(void)
   stracpy(_res_monitor_edge_5_var._name, "res_monitor_edge_5", 16384);
   stracpy(_res_monitor_edge_5_var._type, "Res_monitor", 16384);
   _res_monitor_edge_5_var._index=83;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_5_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_5_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_5_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_5" && strlen("res_mon_edge_5"))
@@ -18373,8 +18448,8 @@ int _res_monitor_edge_6_setpos(void)
   stracpy(_res_monitor_edge_6_var._name, "res_monitor_edge_6", 16384);
   stracpy(_res_monitor_edge_6_var._type, "Res_monitor", 16384);
   _res_monitor_edge_6_var._index=84;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_6_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_6_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_6_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_6" && strlen("res_mon_edge_6"))
@@ -18431,8 +18506,8 @@ int _res_monitor_edge_7_setpos(void)
   stracpy(_res_monitor_edge_7_var._name, "res_monitor_edge_7", 16384);
   stracpy(_res_monitor_edge_7_var._type, "Res_monitor", 16384);
   _res_monitor_edge_7_var._index=85;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_edge_7_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_edge_7_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_edge_7_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_edge_7" && strlen("res_mon_edge_7"))
@@ -18736,8 +18811,8 @@ int _res_monitor_mid_0_setpos(void)
   stracpy(_res_monitor_mid_0_var._name, "res_monitor_mid_0", 16384);
   stracpy(_res_monitor_mid_0_var._type, "Res_monitor", 16384);
   _res_monitor_mid_0_var._index=90;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_0_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_0_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_0_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_0" && strlen("res_mon_mid_0"))
@@ -18794,8 +18869,8 @@ int _res_monitor_mid_1_setpos(void)
   stracpy(_res_monitor_mid_1_var._name, "res_monitor_mid_1", 16384);
   stracpy(_res_monitor_mid_1_var._type, "Res_monitor", 16384);
   _res_monitor_mid_1_var._index=91;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_1_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_1_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_1_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_1" && strlen("res_mon_mid_1"))
@@ -18852,8 +18927,8 @@ int _res_monitor_mid_2_setpos(void)
   stracpy(_res_monitor_mid_2_var._name, "res_monitor_mid_2", 16384);
   stracpy(_res_monitor_mid_2_var._type, "Res_monitor", 16384);
   _res_monitor_mid_2_var._index=92;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_2_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_2_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_2_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_2" && strlen("res_mon_mid_2"))
@@ -18910,8 +18985,8 @@ int _res_monitor_mid_3_setpos(void)
   stracpy(_res_monitor_mid_3_var._name, "res_monitor_mid_3", 16384);
   stracpy(_res_monitor_mid_3_var._type, "Res_monitor", 16384);
   _res_monitor_mid_3_var._index=93;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_3_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_3_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_3_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_3" && strlen("res_mon_mid_3"))
@@ -18968,8 +19043,8 @@ int _res_monitor_mid_4_setpos(void)
   stracpy(_res_monitor_mid_4_var._name, "res_monitor_mid_4", 16384);
   stracpy(_res_monitor_mid_4_var._type, "Res_monitor", 16384);
   _res_monitor_mid_4_var._index=94;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_4_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_4_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_4_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_4" && strlen("res_mon_mid_4"))
@@ -19026,8 +19101,8 @@ int _res_monitor_mid_5_setpos(void)
   stracpy(_res_monitor_mid_5_var._name, "res_monitor_mid_5", 16384);
   stracpy(_res_monitor_mid_5_var._type, "Res_monitor", 16384);
   _res_monitor_mid_5_var._index=95;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_5_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_5_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_5_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_5" && strlen("res_mon_mid_5"))
@@ -19084,8 +19159,8 @@ int _res_monitor_mid_6_setpos(void)
   stracpy(_res_monitor_mid_6_var._name, "res_monitor_mid_6", 16384);
   stracpy(_res_monitor_mid_6_var._type, "Res_monitor", 16384);
   _res_monitor_mid_6_var._index=96;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_6_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_6_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_6_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_6" && strlen("res_mon_mid_6"))
@@ -19142,8 +19217,8 @@ int _res_monitor_mid_7_setpos(void)
   stracpy(_res_monitor_mid_7_var._name, "res_monitor_mid_7", 16384);
   stracpy(_res_monitor_mid_7_var._type, "Res_monitor", 16384);
   _res_monitor_mid_7_var._index=97;
-  if(res_sample && strlen(res_sample))
-    stracpy(_res_monitor_mid_7_var._parameters.res_sample_comp, res_sample ? res_sample : "", 16384);
+  if("res_sample" && strlen("res_sample"))
+    stracpy(_res_monitor_mid_7_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
   _res_monitor_mid_7_var._parameters.res_sample_comp[0]='\0';
   if("res_mon_mid_7" && strlen("res_mon_mid_7"))
@@ -21595,46 +21670,46 @@ _class_Res_sample *class_Res_sample_init(_class_Res_sample *_comp
   #define yheight (_comp->_parameters.yheight)
   #define zdepth (_comp->_parameters.zdepth)
   #define target_index (_comp->_parameters.target_index)
-  #define res_struct (_comp->_parameters.res_struct)
-  SIG_MESSAGE("[_res_sample_init] component res_sample=Res_sample() INITIALISE [Res_sample.comp:88]");
+  #define vars (_comp->_parameters.vars)
+  SIG_MESSAGE("[_res_sample_init] component res_sample=Res_sample() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:108]");
 
-if (!radius || !yheight) {
-    if (!xwidth || !yheight || !zdepth) exit(fprintf(stderr,"Res_sample: %s: sample has no volume (zero dimensions)\n", NAME_CURRENT_COMP));
-    else res_struct.isrect=1; }
-  else res_struct.isrect=0;
+  if (!radius || !yheight) {
+    if (!xwidth || !yheight || !zdepth)
+      exit(fprintf(stderr,"Res_sample: %s: sample has no volume (zero dimensions)\n", NAME_CURRENT_COMP));
+    else
+      vars.isrect = 1;
+  }
+  else {
+    vars.isrect = 0;
+  }
 
   /* now compute target coords if a component index is supplied */
-  if (!target_index && !target_x && !target_y && !target_z) target_index=1;
-  if (target_index)
-  {
+  if (!target_index && !target_x && !target_y && !target_z)
+    target_index = 1;
+  if (target_index) {
     Coords ToTarget;
     ToTarget = coords_sub(POS_A_COMP_INDEX(INDEX_CURRENT_COMP+target_index),POS_A_CURRENT_COMP);
     ToTarget = rot_apply(ROT_A_CURRENT_COMP, ToTarget);
-    coords_get(ToTarget, &res_struct.tx, &res_struct.ty, &res_struct.tz);
+    coords_get(ToTarget, &vars.targetx, &vars.targety, &vars.targetz);
   }
-  else
-  { res_struct.tx = target_x; res_struct.ty = target_y; res_struct.tz = target_z; }
+  else {
+    vars.targetx = target_x;
+    vars.targety = target_y;
+    vars.targetz = target_z;
+  }
 
-  if (!(res_struct.tx || res_struct.ty || res_struct.tz)) {
+  if (!(vars.targetx || vars.targety || vars.targetz)) {
     printf("Res_sample: %s: The target is not defined. Using direct beam (Z-axis).\n",
       NAME_CURRENT_COMP);
-    res_struct.tz=1;
+    vars.targetz = 1;
   }
 
   /* different ways of setting rectangular area */
-  res_struct.aw  = res_struct.ah = 0;
-  if (focus_xw) {
-    res_struct.xw = focus_xw;
-  }
-  if (focus_yh) {
-    res_struct.yh = focus_yh;
-  }
-  if (focus_aw) {
-    res_struct.aw = DEG2RAD*focus_aw;
-  }
-  if (focus_ah) {
-    res_struct.ah = DEG2RAD*focus_ah;
-  }
+  vars.awdim = vars.ahdim = 0;
+  if (focus_xw) vars.xwdim = focus_xw;
+  if (focus_yh) vars.yhdim = focus_yh;
+  if (focus_aw) vars.awdim = DEG2RAD*focus_aw;
+  if (focus_ah) vars.ahdim = DEG2RAD*focus_ah;
   #undef thickness
   #undef radius
   #undef focus_r
@@ -21651,7 +21726,7 @@ if (!radius || !yheight) {
   #undef yheight
   #undef zdepth
   #undef target_index
-  #undef res_struct
+  #undef vars
   return(_comp);
 } /* class_Res_sample_init */
 
@@ -22639,7 +22714,7 @@ int init(void) { /* called by mccode_main for PSI_CAMEA:INITIALISE */
   stracpy(instrument->_name, "PSI_CAMEA", 256);
 
   /* Instrument 'PSI_CAMEA' INITIALISE */
-  SIG_MESSAGE("[PSI_CAMEA] INITIALISE [FullInstrument_v4_elastic_resolution.instr:346]");
+  SIG_MESSAGE("[PSI_CAMEA] INITIALISE [FullInstrument_v4_elastic_resolution.instr:373]");
   #define slitwidth (instrument->_parameters.slitwidth)
   #define SourceE (instrument->_parameters.SourceE)
   #define pds_dist (instrument->_parameters.pds_dist)
@@ -23464,7 +23539,6 @@ thet_an1[3]=48.90;
 thet_an1[4]=49.79;
 thet_an1[5]=50.69;
 ana_l[1]=0.0720;
-Ana1=0;
 
 z_an2[1]=0.9744;
 z_an2[2]=0.9843;
@@ -23482,7 +23556,6 @@ thet_an2[3]=47.21;
 thet_an2[4]=48.09;
 thet_an2[5]=48.98;
 ana_l[2]=0.082;
-Ana2=0;
 
 z_an3[1]=1.0354;
 z_an3[2]=1.0462;
@@ -23500,7 +23573,7 @@ thet_an3[3]=45.53;
 thet_an3[4]=46.41;
 thet_an3[5]=47.32;
 ana_l[3]=0.092;
-Ana3=0;
+
 
 z_an4[1]=1.0959;
 z_an4[2]=1.1078;
@@ -23518,7 +23591,7 @@ thet_an4[3]=43.84;
 thet_an4[4]=44.74;
 thet_an4[5]=45.66;
 ana_l[4]=0.103;
-Ana4=0;
+
 
 z_an5[1]=1.1567;
 z_an5[2]=1.1697;
@@ -23536,7 +23609,7 @@ thet_an5[3]=42.16;
 thet_an5[4]=43.05;
 thet_an5[5]=43.97;
 ana_l[5]=0.113;
-Ana5=0;
+
 
 z_an6[1]=1.2170;
 z_an6[2]=1.2313;
@@ -23554,7 +23627,7 @@ thet_an6[3]=40.47;
 thet_an6[4]=41.36;
 thet_an6[5]=42.28;
 ana_l[6]=0.120;
-Ana6=0;
+
 
 z_an7[1]=1.2775;
 z_an7[2]=1.2936;
@@ -23572,7 +23645,7 @@ thet_an7[3]=38.79;
 thet_an7[4]=39.69;
 thet_an7[5]=40.63;
 ana_l[7]=0.129;
-Ana7=0;
+
 
 z_an8[1]=1.3385;
 z_an8[2]=1.3565;
@@ -23590,7 +23663,7 @@ thet_an8[3]=37.10;
 thet_an8[4]=38.01;
 thet_an8[5]=38.95;
 ana_l[8]=0.140;
-Ana8=0;
+
 
 ana_l[1]=ana_l[1]+ana_l_add;
 ana_l[2]=ana_l[2]+ana_l_add;
@@ -25970,8 +26043,8 @@ _class_Res_sample *class_Res_sample_trace(_class_Res_sample *_comp
   #define yheight (_comp->_parameters.yheight)
   #define zdepth (_comp->_parameters.zdepth)
   #define target_index (_comp->_parameters.target_index)
-  #define res_struct (_comp->_parameters.res_struct)
-  SIG_MESSAGE("[_res_sample_trace] component res_sample=Res_sample() TRACE [Res_sample.comp:129]");
+  #define vars (_comp->_parameters.vars)
+  SIG_MESSAGE("[_res_sample_trace] component res_sample=Res_sample() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:149]");
 
   double t0, t3;                /* Entry/exit time for outer cylinder */
   double t1, t2;                /* Entry/exit time for inner cylinder */
@@ -25982,25 +26055,30 @@ _class_Res_sample *class_Res_sample_trace(_class_Res_sample *_comp
   double solid_angle=0;         /* Solid angle of target as seen from scattering point */
   double aim_x, aim_y, aim_z;   /* Position of target relative to scattering point */
   double scat_factor;           /* Simple cross-section model */
-  int    intersect=0;
+  int intersect = 0;
 
-  if(res_struct.isrect)
+  if(vars.isrect)
     intersect = box_intersect(&t0, &t3, x, y, z, vx, vy, vz, xwidth, yheight, zdepth);
   else
     intersect = cylinder_intersect(&t0, &t3, x, y, z, vx, vy, vz, radius, yheight);
 
-  if(intersect)
-  {
+  if(intersect) {
     if(t0 < 0) ABSORB;
-    if(res_struct.isrect) { t1 = t2 = t3; scat_factor = 2*zdepth; } /* box sample */
+    if(vars.isrect) {
+      t1 = t2 = t3;
+      scat_factor = 2*zdepth;
+    } /* box sample */
     else {  /* Hollow cylinder sample */
       /* Neutron enters at t=t0. */
       if(!thickness || !cylinder_intersect(&t1, &t2, x, y, z, vx, vy, vz, radius-thickness, yheight))
         t1 = t2 = t3;
-      scat_factor = 2*radius; }
+      scat_factor = 2*radius;
+    }
+
     dt0 = t1-t0;                  /* Time in sample, ingoing */
     dt1 = t2-t1;                  /* Time in hole */
     dt2 = t3-t2;                  /* Time in sample, outgoing */
+
     v = sqrt(vx*vx + vy*vy + vz*vz);
     l_full = v * (dt0 + dt2);     /* Length of full path through sample */
     p *= l_full/scat_factor;      /* Scattering probability */
@@ -26012,39 +26090,41 @@ _class_Res_sample *class_Res_sample_trace(_class_Res_sample *_comp
 
     /* Store initial neutron state. */
     if(p == 0) ABSORB;
-    res_struct.pi = p;
-    res_struct.ki_x = V2K*vx;
-    res_struct.ki_y = V2K*vy;
-    res_struct.ki_z = V2K*vz;
-    res_struct.rx = x;
-    res_struct.ry = y;
-    res_struct.rz = z;
+    _particle->res_pi = p;
+    _particle->res_ki_x = V2K*vx;
+    _particle->res_ki_y = V2K*vy;
+    _particle->res_ki_z = V2K*vz;
+    _particle->res_rx = x;
+    _particle->res_ry = y;
+    _particle->res_rz = z;
 
-    aim_x = res_struct.tx-x;         /* Vector pointing at target (anal./det.) */
-    aim_y = res_struct.ty-y;
-    aim_z = res_struct.tz-z;
-    if(res_struct.aw && res_struct.ah) {
-        randvec_target_rect_angular(&vx, &vy, &vz, &solid_angle,
-          aim_x, aim_y, aim_z, res_struct.aw, res_struct.ah, ROT_A_CURRENT_COMP);
-    } else if(res_struct.xw && res_struct.yh) {
-        randvec_target_rect(&vx, &vy, &vz, &solid_angle,
-          aim_x, aim_y, aim_z, res_struct.xw, res_struct.yh, ROT_A_CURRENT_COMP);
+    aim_x = vars.targetx - x;         /* Vector pointing at target (anal./det.) */
+    aim_y = vars.targety - y;
+    aim_z = vars.targetz - z;
+ 
+   if(vars.awdim && vars.ahdim) {
+      randvec_target_rect_angular(&vx, &vy, &vz, &solid_angle,
+        aim_x, aim_y, aim_z, vars.awdim, vars.ahdim, ROT_A_CURRENT_COMP);
+    } else if(vars.xwdim && vars.yhdim) {
+      randvec_target_rect(&vx, &vy, &vz, &solid_angle,
+        aim_x, aim_y, aim_z, vars.xwdim, vars.yhdim, ROT_A_CURRENT_COMP);
     } else {
-        randvec_target_circle(&vx, &vy, &vz, &solid_angle,
-          aim_x, aim_y, aim_z, focus_r);
+      randvec_target_circle(&vx, &vy, &vz, &solid_angle,
+        aim_x, aim_y, aim_z, focus_r);
     }
+
     NORM(vx, vy, vz);
-    E=E0+dE*randpm1();
-    v=sqrt(E)*SE2V;
+    E = E0 + dE*randpm1();
+    v = sqrt(E)*SE2V;
     vx *= v;
     vy *= v;
     vz *= v;
     SCATTER;
 
-      /* Store final neutron state. */
-    res_struct.kf_x = V2K*vx;
-    res_struct.kf_y = V2K*vy;
-    res_struct.kf_z = V2K*vz;
+     /* Store final neutron state. */
+    _particle->res_kf_x = V2K*vx;
+    _particle->res_kf_y = V2K*vy;
+    _particle->res_kf_z = V2K*vz;
   }
 #ifndef NOABSORB_INF_NAN
   /* Check for nan or inf particle parms */ 
@@ -26082,7 +26162,7 @@ _class_Res_sample *class_Res_sample_trace(_class_Res_sample *_comp
   #undef yheight
   #undef zdepth
   #undef target_index
-  #undef res_struct
+  #undef vars
   return(_comp);
 } /* class_Res_sample_trace */
 
@@ -26819,6 +26899,27 @@ _class_Monochromator_flat *class_Monochromator_flat_trace(_class_Monochromator_f
   if(isnan(z)  ||  isinf(z)) printf("NAN or INF found in z,  %s (particle %lld)\n",_comp->_name,_particle->_uid);
 #endif
 
+  #define x_div (_particle->x_div)
+  #define y_div (_particle->y_div)
+  #define Ana1 (_particle->Ana1)
+  #define Ana2 (_particle->Ana2)
+  #define Ana3 (_particle->Ana3)
+  #define Ana4 (_particle->Ana4)
+  #define Ana5 (_particle->Ana5)
+  #define Ana6 (_particle->Ana6)
+  #define Ana7 (_particle->Ana7)
+  #define Ana8 (_particle->Ana8)
+  #define scat (_particle->scat)
+  #define res_pi (_particle->res_pi)
+  #define res_ki_x (_particle->res_ki_x)
+  #define res_ki_y (_particle->res_ki_y)
+  #define res_ki_z (_particle->res_ki_z)
+  #define res_kf_x (_particle->res_kf_x)
+  #define res_kf_y (_particle->res_kf_y)
+  #define res_kf_z (_particle->res_kf_z)
+  #define res_rx (_particle->res_rx)
+  #define res_ry (_particle->res_ry)
+  #define res_rz (_particle->res_rz)
 if (_comp->_index == 37) { // EXTEND 'an111'
 if(SCATTERED){ Ana1 = 1;
  scat=1;} 
@@ -26979,6 +27080,27 @@ if (_comp->_index == 76) { // EXTEND 'an185'
 if(SCATTERED){ Ana8 = 5;
  scat=1;} 
 }
+  #undef x_div
+  #undef y_div
+  #undef Ana1
+  #undef Ana2
+  #undef Ana3
+  #undef Ana4
+  #undef Ana5
+  #undef Ana6
+  #undef Ana7
+  #undef Ana8
+  #undef scat
+  #undef res_pi
+  #undef res_ki_x
+  #undef res_ki_y
+  #undef res_ki_z
+  #undef res_kf_x
+  #undef res_kf_y
+  #undef res_kf_z
+  #undef res_rx
+  #undef res_ry
+  #undef res_rz
 
   #undef zmin
   #undef zmax
@@ -27830,6 +27952,27 @@ _class_PSD_Detector *class_PSD_Detector_trace(_class_PSD_Detector *_comp
   return(_comp);
 } /* class_PSD_Detector_trace */
 
+#define x_div (_particle->x_div)
+#define y_div (_particle->y_div)
+#define Ana1 (_particle->Ana1)
+#define Ana2 (_particle->Ana2)
+#define Ana3 (_particle->Ana3)
+#define Ana4 (_particle->Ana4)
+#define Ana5 (_particle->Ana5)
+#define Ana6 (_particle->Ana6)
+#define Ana7 (_particle->Ana7)
+#define Ana8 (_particle->Ana8)
+#define scat (_particle->scat)
+#define res_pi (_particle->res_pi)
+#define res_ki_x (_particle->res_ki_x)
+#define res_ki_y (_particle->res_ki_y)
+#define res_ki_z (_particle->res_ki_z)
+#define res_kf_x (_particle->res_kf_x)
+#define res_kf_y (_particle->res_kf_y)
+#define res_kf_z (_particle->res_kf_z)
+#define res_rx (_particle->res_rx)
+#define res_ry (_particle->res_ry)
+#define res_rz (_particle->res_rz)
 /* *****************************************************************************
 * instrument 'PSI_CAMEA' TRACE
 ***************************************************************************** */
@@ -31837,6 +31980,27 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
 } /* raytrace_all_funnel */
 #endif // FUNNEL
 
+#undef x_div
+#undef y_div
+#undef Ana1
+#undef Ana2
+#undef Ana3
+#undef Ana4
+#undef Ana5
+#undef Ana6
+#undef Ana7
+#undef Ana8
+#undef scat
+#undef res_pi
+#undef res_ki_x
+#undef res_ki_y
+#undef res_ki_z
+#undef res_kf_x
+#undef res_kf_y
+#undef res_kf_z
+#undef res_rx
+#undef res_ry
+#undef res_rz
 #undef x
 #undef y
 #undef z
@@ -34213,13 +34377,11 @@ _class_Res_sample *class_Res_sample_display(_class_Res_sample *_comp
   #define yheight (_comp->_parameters.yheight)
   #define zdepth (_comp->_parameters.zdepth)
   #define target_index (_comp->_parameters.target_index)
-  #define res_struct (_comp->_parameters.res_struct)
-  SIG_MESSAGE("[_res_sample_display] component res_sample=Res_sample() DISPLAY [Res_sample.comp:206]");
+  #define vars (_comp->_parameters.vars)
+  SIG_MESSAGE("[_res_sample_display] component res_sample=Res_sample() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:233]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
-  
-  if(res_struct.isrect)
-  {                             /* Flat sample. */
+  if(vars.isrect) { /* Flat sample. */
     double xmin = -0.5*xwidth;
     double xmax =  0.5*xwidth;
     double ymin = -0.5*yheight;
@@ -34240,8 +34402,7 @@ _class_Res_sample *class_Res_sample_display(_class_Res_sample *_comp
     line(xmin, ymax, -len, xmin, ymax, len);
     line(xmax, ymax, -len, xmax, ymax, len);
   }
-  else
-  {
+  else {
     circle("xz", 0,  yheight/2.0, 0, radius);
     circle("xz", 0, -yheight/2.0, 0, radius);
     line(-radius, -yheight/2.0, 0, -radius, +yheight/2.0, 0);
@@ -34274,7 +34435,7 @@ _class_Res_sample *class_Res_sample_display(_class_Res_sample *_comp
   #undef yheight
   #undef zdepth
   #undef target_index
-  #undef res_struct
+  #undef vars
   return(_comp);
 } /* class_Res_sample_display */
 
@@ -35110,6 +35271,27 @@ void* _getvar_parameters(char* compname)
 void* _get_particle_var(char *token, _class_particle *p)
 /* enables setpars based use of GET_PARTICLE_DVAR macro and similar */
 {
+  if (!strcmp(token, "x_div")) return (void *) &(p->x_div);
+  if (!strcmp(token, "y_div")) return (void *) &(p->y_div);
+  if (!strcmp(token, "Ana1")) return (void *) &(p->Ana1);
+  if (!strcmp(token, "Ana2")) return (void *) &(p->Ana2);
+  if (!strcmp(token, "Ana3")) return (void *) &(p->Ana3);
+  if (!strcmp(token, "Ana4")) return (void *) &(p->Ana4);
+  if (!strcmp(token, "Ana5")) return (void *) &(p->Ana5);
+  if (!strcmp(token, "Ana6")) return (void *) &(p->Ana6);
+  if (!strcmp(token, "Ana7")) return (void *) &(p->Ana7);
+  if (!strcmp(token, "Ana8")) return (void *) &(p->Ana8);
+  if (!strcmp(token, "scat")) return (void *) &(p->scat);
+  if (!strcmp(token, "res_pi")) return (void *) &(p->res_pi);
+  if (!strcmp(token, "res_ki_x")) return (void *) &(p->res_ki_x);
+  if (!strcmp(token, "res_ki_y")) return (void *) &(p->res_ki_y);
+  if (!strcmp(token, "res_ki_z")) return (void *) &(p->res_ki_z);
+  if (!strcmp(token, "res_kf_x")) return (void *) &(p->res_kf_x);
+  if (!strcmp(token, "res_kf_y")) return (void *) &(p->res_kf_y);
+  if (!strcmp(token, "res_kf_z")) return (void *) &(p->res_kf_z);
+  if (!strcmp(token, "res_rx")) return (void *) &(p->res_rx);
+  if (!strcmp(token, "res_ry")) return (void *) &(p->res_ry);
+  if (!strcmp(token, "res_rz")) return (void *) &(p->res_rz);
   return 0;
 }
 
