@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v4_elastic_resolution.instr (PSI_CAMEA)
- * Date:       Tue Feb 15 17:20:58 2022
+ * Date:       Tue Feb 15 17:24:34 2022
  * File:       ./FullInstrument_v4_elastic_resolution.c
  * CFLAGS=
  */
@@ -5977,8 +5977,6 @@ int main(int argc, char *argv[]){return mccode_main(argc, argv);}
 struct _struct_instrument_parameters {
   MCNUM slitwidth;
   MCNUM SourceE;
-  MCNUM pds_dist;
-  MCNUM pds_dist1;
   MCNUM DeltaSourceE;
   MCNUM EI;
   MCNUM A3;
@@ -6018,12 +6016,10 @@ struct _instrument_struct *instrument = & _instrument_var;
 #pragma acc declare create ( _instrument_var )
 #pragma acc declare create ( instrument )
 
-int numipar = 17;
+int numipar = 15;
 struct mcinputtable_struct mcinputtable[] = {
   "slitwidth", &(_instrument_var._parameters.slitwidth), instr_type_double, "0.5", 
   "SourceE", &(_instrument_var._parameters.SourceE), instr_type_double, "5", 
-  "pds_dist", &(_instrument_var._parameters.pds_dist), instr_type_double, "0.03", 
-  "pds_dist1", &(_instrument_var._parameters.pds_dist1), instr_type_double, "0.38", 
   "DeltaSourceE", &(_instrument_var._parameters.DeltaSourceE), instr_type_double, "0.3", 
   "EI", &(_instrument_var._parameters.EI), instr_type_double, "5", 
   "A3", &(_instrument_var._parameters.A3), instr_type_double, "0", 
@@ -22717,8 +22713,6 @@ int init(void) { /* called by mccode_main for PSI_CAMEA:INITIALISE */
   SIG_MESSAGE("[PSI_CAMEA] INITIALISE [FullInstrument_v4_elastic_resolution.instr:373]");
   #define slitwidth (instrument->_parameters.slitwidth)
   #define SourceE (instrument->_parameters.SourceE)
-  #define pds_dist (instrument->_parameters.pds_dist)
-  #define pds_dist1 (instrument->_parameters.pds_dist1)
   #define DeltaSourceE (instrument->_parameters.DeltaSourceE)
   #define EI (instrument->_parameters.EI)
   #define A3 (instrument->_parameters.A3)
@@ -23718,8 +23712,6 @@ RH_mono = 2*1.6/sin(DEG2RAD*thetaA1)*RH_mono_Bool;
 }
   #undef slitwidth
   #undef SourceE
-  #undef pds_dist
-  #undef pds_dist1
   #undef DeltaSourceE
   #undef EI
   #undef A3

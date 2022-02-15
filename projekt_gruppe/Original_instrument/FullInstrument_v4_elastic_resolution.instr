@@ -34,7 +34,7 @@
 * %End
 *******************************************************************************/
 
-DEFINE INSTRUMENT PSI_CAMEA(slitwidth=0.5, SourceE=5, pds_dist=0.03, pds_dist1=0.38,DeltaSourceE=0.3,EI=5,A3=0,A4=-90,SAMPLE=3,
+DEFINE INSTRUMENT PSI_CAMEA(slitwidth=0.5, SourceE=5,DeltaSourceE=0.3,EI=5,A3=0,A4=-90,SAMPLE=3,
 string file_name="EGECE_13WaveLmax1_geometry.dat.txt",RV_mono_Bool=0.5,RH_mono_Bool=0.5,Be_filter=1,old_mono=0,sampleHeight=0.01,sampleRadius=0.005,samplePosY=0.00)
 
 
