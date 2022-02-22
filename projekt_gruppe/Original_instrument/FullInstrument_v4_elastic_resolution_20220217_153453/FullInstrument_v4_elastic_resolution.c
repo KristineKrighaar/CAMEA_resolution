@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v4_elastic_resolution.instr (PSI_CAMEA)
- * Date:       Thu Feb 17 15:34:11 2022
+ * Date:       Tue Feb 22 12:36:47 2022
  * File:       FullInstrument_v4_elastic_resolution.c
  * CFLAGS=
  */

@@ -1375,6 +1375,9 @@ COMPONENT source = Source_gen4 (
 COMPONENT StartOfGuide = Arm()
 AT (0,0,guide_start) RELATIVE source
 
+COMPONENT arm = Arm()
+AT (0, 0, 4) RELATIVE StartOfGuide
+
 
 COMPONENT elliptical_guide_gravity5= Elliptic_guide_gravity(
 l=length5, linxw=Linx5, linyh=Liny5, loutxw=Loutx5, loutyh=Louty5,
@@ -1427,8 +1430,6 @@ ROTATED (0,0,0) RELATIVE PREVIOUS
 COMPONENT EndOfelement_1= Arm()
 AT (0,0,length1 + 2*u) RELATIVE PREVIOUS
 
-
-
 /*
 COMPONENT Div2d_sample_B = Divergence_monitor(
     nh = 200, nv = 200, filename = "Div2d_sample_B", xwidth = sizeX,
@@ -1440,8 +1441,6 @@ COMPONENT Div2d_sample_B = Divergence_monitor(
     y_div = RAD2DEG*atan2(vy,vz);
     if (SCATTERED) flag=1; else flag=0;
     %}
-
-
 
 COMPONENT Div2d_VirtualSource = Divergence_monitor(
     nh = 200, nv = 200, filename = "Div2d_VirtualSource", xwidth = sizeX, restore_neutron=1,
@@ -1465,9 +1464,6 @@ COMPONENT SlitGuideEnd = Slit(
   AT (0, 0, 0.03) RELATIVE EndOfelement_1
 */
 /********************************************************************************************/
-COMPONENT george = Arm()
-AT (0, 0, 0.8) RELATIVE EndOfelement_1
-
 COMPONENT SlitGuideEnd = Slit(
     xwidth = slitwidth, yheight = slitheight)
   AT (0, 0,37.2-1.6) RELATIVE Origin

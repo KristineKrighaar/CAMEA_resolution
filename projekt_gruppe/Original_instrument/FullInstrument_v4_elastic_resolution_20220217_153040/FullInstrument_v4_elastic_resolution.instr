@@ -1466,7 +1466,7 @@ COMPONENT SlitGuideEnd = Slit(
 */
 /********************************************************************************************/
 COMPONENT george = Arm()
-AT (0, 0, 0.8) RELATIVE EndOfelement_1
+AT (0, 0, 2) RELATIVE EndOfelement_1
 
 COMPONENT SlitGuideEnd = Slit(
     xwidth = slitwidth, yheight = slitheight)

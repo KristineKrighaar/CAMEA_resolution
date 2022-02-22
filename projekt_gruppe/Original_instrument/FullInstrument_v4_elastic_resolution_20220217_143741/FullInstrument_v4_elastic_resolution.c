@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v4_elastic_resolution.instr (PSI_CAMEA)
- * Date:       Thu Feb 17 15:34:11 2022
+ * Date:       Tue Feb 22 12:33:31 2022
  * File:       FullInstrument_v4_elastic_resolution.c
  * CFLAGS=
  */
@@ -6003,12 +6003,12 @@ struct instrument_logic_struct {
 struct _instrument_struct {
   char   _name[256]; /* the name of this instrument e.g. 'PSI_CAMEA' */
 /* Counters per component instance */
-  double counter_AbsorbProp[110]; /* absorbed events in PROP routines */
-  double counter_N[110], counter_P[110], counter_P2[110]; /* event counters after each component instance */
-  _class_particle _trajectory[110]; /* current trajectory for STORE/RESTORE */
+  double counter_AbsorbProp[109]; /* absorbed events in PROP routines */
+  double counter_N[109], counter_P[109], counter_P2[109]; /* event counters after each component instance */
+  _class_particle _trajectory[109]; /* current trajectory for STORE/RESTORE */
 /* Components position table (absolute and relative coords) */
-  Coords _position_relative[110]; /* positions of all components */
-  Coords _position_absolute[110];
+  Coords _position_relative[109]; /* positions of all components */
+  Coords _position_absolute[109];
   _class_instrument_parameters _parameters; /* instrument parameters */
   struct instrument_logic_struct logic; /* instrument logic */
 } _instrument_var;
@@ -13354,10 +13354,7 @@ _class_Elliptic_guide_gravity _elliptical_guide_gravity1_var;
 _class_Arm _EndOfelement_1_var;
 #pragma acc declare create ( _EndOfelement_1_var )
 
-_class_Arm _george_var;
-#pragma acc declare create ( _george_var )
-
-/* component SlitGuideEnd=Slit() [14] DECLARE */
+/* component SlitGuideEnd=Slit() [13] DECLARE */
 /* Parameter definition for component type 'Slit' */
 struct _struct_Slit_parameters {
   /* Component type 'Slit' setting parameters */
@@ -13388,7 +13385,7 @@ typedef struct _struct_Slit _class_Slit;
 _class_Slit _SlitGuideEnd_var;
 #pragma acc declare create ( _SlitGuideEnd_var )
 
-/* component MonoFLat=Monochromator_curved() [15] DECLARE */
+/* component MonoFLat=Monochromator_curved() [14] DECLARE */
 /* Parameter definition for component type 'Monochromator_curved' */
 struct _struct_Monochromator_curved_parameters {
   /* Component type 'Monochromator_curved' setting parameters */
@@ -13454,7 +13451,7 @@ _class_Arm _A2_var;
 _class_Slit _slit_var;
 #pragma acc declare create ( _slit_var )
 
-/* component SlitMonitor=PSD_monitor() [19] DECLARE */
+/* component SlitMonitor=PSD_monitor() [18] DECLARE */
 /* Parameter definition for component type 'PSD_monitor' */
 struct _struct_PSD_monitor_parameters {
   /* Component type 'PSD_monitor' setting parameters */
@@ -13523,7 +13520,7 @@ _class_Arm _a48_var;
 _class_Arm _AMidt_var;
 #pragma acc declare create ( _AMidt_var )
 
-/* component VanSample=Incoherent() [30] DECLARE */
+/* component VanSample=Incoherent() [29] DECLARE */
 /* Parameter definition for component type 'Incoherent' */
 struct _struct_Incoherent_parameters {
   /* Component type 'Incoherent' setting parameters */
@@ -13576,7 +13573,7 @@ typedef struct _struct_Incoherent _class_Incoherent;
 _class_Incoherent _VanSample_var;
 #pragma acc declare create ( _VanSample_var )
 
-/* component sample=Phonon_simple() [31] DECLARE */
+/* component sample=Phonon_simple() [30] DECLARE */
 /* Parameter definition for component type 'Phonon_simple' */
 struct _struct_Phonon_simple_parameters {
   /* Component type 'Phonon_simple' setting parameters */
@@ -13625,7 +13622,7 @@ typedef struct _struct_Phonon_simple _class_Phonon_simple;
 _class_Phonon_simple _sample_var;
 #pragma acc declare create ( _sample_var )
 
-/* component powder1=Powder1() [32] DECLARE */
+/* component powder1=Powder1() [31] DECLARE */
 /* Parameter definition for component type 'Powder1' */
 struct _struct_Powder1_parameters {
   /* Component type 'Powder1' setting parameters */
@@ -13667,7 +13664,7 @@ typedef struct _struct_Powder1 _class_Powder1;
 _class_Powder1 _powder1_var;
 #pragma acc declare create ( _powder1_var )
 
-/* component res_sample=Res_sample() [33] DECLARE */
+/* component res_sample=Res_sample() [32] DECLARE */
 /* Parameter definition for component type 'Res_sample' */
 struct _struct_Res_sample_parameters {
   /* Component type 'Res_sample' setting parameters */
@@ -13709,7 +13706,7 @@ typedef struct _struct_Res_sample _class_Res_sample;
 _class_Res_sample _res_sample_var;
 #pragma acc declare create ( _res_sample_var )
 
-/* component e_monitor_sample=E_monitor() [34] DECLARE */
+/* component e_monitor_sample=E_monitor() [33] DECLARE */
 /* Parameter definition for component type 'E_monitor' */
 struct _struct_E_monitor_parameters {
   /* Component type 'E_monitor' setting parameters */
@@ -13758,7 +13755,7 @@ _class_PSD_monitor _BackEndMonitor_var;
 _class_Slit _slitBackEnd_var;
 #pragma acc declare create ( _slitBackEnd_var )
 
-/* component BeFilter=PowderN() [37] DECLARE */
+/* component BeFilter=PowderN() [36] DECLARE */
 /* Parameter definition for component type 'PowderN' */
 struct _struct_PowderN_parameters {
   /* Component type 'PowderN' setting parameters */
@@ -13817,7 +13814,7 @@ typedef struct _struct_PowderN _class_PowderN;
 _class_PowderN _BeFilter_var;
 #pragma acc declare create ( _BeFilter_var )
 
-/* component an111=Monochromator_flat() [38] DECLARE */
+/* component an111=Monochromator_flat() [37] DECLARE */
 /* Parameter definition for component type 'Monochromator_flat' */
 struct _struct_Monochromator_flat_parameters {
   /* Component type 'Monochromator_flat' setting parameters */
@@ -13977,7 +13974,7 @@ _class_Monochromator_flat _an185_var;
 _class_Arm _arm_res_mon_edge_var;
 #pragma acc declare create ( _arm_res_mon_edge_var )
 
-/* component res_monitor_edge_0=Res_monitor() [79] DECLARE */
+/* component res_monitor_edge_0=Res_monitor() [78] DECLARE */
 /* Parameter definition for component type 'Res_monitor' */
 struct _struct_Res_monitor_parameters {
   /* Component type 'Res_monitor' setting parameters */
@@ -14044,7 +14041,7 @@ _class_Res_monitor _res_monitor_edge_6_var;
 _class_Res_monitor _res_monitor_edge_7_var;
 #pragma acc declare create ( _res_monitor_edge_7_var )
 
-/* component psd_tube1_1_1=PSD_Detector() [87] DECLARE */
+/* component psd_tube1_1_1=PSD_Detector() [86] DECLARE */
 /* Parameter definition for component type 'PSD_Detector' */
 struct _struct_PSD_Detector_parameters {
   /* Component type 'PSD_Detector' setting parameters */
@@ -14186,301 +14183,595 @@ _class_PSD_Detector _psd_tube1_2_5_var;
 _class_PSD_Detector _psd_tube1_2_6_var;
 #pragma acc declare create ( _psd_tube1_2_6_var )
 
-int mcNUMCOMP = 108;
+int mcNUMCOMP = 107;
 
 /* User declarations from instrument definition. Can define functions. */
+
 double slitheight=0.50;
+
 double guide_start=1.5411;
+
 double smallaxis_x_factor5=0.001019;
+
 double smallaxis_y_factor5=0.00193;
+
 double startx5=0.034973;
+
 double starty5=0.11782;
+
 double smallaxis_x_factor3=0.0012272;
+
 double smallaxis_y_factor3=0.11055;
+
 double startx3=0.070026;
+
 double starty3=0.14691;
+
 double lengthfrac2=0.35765;
+
 double smallaxis_x_factor1=0.16453;
+
 double smallaxis_y_factor1=0.093264;
+
 double startx1=0.051571;
+
 double starty1=0.14841;
+
 double length1=13.2556;
+
 double sizeX=0.03;
+
 double sizeY=0.05;
+
 double divreq_x=2;
+
 double divreq_y=2;
+
 double sample_dist=0.03;
+
 double mod_x=0.08;
+
 double mod_y=0.135;
+
 double minimalist_factor=1;
+
 double Mod_sample=35.6;
+
 double closest_element=1.5;
+
 double length4=0.13;
+
 double length5=4.6;
+
 double minlength1=6;
+
 double minlength3=1;
+
 double minlength5=1;
+
 double R05=0.99;
+
 double Qc5=0.0217;
+
 double alpha5=6.07;
+
 double m5=3.5;
+
 double W5=0.003;
+
 double max_smallaxis_x5=0.25;
+
 double max_smallaxis_y5=0.25;
+
 double R03=0.99;
+
 double Qc3=0.0217;
+
 double alpha3=6.07;
+
 double m3=3.5;
+
 double W3=0.003;
+
 double max_smallaxis_x3=0.25;
+
 double max_smallaxis_y3=0.25;
+
 double R02=0.99;
+
 double Qc2=0.0217;
+
 double alpha2=6.07;
+
 double m2=6;
+
 double W2=0.003;
+
 double channels2=1;
+
 double R01=0.99;
+
 double Qc1=0.0217;
+
 double alpha1=6.07;
+
 double m1=3.5;
+
 double W1=0.003;
+
 double max_smallaxis_x1=0.25;
+
 double max_smallaxis_y1=0.25;
+
 double WaveMin=1;
+
 double WaveMax=10;
+
 /********************************************************************************************/
+
 double thetaA1;
+
 double thetaA2;
+
 double R_mono;
+
 double lmin;
+
 double lmax;
+
 /********************************************************************************************/
+
 double u;
+
 double Lambda0;
+
 double dLambda;
+
 double var_divreq_x;
+
 double var_divreq_y;
 
+
+
 double startxpoint[8][3][3];
+
 double startypoint[8][3][3];
+
 double startXdirec[8][3];
+
 double startYdirec[8][3];
+
 double startXposition[8][3];
+
 double startYposition[8][3];
+
 double dist;
+
 double position;
+
 double focus_e;
+
 double elength;
+
 double width;
+
 double height;
+
 double curve_small_radius2;
+
 double curveXcenter2[3];
+
 double DeltaA2;
+
 double DeltaB2;
+
 double sinrot3;
+
 double cosrot3;
+
 double rot_factor_g2;
+
 double X1[5];
+
 double X2[5];
+
 double Z1[5];
+
 double Z2[5];
+
 double a[5];
+
 double b[5];
+
 double tmp_double;
+
 double dx_circ;
+
 double dy_circ;
+
 double dr_circ;
+
 double D_circ;
+
 double x1_circ;
+
 double x2_circ;
+
 double y1_circ;
+
 double y2_circ;
+
 double sign_dy;
+
 double k_circ;
+
 double x_solution[2];
+
 double y_solution[2];
+
 double smallaxis_x5;
+
 double smallaxis_y5;
+
 double Linx5;
+
 double Liny5;
+
 double Loutx5;
+
 double Louty5;
+
 double tmp_k;
+
 double tmp_L1;
+
 double tmp_L2;
+
 double tmp_c;
+
 double tmp_b;
+
 double tmp_w1;
+
 double tmp_w2;
+
 double tmp_L;
+
 double endx5;
+
 double endy5;
+
 double endPoint5;
+
 double startx4;
+
 double starty4;
+
 double endx4;
+
 double endy4;
+
 double endPoint4;
+
 double smallaxis_x3;
+
 double smallaxis_y3;
+
 double Linx3;
+
 double Liny3;
+
 double Loutx3;
+
 double Louty3;
+
 double endx3;
+
 double endy3;
+
 double length3;
+
 double minlengthneeded;
+
 double tmp_length;
+
 double endPoint3;
+
 double startx2;
+
 double starty2;
+
 double endx2;
+
 double endy2;
+
 double curve_radius2;
+
 double rot2;
+
 double var_divreq_x_protected;
+
 double var_divreq_y_protected;
+
 double length2;
+
 double endPoint2;
+
 double smallaxis_x1;
+
 double smallaxis_y1;
+
 double Linx1;
+
 double Liny1;
+
 double Loutx1;
+
 double Louty1;
+
 double endx1;
+
 double endy1;
+
 double endPoint1;
+
 double rot_factor_g2;
+
 int flag;
+
 int i;
+
 int part;
+
 int n_check;
+
 int los_logic;
+
 int n1;
+
 int n2;
+
 int line;
+
 int los_tmp[5];
+
 int n_check;
+
 int los_logic;
+
 int los_check;
+
 int ii;
+
 int los_logic_single[7][8];
+
 FILE *fp;
 
+
+
 // Filter parameters 
+
 double OUTFILTER_THICK;
 
+
+
 // Analyser material parameters
+
 double ana_mosaic_h;
+
 double ana_mosaic_v;
+
 double ana_q = 1.87325;
+
 double ana_r0 = 0.8; 
+
 double DA;    // d-spacing analyser
+
 //Analyser geometrical parameters 
+
 double ana_l[9];
+
 //double ana_w=0.01;
 
+
+
 // Declarations for 'Coarse Collimator' at the PSD detector surface 
+
 int EntrySlit;
+
 int ExitSlit;
+
 int AnaBlade;
+
 double BladeThickness = 0.0001;// detector coll after 2006, from drawings
+
 double WindowSize = 0.025;
+
 double BladeLength = 0.179;// detector coll after 2006, from drawings
+
 double BladeHeight = 0.272;// detector coll after 2006, from drawings
+
 double FirstWindowSizeL;
+
 double FirstWindowSizeR;
+
 double deltaL;
+
 int coarse;
 
+
+
 // Analyzer positions
+
 double z_an1[8];
+
 double y_an1[8];
+
 double thet_an1[8];
 
+
+
 double z_an2[8];
+
 double y_an2[8];
+
 double thet_an2[8];
 
+
+
 double z_an3[8];
+
 double y_an3[8];
+
 double thet_an3[8];
 
+
+
 double pixelstart[8];
+
 double pixelstop[8];
 
+
+
 double z_an4[8];
+
 double y_an4[8];
+
 double thet_an4[8];
 
+
+
 double z_an5[8];
+
 double y_an5[8];
+
 double thet_an5[8];
 
+
+
 double z_an6[8];
+
 double y_an6[8];
+
 double thet_an6[8];
 
+
+
 double z_an7[8];
+
 double y_an7[8];
+
 double thet_an7[8];
 
+
+
 double z_an8[8];
+
 double y_an8[8];
+
 double thet_an8[8];
 
+
+
 // Detector parameters 
+
 double ang_1[8];
+
 double ang_2[8];
+
 double detx_1[8];
+
 double detz_1[8];
+
 double detx_2[8];
+
 double detz_2[8];
+
 double dety_1;
+
 double dety_2;
+
 double det_cen;
+
 int i;
 
+
+
 double A3_val;
+
 double A4_val;
+
 double sourceDivergence;
 
+
+
 double ANA_MOS_H=60;
+
 double ANA_MOS_V=60;
+
 double AW1=0.012;
+
 double AW2=0.012;
+
 double AW3=0.0125;
+
 double AW4=0.013;
+
 double AW5=0.0135;
+
 double AW6=0.014;
+
 double AW7=0.015;
+
 double AW8=0.016;
+
 double RADCOL_height=0.2;
+
 double RADCOL_length=0.3;
+
 double RADCOL_chan=20;
+
 double RADCOL_radius=0.55;
+
 double RADCOL_foilthick=0.0003;
+
 double RADCOL_thetamin=-5;
+
 double RADCOL_thetamax=5;
+
 int RADCOL_flag=1;
+
 int OUTFILTER=1;
 
+
+
 double DET_cen=1.2;
+
 double DET_rad=0.0063;
+
 double DET_len=1.0;
+
 double ana_l_add=0;
 
+
+
 int REP=1;
+
 int VIRTUALOUT=0;
+
 int VIRTUALIN=0;
+
 int verbose=0;
 
 
+
+
+
 double RV_mono;
+
 double RH_mono;
+
+
 
 
 #undef compcurname
@@ -15106,47 +15397,13 @@ int _EndOfelement_1_setpos(void)
   return(0);
 } /* _EndOfelement_1_setpos */
 
-/* component george=Arm() SETTING, POSITION/ROTATION */
-int _george_setpos(void)
-{ /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_george_setpos] component george=Arm() SETTING [Arm:0]");
-  stracpy(_george_var._name, "george", 16384);
-  stracpy(_george_var._type, "Arm", 16384);
-  _george_var._index=13;
-  /* component george=Arm() AT ROTATED */
-  {
-    Coords tc1, tc2;
-    Rotation tr1;
-    rot_set_rotation(tr1,
-      (0.0)*DEG2RAD, (0.0)*DEG2RAD, (0.0)*DEG2RAD);
-    rot_mul(tr1, _EndOfelement_1_var._rotation_absolute, _george_var._rotation_absolute);
-    rot_transpose(_EndOfelement_1_var._rotation_absolute, tr1);
-    rot_mul(_george_var._rotation_absolute, tr1, _george_var._rotation_relative);
-    _george_var._rotation_is_identity =  rot_test_identity(_george_var._rotation_relative);
-    tc1 = coords_set(
-      0, 0, 0.8);
-    rot_transpose(_EndOfelement_1_var._rotation_absolute, tr1);
-    tc2 = rot_apply(tr1, tc1);
-    _george_var._position_absolute = coords_add(_EndOfelement_1_var._position_absolute, tc2);
-    tc1 = coords_sub(_EndOfelement_1_var._position_absolute, _george_var._position_absolute);
-    _george_var._position_relative = rot_apply(_george_var._rotation_absolute, tc1);
-  } /* george=Arm() AT ROTATED */
-  DEBUG_COMPONENT("george", _george_var._position_absolute, _george_var._rotation_absolute);
-  instrument->_position_absolute[13] = _george_var._position_absolute;
-  instrument->_position_relative[13] = _george_var._position_relative;
-    _george_var._position_relative_is_zero =  coords_test_zero(_george_var._position_relative);
-  instrument->counter_N[13]  = instrument->counter_P[13] = instrument->counter_P2[13] = 0;
-  instrument->counter_AbsorbProp[13]= 0;
-  return(0);
-} /* _george_setpos */
-
 /* component SlitGuideEnd=Slit() SETTING, POSITION/ROTATION */
 int _SlitGuideEnd_setpos(void)
 { /* sets initial component parameters, position and rotation */
   SIG_MESSAGE("[_SlitGuideEnd_setpos] component SlitGuideEnd=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
   stracpy(_SlitGuideEnd_var._name, "SlitGuideEnd", 16384);
   stracpy(_SlitGuideEnd_var._type, "Slit", 16384);
-  _SlitGuideEnd_var._index=14;
+  _SlitGuideEnd_var._index=13;
   _SlitGuideEnd_var._parameters.xmin = 0;
   _SlitGuideEnd_var._parameters.xmax = 0;
   _SlitGuideEnd_var._parameters.ymin = 0;
@@ -15162,7 +15419,7 @@ int _SlitGuideEnd_setpos(void)
     rot_set_rotation(tr1,
       (0.0)*DEG2RAD, (0.0)*DEG2RAD, (0.0)*DEG2RAD);
     rot_mul(tr1, _Origin_var._rotation_absolute, _SlitGuideEnd_var._rotation_absolute);
-    rot_transpose(_george_var._rotation_absolute, tr1);
+    rot_transpose(_EndOfelement_1_var._rotation_absolute, tr1);
     rot_mul(_SlitGuideEnd_var._rotation_absolute, tr1, _SlitGuideEnd_var._rotation_relative);
     _SlitGuideEnd_var._rotation_is_identity =  rot_test_identity(_SlitGuideEnd_var._rotation_relative);
     tc1 = coords_set(
@@ -15170,15 +15427,15 @@ int _SlitGuideEnd_setpos(void)
     rot_transpose(_Origin_var._rotation_absolute, tr1);
     tc2 = rot_apply(tr1, tc1);
     _SlitGuideEnd_var._position_absolute = coords_add(_Origin_var._position_absolute, tc2);
-    tc1 = coords_sub(_george_var._position_absolute, _SlitGuideEnd_var._position_absolute);
+    tc1 = coords_sub(_EndOfelement_1_var._position_absolute, _SlitGuideEnd_var._position_absolute);
     _SlitGuideEnd_var._position_relative = rot_apply(_SlitGuideEnd_var._rotation_absolute, tc1);
   } /* SlitGuideEnd=Slit() AT ROTATED */
   DEBUG_COMPONENT("SlitGuideEnd", _SlitGuideEnd_var._position_absolute, _SlitGuideEnd_var._rotation_absolute);
-  instrument->_position_absolute[14] = _SlitGuideEnd_var._position_absolute;
-  instrument->_position_relative[14] = _SlitGuideEnd_var._position_relative;
+  instrument->_position_absolute[13] = _SlitGuideEnd_var._position_absolute;
+  instrument->_position_relative[13] = _SlitGuideEnd_var._position_relative;
     _SlitGuideEnd_var._position_relative_is_zero =  coords_test_zero(_SlitGuideEnd_var._position_relative);
-  instrument->counter_N[14]  = instrument->counter_P[14] = instrument->counter_P2[14] = 0;
-  instrument->counter_AbsorbProp[14]= 0;
+  instrument->counter_N[13]  = instrument->counter_P[13] = instrument->counter_P2[13] = 0;
+  instrument->counter_AbsorbProp[13]= 0;
   return(0);
 } /* _SlitGuideEnd_setpos */
 
@@ -15188,7 +15445,7 @@ int _MonoFLat_setpos(void)
   SIG_MESSAGE("[_MonoFLat_setpos] component MonoFLat=Monochromator_curved() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:130]");
   stracpy(_MonoFLat_var._name, "MonoFLat", 16384);
   stracpy(_MonoFLat_var._type, "Monochromator_curved", 16384);
-  _MonoFLat_var._index=15;
+  _MonoFLat_var._index=14;
   if("NULL" && strlen("NULL"))
     stracpy(_MonoFLat_var._parameters.reflect, "NULL" ? "NULL" : "", 16384);
   else 
@@ -15236,11 +15493,11 @@ int _MonoFLat_setpos(void)
     _MonoFLat_var._position_relative = rot_apply(_MonoFLat_var._rotation_absolute, tc1);
   } /* MonoFLat=Monochromator_curved() AT ROTATED */
   DEBUG_COMPONENT("MonoFLat", _MonoFLat_var._position_absolute, _MonoFLat_var._rotation_absolute);
-  instrument->_position_absolute[15] = _MonoFLat_var._position_absolute;
-  instrument->_position_relative[15] = _MonoFLat_var._position_relative;
+  instrument->_position_absolute[14] = _MonoFLat_var._position_absolute;
+  instrument->_position_relative[14] = _MonoFLat_var._position_relative;
     _MonoFLat_var._position_relative_is_zero =  coords_test_zero(_MonoFLat_var._position_relative);
-  instrument->counter_N[15]  = instrument->counter_P[15] = instrument->counter_P2[15] = 0;
-  instrument->counter_AbsorbProp[15]= 0;
+  instrument->counter_N[14]  = instrument->counter_P[14] = instrument->counter_P2[14] = 0;
+  instrument->counter_AbsorbProp[14]= 0;
   return(0);
 } /* _MonoFLat_setpos */
 
@@ -15250,7 +15507,7 @@ int _Mono_setpos(void)
   SIG_MESSAGE("[_Mono_setpos] component Mono=Monochromator_curved() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:130]");
   stracpy(_Mono_var._name, "Mono", 16384);
   stracpy(_Mono_var._type, "Monochromator_curved", 16384);
-  _Mono_var._index=16;
+  _Mono_var._index=15;
   if("NULL" && strlen("NULL"))
     stracpy(_Mono_var._parameters.reflect, "NULL" ? "NULL" : "", 16384);
   else 
@@ -15298,11 +15555,11 @@ int _Mono_setpos(void)
     _Mono_var._position_relative = rot_apply(_Mono_var._rotation_absolute, tc1);
   } /* Mono=Monochromator_curved() AT ROTATED */
   DEBUG_COMPONENT("Mono", _Mono_var._position_absolute, _Mono_var._rotation_absolute);
-  instrument->_position_absolute[16] = _Mono_var._position_absolute;
-  instrument->_position_relative[16] = _Mono_var._position_relative;
+  instrument->_position_absolute[15] = _Mono_var._position_absolute;
+  instrument->_position_relative[15] = _Mono_var._position_relative;
     _Mono_var._position_relative_is_zero =  coords_test_zero(_Mono_var._position_relative);
-  instrument->counter_N[16]  = instrument->counter_P[16] = instrument->counter_P2[16] = 0;
-  instrument->counter_AbsorbProp[16]= 0;
+  instrument->counter_N[15]  = instrument->counter_P[15] = instrument->counter_P2[15] = 0;
+  instrument->counter_AbsorbProp[15]= 0;
   return(0);
 } /* _Mono_setpos */
 
@@ -15312,7 +15569,7 @@ int _A2_setpos(void)
   SIG_MESSAGE("[_A2_setpos] component A2=Arm() SETTING [Arm:0]");
   stracpy(_A2_var._name, "A2", 16384);
   stracpy(_A2_var._type, "Arm", 16384);
-  _A2_var._index=17;
+  _A2_var._index=16;
   /* component A2=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15332,11 +15589,11 @@ int _A2_setpos(void)
     _A2_var._position_relative = rot_apply(_A2_var._rotation_absolute, tc1);
   } /* A2=Arm() AT ROTATED */
   DEBUG_COMPONENT("A2", _A2_var._position_absolute, _A2_var._rotation_absolute);
-  instrument->_position_absolute[17] = _A2_var._position_absolute;
-  instrument->_position_relative[17] = _A2_var._position_relative;
+  instrument->_position_absolute[16] = _A2_var._position_absolute;
+  instrument->_position_relative[16] = _A2_var._position_relative;
     _A2_var._position_relative_is_zero =  coords_test_zero(_A2_var._position_relative);
-  instrument->counter_N[17]  = instrument->counter_P[17] = instrument->counter_P2[17] = 0;
-  instrument->counter_AbsorbProp[17]= 0;
+  instrument->counter_N[16]  = instrument->counter_P[16] = instrument->counter_P2[16] = 0;
+  instrument->counter_AbsorbProp[16]= 0;
   return(0);
 } /* _A2_setpos */
 
@@ -15346,7 +15603,7 @@ int _slit_setpos(void)
   SIG_MESSAGE("[_slit_setpos] component slit=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
   stracpy(_slit_var._name, "slit", 16384);
   stracpy(_slit_var._type, "Slit", 16384);
-  _slit_var._index=18;
+  _slit_var._index=17;
   _slit_var._parameters.xmin = -0.005;
   _slit_var._parameters.xmax = 0.005;
   _slit_var._parameters.ymin = -0.005;
@@ -15374,11 +15631,11 @@ int _slit_setpos(void)
     _slit_var._position_relative = rot_apply(_slit_var._rotation_absolute, tc1);
   } /* slit=Slit() AT ROTATED */
   DEBUG_COMPONENT("slit", _slit_var._position_absolute, _slit_var._rotation_absolute);
-  instrument->_position_absolute[18] = _slit_var._position_absolute;
-  instrument->_position_relative[18] = _slit_var._position_relative;
+  instrument->_position_absolute[17] = _slit_var._position_absolute;
+  instrument->_position_relative[17] = _slit_var._position_relative;
     _slit_var._position_relative_is_zero =  coords_test_zero(_slit_var._position_relative);
-  instrument->counter_N[18]  = instrument->counter_P[18] = instrument->counter_P2[18] = 0;
-  instrument->counter_AbsorbProp[18]= 0;
+  instrument->counter_N[17]  = instrument->counter_P[17] = instrument->counter_P2[17] = 0;
+  instrument->counter_AbsorbProp[17]= 0;
   return(0);
 } /* _slit_setpos */
 
@@ -15388,7 +15645,7 @@ int _SlitMonitor_setpos(void)
   SIG_MESSAGE("[_SlitMonitor_setpos] component SlitMonitor=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
   stracpy(_SlitMonitor_var._name, "SlitMonitor", 16384);
   stracpy(_SlitMonitor_var._type, "PSD_monitor", 16384);
-  _SlitMonitor_var._index=19;
+  _SlitMonitor_var._index=18;
   _SlitMonitor_var._parameters.nx = 100;
   _SlitMonitor_var._parameters.ny = 100;
   if("SlitMonitor.dat" && strlen("SlitMonitor.dat"))
@@ -15424,11 +15681,11 @@ int _SlitMonitor_setpos(void)
     _SlitMonitor_var._position_relative = rot_apply(_SlitMonitor_var._rotation_absolute, tc1);
   } /* SlitMonitor=PSD_monitor() AT ROTATED */
   DEBUG_COMPONENT("SlitMonitor", _SlitMonitor_var._position_absolute, _SlitMonitor_var._rotation_absolute);
-  instrument->_position_absolute[19] = _SlitMonitor_var._position_absolute;
-  instrument->_position_relative[19] = _SlitMonitor_var._position_relative;
+  instrument->_position_absolute[18] = _SlitMonitor_var._position_absolute;
+  instrument->_position_relative[18] = _SlitMonitor_var._position_relative;
     _SlitMonitor_var._position_relative_is_zero =  coords_test_zero(_SlitMonitor_var._position_relative);
-  instrument->counter_N[19]  = instrument->counter_P[19] = instrument->counter_P2[19] = 0;
-  instrument->counter_AbsorbProp[19]= 0;
+  instrument->counter_N[18]  = instrument->counter_P[18] = instrument->counter_P2[18] = 0;
+  instrument->counter_AbsorbProp[18]= 0;
   return(0);
 } /* _SlitMonitor_setpos */
 
@@ -15438,7 +15695,7 @@ int _SamplePos_setpos(void)
   SIG_MESSAGE("[_SamplePos_setpos] component SamplePos=Arm() SETTING [Arm:0]");
   stracpy(_SamplePos_var._name, "SamplePos", 16384);
   stracpy(_SamplePos_var._type, "Arm", 16384);
-  _SamplePos_var._index=20;
+  _SamplePos_var._index=19;
   /* component SamplePos=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15458,11 +15715,11 @@ int _SamplePos_setpos(void)
     _SamplePos_var._position_relative = rot_apply(_SamplePos_var._rotation_absolute, tc1);
   } /* SamplePos=Arm() AT ROTATED */
   DEBUG_COMPONENT("SamplePos", _SamplePos_var._position_absolute, _SamplePos_var._rotation_absolute);
-  instrument->_position_absolute[20] = _SamplePos_var._position_absolute;
-  instrument->_position_relative[20] = _SamplePos_var._position_relative;
+  instrument->_position_absolute[19] = _SamplePos_var._position_absolute;
+  instrument->_position_relative[19] = _SamplePos_var._position_relative;
     _SamplePos_var._position_relative_is_zero =  coords_test_zero(_SamplePos_var._position_relative);
-  instrument->counter_N[20]  = instrument->counter_P[20] = instrument->counter_P2[20] = 0;
-  instrument->counter_AbsorbProp[20]= 0;
+  instrument->counter_N[19]  = instrument->counter_P[19] = instrument->counter_P2[19] = 0;
+  instrument->counter_AbsorbProp[19]= 0;
   return(0);
 } /* _SamplePos_setpos */
 
@@ -15472,7 +15729,7 @@ int _a41_setpos(void)
   SIG_MESSAGE("[_a41_setpos] component a41=Arm() SETTING [Arm:0]");
   stracpy(_a41_var._name, "a41", 16384);
   stracpy(_a41_var._type, "Arm", 16384);
-  _a41_var._index=21;
+  _a41_var._index=20;
   /* component a41=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15492,11 +15749,11 @@ int _a41_setpos(void)
     _a41_var._position_relative = rot_apply(_a41_var._rotation_absolute, tc1);
   } /* a41=Arm() AT ROTATED */
   DEBUG_COMPONENT("a41", _a41_var._position_absolute, _a41_var._rotation_absolute);
-  instrument->_position_absolute[21] = _a41_var._position_absolute;
-  instrument->_position_relative[21] = _a41_var._position_relative;
+  instrument->_position_absolute[20] = _a41_var._position_absolute;
+  instrument->_position_relative[20] = _a41_var._position_relative;
     _a41_var._position_relative_is_zero =  coords_test_zero(_a41_var._position_relative);
-  instrument->counter_N[21]  = instrument->counter_P[21] = instrument->counter_P2[21] = 0;
-  instrument->counter_AbsorbProp[21]= 0;
+  instrument->counter_N[20]  = instrument->counter_P[20] = instrument->counter_P2[20] = 0;
+  instrument->counter_AbsorbProp[20]= 0;
   return(0);
 } /* _a41_setpos */
 
@@ -15506,7 +15763,7 @@ int _a42_setpos(void)
   SIG_MESSAGE("[_a42_setpos] component a42=Arm() SETTING [Arm:0]");
   stracpy(_a42_var._name, "a42", 16384);
   stracpy(_a42_var._type, "Arm", 16384);
-  _a42_var._index=22;
+  _a42_var._index=21;
   /* component a42=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15526,11 +15783,11 @@ int _a42_setpos(void)
     _a42_var._position_relative = rot_apply(_a42_var._rotation_absolute, tc1);
   } /* a42=Arm() AT ROTATED */
   DEBUG_COMPONENT("a42", _a42_var._position_absolute, _a42_var._rotation_absolute);
-  instrument->_position_absolute[22] = _a42_var._position_absolute;
-  instrument->_position_relative[22] = _a42_var._position_relative;
+  instrument->_position_absolute[21] = _a42_var._position_absolute;
+  instrument->_position_relative[21] = _a42_var._position_relative;
     _a42_var._position_relative_is_zero =  coords_test_zero(_a42_var._position_relative);
-  instrument->counter_N[22]  = instrument->counter_P[22] = instrument->counter_P2[22] = 0;
-  instrument->counter_AbsorbProp[22]= 0;
+  instrument->counter_N[21]  = instrument->counter_P[21] = instrument->counter_P2[21] = 0;
+  instrument->counter_AbsorbProp[21]= 0;
   return(0);
 } /* _a42_setpos */
 
@@ -15540,7 +15797,7 @@ int _a43_setpos(void)
   SIG_MESSAGE("[_a43_setpos] component a43=Arm() SETTING [Arm:0]");
   stracpy(_a43_var._name, "a43", 16384);
   stracpy(_a43_var._type, "Arm", 16384);
-  _a43_var._index=23;
+  _a43_var._index=22;
   /* component a43=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15560,11 +15817,11 @@ int _a43_setpos(void)
     _a43_var._position_relative = rot_apply(_a43_var._rotation_absolute, tc1);
   } /* a43=Arm() AT ROTATED */
   DEBUG_COMPONENT("a43", _a43_var._position_absolute, _a43_var._rotation_absolute);
-  instrument->_position_absolute[23] = _a43_var._position_absolute;
-  instrument->_position_relative[23] = _a43_var._position_relative;
+  instrument->_position_absolute[22] = _a43_var._position_absolute;
+  instrument->_position_relative[22] = _a43_var._position_relative;
     _a43_var._position_relative_is_zero =  coords_test_zero(_a43_var._position_relative);
-  instrument->counter_N[23]  = instrument->counter_P[23] = instrument->counter_P2[23] = 0;
-  instrument->counter_AbsorbProp[23]= 0;
+  instrument->counter_N[22]  = instrument->counter_P[22] = instrument->counter_P2[22] = 0;
+  instrument->counter_AbsorbProp[22]= 0;
   return(0);
 } /* _a43_setpos */
 
@@ -15574,7 +15831,7 @@ int _a44_setpos(void)
   SIG_MESSAGE("[_a44_setpos] component a44=Arm() SETTING [Arm:0]");
   stracpy(_a44_var._name, "a44", 16384);
   stracpy(_a44_var._type, "Arm", 16384);
-  _a44_var._index=24;
+  _a44_var._index=23;
   /* component a44=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15594,11 +15851,11 @@ int _a44_setpos(void)
     _a44_var._position_relative = rot_apply(_a44_var._rotation_absolute, tc1);
   } /* a44=Arm() AT ROTATED */
   DEBUG_COMPONENT("a44", _a44_var._position_absolute, _a44_var._rotation_absolute);
-  instrument->_position_absolute[24] = _a44_var._position_absolute;
-  instrument->_position_relative[24] = _a44_var._position_relative;
+  instrument->_position_absolute[23] = _a44_var._position_absolute;
+  instrument->_position_relative[23] = _a44_var._position_relative;
     _a44_var._position_relative_is_zero =  coords_test_zero(_a44_var._position_relative);
-  instrument->counter_N[24]  = instrument->counter_P[24] = instrument->counter_P2[24] = 0;
-  instrument->counter_AbsorbProp[24]= 0;
+  instrument->counter_N[23]  = instrument->counter_P[23] = instrument->counter_P2[23] = 0;
+  instrument->counter_AbsorbProp[23]= 0;
   return(0);
 } /* _a44_setpos */
 
@@ -15608,7 +15865,7 @@ int _a45_setpos(void)
   SIG_MESSAGE("[_a45_setpos] component a45=Arm() SETTING [Arm:0]");
   stracpy(_a45_var._name, "a45", 16384);
   stracpy(_a45_var._type, "Arm", 16384);
-  _a45_var._index=25;
+  _a45_var._index=24;
   /* component a45=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15628,11 +15885,11 @@ int _a45_setpos(void)
     _a45_var._position_relative = rot_apply(_a45_var._rotation_absolute, tc1);
   } /* a45=Arm() AT ROTATED */
   DEBUG_COMPONENT("a45", _a45_var._position_absolute, _a45_var._rotation_absolute);
-  instrument->_position_absolute[25] = _a45_var._position_absolute;
-  instrument->_position_relative[25] = _a45_var._position_relative;
+  instrument->_position_absolute[24] = _a45_var._position_absolute;
+  instrument->_position_relative[24] = _a45_var._position_relative;
     _a45_var._position_relative_is_zero =  coords_test_zero(_a45_var._position_relative);
-  instrument->counter_N[25]  = instrument->counter_P[25] = instrument->counter_P2[25] = 0;
-  instrument->counter_AbsorbProp[25]= 0;
+  instrument->counter_N[24]  = instrument->counter_P[24] = instrument->counter_P2[24] = 0;
+  instrument->counter_AbsorbProp[24]= 0;
   return(0);
 } /* _a45_setpos */
 
@@ -15642,7 +15899,7 @@ int _a46_setpos(void)
   SIG_MESSAGE("[_a46_setpos] component a46=Arm() SETTING [Arm:0]");
   stracpy(_a46_var._name, "a46", 16384);
   stracpy(_a46_var._type, "Arm", 16384);
-  _a46_var._index=26;
+  _a46_var._index=25;
   /* component a46=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15662,11 +15919,11 @@ int _a46_setpos(void)
     _a46_var._position_relative = rot_apply(_a46_var._rotation_absolute, tc1);
   } /* a46=Arm() AT ROTATED */
   DEBUG_COMPONENT("a46", _a46_var._position_absolute, _a46_var._rotation_absolute);
-  instrument->_position_absolute[26] = _a46_var._position_absolute;
-  instrument->_position_relative[26] = _a46_var._position_relative;
+  instrument->_position_absolute[25] = _a46_var._position_absolute;
+  instrument->_position_relative[25] = _a46_var._position_relative;
     _a46_var._position_relative_is_zero =  coords_test_zero(_a46_var._position_relative);
-  instrument->counter_N[26]  = instrument->counter_P[26] = instrument->counter_P2[26] = 0;
-  instrument->counter_AbsorbProp[26]= 0;
+  instrument->counter_N[25]  = instrument->counter_P[25] = instrument->counter_P2[25] = 0;
+  instrument->counter_AbsorbProp[25]= 0;
   return(0);
 } /* _a46_setpos */
 
@@ -15676,7 +15933,7 @@ int _a47_setpos(void)
   SIG_MESSAGE("[_a47_setpos] component a47=Arm() SETTING [Arm:0]");
   stracpy(_a47_var._name, "a47", 16384);
   stracpy(_a47_var._type, "Arm", 16384);
-  _a47_var._index=27;
+  _a47_var._index=26;
   /* component a47=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15696,11 +15953,11 @@ int _a47_setpos(void)
     _a47_var._position_relative = rot_apply(_a47_var._rotation_absolute, tc1);
   } /* a47=Arm() AT ROTATED */
   DEBUG_COMPONENT("a47", _a47_var._position_absolute, _a47_var._rotation_absolute);
-  instrument->_position_absolute[27] = _a47_var._position_absolute;
-  instrument->_position_relative[27] = _a47_var._position_relative;
+  instrument->_position_absolute[26] = _a47_var._position_absolute;
+  instrument->_position_relative[26] = _a47_var._position_relative;
     _a47_var._position_relative_is_zero =  coords_test_zero(_a47_var._position_relative);
-  instrument->counter_N[27]  = instrument->counter_P[27] = instrument->counter_P2[27] = 0;
-  instrument->counter_AbsorbProp[27]= 0;
+  instrument->counter_N[26]  = instrument->counter_P[26] = instrument->counter_P2[26] = 0;
+  instrument->counter_AbsorbProp[26]= 0;
   return(0);
 } /* _a47_setpos */
 
@@ -15710,7 +15967,7 @@ int _a48_setpos(void)
   SIG_MESSAGE("[_a48_setpos] component a48=Arm() SETTING [Arm:0]");
   stracpy(_a48_var._name, "a48", 16384);
   stracpy(_a48_var._type, "Arm", 16384);
-  _a48_var._index=28;
+  _a48_var._index=27;
   /* component a48=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15730,11 +15987,11 @@ int _a48_setpos(void)
     _a48_var._position_relative = rot_apply(_a48_var._rotation_absolute, tc1);
   } /* a48=Arm() AT ROTATED */
   DEBUG_COMPONENT("a48", _a48_var._position_absolute, _a48_var._rotation_absolute);
-  instrument->_position_absolute[28] = _a48_var._position_absolute;
-  instrument->_position_relative[28] = _a48_var._position_relative;
+  instrument->_position_absolute[27] = _a48_var._position_absolute;
+  instrument->_position_relative[27] = _a48_var._position_relative;
     _a48_var._position_relative_is_zero =  coords_test_zero(_a48_var._position_relative);
-  instrument->counter_N[28]  = instrument->counter_P[28] = instrument->counter_P2[28] = 0;
-  instrument->counter_AbsorbProp[28]= 0;
+  instrument->counter_N[27]  = instrument->counter_P[27] = instrument->counter_P2[27] = 0;
+  instrument->counter_AbsorbProp[27]= 0;
   return(0);
 } /* _a48_setpos */
 
@@ -15744,7 +16001,7 @@ int _AMidt_setpos(void)
   SIG_MESSAGE("[_AMidt_setpos] component AMidt=Arm() SETTING [Arm:0]");
   stracpy(_AMidt_var._name, "AMidt", 16384);
   stracpy(_AMidt_var._type, "Arm", 16384);
-  _AMidt_var._index=29;
+  _AMidt_var._index=28;
   /* component AMidt=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -15764,11 +16021,11 @@ int _AMidt_setpos(void)
     _AMidt_var._position_relative = rot_apply(_AMidt_var._rotation_absolute, tc1);
   } /* AMidt=Arm() AT ROTATED */
   DEBUG_COMPONENT("AMidt", _AMidt_var._position_absolute, _AMidt_var._rotation_absolute);
-  instrument->_position_absolute[29] = _AMidt_var._position_absolute;
-  instrument->_position_relative[29] = _AMidt_var._position_relative;
+  instrument->_position_absolute[28] = _AMidt_var._position_absolute;
+  instrument->_position_relative[28] = _AMidt_var._position_relative;
     _AMidt_var._position_relative_is_zero =  coords_test_zero(_AMidt_var._position_relative);
-  instrument->counter_N[29]  = instrument->counter_P[29] = instrument->counter_P2[29] = 0;
-  instrument->counter_AbsorbProp[29]= 0;
+  instrument->counter_N[28]  = instrument->counter_P[28] = instrument->counter_P2[28] = 0;
+  instrument->counter_AbsorbProp[28]= 0;
   return(0);
 } /* _AMidt_setpos */
 
@@ -15778,7 +16035,7 @@ int _VanSample_setpos(void)
   SIG_MESSAGE("[_VanSample_setpos] component VanSample=Incoherent() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Incoherent.comp:152]");
   stracpy(_VanSample_var._name, "VanSample", 16384);
   stracpy(_VanSample_var._type, "Incoherent", 16384);
-  _VanSample_var._index=30;
+  _VanSample_var._index=29;
   _VanSample_var._parameters.geometry[0]='\0';
   _VanSample_var._parameters.radius = _instrument_var._parameters.sampleRadius;
   _VanSample_var._parameters.xwidth = 0;
@@ -15826,11 +16083,11 @@ int _VanSample_setpos(void)
     _VanSample_var._position_relative = rot_apply(_VanSample_var._rotation_absolute, tc1);
   } /* VanSample=Incoherent() AT ROTATED */
   DEBUG_COMPONENT("VanSample", _VanSample_var._position_absolute, _VanSample_var._rotation_absolute);
-  instrument->_position_absolute[30] = _VanSample_var._position_absolute;
-  instrument->_position_relative[30] = _VanSample_var._position_relative;
+  instrument->_position_absolute[29] = _VanSample_var._position_absolute;
+  instrument->_position_relative[29] = _VanSample_var._position_relative;
     _VanSample_var._position_relative_is_zero =  coords_test_zero(_VanSample_var._position_relative);
-  instrument->counter_N[30]  = instrument->counter_P[30] = instrument->counter_P2[30] = 0;
-  instrument->counter_AbsorbProp[30]= 0;
+  instrument->counter_N[29]  = instrument->counter_P[29] = instrument->counter_P2[29] = 0;
+  instrument->counter_AbsorbProp[29]= 0;
   return(0);
 } /* _VanSample_setpos */
 
@@ -15840,7 +16097,7 @@ int _sample_setpos(void)
   SIG_MESSAGE("[_sample_setpos] component sample=Phonon_simple() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Phonon_simple.comp:333]");
   stracpy(_sample_var._name, "sample", 16384);
   stracpy(_sample_var._type, "Phonon_simple", 16384);
-  _sample_var._index=31;
+  _sample_var._index=30;
   _sample_var._parameters.radius = _instrument_var._parameters.sampleRadius;
   _sample_var._parameters.yheight = _instrument_var._parameters.sampleHeight;
   _sample_var._parameters.sigma_abs = 0.17;
@@ -15882,11 +16139,11 @@ int _sample_setpos(void)
     _sample_var._position_relative = rot_apply(_sample_var._rotation_absolute, tc1);
   } /* sample=Phonon_simple() AT ROTATED */
   DEBUG_COMPONENT("sample", _sample_var._position_absolute, _sample_var._rotation_absolute);
-  instrument->_position_absolute[31] = _sample_var._position_absolute;
-  instrument->_position_relative[31] = _sample_var._position_relative;
+  instrument->_position_absolute[30] = _sample_var._position_absolute;
+  instrument->_position_relative[30] = _sample_var._position_relative;
     _sample_var._position_relative_is_zero =  coords_test_zero(_sample_var._position_relative);
-  instrument->counter_N[31]  = instrument->counter_P[31] = instrument->counter_P2[31] = 0;
-  instrument->counter_AbsorbProp[31]= 0;
+  instrument->counter_N[30]  = instrument->counter_P[30] = instrument->counter_P2[30] = 0;
+  instrument->counter_AbsorbProp[30]= 0;
   return(0);
 } /* _sample_setpos */
 
@@ -15896,7 +16153,7 @@ int _powder1_setpos(void)
   SIG_MESSAGE("[_powder1_setpos] component powder1=Powder1() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Powder1.comp:83]");
   stracpy(_powder1_var._name, "powder1", 16384);
   stracpy(_powder1_var._type, "Powder1", 16384);
-  _powder1_var._index=32;
+  _powder1_var._index=31;
   _powder1_var._parameters.radius = _instrument_var._parameters.sampleRadius;
   _powder1_var._parameters.yheight = _instrument_var._parameters.sampleHeight;
   _powder1_var._parameters.xwidth = 0;
@@ -15931,11 +16188,11 @@ int _powder1_setpos(void)
     _powder1_var._position_relative = rot_apply(_powder1_var._rotation_absolute, tc1);
   } /* powder1=Powder1() AT ROTATED */
   DEBUG_COMPONENT("powder1", _powder1_var._position_absolute, _powder1_var._rotation_absolute);
-  instrument->_position_absolute[32] = _powder1_var._position_absolute;
-  instrument->_position_relative[32] = _powder1_var._position_relative;
+  instrument->_position_absolute[31] = _powder1_var._position_absolute;
+  instrument->_position_relative[31] = _powder1_var._position_relative;
     _powder1_var._position_relative_is_zero =  coords_test_zero(_powder1_var._position_relative);
-  instrument->counter_N[32]  = instrument->counter_P[32] = instrument->counter_P2[32] = 0;
-  instrument->counter_AbsorbProp[32]= 0;
+  instrument->counter_N[31]  = instrument->counter_P[31] = instrument->counter_P2[31] = 0;
+  instrument->counter_AbsorbProp[31]= 0;
   return(0);
 } /* _powder1_setpos */
 
@@ -15945,7 +16202,7 @@ int _res_sample_setpos(void)
   SIG_MESSAGE("[_res_sample_setpos] component res_sample=Res_sample() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Res_sample.comp:108]");
   stracpy(_res_sample_var._name, "res_sample", 16384);
   stracpy(_res_sample_var._type, "Res_sample", 16384);
-  _res_sample_var._index=33;
+  _res_sample_var._index=32;
   _res_sample_var._parameters.thickness = 0;
   _res_sample_var._parameters.radius = _instrument_var._parameters.sampleRadius;
   _res_sample_var._parameters.focus_r = 0.05;
@@ -15983,11 +16240,11 @@ int _res_sample_setpos(void)
     _res_sample_var._position_relative = rot_apply(_res_sample_var._rotation_absolute, tc1);
   } /* res_sample=Res_sample() AT ROTATED */
   DEBUG_COMPONENT("res_sample", _res_sample_var._position_absolute, _res_sample_var._rotation_absolute);
-  instrument->_position_absolute[33] = _res_sample_var._position_absolute;
-  instrument->_position_relative[33] = _res_sample_var._position_relative;
+  instrument->_position_absolute[32] = _res_sample_var._position_absolute;
+  instrument->_position_relative[32] = _res_sample_var._position_relative;
     _res_sample_var._position_relative_is_zero =  coords_test_zero(_res_sample_var._position_relative);
-  instrument->counter_N[33]  = instrument->counter_P[33] = instrument->counter_P2[33] = 0;
-  instrument->counter_AbsorbProp[33]= 0;
+  instrument->counter_N[32]  = instrument->counter_P[32] = instrument->counter_P2[32] = 0;
+  instrument->counter_AbsorbProp[32]= 0;
   return(0);
 } /* _res_sample_setpos */
 
@@ -15997,7 +16254,7 @@ int _e_monitor_sample_setpos(void)
   SIG_MESSAGE("[_e_monitor_sample_setpos] component e_monitor_sample=E_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\E_monitor.comp:69]");
   stracpy(_e_monitor_sample_var._name, "e_monitor_sample", 16384);
   stracpy(_e_monitor_sample_var._type, "E_monitor", 16384);
-  _e_monitor_sample_var._index=34;
+  _e_monitor_sample_var._index=33;
   _e_monitor_sample_var._parameters.nE = 1000;
   if("Energy_sample_pos" && strlen("Energy_sample_pos"))
     stracpy(_e_monitor_sample_var._parameters.filename, "Energy_sample_pos" ? "Energy_sample_pos" : "", 16384);
@@ -16034,11 +16291,11 @@ int _e_monitor_sample_setpos(void)
     _e_monitor_sample_var._position_relative = rot_apply(_e_monitor_sample_var._rotation_absolute, tc1);
   } /* e_monitor_sample=E_monitor() AT ROTATED */
   DEBUG_COMPONENT("e_monitor_sample", _e_monitor_sample_var._position_absolute, _e_monitor_sample_var._rotation_absolute);
-  instrument->_position_absolute[34] = _e_monitor_sample_var._position_absolute;
-  instrument->_position_relative[34] = _e_monitor_sample_var._position_relative;
+  instrument->_position_absolute[33] = _e_monitor_sample_var._position_absolute;
+  instrument->_position_relative[33] = _e_monitor_sample_var._position_relative;
     _e_monitor_sample_var._position_relative_is_zero =  coords_test_zero(_e_monitor_sample_var._position_relative);
-  instrument->counter_N[34]  = instrument->counter_P[34] = instrument->counter_P2[34] = 0;
-  instrument->counter_AbsorbProp[34]= 0;
+  instrument->counter_N[33]  = instrument->counter_P[33] = instrument->counter_P2[33] = 0;
+  instrument->counter_AbsorbProp[33]= 0;
   return(0);
 } /* _e_monitor_sample_setpos */
 
@@ -16048,7 +16305,7 @@ int _BackEndMonitor_setpos(void)
   SIG_MESSAGE("[_BackEndMonitor_setpos] component BackEndMonitor=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
   stracpy(_BackEndMonitor_var._name, "BackEndMonitor", 16384);
   stracpy(_BackEndMonitor_var._type, "PSD_monitor", 16384);
-  _BackEndMonitor_var._index=35;
+  _BackEndMonitor_var._index=34;
   _BackEndMonitor_var._parameters.nx = 100;
   _BackEndMonitor_var._parameters.ny = 100;
   if("BackEndMonitor.dat" && strlen("BackEndMonitor.dat"))
@@ -16084,11 +16341,11 @@ int _BackEndMonitor_setpos(void)
     _BackEndMonitor_var._position_relative = rot_apply(_BackEndMonitor_var._rotation_absolute, tc1);
   } /* BackEndMonitor=PSD_monitor() AT ROTATED */
   DEBUG_COMPONENT("BackEndMonitor", _BackEndMonitor_var._position_absolute, _BackEndMonitor_var._rotation_absolute);
-  instrument->_position_absolute[35] = _BackEndMonitor_var._position_absolute;
-  instrument->_position_relative[35] = _BackEndMonitor_var._position_relative;
+  instrument->_position_absolute[34] = _BackEndMonitor_var._position_absolute;
+  instrument->_position_relative[34] = _BackEndMonitor_var._position_relative;
     _BackEndMonitor_var._position_relative_is_zero =  coords_test_zero(_BackEndMonitor_var._position_relative);
-  instrument->counter_N[35]  = instrument->counter_P[35] = instrument->counter_P2[35] = 0;
-  instrument->counter_AbsorbProp[35]= 0;
+  instrument->counter_N[34]  = instrument->counter_P[34] = instrument->counter_P2[34] = 0;
+  instrument->counter_AbsorbProp[34]= 0;
   return(0);
 } /* _BackEndMonitor_setpos */
 
@@ -16098,7 +16355,7 @@ int _slitBackEnd_setpos(void)
   SIG_MESSAGE("[_slitBackEnd_setpos] component slitBackEnd=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
   stracpy(_slitBackEnd_var._name, "slitBackEnd", 16384);
   stracpy(_slitBackEnd_var._type, "Slit", 16384);
-  _slitBackEnd_var._index=36;
+  _slitBackEnd_var._index=35;
   _slitBackEnd_var._parameters.xmin = -0.5;
   _slitBackEnd_var._parameters.xmax = 0.5;
   _slitBackEnd_var._parameters.ymin = -0.05;
@@ -16126,11 +16383,11 @@ int _slitBackEnd_setpos(void)
     _slitBackEnd_var._position_relative = rot_apply(_slitBackEnd_var._rotation_absolute, tc1);
   } /* slitBackEnd=Slit() AT ROTATED */
   DEBUG_COMPONENT("slitBackEnd", _slitBackEnd_var._position_absolute, _slitBackEnd_var._rotation_absolute);
-  instrument->_position_absolute[36] = _slitBackEnd_var._position_absolute;
-  instrument->_position_relative[36] = _slitBackEnd_var._position_relative;
+  instrument->_position_absolute[35] = _slitBackEnd_var._position_absolute;
+  instrument->_position_relative[35] = _slitBackEnd_var._position_relative;
     _slitBackEnd_var._position_relative_is_zero =  coords_test_zero(_slitBackEnd_var._position_relative);
-  instrument->counter_N[36]  = instrument->counter_P[36] = instrument->counter_P2[36] = 0;
-  instrument->counter_AbsorbProp[36]= 0;
+  instrument->counter_N[35]  = instrument->counter_P[35] = instrument->counter_P2[35] = 0;
+  instrument->counter_AbsorbProp[35]= 0;
   return(0);
 } /* _slitBackEnd_setpos */
 
@@ -16140,7 +16397,7 @@ int _BeFilter_setpos(void)
   SIG_MESSAGE("[_BeFilter_setpos] component BeFilter=PowderN() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\PowderN.comp:551]");
   stracpy(_BeFilter_var._name, "BeFilter", 16384);
   stracpy(_BeFilter_var._type, "PowderN", 16384);
-  _BeFilter_var._index=37;
+  _BeFilter_var._index=36;
   if("Be.laz" && strlen("Be.laz"))
     stracpy(_BeFilter_var._parameters.reflections, "Be.laz" ? "Be.laz" : "", 16384);
   else 
@@ -16204,11 +16461,11 @@ int _BeFilter_setpos(void)
     _BeFilter_var._position_relative = rot_apply(_BeFilter_var._rotation_absolute, tc1);
   } /* BeFilter=PowderN() AT ROTATED */
   DEBUG_COMPONENT("BeFilter", _BeFilter_var._position_absolute, _BeFilter_var._rotation_absolute);
-  instrument->_position_absolute[37] = _BeFilter_var._position_absolute;
-  instrument->_position_relative[37] = _BeFilter_var._position_relative;
+  instrument->_position_absolute[36] = _BeFilter_var._position_absolute;
+  instrument->_position_relative[36] = _BeFilter_var._position_relative;
     _BeFilter_var._position_relative_is_zero =  coords_test_zero(_BeFilter_var._position_relative);
-  instrument->counter_N[37]  = instrument->counter_P[37] = instrument->counter_P2[37] = 0;
-  instrument->counter_AbsorbProp[37]= 0;
+  instrument->counter_N[36]  = instrument->counter_P[36] = instrument->counter_P2[36] = 0;
+  instrument->counter_AbsorbProp[36]= 0;
   return(0);
 } /* _BeFilter_setpos */
 
@@ -16218,7 +16475,7 @@ int _an111_setpos(void)
   SIG_MESSAGE("[_an111_setpos] component an111=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an111_var._name, "an111", 16384);
   stracpy(_an111_var._type, "Monochromator_flat", 16384);
-  _an111_var._index=38;
+  _an111_var._index=37;
   _an111_var._parameters.zmin = - ana_l [ 1 ] / 2;
   _an111_var._parameters.zmax = ana_l [ 1 ] / 2;
   _an111_var._parameters.ymin = - AW1 / 2;
@@ -16251,11 +16508,11 @@ int _an111_setpos(void)
     _an111_var._position_relative = rot_apply(_an111_var._rotation_absolute, tc1);
   } /* an111=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an111", _an111_var._position_absolute, _an111_var._rotation_absolute);
-  instrument->_position_absolute[38] = _an111_var._position_absolute;
-  instrument->_position_relative[38] = _an111_var._position_relative;
+  instrument->_position_absolute[37] = _an111_var._position_absolute;
+  instrument->_position_relative[37] = _an111_var._position_relative;
     _an111_var._position_relative_is_zero =  coords_test_zero(_an111_var._position_relative);
-  instrument->counter_N[38]  = instrument->counter_P[38] = instrument->counter_P2[38] = 0;
-  instrument->counter_AbsorbProp[38]= 0;
+  instrument->counter_N[37]  = instrument->counter_P[37] = instrument->counter_P2[37] = 0;
+  instrument->counter_AbsorbProp[37]= 0;
   return(0);
 } /* _an111_setpos */
 
@@ -16265,7 +16522,7 @@ int _an112_setpos(void)
   SIG_MESSAGE("[_an112_setpos] component an112=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an112_var._name, "an112", 16384);
   stracpy(_an112_var._type, "Monochromator_flat", 16384);
-  _an112_var._index=39;
+  _an112_var._index=38;
   _an112_var._parameters.zmin = - ana_l [ 1 ] / 2;
   _an112_var._parameters.zmax = ana_l [ 1 ] / 2;
   _an112_var._parameters.ymin = - AW1 / 2;
@@ -16298,11 +16555,11 @@ int _an112_setpos(void)
     _an112_var._position_relative = rot_apply(_an112_var._rotation_absolute, tc1);
   } /* an112=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an112", _an112_var._position_absolute, _an112_var._rotation_absolute);
-  instrument->_position_absolute[39] = _an112_var._position_absolute;
-  instrument->_position_relative[39] = _an112_var._position_relative;
+  instrument->_position_absolute[38] = _an112_var._position_absolute;
+  instrument->_position_relative[38] = _an112_var._position_relative;
     _an112_var._position_relative_is_zero =  coords_test_zero(_an112_var._position_relative);
-  instrument->counter_N[39]  = instrument->counter_P[39] = instrument->counter_P2[39] = 0;
-  instrument->counter_AbsorbProp[39]= 0;
+  instrument->counter_N[38]  = instrument->counter_P[38] = instrument->counter_P2[38] = 0;
+  instrument->counter_AbsorbProp[38]= 0;
   return(0);
 } /* _an112_setpos */
 
@@ -16312,7 +16569,7 @@ int _an113_setpos(void)
   SIG_MESSAGE("[_an113_setpos] component an113=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an113_var._name, "an113", 16384);
   stracpy(_an113_var._type, "Monochromator_flat", 16384);
-  _an113_var._index=40;
+  _an113_var._index=39;
   _an113_var._parameters.zmin = - ana_l [ 1 ] / 2;
   _an113_var._parameters.zmax = ana_l [ 1 ] / 2;
   _an113_var._parameters.ymin = - AW1 / 2;
@@ -16345,11 +16602,11 @@ int _an113_setpos(void)
     _an113_var._position_relative = rot_apply(_an113_var._rotation_absolute, tc1);
   } /* an113=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an113", _an113_var._position_absolute, _an113_var._rotation_absolute);
-  instrument->_position_absolute[40] = _an113_var._position_absolute;
-  instrument->_position_relative[40] = _an113_var._position_relative;
+  instrument->_position_absolute[39] = _an113_var._position_absolute;
+  instrument->_position_relative[39] = _an113_var._position_relative;
     _an113_var._position_relative_is_zero =  coords_test_zero(_an113_var._position_relative);
-  instrument->counter_N[40]  = instrument->counter_P[40] = instrument->counter_P2[40] = 0;
-  instrument->counter_AbsorbProp[40]= 0;
+  instrument->counter_N[39]  = instrument->counter_P[39] = instrument->counter_P2[39] = 0;
+  instrument->counter_AbsorbProp[39]= 0;
   return(0);
 } /* _an113_setpos */
 
@@ -16359,7 +16616,7 @@ int _an114_setpos(void)
   SIG_MESSAGE("[_an114_setpos] component an114=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an114_var._name, "an114", 16384);
   stracpy(_an114_var._type, "Monochromator_flat", 16384);
-  _an114_var._index=41;
+  _an114_var._index=40;
   _an114_var._parameters.zmin = - ana_l [ 1 ] / 2;
   _an114_var._parameters.zmax = ana_l [ 1 ] / 2;
   _an114_var._parameters.ymin = - AW1 / 2;
@@ -16392,11 +16649,11 @@ int _an114_setpos(void)
     _an114_var._position_relative = rot_apply(_an114_var._rotation_absolute, tc1);
   } /* an114=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an114", _an114_var._position_absolute, _an114_var._rotation_absolute);
-  instrument->_position_absolute[41] = _an114_var._position_absolute;
-  instrument->_position_relative[41] = _an114_var._position_relative;
+  instrument->_position_absolute[40] = _an114_var._position_absolute;
+  instrument->_position_relative[40] = _an114_var._position_relative;
     _an114_var._position_relative_is_zero =  coords_test_zero(_an114_var._position_relative);
-  instrument->counter_N[41]  = instrument->counter_P[41] = instrument->counter_P2[41] = 0;
-  instrument->counter_AbsorbProp[41]= 0;
+  instrument->counter_N[40]  = instrument->counter_P[40] = instrument->counter_P2[40] = 0;
+  instrument->counter_AbsorbProp[40]= 0;
   return(0);
 } /* _an114_setpos */
 
@@ -16406,7 +16663,7 @@ int _an115_setpos(void)
   SIG_MESSAGE("[_an115_setpos] component an115=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an115_var._name, "an115", 16384);
   stracpy(_an115_var._type, "Monochromator_flat", 16384);
-  _an115_var._index=42;
+  _an115_var._index=41;
   _an115_var._parameters.zmin = - ana_l [ 1 ] / 2;
   _an115_var._parameters.zmax = ana_l [ 1 ] / 2;
   _an115_var._parameters.ymin = - AW1 / 2;
@@ -16439,11 +16696,11 @@ int _an115_setpos(void)
     _an115_var._position_relative = rot_apply(_an115_var._rotation_absolute, tc1);
   } /* an115=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an115", _an115_var._position_absolute, _an115_var._rotation_absolute);
-  instrument->_position_absolute[42] = _an115_var._position_absolute;
-  instrument->_position_relative[42] = _an115_var._position_relative;
+  instrument->_position_absolute[41] = _an115_var._position_absolute;
+  instrument->_position_relative[41] = _an115_var._position_relative;
     _an115_var._position_relative_is_zero =  coords_test_zero(_an115_var._position_relative);
-  instrument->counter_N[42]  = instrument->counter_P[42] = instrument->counter_P2[42] = 0;
-  instrument->counter_AbsorbProp[42]= 0;
+  instrument->counter_N[41]  = instrument->counter_P[41] = instrument->counter_P2[41] = 0;
+  instrument->counter_AbsorbProp[41]= 0;
   return(0);
 } /* _an115_setpos */
 
@@ -16453,7 +16710,7 @@ int _an121_setpos(void)
   SIG_MESSAGE("[_an121_setpos] component an121=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an121_var._name, "an121", 16384);
   stracpy(_an121_var._type, "Monochromator_flat", 16384);
-  _an121_var._index=43;
+  _an121_var._index=42;
   _an121_var._parameters.zmin = - ana_l [ 2 ] / 2;
   _an121_var._parameters.zmax = ana_l [ 2 ] / 2;
   _an121_var._parameters.ymin = - AW2 / 2;
@@ -16486,11 +16743,11 @@ int _an121_setpos(void)
     _an121_var._position_relative = rot_apply(_an121_var._rotation_absolute, tc1);
   } /* an121=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an121", _an121_var._position_absolute, _an121_var._rotation_absolute);
-  instrument->_position_absolute[43] = _an121_var._position_absolute;
-  instrument->_position_relative[43] = _an121_var._position_relative;
+  instrument->_position_absolute[42] = _an121_var._position_absolute;
+  instrument->_position_relative[42] = _an121_var._position_relative;
     _an121_var._position_relative_is_zero =  coords_test_zero(_an121_var._position_relative);
-  instrument->counter_N[43]  = instrument->counter_P[43] = instrument->counter_P2[43] = 0;
-  instrument->counter_AbsorbProp[43]= 0;
+  instrument->counter_N[42]  = instrument->counter_P[42] = instrument->counter_P2[42] = 0;
+  instrument->counter_AbsorbProp[42]= 0;
   return(0);
 } /* _an121_setpos */
 
@@ -16500,7 +16757,7 @@ int _an122_setpos(void)
   SIG_MESSAGE("[_an122_setpos] component an122=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an122_var._name, "an122", 16384);
   stracpy(_an122_var._type, "Monochromator_flat", 16384);
-  _an122_var._index=44;
+  _an122_var._index=43;
   _an122_var._parameters.zmin = - ana_l [ 2 ] / 2;
   _an122_var._parameters.zmax = ana_l [ 2 ] / 2;
   _an122_var._parameters.ymin = - AW2 / 2;
@@ -16533,11 +16790,11 @@ int _an122_setpos(void)
     _an122_var._position_relative = rot_apply(_an122_var._rotation_absolute, tc1);
   } /* an122=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an122", _an122_var._position_absolute, _an122_var._rotation_absolute);
-  instrument->_position_absolute[44] = _an122_var._position_absolute;
-  instrument->_position_relative[44] = _an122_var._position_relative;
+  instrument->_position_absolute[43] = _an122_var._position_absolute;
+  instrument->_position_relative[43] = _an122_var._position_relative;
     _an122_var._position_relative_is_zero =  coords_test_zero(_an122_var._position_relative);
-  instrument->counter_N[44]  = instrument->counter_P[44] = instrument->counter_P2[44] = 0;
-  instrument->counter_AbsorbProp[44]= 0;
+  instrument->counter_N[43]  = instrument->counter_P[43] = instrument->counter_P2[43] = 0;
+  instrument->counter_AbsorbProp[43]= 0;
   return(0);
 } /* _an122_setpos */
 
@@ -16547,7 +16804,7 @@ int _an123_setpos(void)
   SIG_MESSAGE("[_an123_setpos] component an123=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an123_var._name, "an123", 16384);
   stracpy(_an123_var._type, "Monochromator_flat", 16384);
-  _an123_var._index=45;
+  _an123_var._index=44;
   _an123_var._parameters.zmin = - ana_l [ 2 ] / 2;
   _an123_var._parameters.zmax = ana_l [ 2 ] / 2;
   _an123_var._parameters.ymin = - AW2 / 2;
@@ -16580,11 +16837,11 @@ int _an123_setpos(void)
     _an123_var._position_relative = rot_apply(_an123_var._rotation_absolute, tc1);
   } /* an123=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an123", _an123_var._position_absolute, _an123_var._rotation_absolute);
-  instrument->_position_absolute[45] = _an123_var._position_absolute;
-  instrument->_position_relative[45] = _an123_var._position_relative;
+  instrument->_position_absolute[44] = _an123_var._position_absolute;
+  instrument->_position_relative[44] = _an123_var._position_relative;
     _an123_var._position_relative_is_zero =  coords_test_zero(_an123_var._position_relative);
-  instrument->counter_N[45]  = instrument->counter_P[45] = instrument->counter_P2[45] = 0;
-  instrument->counter_AbsorbProp[45]= 0;
+  instrument->counter_N[44]  = instrument->counter_P[44] = instrument->counter_P2[44] = 0;
+  instrument->counter_AbsorbProp[44]= 0;
   return(0);
 } /* _an123_setpos */
 
@@ -16594,7 +16851,7 @@ int _an124_setpos(void)
   SIG_MESSAGE("[_an124_setpos] component an124=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an124_var._name, "an124", 16384);
   stracpy(_an124_var._type, "Monochromator_flat", 16384);
-  _an124_var._index=46;
+  _an124_var._index=45;
   _an124_var._parameters.zmin = - ana_l [ 2 ] / 2;
   _an124_var._parameters.zmax = ana_l [ 2 ] / 2;
   _an124_var._parameters.ymin = - AW2 / 2;
@@ -16627,11 +16884,11 @@ int _an124_setpos(void)
     _an124_var._position_relative = rot_apply(_an124_var._rotation_absolute, tc1);
   } /* an124=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an124", _an124_var._position_absolute, _an124_var._rotation_absolute);
-  instrument->_position_absolute[46] = _an124_var._position_absolute;
-  instrument->_position_relative[46] = _an124_var._position_relative;
+  instrument->_position_absolute[45] = _an124_var._position_absolute;
+  instrument->_position_relative[45] = _an124_var._position_relative;
     _an124_var._position_relative_is_zero =  coords_test_zero(_an124_var._position_relative);
-  instrument->counter_N[46]  = instrument->counter_P[46] = instrument->counter_P2[46] = 0;
-  instrument->counter_AbsorbProp[46]= 0;
+  instrument->counter_N[45]  = instrument->counter_P[45] = instrument->counter_P2[45] = 0;
+  instrument->counter_AbsorbProp[45]= 0;
   return(0);
 } /* _an124_setpos */
 
@@ -16641,7 +16898,7 @@ int _an125_setpos(void)
   SIG_MESSAGE("[_an125_setpos] component an125=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an125_var._name, "an125", 16384);
   stracpy(_an125_var._type, "Monochromator_flat", 16384);
-  _an125_var._index=47;
+  _an125_var._index=46;
   _an125_var._parameters.zmin = - ana_l [ 2 ] / 2;
   _an125_var._parameters.zmax = ana_l [ 2 ] / 2;
   _an125_var._parameters.ymin = - AW2 / 2;
@@ -16674,11 +16931,11 @@ int _an125_setpos(void)
     _an125_var._position_relative = rot_apply(_an125_var._rotation_absolute, tc1);
   } /* an125=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an125", _an125_var._position_absolute, _an125_var._rotation_absolute);
-  instrument->_position_absolute[47] = _an125_var._position_absolute;
-  instrument->_position_relative[47] = _an125_var._position_relative;
+  instrument->_position_absolute[46] = _an125_var._position_absolute;
+  instrument->_position_relative[46] = _an125_var._position_relative;
     _an125_var._position_relative_is_zero =  coords_test_zero(_an125_var._position_relative);
-  instrument->counter_N[47]  = instrument->counter_P[47] = instrument->counter_P2[47] = 0;
-  instrument->counter_AbsorbProp[47]= 0;
+  instrument->counter_N[46]  = instrument->counter_P[46] = instrument->counter_P2[46] = 0;
+  instrument->counter_AbsorbProp[46]= 0;
   return(0);
 } /* _an125_setpos */
 
@@ -16688,7 +16945,7 @@ int _an131_setpos(void)
   SIG_MESSAGE("[_an131_setpos] component an131=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an131_var._name, "an131", 16384);
   stracpy(_an131_var._type, "Monochromator_flat", 16384);
-  _an131_var._index=48;
+  _an131_var._index=47;
   _an131_var._parameters.zmin = - ana_l [ 3 ] / 2;
   _an131_var._parameters.zmax = ana_l [ 3 ] / 2;
   _an131_var._parameters.ymin = - AW3 / 2;
@@ -16721,11 +16978,11 @@ int _an131_setpos(void)
     _an131_var._position_relative = rot_apply(_an131_var._rotation_absolute, tc1);
   } /* an131=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an131", _an131_var._position_absolute, _an131_var._rotation_absolute);
-  instrument->_position_absolute[48] = _an131_var._position_absolute;
-  instrument->_position_relative[48] = _an131_var._position_relative;
+  instrument->_position_absolute[47] = _an131_var._position_absolute;
+  instrument->_position_relative[47] = _an131_var._position_relative;
     _an131_var._position_relative_is_zero =  coords_test_zero(_an131_var._position_relative);
-  instrument->counter_N[48]  = instrument->counter_P[48] = instrument->counter_P2[48] = 0;
-  instrument->counter_AbsorbProp[48]= 0;
+  instrument->counter_N[47]  = instrument->counter_P[47] = instrument->counter_P2[47] = 0;
+  instrument->counter_AbsorbProp[47]= 0;
   return(0);
 } /* _an131_setpos */
 
@@ -16735,7 +16992,7 @@ int _an132_setpos(void)
   SIG_MESSAGE("[_an132_setpos] component an132=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an132_var._name, "an132", 16384);
   stracpy(_an132_var._type, "Monochromator_flat", 16384);
-  _an132_var._index=49;
+  _an132_var._index=48;
   _an132_var._parameters.zmin = - ana_l [ 3 ] / 2;
   _an132_var._parameters.zmax = ana_l [ 3 ] / 2;
   _an132_var._parameters.ymin = - AW3 / 2;
@@ -16768,11 +17025,11 @@ int _an132_setpos(void)
     _an132_var._position_relative = rot_apply(_an132_var._rotation_absolute, tc1);
   } /* an132=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an132", _an132_var._position_absolute, _an132_var._rotation_absolute);
-  instrument->_position_absolute[49] = _an132_var._position_absolute;
-  instrument->_position_relative[49] = _an132_var._position_relative;
+  instrument->_position_absolute[48] = _an132_var._position_absolute;
+  instrument->_position_relative[48] = _an132_var._position_relative;
     _an132_var._position_relative_is_zero =  coords_test_zero(_an132_var._position_relative);
-  instrument->counter_N[49]  = instrument->counter_P[49] = instrument->counter_P2[49] = 0;
-  instrument->counter_AbsorbProp[49]= 0;
+  instrument->counter_N[48]  = instrument->counter_P[48] = instrument->counter_P2[48] = 0;
+  instrument->counter_AbsorbProp[48]= 0;
   return(0);
 } /* _an132_setpos */
 
@@ -16782,7 +17039,7 @@ int _an133_setpos(void)
   SIG_MESSAGE("[_an133_setpos] component an133=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an133_var._name, "an133", 16384);
   stracpy(_an133_var._type, "Monochromator_flat", 16384);
-  _an133_var._index=50;
+  _an133_var._index=49;
   _an133_var._parameters.zmin = - ana_l [ 3 ] / 2;
   _an133_var._parameters.zmax = ana_l [ 3 ] / 2;
   _an133_var._parameters.ymin = - AW3 / 2;
@@ -16815,11 +17072,11 @@ int _an133_setpos(void)
     _an133_var._position_relative = rot_apply(_an133_var._rotation_absolute, tc1);
   } /* an133=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an133", _an133_var._position_absolute, _an133_var._rotation_absolute);
-  instrument->_position_absolute[50] = _an133_var._position_absolute;
-  instrument->_position_relative[50] = _an133_var._position_relative;
+  instrument->_position_absolute[49] = _an133_var._position_absolute;
+  instrument->_position_relative[49] = _an133_var._position_relative;
     _an133_var._position_relative_is_zero =  coords_test_zero(_an133_var._position_relative);
-  instrument->counter_N[50]  = instrument->counter_P[50] = instrument->counter_P2[50] = 0;
-  instrument->counter_AbsorbProp[50]= 0;
+  instrument->counter_N[49]  = instrument->counter_P[49] = instrument->counter_P2[49] = 0;
+  instrument->counter_AbsorbProp[49]= 0;
   return(0);
 } /* _an133_setpos */
 
@@ -16829,7 +17086,7 @@ int _an134_setpos(void)
   SIG_MESSAGE("[_an134_setpos] component an134=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an134_var._name, "an134", 16384);
   stracpy(_an134_var._type, "Monochromator_flat", 16384);
-  _an134_var._index=51;
+  _an134_var._index=50;
   _an134_var._parameters.zmin = - ana_l [ 3 ] / 2;
   _an134_var._parameters.zmax = ana_l [ 3 ] / 2;
   _an134_var._parameters.ymin = - AW3 / 2;
@@ -16862,11 +17119,11 @@ int _an134_setpos(void)
     _an134_var._position_relative = rot_apply(_an134_var._rotation_absolute, tc1);
   } /* an134=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an134", _an134_var._position_absolute, _an134_var._rotation_absolute);
-  instrument->_position_absolute[51] = _an134_var._position_absolute;
-  instrument->_position_relative[51] = _an134_var._position_relative;
+  instrument->_position_absolute[50] = _an134_var._position_absolute;
+  instrument->_position_relative[50] = _an134_var._position_relative;
     _an134_var._position_relative_is_zero =  coords_test_zero(_an134_var._position_relative);
-  instrument->counter_N[51]  = instrument->counter_P[51] = instrument->counter_P2[51] = 0;
-  instrument->counter_AbsorbProp[51]= 0;
+  instrument->counter_N[50]  = instrument->counter_P[50] = instrument->counter_P2[50] = 0;
+  instrument->counter_AbsorbProp[50]= 0;
   return(0);
 } /* _an134_setpos */
 
@@ -16876,7 +17133,7 @@ int _an135_setpos(void)
   SIG_MESSAGE("[_an135_setpos] component an135=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an135_var._name, "an135", 16384);
   stracpy(_an135_var._type, "Monochromator_flat", 16384);
-  _an135_var._index=52;
+  _an135_var._index=51;
   _an135_var._parameters.zmin = - ana_l [ 3 ] / 2;
   _an135_var._parameters.zmax = ana_l [ 3 ] / 2;
   _an135_var._parameters.ymin = - AW3 / 2;
@@ -16909,11 +17166,11 @@ int _an135_setpos(void)
     _an135_var._position_relative = rot_apply(_an135_var._rotation_absolute, tc1);
   } /* an135=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an135", _an135_var._position_absolute, _an135_var._rotation_absolute);
-  instrument->_position_absolute[52] = _an135_var._position_absolute;
-  instrument->_position_relative[52] = _an135_var._position_relative;
+  instrument->_position_absolute[51] = _an135_var._position_absolute;
+  instrument->_position_relative[51] = _an135_var._position_relative;
     _an135_var._position_relative_is_zero =  coords_test_zero(_an135_var._position_relative);
-  instrument->counter_N[52]  = instrument->counter_P[52] = instrument->counter_P2[52] = 0;
-  instrument->counter_AbsorbProp[52]= 0;
+  instrument->counter_N[51]  = instrument->counter_P[51] = instrument->counter_P2[51] = 0;
+  instrument->counter_AbsorbProp[51]= 0;
   return(0);
 } /* _an135_setpos */
 
@@ -16923,7 +17180,7 @@ int _an141_setpos(void)
   SIG_MESSAGE("[_an141_setpos] component an141=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an141_var._name, "an141", 16384);
   stracpy(_an141_var._type, "Monochromator_flat", 16384);
-  _an141_var._index=53;
+  _an141_var._index=52;
   _an141_var._parameters.zmin = - ana_l [ 4 ] / 2;
   _an141_var._parameters.zmax = ana_l [ 4 ] / 2;
   _an141_var._parameters.ymin = - AW4 / 2;
@@ -16956,11 +17213,11 @@ int _an141_setpos(void)
     _an141_var._position_relative = rot_apply(_an141_var._rotation_absolute, tc1);
   } /* an141=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an141", _an141_var._position_absolute, _an141_var._rotation_absolute);
-  instrument->_position_absolute[53] = _an141_var._position_absolute;
-  instrument->_position_relative[53] = _an141_var._position_relative;
+  instrument->_position_absolute[52] = _an141_var._position_absolute;
+  instrument->_position_relative[52] = _an141_var._position_relative;
     _an141_var._position_relative_is_zero =  coords_test_zero(_an141_var._position_relative);
-  instrument->counter_N[53]  = instrument->counter_P[53] = instrument->counter_P2[53] = 0;
-  instrument->counter_AbsorbProp[53]= 0;
+  instrument->counter_N[52]  = instrument->counter_P[52] = instrument->counter_P2[52] = 0;
+  instrument->counter_AbsorbProp[52]= 0;
   return(0);
 } /* _an141_setpos */
 
@@ -16970,7 +17227,7 @@ int _an142_setpos(void)
   SIG_MESSAGE("[_an142_setpos] component an142=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an142_var._name, "an142", 16384);
   stracpy(_an142_var._type, "Monochromator_flat", 16384);
-  _an142_var._index=54;
+  _an142_var._index=53;
   _an142_var._parameters.zmin = - ana_l [ 4 ] / 2;
   _an142_var._parameters.zmax = ana_l [ 4 ] / 2;
   _an142_var._parameters.ymin = - AW4 / 2;
@@ -17003,11 +17260,11 @@ int _an142_setpos(void)
     _an142_var._position_relative = rot_apply(_an142_var._rotation_absolute, tc1);
   } /* an142=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an142", _an142_var._position_absolute, _an142_var._rotation_absolute);
-  instrument->_position_absolute[54] = _an142_var._position_absolute;
-  instrument->_position_relative[54] = _an142_var._position_relative;
+  instrument->_position_absolute[53] = _an142_var._position_absolute;
+  instrument->_position_relative[53] = _an142_var._position_relative;
     _an142_var._position_relative_is_zero =  coords_test_zero(_an142_var._position_relative);
-  instrument->counter_N[54]  = instrument->counter_P[54] = instrument->counter_P2[54] = 0;
-  instrument->counter_AbsorbProp[54]= 0;
+  instrument->counter_N[53]  = instrument->counter_P[53] = instrument->counter_P2[53] = 0;
+  instrument->counter_AbsorbProp[53]= 0;
   return(0);
 } /* _an142_setpos */
 
@@ -17017,7 +17274,7 @@ int _an143_setpos(void)
   SIG_MESSAGE("[_an143_setpos] component an143=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an143_var._name, "an143", 16384);
   stracpy(_an143_var._type, "Monochromator_flat", 16384);
-  _an143_var._index=55;
+  _an143_var._index=54;
   _an143_var._parameters.zmin = - ana_l [ 4 ] / 2;
   _an143_var._parameters.zmax = ana_l [ 4 ] / 2;
   _an143_var._parameters.ymin = - AW4 / 2;
@@ -17050,11 +17307,11 @@ int _an143_setpos(void)
     _an143_var._position_relative = rot_apply(_an143_var._rotation_absolute, tc1);
   } /* an143=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an143", _an143_var._position_absolute, _an143_var._rotation_absolute);
-  instrument->_position_absolute[55] = _an143_var._position_absolute;
-  instrument->_position_relative[55] = _an143_var._position_relative;
+  instrument->_position_absolute[54] = _an143_var._position_absolute;
+  instrument->_position_relative[54] = _an143_var._position_relative;
     _an143_var._position_relative_is_zero =  coords_test_zero(_an143_var._position_relative);
-  instrument->counter_N[55]  = instrument->counter_P[55] = instrument->counter_P2[55] = 0;
-  instrument->counter_AbsorbProp[55]= 0;
+  instrument->counter_N[54]  = instrument->counter_P[54] = instrument->counter_P2[54] = 0;
+  instrument->counter_AbsorbProp[54]= 0;
   return(0);
 } /* _an143_setpos */
 
@@ -17064,7 +17321,7 @@ int _an144_setpos(void)
   SIG_MESSAGE("[_an144_setpos] component an144=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an144_var._name, "an144", 16384);
   stracpy(_an144_var._type, "Monochromator_flat", 16384);
-  _an144_var._index=56;
+  _an144_var._index=55;
   _an144_var._parameters.zmin = - ana_l [ 4 ] / 2;
   _an144_var._parameters.zmax = ana_l [ 4 ] / 2;
   _an144_var._parameters.ymin = - AW4 / 2;
@@ -17097,11 +17354,11 @@ int _an144_setpos(void)
     _an144_var._position_relative = rot_apply(_an144_var._rotation_absolute, tc1);
   } /* an144=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an144", _an144_var._position_absolute, _an144_var._rotation_absolute);
-  instrument->_position_absolute[56] = _an144_var._position_absolute;
-  instrument->_position_relative[56] = _an144_var._position_relative;
+  instrument->_position_absolute[55] = _an144_var._position_absolute;
+  instrument->_position_relative[55] = _an144_var._position_relative;
     _an144_var._position_relative_is_zero =  coords_test_zero(_an144_var._position_relative);
-  instrument->counter_N[56]  = instrument->counter_P[56] = instrument->counter_P2[56] = 0;
-  instrument->counter_AbsorbProp[56]= 0;
+  instrument->counter_N[55]  = instrument->counter_P[55] = instrument->counter_P2[55] = 0;
+  instrument->counter_AbsorbProp[55]= 0;
   return(0);
 } /* _an144_setpos */
 
@@ -17111,7 +17368,7 @@ int _an145_setpos(void)
   SIG_MESSAGE("[_an145_setpos] component an145=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an145_var._name, "an145", 16384);
   stracpy(_an145_var._type, "Monochromator_flat", 16384);
-  _an145_var._index=57;
+  _an145_var._index=56;
   _an145_var._parameters.zmin = - ana_l [ 4 ] / 2;
   _an145_var._parameters.zmax = ana_l [ 4 ] / 2;
   _an145_var._parameters.ymin = - AW4 / 2;
@@ -17144,11 +17401,11 @@ int _an145_setpos(void)
     _an145_var._position_relative = rot_apply(_an145_var._rotation_absolute, tc1);
   } /* an145=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an145", _an145_var._position_absolute, _an145_var._rotation_absolute);
-  instrument->_position_absolute[57] = _an145_var._position_absolute;
-  instrument->_position_relative[57] = _an145_var._position_relative;
+  instrument->_position_absolute[56] = _an145_var._position_absolute;
+  instrument->_position_relative[56] = _an145_var._position_relative;
     _an145_var._position_relative_is_zero =  coords_test_zero(_an145_var._position_relative);
-  instrument->counter_N[57]  = instrument->counter_P[57] = instrument->counter_P2[57] = 0;
-  instrument->counter_AbsorbProp[57]= 0;
+  instrument->counter_N[56]  = instrument->counter_P[56] = instrument->counter_P2[56] = 0;
+  instrument->counter_AbsorbProp[56]= 0;
   return(0);
 } /* _an145_setpos */
 
@@ -17158,7 +17415,7 @@ int _an151_setpos(void)
   SIG_MESSAGE("[_an151_setpos] component an151=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an151_var._name, "an151", 16384);
   stracpy(_an151_var._type, "Monochromator_flat", 16384);
-  _an151_var._index=58;
+  _an151_var._index=57;
   _an151_var._parameters.zmin = - ana_l [ 5 ] / 2;
   _an151_var._parameters.zmax = ana_l [ 5 ] / 2;
   _an151_var._parameters.ymin = - AW5 / 2;
@@ -17191,11 +17448,11 @@ int _an151_setpos(void)
     _an151_var._position_relative = rot_apply(_an151_var._rotation_absolute, tc1);
   } /* an151=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an151", _an151_var._position_absolute, _an151_var._rotation_absolute);
-  instrument->_position_absolute[58] = _an151_var._position_absolute;
-  instrument->_position_relative[58] = _an151_var._position_relative;
+  instrument->_position_absolute[57] = _an151_var._position_absolute;
+  instrument->_position_relative[57] = _an151_var._position_relative;
     _an151_var._position_relative_is_zero =  coords_test_zero(_an151_var._position_relative);
-  instrument->counter_N[58]  = instrument->counter_P[58] = instrument->counter_P2[58] = 0;
-  instrument->counter_AbsorbProp[58]= 0;
+  instrument->counter_N[57]  = instrument->counter_P[57] = instrument->counter_P2[57] = 0;
+  instrument->counter_AbsorbProp[57]= 0;
   return(0);
 } /* _an151_setpos */
 
@@ -17205,7 +17462,7 @@ int _an152_setpos(void)
   SIG_MESSAGE("[_an152_setpos] component an152=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an152_var._name, "an152", 16384);
   stracpy(_an152_var._type, "Monochromator_flat", 16384);
-  _an152_var._index=59;
+  _an152_var._index=58;
   _an152_var._parameters.zmin = - ana_l [ 5 ] / 2;
   _an152_var._parameters.zmax = ana_l [ 5 ] / 2;
   _an152_var._parameters.ymin = - AW5 / 2;
@@ -17238,11 +17495,11 @@ int _an152_setpos(void)
     _an152_var._position_relative = rot_apply(_an152_var._rotation_absolute, tc1);
   } /* an152=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an152", _an152_var._position_absolute, _an152_var._rotation_absolute);
-  instrument->_position_absolute[59] = _an152_var._position_absolute;
-  instrument->_position_relative[59] = _an152_var._position_relative;
+  instrument->_position_absolute[58] = _an152_var._position_absolute;
+  instrument->_position_relative[58] = _an152_var._position_relative;
     _an152_var._position_relative_is_zero =  coords_test_zero(_an152_var._position_relative);
-  instrument->counter_N[59]  = instrument->counter_P[59] = instrument->counter_P2[59] = 0;
-  instrument->counter_AbsorbProp[59]= 0;
+  instrument->counter_N[58]  = instrument->counter_P[58] = instrument->counter_P2[58] = 0;
+  instrument->counter_AbsorbProp[58]= 0;
   return(0);
 } /* _an152_setpos */
 
@@ -17252,7 +17509,7 @@ int _an153_setpos(void)
   SIG_MESSAGE("[_an153_setpos] component an153=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an153_var._name, "an153", 16384);
   stracpy(_an153_var._type, "Monochromator_flat", 16384);
-  _an153_var._index=60;
+  _an153_var._index=59;
   _an153_var._parameters.zmin = - ana_l [ 5 ] / 2;
   _an153_var._parameters.zmax = ana_l [ 5 ] / 2;
   _an153_var._parameters.ymin = - AW5 / 2;
@@ -17285,11 +17542,11 @@ int _an153_setpos(void)
     _an153_var._position_relative = rot_apply(_an153_var._rotation_absolute, tc1);
   } /* an153=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an153", _an153_var._position_absolute, _an153_var._rotation_absolute);
-  instrument->_position_absolute[60] = _an153_var._position_absolute;
-  instrument->_position_relative[60] = _an153_var._position_relative;
+  instrument->_position_absolute[59] = _an153_var._position_absolute;
+  instrument->_position_relative[59] = _an153_var._position_relative;
     _an153_var._position_relative_is_zero =  coords_test_zero(_an153_var._position_relative);
-  instrument->counter_N[60]  = instrument->counter_P[60] = instrument->counter_P2[60] = 0;
-  instrument->counter_AbsorbProp[60]= 0;
+  instrument->counter_N[59]  = instrument->counter_P[59] = instrument->counter_P2[59] = 0;
+  instrument->counter_AbsorbProp[59]= 0;
   return(0);
 } /* _an153_setpos */
 
@@ -17299,7 +17556,7 @@ int _an154_setpos(void)
   SIG_MESSAGE("[_an154_setpos] component an154=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an154_var._name, "an154", 16384);
   stracpy(_an154_var._type, "Monochromator_flat", 16384);
-  _an154_var._index=61;
+  _an154_var._index=60;
   _an154_var._parameters.zmin = - ana_l [ 5 ] / 2;
   _an154_var._parameters.zmax = ana_l [ 5 ] / 2;
   _an154_var._parameters.ymin = - AW5 / 2;
@@ -17332,11 +17589,11 @@ int _an154_setpos(void)
     _an154_var._position_relative = rot_apply(_an154_var._rotation_absolute, tc1);
   } /* an154=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an154", _an154_var._position_absolute, _an154_var._rotation_absolute);
-  instrument->_position_absolute[61] = _an154_var._position_absolute;
-  instrument->_position_relative[61] = _an154_var._position_relative;
+  instrument->_position_absolute[60] = _an154_var._position_absolute;
+  instrument->_position_relative[60] = _an154_var._position_relative;
     _an154_var._position_relative_is_zero =  coords_test_zero(_an154_var._position_relative);
-  instrument->counter_N[61]  = instrument->counter_P[61] = instrument->counter_P2[61] = 0;
-  instrument->counter_AbsorbProp[61]= 0;
+  instrument->counter_N[60]  = instrument->counter_P[60] = instrument->counter_P2[60] = 0;
+  instrument->counter_AbsorbProp[60]= 0;
   return(0);
 } /* _an154_setpos */
 
@@ -17346,7 +17603,7 @@ int _an155_setpos(void)
   SIG_MESSAGE("[_an155_setpos] component an155=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an155_var._name, "an155", 16384);
   stracpy(_an155_var._type, "Monochromator_flat", 16384);
-  _an155_var._index=62;
+  _an155_var._index=61;
   _an155_var._parameters.zmin = - ana_l [ 5 ] / 2;
   _an155_var._parameters.zmax = ana_l [ 5 ] / 2;
   _an155_var._parameters.ymin = - AW5 / 2;
@@ -17379,11 +17636,11 @@ int _an155_setpos(void)
     _an155_var._position_relative = rot_apply(_an155_var._rotation_absolute, tc1);
   } /* an155=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an155", _an155_var._position_absolute, _an155_var._rotation_absolute);
-  instrument->_position_absolute[62] = _an155_var._position_absolute;
-  instrument->_position_relative[62] = _an155_var._position_relative;
+  instrument->_position_absolute[61] = _an155_var._position_absolute;
+  instrument->_position_relative[61] = _an155_var._position_relative;
     _an155_var._position_relative_is_zero =  coords_test_zero(_an155_var._position_relative);
-  instrument->counter_N[62]  = instrument->counter_P[62] = instrument->counter_P2[62] = 0;
-  instrument->counter_AbsorbProp[62]= 0;
+  instrument->counter_N[61]  = instrument->counter_P[61] = instrument->counter_P2[61] = 0;
+  instrument->counter_AbsorbProp[61]= 0;
   return(0);
 } /* _an155_setpos */
 
@@ -17393,7 +17650,7 @@ int _an161_setpos(void)
   SIG_MESSAGE("[_an161_setpos] component an161=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an161_var._name, "an161", 16384);
   stracpy(_an161_var._type, "Monochromator_flat", 16384);
-  _an161_var._index=63;
+  _an161_var._index=62;
   _an161_var._parameters.zmin = - ana_l [ 6 ] / 2;
   _an161_var._parameters.zmax = ana_l [ 6 ] / 2;
   _an161_var._parameters.ymin = - AW6 / 2;
@@ -17426,11 +17683,11 @@ int _an161_setpos(void)
     _an161_var._position_relative = rot_apply(_an161_var._rotation_absolute, tc1);
   } /* an161=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an161", _an161_var._position_absolute, _an161_var._rotation_absolute);
-  instrument->_position_absolute[63] = _an161_var._position_absolute;
-  instrument->_position_relative[63] = _an161_var._position_relative;
+  instrument->_position_absolute[62] = _an161_var._position_absolute;
+  instrument->_position_relative[62] = _an161_var._position_relative;
     _an161_var._position_relative_is_zero =  coords_test_zero(_an161_var._position_relative);
-  instrument->counter_N[63]  = instrument->counter_P[63] = instrument->counter_P2[63] = 0;
-  instrument->counter_AbsorbProp[63]= 0;
+  instrument->counter_N[62]  = instrument->counter_P[62] = instrument->counter_P2[62] = 0;
+  instrument->counter_AbsorbProp[62]= 0;
   return(0);
 } /* _an161_setpos */
 
@@ -17440,7 +17697,7 @@ int _an162_setpos(void)
   SIG_MESSAGE("[_an162_setpos] component an162=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an162_var._name, "an162", 16384);
   stracpy(_an162_var._type, "Monochromator_flat", 16384);
-  _an162_var._index=64;
+  _an162_var._index=63;
   _an162_var._parameters.zmin = - ana_l [ 6 ] / 2;
   _an162_var._parameters.zmax = ana_l [ 6 ] / 2;
   _an162_var._parameters.ymin = - AW6 / 2;
@@ -17473,11 +17730,11 @@ int _an162_setpos(void)
     _an162_var._position_relative = rot_apply(_an162_var._rotation_absolute, tc1);
   } /* an162=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an162", _an162_var._position_absolute, _an162_var._rotation_absolute);
-  instrument->_position_absolute[64] = _an162_var._position_absolute;
-  instrument->_position_relative[64] = _an162_var._position_relative;
+  instrument->_position_absolute[63] = _an162_var._position_absolute;
+  instrument->_position_relative[63] = _an162_var._position_relative;
     _an162_var._position_relative_is_zero =  coords_test_zero(_an162_var._position_relative);
-  instrument->counter_N[64]  = instrument->counter_P[64] = instrument->counter_P2[64] = 0;
-  instrument->counter_AbsorbProp[64]= 0;
+  instrument->counter_N[63]  = instrument->counter_P[63] = instrument->counter_P2[63] = 0;
+  instrument->counter_AbsorbProp[63]= 0;
   return(0);
 } /* _an162_setpos */
 
@@ -17487,7 +17744,7 @@ int _an163_setpos(void)
   SIG_MESSAGE("[_an163_setpos] component an163=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an163_var._name, "an163", 16384);
   stracpy(_an163_var._type, "Monochromator_flat", 16384);
-  _an163_var._index=65;
+  _an163_var._index=64;
   _an163_var._parameters.zmin = - ana_l [ 6 ] / 2;
   _an163_var._parameters.zmax = ana_l [ 6 ] / 2;
   _an163_var._parameters.ymin = - AW6 / 2;
@@ -17520,11 +17777,11 @@ int _an163_setpos(void)
     _an163_var._position_relative = rot_apply(_an163_var._rotation_absolute, tc1);
   } /* an163=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an163", _an163_var._position_absolute, _an163_var._rotation_absolute);
-  instrument->_position_absolute[65] = _an163_var._position_absolute;
-  instrument->_position_relative[65] = _an163_var._position_relative;
+  instrument->_position_absolute[64] = _an163_var._position_absolute;
+  instrument->_position_relative[64] = _an163_var._position_relative;
     _an163_var._position_relative_is_zero =  coords_test_zero(_an163_var._position_relative);
-  instrument->counter_N[65]  = instrument->counter_P[65] = instrument->counter_P2[65] = 0;
-  instrument->counter_AbsorbProp[65]= 0;
+  instrument->counter_N[64]  = instrument->counter_P[64] = instrument->counter_P2[64] = 0;
+  instrument->counter_AbsorbProp[64]= 0;
   return(0);
 } /* _an163_setpos */
 
@@ -17534,7 +17791,7 @@ int _an164_setpos(void)
   SIG_MESSAGE("[_an164_setpos] component an164=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an164_var._name, "an164", 16384);
   stracpy(_an164_var._type, "Monochromator_flat", 16384);
-  _an164_var._index=66;
+  _an164_var._index=65;
   _an164_var._parameters.zmin = - ana_l [ 6 ] / 2;
   _an164_var._parameters.zmax = ana_l [ 6 ] / 2;
   _an164_var._parameters.ymin = - AW6 / 2;
@@ -17567,11 +17824,11 @@ int _an164_setpos(void)
     _an164_var._position_relative = rot_apply(_an164_var._rotation_absolute, tc1);
   } /* an164=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an164", _an164_var._position_absolute, _an164_var._rotation_absolute);
-  instrument->_position_absolute[66] = _an164_var._position_absolute;
-  instrument->_position_relative[66] = _an164_var._position_relative;
+  instrument->_position_absolute[65] = _an164_var._position_absolute;
+  instrument->_position_relative[65] = _an164_var._position_relative;
     _an164_var._position_relative_is_zero =  coords_test_zero(_an164_var._position_relative);
-  instrument->counter_N[66]  = instrument->counter_P[66] = instrument->counter_P2[66] = 0;
-  instrument->counter_AbsorbProp[66]= 0;
+  instrument->counter_N[65]  = instrument->counter_P[65] = instrument->counter_P2[65] = 0;
+  instrument->counter_AbsorbProp[65]= 0;
   return(0);
 } /* _an164_setpos */
 
@@ -17581,7 +17838,7 @@ int _an165_setpos(void)
   SIG_MESSAGE("[_an165_setpos] component an165=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an165_var._name, "an165", 16384);
   stracpy(_an165_var._type, "Monochromator_flat", 16384);
-  _an165_var._index=67;
+  _an165_var._index=66;
   _an165_var._parameters.zmin = - ana_l [ 6 ] / 2;
   _an165_var._parameters.zmax = ana_l [ 6 ] / 2;
   _an165_var._parameters.ymin = - AW6 / 2;
@@ -17614,11 +17871,11 @@ int _an165_setpos(void)
     _an165_var._position_relative = rot_apply(_an165_var._rotation_absolute, tc1);
   } /* an165=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an165", _an165_var._position_absolute, _an165_var._rotation_absolute);
-  instrument->_position_absolute[67] = _an165_var._position_absolute;
-  instrument->_position_relative[67] = _an165_var._position_relative;
+  instrument->_position_absolute[66] = _an165_var._position_absolute;
+  instrument->_position_relative[66] = _an165_var._position_relative;
     _an165_var._position_relative_is_zero =  coords_test_zero(_an165_var._position_relative);
-  instrument->counter_N[67]  = instrument->counter_P[67] = instrument->counter_P2[67] = 0;
-  instrument->counter_AbsorbProp[67]= 0;
+  instrument->counter_N[66]  = instrument->counter_P[66] = instrument->counter_P2[66] = 0;
+  instrument->counter_AbsorbProp[66]= 0;
   return(0);
 } /* _an165_setpos */
 
@@ -17628,7 +17885,7 @@ int _an171_setpos(void)
   SIG_MESSAGE("[_an171_setpos] component an171=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an171_var._name, "an171", 16384);
   stracpy(_an171_var._type, "Monochromator_flat", 16384);
-  _an171_var._index=68;
+  _an171_var._index=67;
   _an171_var._parameters.zmin = - ana_l [ 7 ] / 2;
   _an171_var._parameters.zmax = ana_l [ 7 ] / 2;
   _an171_var._parameters.ymin = - AW7 / 2;
@@ -17661,11 +17918,11 @@ int _an171_setpos(void)
     _an171_var._position_relative = rot_apply(_an171_var._rotation_absolute, tc1);
   } /* an171=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an171", _an171_var._position_absolute, _an171_var._rotation_absolute);
-  instrument->_position_absolute[68] = _an171_var._position_absolute;
-  instrument->_position_relative[68] = _an171_var._position_relative;
+  instrument->_position_absolute[67] = _an171_var._position_absolute;
+  instrument->_position_relative[67] = _an171_var._position_relative;
     _an171_var._position_relative_is_zero =  coords_test_zero(_an171_var._position_relative);
-  instrument->counter_N[68]  = instrument->counter_P[68] = instrument->counter_P2[68] = 0;
-  instrument->counter_AbsorbProp[68]= 0;
+  instrument->counter_N[67]  = instrument->counter_P[67] = instrument->counter_P2[67] = 0;
+  instrument->counter_AbsorbProp[67]= 0;
   return(0);
 } /* _an171_setpos */
 
@@ -17675,7 +17932,7 @@ int _an172_setpos(void)
   SIG_MESSAGE("[_an172_setpos] component an172=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an172_var._name, "an172", 16384);
   stracpy(_an172_var._type, "Monochromator_flat", 16384);
-  _an172_var._index=69;
+  _an172_var._index=68;
   _an172_var._parameters.zmin = - ana_l [ 7 ] / 2;
   _an172_var._parameters.zmax = ana_l [ 7 ] / 2;
   _an172_var._parameters.ymin = - AW7 / 2;
@@ -17708,11 +17965,11 @@ int _an172_setpos(void)
     _an172_var._position_relative = rot_apply(_an172_var._rotation_absolute, tc1);
   } /* an172=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an172", _an172_var._position_absolute, _an172_var._rotation_absolute);
-  instrument->_position_absolute[69] = _an172_var._position_absolute;
-  instrument->_position_relative[69] = _an172_var._position_relative;
+  instrument->_position_absolute[68] = _an172_var._position_absolute;
+  instrument->_position_relative[68] = _an172_var._position_relative;
     _an172_var._position_relative_is_zero =  coords_test_zero(_an172_var._position_relative);
-  instrument->counter_N[69]  = instrument->counter_P[69] = instrument->counter_P2[69] = 0;
-  instrument->counter_AbsorbProp[69]= 0;
+  instrument->counter_N[68]  = instrument->counter_P[68] = instrument->counter_P2[68] = 0;
+  instrument->counter_AbsorbProp[68]= 0;
   return(0);
 } /* _an172_setpos */
 
@@ -17722,7 +17979,7 @@ int _an173_setpos(void)
   SIG_MESSAGE("[_an173_setpos] component an173=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an173_var._name, "an173", 16384);
   stracpy(_an173_var._type, "Monochromator_flat", 16384);
-  _an173_var._index=70;
+  _an173_var._index=69;
   _an173_var._parameters.zmin = - ana_l [ 7 ] / 2;
   _an173_var._parameters.zmax = ana_l [ 7 ] / 2;
   _an173_var._parameters.ymin = - AW7 / 2;
@@ -17755,11 +18012,11 @@ int _an173_setpos(void)
     _an173_var._position_relative = rot_apply(_an173_var._rotation_absolute, tc1);
   } /* an173=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an173", _an173_var._position_absolute, _an173_var._rotation_absolute);
-  instrument->_position_absolute[70] = _an173_var._position_absolute;
-  instrument->_position_relative[70] = _an173_var._position_relative;
+  instrument->_position_absolute[69] = _an173_var._position_absolute;
+  instrument->_position_relative[69] = _an173_var._position_relative;
     _an173_var._position_relative_is_zero =  coords_test_zero(_an173_var._position_relative);
-  instrument->counter_N[70]  = instrument->counter_P[70] = instrument->counter_P2[70] = 0;
-  instrument->counter_AbsorbProp[70]= 0;
+  instrument->counter_N[69]  = instrument->counter_P[69] = instrument->counter_P2[69] = 0;
+  instrument->counter_AbsorbProp[69]= 0;
   return(0);
 } /* _an173_setpos */
 
@@ -17769,7 +18026,7 @@ int _an174_setpos(void)
   SIG_MESSAGE("[_an174_setpos] component an174=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an174_var._name, "an174", 16384);
   stracpy(_an174_var._type, "Monochromator_flat", 16384);
-  _an174_var._index=71;
+  _an174_var._index=70;
   _an174_var._parameters.zmin = - ana_l [ 7 ] / 2;
   _an174_var._parameters.zmax = ana_l [ 7 ] / 2;
   _an174_var._parameters.ymin = - AW7 / 2;
@@ -17802,11 +18059,11 @@ int _an174_setpos(void)
     _an174_var._position_relative = rot_apply(_an174_var._rotation_absolute, tc1);
   } /* an174=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an174", _an174_var._position_absolute, _an174_var._rotation_absolute);
-  instrument->_position_absolute[71] = _an174_var._position_absolute;
-  instrument->_position_relative[71] = _an174_var._position_relative;
+  instrument->_position_absolute[70] = _an174_var._position_absolute;
+  instrument->_position_relative[70] = _an174_var._position_relative;
     _an174_var._position_relative_is_zero =  coords_test_zero(_an174_var._position_relative);
-  instrument->counter_N[71]  = instrument->counter_P[71] = instrument->counter_P2[71] = 0;
-  instrument->counter_AbsorbProp[71]= 0;
+  instrument->counter_N[70]  = instrument->counter_P[70] = instrument->counter_P2[70] = 0;
+  instrument->counter_AbsorbProp[70]= 0;
   return(0);
 } /* _an174_setpos */
 
@@ -17816,7 +18073,7 @@ int _an175_setpos(void)
   SIG_MESSAGE("[_an175_setpos] component an175=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an175_var._name, "an175", 16384);
   stracpy(_an175_var._type, "Monochromator_flat", 16384);
-  _an175_var._index=72;
+  _an175_var._index=71;
   _an175_var._parameters.zmin = - ana_l [ 7 ] / 2;
   _an175_var._parameters.zmax = ana_l [ 7 ] / 2;
   _an175_var._parameters.ymin = - AW7 / 2;
@@ -17849,11 +18106,11 @@ int _an175_setpos(void)
     _an175_var._position_relative = rot_apply(_an175_var._rotation_absolute, tc1);
   } /* an175=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an175", _an175_var._position_absolute, _an175_var._rotation_absolute);
-  instrument->_position_absolute[72] = _an175_var._position_absolute;
-  instrument->_position_relative[72] = _an175_var._position_relative;
+  instrument->_position_absolute[71] = _an175_var._position_absolute;
+  instrument->_position_relative[71] = _an175_var._position_relative;
     _an175_var._position_relative_is_zero =  coords_test_zero(_an175_var._position_relative);
-  instrument->counter_N[72]  = instrument->counter_P[72] = instrument->counter_P2[72] = 0;
-  instrument->counter_AbsorbProp[72]= 0;
+  instrument->counter_N[71]  = instrument->counter_P[71] = instrument->counter_P2[71] = 0;
+  instrument->counter_AbsorbProp[71]= 0;
   return(0);
 } /* _an175_setpos */
 
@@ -17863,7 +18120,7 @@ int _an181_setpos(void)
   SIG_MESSAGE("[_an181_setpos] component an181=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an181_var._name, "an181", 16384);
   stracpy(_an181_var._type, "Monochromator_flat", 16384);
-  _an181_var._index=73;
+  _an181_var._index=72;
   _an181_var._parameters.zmin = - ana_l [ 8 ] / 2;
   _an181_var._parameters.zmax = ana_l [ 8 ] / 2;
   _an181_var._parameters.ymin = - AW8 / 2;
@@ -17896,11 +18153,11 @@ int _an181_setpos(void)
     _an181_var._position_relative = rot_apply(_an181_var._rotation_absolute, tc1);
   } /* an181=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an181", _an181_var._position_absolute, _an181_var._rotation_absolute);
-  instrument->_position_absolute[73] = _an181_var._position_absolute;
-  instrument->_position_relative[73] = _an181_var._position_relative;
+  instrument->_position_absolute[72] = _an181_var._position_absolute;
+  instrument->_position_relative[72] = _an181_var._position_relative;
     _an181_var._position_relative_is_zero =  coords_test_zero(_an181_var._position_relative);
-  instrument->counter_N[73]  = instrument->counter_P[73] = instrument->counter_P2[73] = 0;
-  instrument->counter_AbsorbProp[73]= 0;
+  instrument->counter_N[72]  = instrument->counter_P[72] = instrument->counter_P2[72] = 0;
+  instrument->counter_AbsorbProp[72]= 0;
   return(0);
 } /* _an181_setpos */
 
@@ -17910,7 +18167,7 @@ int _an182_setpos(void)
   SIG_MESSAGE("[_an182_setpos] component an182=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an182_var._name, "an182", 16384);
   stracpy(_an182_var._type, "Monochromator_flat", 16384);
-  _an182_var._index=74;
+  _an182_var._index=73;
   _an182_var._parameters.zmin = - ana_l [ 8 ] / 2;
   _an182_var._parameters.zmax = ana_l [ 8 ] / 2;
   _an182_var._parameters.ymin = - AW8 / 2;
@@ -17943,11 +18200,11 @@ int _an182_setpos(void)
     _an182_var._position_relative = rot_apply(_an182_var._rotation_absolute, tc1);
   } /* an182=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an182", _an182_var._position_absolute, _an182_var._rotation_absolute);
-  instrument->_position_absolute[74] = _an182_var._position_absolute;
-  instrument->_position_relative[74] = _an182_var._position_relative;
+  instrument->_position_absolute[73] = _an182_var._position_absolute;
+  instrument->_position_relative[73] = _an182_var._position_relative;
     _an182_var._position_relative_is_zero =  coords_test_zero(_an182_var._position_relative);
-  instrument->counter_N[74]  = instrument->counter_P[74] = instrument->counter_P2[74] = 0;
-  instrument->counter_AbsorbProp[74]= 0;
+  instrument->counter_N[73]  = instrument->counter_P[73] = instrument->counter_P2[73] = 0;
+  instrument->counter_AbsorbProp[73]= 0;
   return(0);
 } /* _an182_setpos */
 
@@ -17957,7 +18214,7 @@ int _an183_setpos(void)
   SIG_MESSAGE("[_an183_setpos] component an183=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an183_var._name, "an183", 16384);
   stracpy(_an183_var._type, "Monochromator_flat", 16384);
-  _an183_var._index=75;
+  _an183_var._index=74;
   _an183_var._parameters.zmin = - ana_l [ 8 ] / 2;
   _an183_var._parameters.zmax = ana_l [ 8 ] / 2;
   _an183_var._parameters.ymin = - AW8 / 2;
@@ -17990,11 +18247,11 @@ int _an183_setpos(void)
     _an183_var._position_relative = rot_apply(_an183_var._rotation_absolute, tc1);
   } /* an183=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an183", _an183_var._position_absolute, _an183_var._rotation_absolute);
-  instrument->_position_absolute[75] = _an183_var._position_absolute;
-  instrument->_position_relative[75] = _an183_var._position_relative;
+  instrument->_position_absolute[74] = _an183_var._position_absolute;
+  instrument->_position_relative[74] = _an183_var._position_relative;
     _an183_var._position_relative_is_zero =  coords_test_zero(_an183_var._position_relative);
-  instrument->counter_N[75]  = instrument->counter_P[75] = instrument->counter_P2[75] = 0;
-  instrument->counter_AbsorbProp[75]= 0;
+  instrument->counter_N[74]  = instrument->counter_P[74] = instrument->counter_P2[74] = 0;
+  instrument->counter_AbsorbProp[74]= 0;
   return(0);
 } /* _an183_setpos */
 
@@ -18004,7 +18261,7 @@ int _an184_setpos(void)
   SIG_MESSAGE("[_an184_setpos] component an184=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an184_var._name, "an184", 16384);
   stracpy(_an184_var._type, "Monochromator_flat", 16384);
-  _an184_var._index=76;
+  _an184_var._index=75;
   _an184_var._parameters.zmin = - ana_l [ 8 ] / 2;
   _an184_var._parameters.zmax = ana_l [ 8 ] / 2;
   _an184_var._parameters.ymin = - AW8 / 2;
@@ -18037,11 +18294,11 @@ int _an184_setpos(void)
     _an184_var._position_relative = rot_apply(_an184_var._rotation_absolute, tc1);
   } /* an184=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an184", _an184_var._position_absolute, _an184_var._rotation_absolute);
-  instrument->_position_absolute[76] = _an184_var._position_absolute;
-  instrument->_position_relative[76] = _an184_var._position_relative;
+  instrument->_position_absolute[75] = _an184_var._position_absolute;
+  instrument->_position_relative[75] = _an184_var._position_relative;
     _an184_var._position_relative_is_zero =  coords_test_zero(_an184_var._position_relative);
-  instrument->counter_N[76]  = instrument->counter_P[76] = instrument->counter_P2[76] = 0;
-  instrument->counter_AbsorbProp[76]= 0;
+  instrument->counter_N[75]  = instrument->counter_P[75] = instrument->counter_P2[75] = 0;
+  instrument->counter_AbsorbProp[75]= 0;
   return(0);
 } /* _an184_setpos */
 
@@ -18051,7 +18308,7 @@ int _an185_setpos(void)
   SIG_MESSAGE("[_an185_setpos] component an185=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
   stracpy(_an185_var._name, "an185", 16384);
   stracpy(_an185_var._type, "Monochromator_flat", 16384);
-  _an185_var._index=77;
+  _an185_var._index=76;
   _an185_var._parameters.zmin = - ana_l [ 8 ] / 2;
   _an185_var._parameters.zmax = ana_l [ 8 ] / 2;
   _an185_var._parameters.ymin = - AW8 / 2;
@@ -18084,11 +18341,11 @@ int _an185_setpos(void)
     _an185_var._position_relative = rot_apply(_an185_var._rotation_absolute, tc1);
   } /* an185=Monochromator_flat() AT ROTATED */
   DEBUG_COMPONENT("an185", _an185_var._position_absolute, _an185_var._rotation_absolute);
-  instrument->_position_absolute[77] = _an185_var._position_absolute;
-  instrument->_position_relative[77] = _an185_var._position_relative;
+  instrument->_position_absolute[76] = _an185_var._position_absolute;
+  instrument->_position_relative[76] = _an185_var._position_relative;
     _an185_var._position_relative_is_zero =  coords_test_zero(_an185_var._position_relative);
-  instrument->counter_N[77]  = instrument->counter_P[77] = instrument->counter_P2[77] = 0;
-  instrument->counter_AbsorbProp[77]= 0;
+  instrument->counter_N[76]  = instrument->counter_P[76] = instrument->counter_P2[76] = 0;
+  instrument->counter_AbsorbProp[76]= 0;
   return(0);
 } /* _an185_setpos */
 
@@ -18098,7 +18355,7 @@ int _arm_res_mon_edge_setpos(void)
   SIG_MESSAGE("[_arm_res_mon_edge_setpos] component arm_res_mon_edge=Arm() SETTING [Arm:0]");
   stracpy(_arm_res_mon_edge_var._name, "arm_res_mon_edge", 16384);
   stracpy(_arm_res_mon_edge_var._type, "Arm", 16384);
-  _arm_res_mon_edge_var._index=78;
+  _arm_res_mon_edge_var._index=77;
   /* component arm_res_mon_edge=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -18118,11 +18375,11 @@ int _arm_res_mon_edge_setpos(void)
     _arm_res_mon_edge_var._position_relative = rot_apply(_arm_res_mon_edge_var._rotation_absolute, tc1);
   } /* arm_res_mon_edge=Arm() AT ROTATED */
   DEBUG_COMPONENT("arm_res_mon_edge", _arm_res_mon_edge_var._position_absolute, _arm_res_mon_edge_var._rotation_absolute);
-  instrument->_position_absolute[78] = _arm_res_mon_edge_var._position_absolute;
-  instrument->_position_relative[78] = _arm_res_mon_edge_var._position_relative;
+  instrument->_position_absolute[77] = _arm_res_mon_edge_var._position_absolute;
+  instrument->_position_relative[77] = _arm_res_mon_edge_var._position_relative;
     _arm_res_mon_edge_var._position_relative_is_zero =  coords_test_zero(_arm_res_mon_edge_var._position_relative);
-  instrument->counter_N[78]  = instrument->counter_P[78] = instrument->counter_P2[78] = 0;
-  instrument->counter_AbsorbProp[78]= 0;
+  instrument->counter_N[77]  = instrument->counter_P[77] = instrument->counter_P2[77] = 0;
+  instrument->counter_AbsorbProp[77]= 0;
   return(0);
 } /* _arm_res_mon_edge_setpos */
 
@@ -18132,7 +18389,7 @@ int _res_monitor_edge_0_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_0_setpos] component res_monitor_edge_0=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_0_var._name, "res_monitor_edge_0", 16384);
   stracpy(_res_monitor_edge_0_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_0_var._index=79;
+  _res_monitor_edge_0_var._index=78;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_0_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18176,11 +18433,11 @@ int _res_monitor_edge_0_setpos(void)
     _res_monitor_edge_0_var._position_relative = rot_apply(_res_monitor_edge_0_var._rotation_absolute, tc1);
   } /* res_monitor_edge_0=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_0", _res_monitor_edge_0_var._position_absolute, _res_monitor_edge_0_var._rotation_absolute);
-  instrument->_position_absolute[79] = _res_monitor_edge_0_var._position_absolute;
-  instrument->_position_relative[79] = _res_monitor_edge_0_var._position_relative;
+  instrument->_position_absolute[78] = _res_monitor_edge_0_var._position_absolute;
+  instrument->_position_relative[78] = _res_monitor_edge_0_var._position_relative;
     _res_monitor_edge_0_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_0_var._position_relative);
-  instrument->counter_N[79]  = instrument->counter_P[79] = instrument->counter_P2[79] = 0;
-  instrument->counter_AbsorbProp[79]= 0;
+  instrument->counter_N[78]  = instrument->counter_P[78] = instrument->counter_P2[78] = 0;
+  instrument->counter_AbsorbProp[78]= 0;
   return(0);
 } /* _res_monitor_edge_0_setpos */
 
@@ -18190,7 +18447,7 @@ int _res_monitor_edge_1_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_1_setpos] component res_monitor_edge_1=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_1_var._name, "res_monitor_edge_1", 16384);
   stracpy(_res_monitor_edge_1_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_1_var._index=80;
+  _res_monitor_edge_1_var._index=79;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_1_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18234,11 +18491,11 @@ int _res_monitor_edge_1_setpos(void)
     _res_monitor_edge_1_var._position_relative = rot_apply(_res_monitor_edge_1_var._rotation_absolute, tc1);
   } /* res_monitor_edge_1=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_1", _res_monitor_edge_1_var._position_absolute, _res_monitor_edge_1_var._rotation_absolute);
-  instrument->_position_absolute[80] = _res_monitor_edge_1_var._position_absolute;
-  instrument->_position_relative[80] = _res_monitor_edge_1_var._position_relative;
+  instrument->_position_absolute[79] = _res_monitor_edge_1_var._position_absolute;
+  instrument->_position_relative[79] = _res_monitor_edge_1_var._position_relative;
     _res_monitor_edge_1_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_1_var._position_relative);
-  instrument->counter_N[80]  = instrument->counter_P[80] = instrument->counter_P2[80] = 0;
-  instrument->counter_AbsorbProp[80]= 0;
+  instrument->counter_N[79]  = instrument->counter_P[79] = instrument->counter_P2[79] = 0;
+  instrument->counter_AbsorbProp[79]= 0;
   return(0);
 } /* _res_monitor_edge_1_setpos */
 
@@ -18248,7 +18505,7 @@ int _res_monitor_edge_2_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_2_setpos] component res_monitor_edge_2=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_2_var._name, "res_monitor_edge_2", 16384);
   stracpy(_res_monitor_edge_2_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_2_var._index=81;
+  _res_monitor_edge_2_var._index=80;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_2_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18292,11 +18549,11 @@ int _res_monitor_edge_2_setpos(void)
     _res_monitor_edge_2_var._position_relative = rot_apply(_res_monitor_edge_2_var._rotation_absolute, tc1);
   } /* res_monitor_edge_2=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_2", _res_monitor_edge_2_var._position_absolute, _res_monitor_edge_2_var._rotation_absolute);
-  instrument->_position_absolute[81] = _res_monitor_edge_2_var._position_absolute;
-  instrument->_position_relative[81] = _res_monitor_edge_2_var._position_relative;
+  instrument->_position_absolute[80] = _res_monitor_edge_2_var._position_absolute;
+  instrument->_position_relative[80] = _res_monitor_edge_2_var._position_relative;
     _res_monitor_edge_2_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_2_var._position_relative);
-  instrument->counter_N[81]  = instrument->counter_P[81] = instrument->counter_P2[81] = 0;
-  instrument->counter_AbsorbProp[81]= 0;
+  instrument->counter_N[80]  = instrument->counter_P[80] = instrument->counter_P2[80] = 0;
+  instrument->counter_AbsorbProp[80]= 0;
   return(0);
 } /* _res_monitor_edge_2_setpos */
 
@@ -18306,7 +18563,7 @@ int _res_monitor_edge_3_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_3_setpos] component res_monitor_edge_3=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_3_var._name, "res_monitor_edge_3", 16384);
   stracpy(_res_monitor_edge_3_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_3_var._index=82;
+  _res_monitor_edge_3_var._index=81;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_3_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18350,11 +18607,11 @@ int _res_monitor_edge_3_setpos(void)
     _res_monitor_edge_3_var._position_relative = rot_apply(_res_monitor_edge_3_var._rotation_absolute, tc1);
   } /* res_monitor_edge_3=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_3", _res_monitor_edge_3_var._position_absolute, _res_monitor_edge_3_var._rotation_absolute);
-  instrument->_position_absolute[82] = _res_monitor_edge_3_var._position_absolute;
-  instrument->_position_relative[82] = _res_monitor_edge_3_var._position_relative;
+  instrument->_position_absolute[81] = _res_monitor_edge_3_var._position_absolute;
+  instrument->_position_relative[81] = _res_monitor_edge_3_var._position_relative;
     _res_monitor_edge_3_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_3_var._position_relative);
-  instrument->counter_N[82]  = instrument->counter_P[82] = instrument->counter_P2[82] = 0;
-  instrument->counter_AbsorbProp[82]= 0;
+  instrument->counter_N[81]  = instrument->counter_P[81] = instrument->counter_P2[81] = 0;
+  instrument->counter_AbsorbProp[81]= 0;
   return(0);
 } /* _res_monitor_edge_3_setpos */
 
@@ -18364,7 +18621,7 @@ int _res_monitor_edge_4_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_4_setpos] component res_monitor_edge_4=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_4_var._name, "res_monitor_edge_4", 16384);
   stracpy(_res_monitor_edge_4_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_4_var._index=83;
+  _res_monitor_edge_4_var._index=82;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_4_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18408,11 +18665,11 @@ int _res_monitor_edge_4_setpos(void)
     _res_monitor_edge_4_var._position_relative = rot_apply(_res_monitor_edge_4_var._rotation_absolute, tc1);
   } /* res_monitor_edge_4=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_4", _res_monitor_edge_4_var._position_absolute, _res_monitor_edge_4_var._rotation_absolute);
-  instrument->_position_absolute[83] = _res_monitor_edge_4_var._position_absolute;
-  instrument->_position_relative[83] = _res_monitor_edge_4_var._position_relative;
+  instrument->_position_absolute[82] = _res_monitor_edge_4_var._position_absolute;
+  instrument->_position_relative[82] = _res_monitor_edge_4_var._position_relative;
     _res_monitor_edge_4_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_4_var._position_relative);
-  instrument->counter_N[83]  = instrument->counter_P[83] = instrument->counter_P2[83] = 0;
-  instrument->counter_AbsorbProp[83]= 0;
+  instrument->counter_N[82]  = instrument->counter_P[82] = instrument->counter_P2[82] = 0;
+  instrument->counter_AbsorbProp[82]= 0;
   return(0);
 } /* _res_monitor_edge_4_setpos */
 
@@ -18422,7 +18679,7 @@ int _res_monitor_edge_5_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_5_setpos] component res_monitor_edge_5=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_5_var._name, "res_monitor_edge_5", 16384);
   stracpy(_res_monitor_edge_5_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_5_var._index=84;
+  _res_monitor_edge_5_var._index=83;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_5_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18466,11 +18723,11 @@ int _res_monitor_edge_5_setpos(void)
     _res_monitor_edge_5_var._position_relative = rot_apply(_res_monitor_edge_5_var._rotation_absolute, tc1);
   } /* res_monitor_edge_5=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_5", _res_monitor_edge_5_var._position_absolute, _res_monitor_edge_5_var._rotation_absolute);
-  instrument->_position_absolute[84] = _res_monitor_edge_5_var._position_absolute;
-  instrument->_position_relative[84] = _res_monitor_edge_5_var._position_relative;
+  instrument->_position_absolute[83] = _res_monitor_edge_5_var._position_absolute;
+  instrument->_position_relative[83] = _res_monitor_edge_5_var._position_relative;
     _res_monitor_edge_5_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_5_var._position_relative);
-  instrument->counter_N[84]  = instrument->counter_P[84] = instrument->counter_P2[84] = 0;
-  instrument->counter_AbsorbProp[84]= 0;
+  instrument->counter_N[83]  = instrument->counter_P[83] = instrument->counter_P2[83] = 0;
+  instrument->counter_AbsorbProp[83]= 0;
   return(0);
 } /* _res_monitor_edge_5_setpos */
 
@@ -18480,7 +18737,7 @@ int _res_monitor_edge_6_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_6_setpos] component res_monitor_edge_6=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_6_var._name, "res_monitor_edge_6", 16384);
   stracpy(_res_monitor_edge_6_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_6_var._index=85;
+  _res_monitor_edge_6_var._index=84;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_6_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18524,11 +18781,11 @@ int _res_monitor_edge_6_setpos(void)
     _res_monitor_edge_6_var._position_relative = rot_apply(_res_monitor_edge_6_var._rotation_absolute, tc1);
   } /* res_monitor_edge_6=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_6", _res_monitor_edge_6_var._position_absolute, _res_monitor_edge_6_var._rotation_absolute);
-  instrument->_position_absolute[85] = _res_monitor_edge_6_var._position_absolute;
-  instrument->_position_relative[85] = _res_monitor_edge_6_var._position_relative;
+  instrument->_position_absolute[84] = _res_monitor_edge_6_var._position_absolute;
+  instrument->_position_relative[84] = _res_monitor_edge_6_var._position_relative;
     _res_monitor_edge_6_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_6_var._position_relative);
-  instrument->counter_N[85]  = instrument->counter_P[85] = instrument->counter_P2[85] = 0;
-  instrument->counter_AbsorbProp[85]= 0;
+  instrument->counter_N[84]  = instrument->counter_P[84] = instrument->counter_P2[84] = 0;
+  instrument->counter_AbsorbProp[84]= 0;
   return(0);
 } /* _res_monitor_edge_6_setpos */
 
@@ -18538,7 +18795,7 @@ int _res_monitor_edge_7_setpos(void)
   SIG_MESSAGE("[_res_monitor_edge_7_setpos] component res_monitor_edge_7=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_edge_7_var._name, "res_monitor_edge_7", 16384);
   stracpy(_res_monitor_edge_7_var._type, "Res_monitor", 16384);
-  _res_monitor_edge_7_var._index=86;
+  _res_monitor_edge_7_var._index=85;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_edge_7_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18582,11 +18839,11 @@ int _res_monitor_edge_7_setpos(void)
     _res_monitor_edge_7_var._position_relative = rot_apply(_res_monitor_edge_7_var._rotation_absolute, tc1);
   } /* res_monitor_edge_7=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_edge_7", _res_monitor_edge_7_var._position_absolute, _res_monitor_edge_7_var._rotation_absolute);
-  instrument->_position_absolute[86] = _res_monitor_edge_7_var._position_absolute;
-  instrument->_position_relative[86] = _res_monitor_edge_7_var._position_relative;
+  instrument->_position_absolute[85] = _res_monitor_edge_7_var._position_absolute;
+  instrument->_position_relative[85] = _res_monitor_edge_7_var._position_relative;
     _res_monitor_edge_7_var._position_relative_is_zero =  coords_test_zero(_res_monitor_edge_7_var._position_relative);
-  instrument->counter_N[86]  = instrument->counter_P[86] = instrument->counter_P2[86] = 0;
-  instrument->counter_AbsorbProp[86]= 0;
+  instrument->counter_N[85]  = instrument->counter_P[85] = instrument->counter_P2[85] = 0;
+  instrument->counter_AbsorbProp[85]= 0;
   return(0);
 } /* _res_monitor_edge_7_setpos */
 
@@ -18596,7 +18853,7 @@ int _psd_tube1_1_1_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_1_setpos] component psd_tube1_1_1=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_1_var._name, "psd_tube1_1_1", 16384);
   stracpy(_psd_tube1_1_1_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_1_var._index=87;
+  _psd_tube1_1_1_var._index=86;
   _psd_tube1_1_1_var._parameters.nx = 1;
   _psd_tube1_1_1_var._parameters.ny = 1024;
   _psd_tube1_1_1_var._parameters.xwidth = 0;
@@ -18653,11 +18910,11 @@ int _psd_tube1_1_1_setpos(void)
     _psd_tube1_1_1_var._position_relative = rot_apply(_psd_tube1_1_1_var._rotation_absolute, tc1);
   } /* psd_tube1_1_1=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_1", _psd_tube1_1_1_var._position_absolute, _psd_tube1_1_1_var._rotation_absolute);
-  instrument->_position_absolute[87] = _psd_tube1_1_1_var._position_absolute;
-  instrument->_position_relative[87] = _psd_tube1_1_1_var._position_relative;
+  instrument->_position_absolute[86] = _psd_tube1_1_1_var._position_absolute;
+  instrument->_position_relative[86] = _psd_tube1_1_1_var._position_relative;
     _psd_tube1_1_1_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_1_var._position_relative);
-  instrument->counter_N[87]  = instrument->counter_P[87] = instrument->counter_P2[87] = 0;
-  instrument->counter_AbsorbProp[87]= 0;
+  instrument->counter_N[86]  = instrument->counter_P[86] = instrument->counter_P2[86] = 0;
+  instrument->counter_AbsorbProp[86]= 0;
   return(0);
 } /* _psd_tube1_1_1_setpos */
 
@@ -18667,7 +18924,7 @@ int _psd_tube1_1_2_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_2_setpos] component psd_tube1_1_2=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_2_var._name, "psd_tube1_1_2", 16384);
   stracpy(_psd_tube1_1_2_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_2_var._index=88;
+  _psd_tube1_1_2_var._index=87;
   _psd_tube1_1_2_var._parameters.nx = 1;
   _psd_tube1_1_2_var._parameters.ny = 1024;
   _psd_tube1_1_2_var._parameters.xwidth = 0;
@@ -18724,11 +18981,11 @@ int _psd_tube1_1_2_setpos(void)
     _psd_tube1_1_2_var._position_relative = rot_apply(_psd_tube1_1_2_var._rotation_absolute, tc1);
   } /* psd_tube1_1_2=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_2", _psd_tube1_1_2_var._position_absolute, _psd_tube1_1_2_var._rotation_absolute);
-  instrument->_position_absolute[88] = _psd_tube1_1_2_var._position_absolute;
-  instrument->_position_relative[88] = _psd_tube1_1_2_var._position_relative;
+  instrument->_position_absolute[87] = _psd_tube1_1_2_var._position_absolute;
+  instrument->_position_relative[87] = _psd_tube1_1_2_var._position_relative;
     _psd_tube1_1_2_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_2_var._position_relative);
-  instrument->counter_N[88]  = instrument->counter_P[88] = instrument->counter_P2[88] = 0;
-  instrument->counter_AbsorbProp[88]= 0;
+  instrument->counter_N[87]  = instrument->counter_P[87] = instrument->counter_P2[87] = 0;
+  instrument->counter_AbsorbProp[87]= 0;
   return(0);
 } /* _psd_tube1_1_2_setpos */
 
@@ -18738,7 +18995,7 @@ int _psd_tube1_1_3_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_3_setpos] component psd_tube1_1_3=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_3_var._name, "psd_tube1_1_3", 16384);
   stracpy(_psd_tube1_1_3_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_3_var._index=89;
+  _psd_tube1_1_3_var._index=88;
   _psd_tube1_1_3_var._parameters.nx = 1;
   _psd_tube1_1_3_var._parameters.ny = 1024;
   _psd_tube1_1_3_var._parameters.xwidth = 0;
@@ -18795,11 +19052,11 @@ int _psd_tube1_1_3_setpos(void)
     _psd_tube1_1_3_var._position_relative = rot_apply(_psd_tube1_1_3_var._rotation_absolute, tc1);
   } /* psd_tube1_1_3=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_3", _psd_tube1_1_3_var._position_absolute, _psd_tube1_1_3_var._rotation_absolute);
-  instrument->_position_absolute[89] = _psd_tube1_1_3_var._position_absolute;
-  instrument->_position_relative[89] = _psd_tube1_1_3_var._position_relative;
+  instrument->_position_absolute[88] = _psd_tube1_1_3_var._position_absolute;
+  instrument->_position_relative[88] = _psd_tube1_1_3_var._position_relative;
     _psd_tube1_1_3_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_3_var._position_relative);
-  instrument->counter_N[89]  = instrument->counter_P[89] = instrument->counter_P2[89] = 0;
-  instrument->counter_AbsorbProp[89]= 0;
+  instrument->counter_N[88]  = instrument->counter_P[88] = instrument->counter_P2[88] = 0;
+  instrument->counter_AbsorbProp[88]= 0;
   return(0);
 } /* _psd_tube1_1_3_setpos */
 
@@ -18809,7 +19066,7 @@ int _arm_res_mon_mid_setpos(void)
   SIG_MESSAGE("[_arm_res_mon_mid_setpos] component arm_res_mon_mid=Arm() SETTING [Arm:0]");
   stracpy(_arm_res_mon_mid_var._name, "arm_res_mon_mid", 16384);
   stracpy(_arm_res_mon_mid_var._type, "Arm", 16384);
-  _arm_res_mon_mid_var._index=90;
+  _arm_res_mon_mid_var._index=89;
   /* component arm_res_mon_mid=Arm() AT ROTATED */
   {
     Coords tc1, tc2;
@@ -18829,11 +19086,11 @@ int _arm_res_mon_mid_setpos(void)
     _arm_res_mon_mid_var._position_relative = rot_apply(_arm_res_mon_mid_var._rotation_absolute, tc1);
   } /* arm_res_mon_mid=Arm() AT ROTATED */
   DEBUG_COMPONENT("arm_res_mon_mid", _arm_res_mon_mid_var._position_absolute, _arm_res_mon_mid_var._rotation_absolute);
-  instrument->_position_absolute[90] = _arm_res_mon_mid_var._position_absolute;
-  instrument->_position_relative[90] = _arm_res_mon_mid_var._position_relative;
+  instrument->_position_absolute[89] = _arm_res_mon_mid_var._position_absolute;
+  instrument->_position_relative[89] = _arm_res_mon_mid_var._position_relative;
     _arm_res_mon_mid_var._position_relative_is_zero =  coords_test_zero(_arm_res_mon_mid_var._position_relative);
-  instrument->counter_N[90]  = instrument->counter_P[90] = instrument->counter_P2[90] = 0;
-  instrument->counter_AbsorbProp[90]= 0;
+  instrument->counter_N[89]  = instrument->counter_P[89] = instrument->counter_P2[89] = 0;
+  instrument->counter_AbsorbProp[89]= 0;
   return(0);
 } /* _arm_res_mon_mid_setpos */
 
@@ -18843,7 +19100,7 @@ int _res_monitor_mid_0_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_0_setpos] component res_monitor_mid_0=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_0_var._name, "res_monitor_mid_0", 16384);
   stracpy(_res_monitor_mid_0_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_0_var._index=91;
+  _res_monitor_mid_0_var._index=90;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_0_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18887,11 +19144,11 @@ int _res_monitor_mid_0_setpos(void)
     _res_monitor_mid_0_var._position_relative = rot_apply(_res_monitor_mid_0_var._rotation_absolute, tc1);
   } /* res_monitor_mid_0=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_0", _res_monitor_mid_0_var._position_absolute, _res_monitor_mid_0_var._rotation_absolute);
-  instrument->_position_absolute[91] = _res_monitor_mid_0_var._position_absolute;
-  instrument->_position_relative[91] = _res_monitor_mid_0_var._position_relative;
+  instrument->_position_absolute[90] = _res_monitor_mid_0_var._position_absolute;
+  instrument->_position_relative[90] = _res_monitor_mid_0_var._position_relative;
     _res_monitor_mid_0_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_0_var._position_relative);
-  instrument->counter_N[91]  = instrument->counter_P[91] = instrument->counter_P2[91] = 0;
-  instrument->counter_AbsorbProp[91]= 0;
+  instrument->counter_N[90]  = instrument->counter_P[90] = instrument->counter_P2[90] = 0;
+  instrument->counter_AbsorbProp[90]= 0;
   return(0);
 } /* _res_monitor_mid_0_setpos */
 
@@ -18901,7 +19158,7 @@ int _res_monitor_mid_1_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_1_setpos] component res_monitor_mid_1=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_1_var._name, "res_monitor_mid_1", 16384);
   stracpy(_res_monitor_mid_1_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_1_var._index=92;
+  _res_monitor_mid_1_var._index=91;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_1_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -18945,11 +19202,11 @@ int _res_monitor_mid_1_setpos(void)
     _res_monitor_mid_1_var._position_relative = rot_apply(_res_monitor_mid_1_var._rotation_absolute, tc1);
   } /* res_monitor_mid_1=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_1", _res_monitor_mid_1_var._position_absolute, _res_monitor_mid_1_var._rotation_absolute);
-  instrument->_position_absolute[92] = _res_monitor_mid_1_var._position_absolute;
-  instrument->_position_relative[92] = _res_monitor_mid_1_var._position_relative;
+  instrument->_position_absolute[91] = _res_monitor_mid_1_var._position_absolute;
+  instrument->_position_relative[91] = _res_monitor_mid_1_var._position_relative;
     _res_monitor_mid_1_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_1_var._position_relative);
-  instrument->counter_N[92]  = instrument->counter_P[92] = instrument->counter_P2[92] = 0;
-  instrument->counter_AbsorbProp[92]= 0;
+  instrument->counter_N[91]  = instrument->counter_P[91] = instrument->counter_P2[91] = 0;
+  instrument->counter_AbsorbProp[91]= 0;
   return(0);
 } /* _res_monitor_mid_1_setpos */
 
@@ -18959,7 +19216,7 @@ int _res_monitor_mid_2_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_2_setpos] component res_monitor_mid_2=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_2_var._name, "res_monitor_mid_2", 16384);
   stracpy(_res_monitor_mid_2_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_2_var._index=93;
+  _res_monitor_mid_2_var._index=92;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_2_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -19003,11 +19260,11 @@ int _res_monitor_mid_2_setpos(void)
     _res_monitor_mid_2_var._position_relative = rot_apply(_res_monitor_mid_2_var._rotation_absolute, tc1);
   } /* res_monitor_mid_2=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_2", _res_monitor_mid_2_var._position_absolute, _res_monitor_mid_2_var._rotation_absolute);
-  instrument->_position_absolute[93] = _res_monitor_mid_2_var._position_absolute;
-  instrument->_position_relative[93] = _res_monitor_mid_2_var._position_relative;
+  instrument->_position_absolute[92] = _res_monitor_mid_2_var._position_absolute;
+  instrument->_position_relative[92] = _res_monitor_mid_2_var._position_relative;
     _res_monitor_mid_2_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_2_var._position_relative);
-  instrument->counter_N[93]  = instrument->counter_P[93] = instrument->counter_P2[93] = 0;
-  instrument->counter_AbsorbProp[93]= 0;
+  instrument->counter_N[92]  = instrument->counter_P[92] = instrument->counter_P2[92] = 0;
+  instrument->counter_AbsorbProp[92]= 0;
   return(0);
 } /* _res_monitor_mid_2_setpos */
 
@@ -19017,7 +19274,7 @@ int _res_monitor_mid_3_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_3_setpos] component res_monitor_mid_3=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_3_var._name, "res_monitor_mid_3", 16384);
   stracpy(_res_monitor_mid_3_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_3_var._index=94;
+  _res_monitor_mid_3_var._index=93;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_3_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -19061,11 +19318,11 @@ int _res_monitor_mid_3_setpos(void)
     _res_monitor_mid_3_var._position_relative = rot_apply(_res_monitor_mid_3_var._rotation_absolute, tc1);
   } /* res_monitor_mid_3=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_3", _res_monitor_mid_3_var._position_absolute, _res_monitor_mid_3_var._rotation_absolute);
-  instrument->_position_absolute[94] = _res_monitor_mid_3_var._position_absolute;
-  instrument->_position_relative[94] = _res_monitor_mid_3_var._position_relative;
+  instrument->_position_absolute[93] = _res_monitor_mid_3_var._position_absolute;
+  instrument->_position_relative[93] = _res_monitor_mid_3_var._position_relative;
     _res_monitor_mid_3_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_3_var._position_relative);
-  instrument->counter_N[94]  = instrument->counter_P[94] = instrument->counter_P2[94] = 0;
-  instrument->counter_AbsorbProp[94]= 0;
+  instrument->counter_N[93]  = instrument->counter_P[93] = instrument->counter_P2[93] = 0;
+  instrument->counter_AbsorbProp[93]= 0;
   return(0);
 } /* _res_monitor_mid_3_setpos */
 
@@ -19075,7 +19332,7 @@ int _res_monitor_mid_4_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_4_setpos] component res_monitor_mid_4=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_4_var._name, "res_monitor_mid_4", 16384);
   stracpy(_res_monitor_mid_4_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_4_var._index=95;
+  _res_monitor_mid_4_var._index=94;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_4_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -19119,11 +19376,11 @@ int _res_monitor_mid_4_setpos(void)
     _res_monitor_mid_4_var._position_relative = rot_apply(_res_monitor_mid_4_var._rotation_absolute, tc1);
   } /* res_monitor_mid_4=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_4", _res_monitor_mid_4_var._position_absolute, _res_monitor_mid_4_var._rotation_absolute);
-  instrument->_position_absolute[95] = _res_monitor_mid_4_var._position_absolute;
-  instrument->_position_relative[95] = _res_monitor_mid_4_var._position_relative;
+  instrument->_position_absolute[94] = _res_monitor_mid_4_var._position_absolute;
+  instrument->_position_relative[94] = _res_monitor_mid_4_var._position_relative;
     _res_monitor_mid_4_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_4_var._position_relative);
-  instrument->counter_N[95]  = instrument->counter_P[95] = instrument->counter_P2[95] = 0;
-  instrument->counter_AbsorbProp[95]= 0;
+  instrument->counter_N[94]  = instrument->counter_P[94] = instrument->counter_P2[94] = 0;
+  instrument->counter_AbsorbProp[94]= 0;
   return(0);
 } /* _res_monitor_mid_4_setpos */
 
@@ -19133,7 +19390,7 @@ int _res_monitor_mid_5_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_5_setpos] component res_monitor_mid_5=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_5_var._name, "res_monitor_mid_5", 16384);
   stracpy(_res_monitor_mid_5_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_5_var._index=96;
+  _res_monitor_mid_5_var._index=95;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_5_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -19177,11 +19434,11 @@ int _res_monitor_mid_5_setpos(void)
     _res_monitor_mid_5_var._position_relative = rot_apply(_res_monitor_mid_5_var._rotation_absolute, tc1);
   } /* res_monitor_mid_5=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_5", _res_monitor_mid_5_var._position_absolute, _res_monitor_mid_5_var._rotation_absolute);
-  instrument->_position_absolute[96] = _res_monitor_mid_5_var._position_absolute;
-  instrument->_position_relative[96] = _res_monitor_mid_5_var._position_relative;
+  instrument->_position_absolute[95] = _res_monitor_mid_5_var._position_absolute;
+  instrument->_position_relative[95] = _res_monitor_mid_5_var._position_relative;
     _res_monitor_mid_5_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_5_var._position_relative);
-  instrument->counter_N[96]  = instrument->counter_P[96] = instrument->counter_P2[96] = 0;
-  instrument->counter_AbsorbProp[96]= 0;
+  instrument->counter_N[95]  = instrument->counter_P[95] = instrument->counter_P2[95] = 0;
+  instrument->counter_AbsorbProp[95]= 0;
   return(0);
 } /* _res_monitor_mid_5_setpos */
 
@@ -19191,7 +19448,7 @@ int _res_monitor_mid_6_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_6_setpos] component res_monitor_mid_6=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_6_var._name, "res_monitor_mid_6", 16384);
   stracpy(_res_monitor_mid_6_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_6_var._index=97;
+  _res_monitor_mid_6_var._index=96;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_6_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -19235,11 +19492,11 @@ int _res_monitor_mid_6_setpos(void)
     _res_monitor_mid_6_var._position_relative = rot_apply(_res_monitor_mid_6_var._rotation_absolute, tc1);
   } /* res_monitor_mid_6=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_6", _res_monitor_mid_6_var._position_absolute, _res_monitor_mid_6_var._rotation_absolute);
-  instrument->_position_absolute[97] = _res_monitor_mid_6_var._position_absolute;
-  instrument->_position_relative[97] = _res_monitor_mid_6_var._position_relative;
+  instrument->_position_absolute[96] = _res_monitor_mid_6_var._position_absolute;
+  instrument->_position_relative[96] = _res_monitor_mid_6_var._position_relative;
     _res_monitor_mid_6_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_6_var._position_relative);
-  instrument->counter_N[97]  = instrument->counter_P[97] = instrument->counter_P2[97] = 0;
-  instrument->counter_AbsorbProp[97]= 0;
+  instrument->counter_N[96]  = instrument->counter_P[96] = instrument->counter_P2[96] = 0;
+  instrument->counter_AbsorbProp[96]= 0;
   return(0);
 } /* _res_monitor_mid_6_setpos */
 
@@ -19249,7 +19506,7 @@ int _res_monitor_mid_7_setpos(void)
   SIG_MESSAGE("[_res_monitor_mid_7_setpos] component res_monitor_mid_7=Res_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\Res_monitor.comp:96]");
   stracpy(_res_monitor_mid_7_var._name, "res_monitor_mid_7", 16384);
   stracpy(_res_monitor_mid_7_var._type, "Res_monitor", 16384);
-  _res_monitor_mid_7_var._index=98;
+  _res_monitor_mid_7_var._index=97;
   if("res_sample" && strlen("res_sample"))
     stracpy(_res_monitor_mid_7_var._parameters.res_sample_comp, "res_sample" ? "res_sample" : "", 16384);
   else 
@@ -19293,11 +19550,11 @@ int _res_monitor_mid_7_setpos(void)
     _res_monitor_mid_7_var._position_relative = rot_apply(_res_monitor_mid_7_var._rotation_absolute, tc1);
   } /* res_monitor_mid_7=Res_monitor() AT ROTATED */
   DEBUG_COMPONENT("res_monitor_mid_7", _res_monitor_mid_7_var._position_absolute, _res_monitor_mid_7_var._rotation_absolute);
-  instrument->_position_absolute[98] = _res_monitor_mid_7_var._position_absolute;
-  instrument->_position_relative[98] = _res_monitor_mid_7_var._position_relative;
+  instrument->_position_absolute[97] = _res_monitor_mid_7_var._position_absolute;
+  instrument->_position_relative[97] = _res_monitor_mid_7_var._position_relative;
     _res_monitor_mid_7_var._position_relative_is_zero =  coords_test_zero(_res_monitor_mid_7_var._position_relative);
-  instrument->counter_N[98]  = instrument->counter_P[98] = instrument->counter_P2[98] = 0;
-  instrument->counter_AbsorbProp[98]= 0;
+  instrument->counter_N[97]  = instrument->counter_P[97] = instrument->counter_P2[97] = 0;
+  instrument->counter_AbsorbProp[97]= 0;
   return(0);
 } /* _res_monitor_mid_7_setpos */
 
@@ -19307,7 +19564,7 @@ int _psd_tube1_1_4_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_4_setpos] component psd_tube1_1_4=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_4_var._name, "psd_tube1_1_4", 16384);
   stracpy(_psd_tube1_1_4_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_4_var._index=99;
+  _psd_tube1_1_4_var._index=98;
   _psd_tube1_1_4_var._parameters.nx = 1;
   _psd_tube1_1_4_var._parameters.ny = 1024;
   _psd_tube1_1_4_var._parameters.xwidth = 0;
@@ -19364,11 +19621,11 @@ int _psd_tube1_1_4_setpos(void)
     _psd_tube1_1_4_var._position_relative = rot_apply(_psd_tube1_1_4_var._rotation_absolute, tc1);
   } /* psd_tube1_1_4=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_4", _psd_tube1_1_4_var._position_absolute, _psd_tube1_1_4_var._rotation_absolute);
-  instrument->_position_absolute[99] = _psd_tube1_1_4_var._position_absolute;
-  instrument->_position_relative[99] = _psd_tube1_1_4_var._position_relative;
+  instrument->_position_absolute[98] = _psd_tube1_1_4_var._position_absolute;
+  instrument->_position_relative[98] = _psd_tube1_1_4_var._position_relative;
     _psd_tube1_1_4_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_4_var._position_relative);
-  instrument->counter_N[99]  = instrument->counter_P[99] = instrument->counter_P2[99] = 0;
-  instrument->counter_AbsorbProp[99]= 0;
+  instrument->counter_N[98]  = instrument->counter_P[98] = instrument->counter_P2[98] = 0;
+  instrument->counter_AbsorbProp[98]= 0;
   return(0);
 } /* _psd_tube1_1_4_setpos */
 
@@ -19378,7 +19635,7 @@ int _psd_tube1_1_5_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_5_setpos] component psd_tube1_1_5=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_5_var._name, "psd_tube1_1_5", 16384);
   stracpy(_psd_tube1_1_5_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_5_var._index=100;
+  _psd_tube1_1_5_var._index=99;
   _psd_tube1_1_5_var._parameters.nx = 1;
   _psd_tube1_1_5_var._parameters.ny = 1024;
   _psd_tube1_1_5_var._parameters.xwidth = 0;
@@ -19435,11 +19692,11 @@ int _psd_tube1_1_5_setpos(void)
     _psd_tube1_1_5_var._position_relative = rot_apply(_psd_tube1_1_5_var._rotation_absolute, tc1);
   } /* psd_tube1_1_5=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_5", _psd_tube1_1_5_var._position_absolute, _psd_tube1_1_5_var._rotation_absolute);
-  instrument->_position_absolute[100] = _psd_tube1_1_5_var._position_absolute;
-  instrument->_position_relative[100] = _psd_tube1_1_5_var._position_relative;
+  instrument->_position_absolute[99] = _psd_tube1_1_5_var._position_absolute;
+  instrument->_position_relative[99] = _psd_tube1_1_5_var._position_relative;
     _psd_tube1_1_5_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_5_var._position_relative);
-  instrument->counter_N[100]  = instrument->counter_P[100] = instrument->counter_P2[100] = 0;
-  instrument->counter_AbsorbProp[100]= 0;
+  instrument->counter_N[99]  = instrument->counter_P[99] = instrument->counter_P2[99] = 0;
+  instrument->counter_AbsorbProp[99]= 0;
   return(0);
 } /* _psd_tube1_1_5_setpos */
 
@@ -19449,7 +19706,7 @@ int _psd_tube1_1_6_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_6_setpos] component psd_tube1_1_6=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_6_var._name, "psd_tube1_1_6", 16384);
   stracpy(_psd_tube1_1_6_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_6_var._index=101;
+  _psd_tube1_1_6_var._index=100;
   _psd_tube1_1_6_var._parameters.nx = 1;
   _psd_tube1_1_6_var._parameters.ny = 1024;
   _psd_tube1_1_6_var._parameters.xwidth = 0;
@@ -19506,11 +19763,11 @@ int _psd_tube1_1_6_setpos(void)
     _psd_tube1_1_6_var._position_relative = rot_apply(_psd_tube1_1_6_var._rotation_absolute, tc1);
   } /* psd_tube1_1_6=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_6", _psd_tube1_1_6_var._position_absolute, _psd_tube1_1_6_var._rotation_absolute);
-  instrument->_position_absolute[101] = _psd_tube1_1_6_var._position_absolute;
-  instrument->_position_relative[101] = _psd_tube1_1_6_var._position_relative;
+  instrument->_position_absolute[100] = _psd_tube1_1_6_var._position_absolute;
+  instrument->_position_relative[100] = _psd_tube1_1_6_var._position_relative;
     _psd_tube1_1_6_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_6_var._position_relative);
-  instrument->counter_N[101]  = instrument->counter_P[101] = instrument->counter_P2[101] = 0;
-  instrument->counter_AbsorbProp[101]= 0;
+  instrument->counter_N[100]  = instrument->counter_P[100] = instrument->counter_P2[100] = 0;
+  instrument->counter_AbsorbProp[100]= 0;
   return(0);
 } /* _psd_tube1_1_6_setpos */
 
@@ -19520,7 +19777,7 @@ int _psd_tube1_1_7_setpos(void)
   SIG_MESSAGE("[_psd_tube1_1_7_setpos] component psd_tube1_1_7=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_1_7_var._name, "psd_tube1_1_7", 16384);
   stracpy(_psd_tube1_1_7_var._type, "PSD_Detector", 16384);
-  _psd_tube1_1_7_var._index=102;
+  _psd_tube1_1_7_var._index=101;
   _psd_tube1_1_7_var._parameters.nx = 1;
   _psd_tube1_1_7_var._parameters.ny = 1024;
   _psd_tube1_1_7_var._parameters.xwidth = 0;
@@ -19577,11 +19834,11 @@ int _psd_tube1_1_7_setpos(void)
     _psd_tube1_1_7_var._position_relative = rot_apply(_psd_tube1_1_7_var._rotation_absolute, tc1);
   } /* psd_tube1_1_7=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_1_7", _psd_tube1_1_7_var._position_absolute, _psd_tube1_1_7_var._rotation_absolute);
-  instrument->_position_absolute[102] = _psd_tube1_1_7_var._position_absolute;
-  instrument->_position_relative[102] = _psd_tube1_1_7_var._position_relative;
+  instrument->_position_absolute[101] = _psd_tube1_1_7_var._position_absolute;
+  instrument->_position_relative[101] = _psd_tube1_1_7_var._position_relative;
     _psd_tube1_1_7_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_1_7_var._position_relative);
-  instrument->counter_N[102]  = instrument->counter_P[102] = instrument->counter_P2[102] = 0;
-  instrument->counter_AbsorbProp[102]= 0;
+  instrument->counter_N[101]  = instrument->counter_P[101] = instrument->counter_P2[101] = 0;
+  instrument->counter_AbsorbProp[101]= 0;
   return(0);
 } /* _psd_tube1_1_7_setpos */
 
@@ -19591,7 +19848,7 @@ int _psd_tube1_2_1_setpos(void)
   SIG_MESSAGE("[_psd_tube1_2_1_setpos] component psd_tube1_2_1=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_2_1_var._name, "psd_tube1_2_1", 16384);
   stracpy(_psd_tube1_2_1_var._type, "PSD_Detector", 16384);
-  _psd_tube1_2_1_var._index=103;
+  _psd_tube1_2_1_var._index=102;
   _psd_tube1_2_1_var._parameters.nx = 1;
   _psd_tube1_2_1_var._parameters.ny = 1024;
   _psd_tube1_2_1_var._parameters.xwidth = 0;
@@ -19648,11 +19905,11 @@ int _psd_tube1_2_1_setpos(void)
     _psd_tube1_2_1_var._position_relative = rot_apply(_psd_tube1_2_1_var._rotation_absolute, tc1);
   } /* psd_tube1_2_1=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_2_1", _psd_tube1_2_1_var._position_absolute, _psd_tube1_2_1_var._rotation_absolute);
-  instrument->_position_absolute[103] = _psd_tube1_2_1_var._position_absolute;
-  instrument->_position_relative[103] = _psd_tube1_2_1_var._position_relative;
+  instrument->_position_absolute[102] = _psd_tube1_2_1_var._position_absolute;
+  instrument->_position_relative[102] = _psd_tube1_2_1_var._position_relative;
     _psd_tube1_2_1_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_2_1_var._position_relative);
-  instrument->counter_N[103]  = instrument->counter_P[103] = instrument->counter_P2[103] = 0;
-  instrument->counter_AbsorbProp[103]= 0;
+  instrument->counter_N[102]  = instrument->counter_P[102] = instrument->counter_P2[102] = 0;
+  instrument->counter_AbsorbProp[102]= 0;
   return(0);
 } /* _psd_tube1_2_1_setpos */
 
@@ -19662,7 +19919,7 @@ int _psd_tube1_2_2_setpos(void)
   SIG_MESSAGE("[_psd_tube1_2_2_setpos] component psd_tube1_2_2=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_2_2_var._name, "psd_tube1_2_2", 16384);
   stracpy(_psd_tube1_2_2_var._type, "PSD_Detector", 16384);
-  _psd_tube1_2_2_var._index=104;
+  _psd_tube1_2_2_var._index=103;
   _psd_tube1_2_2_var._parameters.nx = 1;
   _psd_tube1_2_2_var._parameters.ny = 1024;
   _psd_tube1_2_2_var._parameters.xwidth = 0;
@@ -19719,11 +19976,11 @@ int _psd_tube1_2_2_setpos(void)
     _psd_tube1_2_2_var._position_relative = rot_apply(_psd_tube1_2_2_var._rotation_absolute, tc1);
   } /* psd_tube1_2_2=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_2_2", _psd_tube1_2_2_var._position_absolute, _psd_tube1_2_2_var._rotation_absolute);
-  instrument->_position_absolute[104] = _psd_tube1_2_2_var._position_absolute;
-  instrument->_position_relative[104] = _psd_tube1_2_2_var._position_relative;
+  instrument->_position_absolute[103] = _psd_tube1_2_2_var._position_absolute;
+  instrument->_position_relative[103] = _psd_tube1_2_2_var._position_relative;
     _psd_tube1_2_2_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_2_2_var._position_relative);
-  instrument->counter_N[104]  = instrument->counter_P[104] = instrument->counter_P2[104] = 0;
-  instrument->counter_AbsorbProp[104]= 0;
+  instrument->counter_N[103]  = instrument->counter_P[103] = instrument->counter_P2[103] = 0;
+  instrument->counter_AbsorbProp[103]= 0;
   return(0);
 } /* _psd_tube1_2_2_setpos */
 
@@ -19733,7 +19990,7 @@ int _psd_tube1_2_3_setpos(void)
   SIG_MESSAGE("[_psd_tube1_2_3_setpos] component psd_tube1_2_3=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_2_3_var._name, "psd_tube1_2_3", 16384);
   stracpy(_psd_tube1_2_3_var._type, "PSD_Detector", 16384);
-  _psd_tube1_2_3_var._index=105;
+  _psd_tube1_2_3_var._index=104;
   _psd_tube1_2_3_var._parameters.nx = 1;
   _psd_tube1_2_3_var._parameters.ny = 1024;
   _psd_tube1_2_3_var._parameters.xwidth = 0;
@@ -19790,11 +20047,11 @@ int _psd_tube1_2_3_setpos(void)
     _psd_tube1_2_3_var._position_relative = rot_apply(_psd_tube1_2_3_var._rotation_absolute, tc1);
   } /* psd_tube1_2_3=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_2_3", _psd_tube1_2_3_var._position_absolute, _psd_tube1_2_3_var._rotation_absolute);
-  instrument->_position_absolute[105] = _psd_tube1_2_3_var._position_absolute;
-  instrument->_position_relative[105] = _psd_tube1_2_3_var._position_relative;
+  instrument->_position_absolute[104] = _psd_tube1_2_3_var._position_absolute;
+  instrument->_position_relative[104] = _psd_tube1_2_3_var._position_relative;
     _psd_tube1_2_3_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_2_3_var._position_relative);
-  instrument->counter_N[105]  = instrument->counter_P[105] = instrument->counter_P2[105] = 0;
-  instrument->counter_AbsorbProp[105]= 0;
+  instrument->counter_N[104]  = instrument->counter_P[104] = instrument->counter_P2[104] = 0;
+  instrument->counter_AbsorbProp[104]= 0;
   return(0);
 } /* _psd_tube1_2_3_setpos */
 
@@ -19804,7 +20061,7 @@ int _psd_tube1_2_4_setpos(void)
   SIG_MESSAGE("[_psd_tube1_2_4_setpos] component psd_tube1_2_4=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_2_4_var._name, "psd_tube1_2_4", 16384);
   stracpy(_psd_tube1_2_4_var._type, "PSD_Detector", 16384);
-  _psd_tube1_2_4_var._index=106;
+  _psd_tube1_2_4_var._index=105;
   _psd_tube1_2_4_var._parameters.nx = 1;
   _psd_tube1_2_4_var._parameters.ny = 1024;
   _psd_tube1_2_4_var._parameters.xwidth = 0;
@@ -19861,11 +20118,11 @@ int _psd_tube1_2_4_setpos(void)
     _psd_tube1_2_4_var._position_relative = rot_apply(_psd_tube1_2_4_var._rotation_absolute, tc1);
   } /* psd_tube1_2_4=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_2_4", _psd_tube1_2_4_var._position_absolute, _psd_tube1_2_4_var._rotation_absolute);
-  instrument->_position_absolute[106] = _psd_tube1_2_4_var._position_absolute;
-  instrument->_position_relative[106] = _psd_tube1_2_4_var._position_relative;
+  instrument->_position_absolute[105] = _psd_tube1_2_4_var._position_absolute;
+  instrument->_position_relative[105] = _psd_tube1_2_4_var._position_relative;
     _psd_tube1_2_4_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_2_4_var._position_relative);
-  instrument->counter_N[106]  = instrument->counter_P[106] = instrument->counter_P2[106] = 0;
-  instrument->counter_AbsorbProp[106]= 0;
+  instrument->counter_N[105]  = instrument->counter_P[105] = instrument->counter_P2[105] = 0;
+  instrument->counter_AbsorbProp[105]= 0;
   return(0);
 } /* _psd_tube1_2_4_setpos */
 
@@ -19875,7 +20132,7 @@ int _psd_tube1_2_5_setpos(void)
   SIG_MESSAGE("[_psd_tube1_2_5_setpos] component psd_tube1_2_5=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_2_5_var._name, "psd_tube1_2_5", 16384);
   stracpy(_psd_tube1_2_5_var._type, "PSD_Detector", 16384);
-  _psd_tube1_2_5_var._index=107;
+  _psd_tube1_2_5_var._index=106;
   _psd_tube1_2_5_var._parameters.nx = 1;
   _psd_tube1_2_5_var._parameters.ny = 1024;
   _psd_tube1_2_5_var._parameters.xwidth = 0;
@@ -19932,11 +20189,11 @@ int _psd_tube1_2_5_setpos(void)
     _psd_tube1_2_5_var._position_relative = rot_apply(_psd_tube1_2_5_var._rotation_absolute, tc1);
   } /* psd_tube1_2_5=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_2_5", _psd_tube1_2_5_var._position_absolute, _psd_tube1_2_5_var._rotation_absolute);
-  instrument->_position_absolute[107] = _psd_tube1_2_5_var._position_absolute;
-  instrument->_position_relative[107] = _psd_tube1_2_5_var._position_relative;
+  instrument->_position_absolute[106] = _psd_tube1_2_5_var._position_absolute;
+  instrument->_position_relative[106] = _psd_tube1_2_5_var._position_relative;
     _psd_tube1_2_5_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_2_5_var._position_relative);
-  instrument->counter_N[107]  = instrument->counter_P[107] = instrument->counter_P2[107] = 0;
-  instrument->counter_AbsorbProp[107]= 0;
+  instrument->counter_N[106]  = instrument->counter_P[106] = instrument->counter_P2[106] = 0;
+  instrument->counter_AbsorbProp[106]= 0;
   return(0);
 } /* _psd_tube1_2_5_setpos */
 
@@ -19946,7 +20203,7 @@ int _psd_tube1_2_6_setpos(void)
   SIG_MESSAGE("[_psd_tube1_2_6_setpos] component psd_tube1_2_6=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:253]");
   stracpy(_psd_tube1_2_6_var._name, "psd_tube1_2_6", 16384);
   stracpy(_psd_tube1_2_6_var._type, "PSD_Detector", 16384);
-  _psd_tube1_2_6_var._index=108;
+  _psd_tube1_2_6_var._index=107;
   _psd_tube1_2_6_var._parameters.nx = 1;
   _psd_tube1_2_6_var._parameters.ny = 1024;
   _psd_tube1_2_6_var._parameters.xwidth = 0;
@@ -20003,11 +20260,11 @@ int _psd_tube1_2_6_setpos(void)
     _psd_tube1_2_6_var._position_relative = rot_apply(_psd_tube1_2_6_var._rotation_absolute, tc1);
   } /* psd_tube1_2_6=PSD_Detector() AT ROTATED */
   DEBUG_COMPONENT("psd_tube1_2_6", _psd_tube1_2_6_var._position_absolute, _psd_tube1_2_6_var._rotation_absolute);
-  instrument->_position_absolute[108] = _psd_tube1_2_6_var._position_absolute;
-  instrument->_position_relative[108] = _psd_tube1_2_6_var._position_relative;
+  instrument->_position_absolute[107] = _psd_tube1_2_6_var._position_absolute;
+  instrument->_position_relative[107] = _psd_tube1_2_6_var._position_relative;
     _psd_tube1_2_6_var._position_relative_is_zero =  coords_test_zero(_psd_tube1_2_6_var._position_relative);
-  instrument->counter_N[108]  = instrument->counter_P[108] = instrument->counter_P2[108] = 0;
-  instrument->counter_AbsorbProp[108]= 0;
+  instrument->counter_N[107]  = instrument->counter_P[107] = instrument->counter_P2[107] = 0;
+  instrument->counter_AbsorbProp[107]= 0;
   return(0);
 } /* _psd_tube1_2_6_setpos */
 
@@ -22747,7 +23004,7 @@ int init(void) { /* called by mccode_main for PSI_CAMEA:INITIALISE */
   stracpy(instrument->_name, "PSI_CAMEA", 256);
 
   /* Instrument 'PSI_CAMEA' INITIALISE */
-  SIG_MESSAGE("[PSI_CAMEA] INITIALISE [FullInstrument_v4_elastic_resolution.instr:373]");
+  SIG_MESSAGE("[PSI_CAMEA] INITIALISE [FullInstrument_v4_elastic_resolution.instr:745]");
   #define slitwidth (instrument->_parameters.slitwidth)
   #define SourceE (instrument->_parameters.SourceE)
   #define DeltaSourceE (instrument->_parameters.DeltaSourceE)
@@ -22764,233 +23021,461 @@ int init(void) { /* called by mccode_main for PSI_CAMEA:INITIALISE */
   #define sampleRadius (instrument->_parameters.sampleRadius)
   #define samplePosY (instrument->_parameters.samplePosY)
 {
+
 /********************************************************************************************/
+
 thetaA1= asin(1.0/(0.1106*sqrt(EI)*2.0*3.355));
+
 thetaA2=2.0*thetaA1;
+
 R_mono=sqrt( ( 2.0*1.6*1.6+2.0*1.6*1.6*cos(thetaA2)) )/2.0/sqrt(sin(thetaA2)*sin(thetaA2))*2;
+
 thetaA2=thetaA2*RAD2DEG;
+
 thetaA1=thetaA1*RAD2DEG;
+
 lmin=1.0/0.1106/sqrt(SourceE+DeltaSourceE/2.0);
+
 lmax=1.0/0.1106/sqrt(SourceE-DeltaSourceE/2.0);
+
 printf("\n lmin: %f      lmax: %f \n",lmin,lmax);
+
 printf("\n E0: %f      E0max: %f E0min %f \n",SourceE,SourceE+DeltaSourceE/2.0,SourceE-DeltaSourceE/2.0);
+
 /********************************************************************************************/
+
+
 
 dLambda = 0.5*(WaveMax - WaveMin);
+
 Lambda0 = dLambda+WaveMin;
 
+
+
 var_divreq_x = divreq_x;
+
 var_divreq_y = divreq_y;
+
+
 
 u=1e-4;
 
 
+
+
+
 endPoint1 = Mod_sample - sample_dist;
 
+
+
 endy1 = sizeY + 2*sample_dist*tan(divreq_y*DEG2RAD);
+
+
+
 
 
 endx1 = sizeX + 2*sample_dist*tan(divreq_x*DEG2RAD);
 
 
+
+
+
 var_divreq_x = atan(endx1*tan(var_divreq_x*DEG2RAD)/startx1)*RAD2DEG;
+
 var_divreq_y = atan(endy1*tan(var_divreq_y*DEG2RAD)/starty1)*RAD2DEG;
 
 
 
+
+
+
+
 if (startx1 > endx1) {
+
 smallaxis_x1 = 0.5*startx1+ 0.5*smallaxis_x_factor1*(max_smallaxis_x1-startx1);
+
 }
+
 else {
+
 smallaxis_x1 = 0.5*endx1+ 0.5*smallaxis_x_factor1*(max_smallaxis_x1-endx1);
+
 }
+
 if (starty1 > endy1) {
+
 smallaxis_y1 = 0.5*starty1+ 0.5*smallaxis_y_factor1*(max_smallaxis_y1-starty1);
+
 }
+
 else {
+
 smallaxis_y1 = 0.5*endy1+ 0.5*smallaxis_y_factor1*(max_smallaxis_y1-endy1);
+
 }
+
+
+
 
 
 // calculating focus points for elliptic guide 1 x direction
+
 tmp_w1=startx1;
+
 tmp_w2=endx1;
+
 tmp_b=smallaxis_x1;
+
 tmp_L=length1;
 
+
+
 tmp_k=cos(asin(tmp_w2/(2*tmp_b)))/cos(asin(tmp_w1/(2*tmp_b)));
+
 tmp_L1=tmp_L/(1+tmp_k);
+
 tmp_L2=tmp_L-tmp_L1;
+
 tmp_c=cos(asin(tmp_w1/(2*tmp_b)))*cos(asin(tmp_w1/(2*tmp_b)));
+
 Linx1=-tmp_L1+sqrt(tmp_L1*tmp_L1*(1/tmp_c)-tmp_b*tmp_b);
+
 Loutx1= Linx1+tmp_L1-tmp_L2;
 
+
+
 // calculating focus points for elliptic guide 1 y direction
+
 tmp_w1=starty1;
+
 tmp_w2=endy1;
+
 tmp_b=smallaxis_y1;
+
 tmp_L=length1;
 
+
+
 tmp_k=cos(asin(tmp_w2/(2*tmp_b)))/cos(asin(tmp_w1/(2*tmp_b)));
+
 tmp_L1=tmp_L/(1+tmp_k);
+
 tmp_L2=tmp_L-tmp_L1;
+
 tmp_c=cos(asin(tmp_w1/(2*tmp_b)))*cos(asin(tmp_w1/(2*tmp_b)));
+
 Liny1=-tmp_L1+sqrt(tmp_L1*tmp_L1*(1/tmp_c)-tmp_b*tmp_b);
+
 Louty1= Liny1+tmp_L1-tmp_L2;
+
+
+
+
 
 
 
 endPoint2 = endPoint1 - length1 - u;
 
+
+
 minlengthneeded = 0;
+
+
+
+
 
 
 
 length2 = minlengthneeded + (endPoint2 - guide_start - minlengthneeded - length4 - length5 - minlength3 - minlength5)*lengthfrac2;
 
 
+
+
+
 var_divreq_x_protected = var_divreq_x;
+
 var_divreq_y_protected = var_divreq_y;
 
+
+
 rot2 = 0;
+
 los_logic = 1;
+
 while(los_logic==1) {
+
 rot2 = rot2 + 0.0002;
+
 curve_radius2 = length2/(rot2*DEG2RAD);
 
+
+
 var_divreq_x = var_divreq_x_protected;
+
 var_divreq_y = var_divreq_y_protected;
 
 
 
+
+
+
+
 endx2 = startx1;
+
 endy2 = starty1;
 
 
+
+
+
 startx2 = endx2;
+
 starty2 = endy2;
+
+
+
 
 
 endPoint3 = endPoint2 - length2 - u;
 
+
+
 minlengthneeded = 0;
+
+
 
 if (minlengthneeded < 1) minlengthneeded = 1;
 
 
 
+
+
+
+
 length3 = endPoint3 - guide_start - length4 - length5;
 
+
+
 endx3 = startx2;
+
 endy3 = starty2;
 
 
+
+
+
 var_divreq_x = atan(endx3*tan(var_divreq_x*DEG2RAD)/startx3)*RAD2DEG;
+
 var_divreq_y = atan(endy3*tan(var_divreq_y*DEG2RAD)/starty3)*RAD2DEG;
 
 
 
+
+
+
+
 if (startx3 > endx3) {
+
 smallaxis_x3 = 0.5*startx3+ 0.5*smallaxis_x_factor3*(max_smallaxis_x3-startx3);
+
 }
+
 else {
+
 smallaxis_x3 = 0.5*endx3+ 0.5*smallaxis_x_factor3*(max_smallaxis_x3-endx3);
+
 }
+
 if (starty3 > endy3) {
+
 smallaxis_y3 = 0.5*starty3+ 0.5*smallaxis_y_factor3*(max_smallaxis_y3-starty3);
+
 }
+
 else {
+
 smallaxis_y3 = 0.5*endy3+ 0.5*smallaxis_y_factor3*(max_smallaxis_y3-endy3);
+
 }
+
+
+
 
 
 // calculating focus points for elliptic guide 3 x direction
+
 tmp_w1=startx3;
+
 tmp_w2=endx3;
+
 tmp_b=smallaxis_x3;
+
 tmp_L=length3;
 
+
+
 tmp_k=cos(asin(tmp_w2/(2*tmp_b)))/cos(asin(tmp_w1/(2*tmp_b)));
+
 tmp_L1=tmp_L/(1+tmp_k);
+
 tmp_L2=tmp_L-tmp_L1;
+
 tmp_c=cos(asin(tmp_w1/(2*tmp_b)))*cos(asin(tmp_w1/(2*tmp_b)));
+
 Linx3=-tmp_L1+sqrt(tmp_L1*tmp_L1*(1/tmp_c)-tmp_b*tmp_b);
+
 Loutx3= Linx3+tmp_L1-tmp_L2;
 
+
+
 // calculating focus points for elliptic guide 3 y direction
+
 tmp_w1=starty3;
+
 tmp_w2=endy3;
+
 tmp_b=smallaxis_y3;
+
 tmp_L=length3;
 
+
+
 tmp_k=cos(asin(tmp_w2/(2*tmp_b)))/cos(asin(tmp_w1/(2*tmp_b)));
+
 tmp_L1=tmp_L/(1+tmp_k);
+
 tmp_L2=tmp_L-tmp_L1;
+
 tmp_c=cos(asin(tmp_w1/(2*tmp_b)))*cos(asin(tmp_w1/(2*tmp_b)));
+
 Liny3=-tmp_L1+sqrt(tmp_L1*tmp_L1*(1/tmp_c)-tmp_b*tmp_b);
+
 Louty3= Liny3+tmp_L1-tmp_L2;
+
+
+
+
 
 
 
 endPoint4 = endPoint3 - length3 - u;
 
+
+
 endx4 = startx3;
+
 endy4 = starty3;
 
 
+
+
+
 startx4 = endx4 + 2*length4*tan(var_divreq_x*DEG2RAD);
+
 starty4 = endy4 + 2*length4*tan(var_divreq_y*DEG2RAD);
+
+
+
 
 
 endPoint5 = endPoint4 - length4 - u;
 
+
+
 endx5 = startx4;
+
 endy5 = starty4;
 
 
+
+
+
 var_divreq_x = atan(endx5*tan(var_divreq_x*DEG2RAD)/startx5)*RAD2DEG;
+
 var_divreq_y = atan(endy5*tan(var_divreq_y*DEG2RAD)/starty5)*RAD2DEG;
 
 
 
+
+
+
+
 if (startx5 > endx5) {
+
 smallaxis_x5 = 0.5*startx5+ 0.5*smallaxis_x_factor5*(max_smallaxis_x5-startx5);
+
 }
+
 else {
+
 smallaxis_x5 = 0.5*endx5+ 0.5*smallaxis_x_factor5*(max_smallaxis_x5-endx5);
+
 }
+
 if (starty5 > endy5) {
+
 smallaxis_y5 = 0.5*starty5+ 0.5*smallaxis_y_factor5*(max_smallaxis_y5-starty5);
+
 }
+
 else {
+
 smallaxis_y5 = 0.5*endy5+ 0.5*smallaxis_y_factor5*(max_smallaxis_y5-endy5);
+
 }
+
+
+
 
 
 // calculating focus points for elliptic guide 5 x direction
+
 tmp_w1=startx5;
+
 tmp_w2=endx5;
+
 tmp_b=smallaxis_x5;
+
 tmp_L=length5;
 
+
+
 tmp_k=cos(asin(tmp_w2/(2*tmp_b)))/cos(asin(tmp_w1/(2*tmp_b)));
+
 tmp_L1=tmp_L/(1+tmp_k);
+
 tmp_L2=tmp_L-tmp_L1;
+
 tmp_c=cos(asin(tmp_w1/(2*tmp_b)))*cos(asin(tmp_w1/(2*tmp_b)));
+
 Linx5=-tmp_L1+sqrt(tmp_L1*tmp_L1*(1/tmp_c)-tmp_b*tmp_b);
+
 Loutx5= Linx5+tmp_L1-tmp_L2;
 
+
+
 // calculating focus points for elliptic guide 5 y direction
+
 tmp_w1=starty5;
+
 tmp_w2=endy5;
+
 tmp_b=smallaxis_y5;
+
 tmp_L=length5;
 
+
+
 tmp_k=cos(asin(tmp_w2/(2*tmp_b)))/cos(asin(tmp_w1/(2*tmp_b)));
+
 tmp_L1=tmp_L/(1+tmp_k);
+
 tmp_L2=tmp_L-tmp_L1;
+
 tmp_c=cos(asin(tmp_w1/(2*tmp_b)))*cos(asin(tmp_w1/(2*tmp_b)));
+
 Liny5=-tmp_L1+sqrt(tmp_L1*tmp_L1*(1/tmp_c)-tmp_b*tmp_b);
+
 Louty5= Liny5+tmp_L1-tmp_L2;
 
 
@@ -22998,254 +23483,516 @@ Louty5= Liny5+tmp_L1-tmp_L2;
 
 
 
+
+
+
+
+
+
+
 // Temporary fake start point, for this specific los section
+
 startXdirec[7][1] = 1.0;
+
 startXdirec[7][2] = 0.0;
+
 startYdirec[7][1] = 1.0;
+
 startYdirec[7][2] = 0.0;
 
+
+
 startXposition[7][1] = 0.0;
+
 startXposition[7][2] = 0.0;
+
 startYposition[7][1] = 0.0;
+
 startYposition[7][2] = 0.0;
 
+
+
 startXdirec[6][1] = startXdirec[7][1];
+
 startXdirec[6][2] = startXdirec[7][2];
+
 startYdirec[6][1] = startYdirec[7][1];
+
 startYdirec[6][2] = startYdirec[7][2];
+
 startXposition[6][1] = startXposition[7][1] + startXdirec[7][1]*0*length5;
+
 startXposition[6][2] = startXposition[7][2] + startXdirec[7][2]*0*length5;
+
 startYposition[6][1] = startYposition[7][1] + startYdirec[7][1]*0*length5;
+
 startYposition[6][2] = startYposition[7][2] + startYdirec[7][2]*0*length5;
 
+
+
 position = 0*length5;
+
 focus_e = length5 + Loutx5;
+
 elength = focus_e + Linx5;
+
 width  = smallaxis_x5*sqrt(1-(((position+Linx5)-elength/2)/(elength/2))*(((position+Linx5)-elength/2)/(elength/2)));
+
 focus_e = length5 + Louty5;
+
 elength = focus_e + Liny5;
+
 height = smallaxis_y5*sqrt(1-(((position+Liny5)-elength/2)/(elength/2))*(((position+Liny5)-elength/2)/(elength/2)));
+
 startxpoint[6][1][1] = startXposition[6][1]+startXdirec[6][2]*width;
+
 startxpoint[6][2][1] = startXposition[6][2]-startXdirec[6][1]*width;
+
 startxpoint[6][1][2] = startXposition[6][1]-startXdirec[6][2]*width;
+
 startxpoint[6][2][2] = startXposition[6][2]+startXdirec[6][1]*width;
+
 startypoint[6][1][1] = startYposition[6][1]+startYdirec[6][2]*height;
+
 startypoint[6][2][1] = startYposition[6][2]-startYdirec[6][1]*height;
+
 startypoint[6][1][2] = startYposition[6][1]-startYdirec[6][2]*height;
+
 startypoint[6][2][2] = startYposition[6][2]+startYdirec[6][1]*height;
 
 
 
+
+
+
+
 startXdirec[5][1] = startXdirec[7][1];
+
 startXdirec[5][2] = startXdirec[7][2];
+
 startYdirec[5][1] = startYdirec[7][1];
+
 startYdirec[5][2] = startYdirec[7][2];
+
 startXposition[5][1] = startXposition[7][1] + startXdirec[7][1]*length5;
+
 startXposition[5][2] = startXposition[7][2] + startXdirec[7][2]*length5;
+
 startYposition[5][1] = startYposition[7][1] + startYdirec[7][1]*length5;
+
 startYposition[5][2] = startYposition[7][2] + startYdirec[7][2]*length5;
 
+
+
 startxpoint[5][1][1] = startXposition[5][1]+startXdirec[5][2]*0.5*startx4;
+
 startxpoint[5][2][1] = startXposition[5][2]-startXdirec[5][1]*0.5*startx4;
+
 startxpoint[5][1][2] = startXposition[5][1]-startXdirec[5][2]*0.5*startx4;
+
 startxpoint[5][2][2] = startXposition[5][2]+startXdirec[5][1]*0.5*startx4;
+
 startypoint[5][1][1] = startYposition[5][1]+startYdirec[5][2]*0.5*starty4;
+
 startypoint[5][2][1] = startYposition[5][2]-startYdirec[5][1]*0.5*starty4;
+
 startypoint[5][1][2] = startYposition[5][1]-startYdirec[5][2]*0.5*starty4;
+
 startypoint[5][2][2] = startYposition[5][2]+startYdirec[5][1]*0.5*starty4;
 
 
 
 
+
+
+
+
+
 startXdirec[4][1] = startXdirec[5][1];
+
 startXdirec[4][2] = startXdirec[5][2];
+
 startYdirec[4][1] = startYdirec[5][1];
+
 startYdirec[4][2] = startYdirec[5][2];
+
 startXposition[4][1] = startXposition[5][1] + startXdirec[5][1]*length4;
+
 startXposition[4][2] = startXposition[5][2] + startXdirec[5][2]*length4;
+
 startYposition[4][1] = startYposition[5][1] + startYdirec[5][1]*length4;
+
 startYposition[4][2] = startYposition[5][2] + startYdirec[5][2]*length4;
 
+
+
 startxpoint[4][1][1] = startXposition[4][1]+startXdirec[4][2]*0.5*startx3;
+
 startxpoint[4][2][1] = startXposition[4][2]-startXdirec[4][1]*0.5*startx3;
+
 startxpoint[4][1][2] = startXposition[4][1]-startXdirec[4][2]*0.5*startx3;
+
 startxpoint[4][2][2] = startXposition[4][2]+startXdirec[4][1]*0.5*startx3;
+
 startypoint[4][1][1] = startYposition[4][1]+startYdirec[4][2]*0.5*starty3;
+
 startypoint[4][2][1] = startYposition[4][2]-startYdirec[4][1]*0.5*starty3;
+
 startypoint[4][1][2] = startYposition[4][1]-startYdirec[4][2]*0.5*starty3;
+
 startypoint[4][2][2] = startYposition[4][2]+startYdirec[4][1]*0.5*starty3;
 
 
 
 
+
+
+
+
+
 startXdirec[3][1] = startXdirec[4][1];
+
 startXdirec[3][2] = startXdirec[4][2];
+
 startYdirec[3][1] = startYdirec[4][1];
+
 startYdirec[3][2] = startYdirec[4][2];
+
 startXposition[3][1] = startXposition[4][1] + startXdirec[4][1]*length3;
+
 startXposition[3][2] = startXposition[4][2] + startXdirec[4][2]*length3;
+
 startYposition[3][1] = startYposition[4][1] + startYdirec[4][1]*length3;
+
 startYposition[3][2] = startYposition[4][2] + startYdirec[4][2]*length3;
 
+
+
 startxpoint[3][1][1] = startXposition[3][1]+startXdirec[3][2]*0.5*startx2;
+
 startxpoint[3][2][1] = startXposition[3][2]-startXdirec[3][1]*0.5*startx2;
+
 startxpoint[3][1][2] = startXposition[3][1]-startXdirec[3][2]*0.5*startx2;
+
 startxpoint[3][2][2] = startXposition[3][2]+startXdirec[3][1]*0.5*startx2;
+
 startypoint[3][1][1] = startYposition[3][1]+startYdirec[3][2]*0.5*starty2;
+
 startypoint[3][2][1] = startYposition[3][2]-startYdirec[3][1]*0.5*starty2;
+
 startypoint[3][1][2] = startYposition[3][1]-startYdirec[3][2]*0.5*starty2;
+
 startypoint[3][2][2] = startYposition[3][2]+startYdirec[3][1]*0.5*starty2;
 
+
+
 curveXcenter2[1] = startXposition[3][1] + startXdirec[3][2] * curve_radius2;
+
 curveXcenter2[2] = startXposition[3][2] - startXdirec[3][1] * curve_radius2;
+
 curve_small_radius2 = curve_radius2 - 0.5*startx2;
 
 
 
+
+
+
+
 rot_factor_g2 = 1;
+
 cosrot3 = cos(rot2*DEG2RAD);
+
 sinrot3 = sin(rot2*DEG2RAD);
+
 DeltaA2 = curve_radius2*(1-cos(rot2*DEG2RAD));
+
 DeltaB2 = curve_radius2*sin(rot2*DEG2RAD);
+
 startXdirec[2][1] = startXdirec[3][1]*cosrot3 + startXdirec[3][2]*sinrot3;
+
 startXdirec[2][2] = - startXdirec[3][1]*sinrot3 + startXdirec[3][2]*cosrot3;
+
 startXposition[2][1] = startXposition[3][1] + startXdirec[3][2]*DeltaA2 + startXdirec[3][1]*DeltaB2;
+
 startXposition[2][2] = startXposition[3][2] - startXdirec[3][1]*DeltaA2 + startXdirec[3][2]*DeltaB2;
+
 startYdirec[2][1] = startYdirec[3][1];
+
 startYdirec[2][2] = startYdirec[3][2];
+
 startYposition[2][1] = startYposition[3][1] + startYdirec[3][2]*DeltaA2 + startYdirec[3][1]*DeltaB2;
+
 startYposition[2][2] = startYposition[3][2] + startYdirec[3][2]*length2*rot_factor_g2;
 
+
+
 startxpoint[2][1][1] = startXposition[2][1]+startXdirec[2][2]*0.5*startx1;
+
 startxpoint[2][2][1] = startXposition[2][2]-startXdirec[2][1]*0.5*startx1;
+
 startxpoint[2][1][2] = startXposition[2][1]-startXdirec[2][2]*0.5*startx1;
+
 startxpoint[2][2][2] = startXposition[2][2]+startXdirec[2][1]*0.5*startx1;
+
 startypoint[2][1][1] = startYposition[2][1]+startYdirec[2][2]*0.5*starty1;
+
 startypoint[2][2][1] = startYposition[2][2]-startYdirec[2][1]*0.5*starty1;
+
 startypoint[2][1][2] = startYposition[2][1]-startYdirec[2][2]*0.5*starty1;
+
 startypoint[2][2][2] = startYposition[2][2]+startYdirec[2][1]*0.5*starty1;
 
 
 
 
+
+
+
+
+
 startXdirec[1][1] = startXdirec[2][1];
+
 startXdirec[1][2] = startXdirec[2][2];
+
 startYdirec[1][1] = startYdirec[2][1];
+
 startYdirec[1][2] = startYdirec[2][2];
+
 startXposition[1][1] = startXposition[2][1] + startXdirec[2][1]*(length1 - 6);
+
 startXposition[1][2] = startXposition[2][2] + startXdirec[2][2]*(length1 - 6);
+
 startYposition[1][1] = startYposition[2][1] + startYdirec[2][1]*(length1 - 6);
+
 startYposition[1][2] = startYposition[2][2] + startYdirec[2][2]*(length1 - 6);
 
+
+
 position = length1 - 6;
+
 focus_e = length1 + Loutx1;
+
 elength = focus_e + Linx1;
+
 width  = smallaxis_x1*sqrt(1-(((position+Linx1)-elength/2)/(elength/2))*(((position+Linx1)-elength/2)/(elength/2)));
+
 focus_e = length1 + Louty1;
+
 elength = focus_e + Liny1;
+
 height = smallaxis_y1*sqrt(1-(((position+Liny1)-elength/2)/(elength/2))*(((position+Liny1)-elength/2)/(elength/2)));
+
 startxpoint[1][1][1] = startXposition[1][1]+startXdirec[1][2]*width;
+
 startxpoint[1][2][1] = startXposition[1][2]-startXdirec[1][1]*width;
+
 startxpoint[1][1][2] = startXposition[1][1]-startXdirec[1][2]*width;
+
 startxpoint[1][2][2] = startXposition[1][2]+startXdirec[1][1]*width;
+
 startypoint[1][1][1] = startYposition[1][1]+startYdirec[1][2]*height;
+
 startypoint[1][2][1] = startYposition[1][2]-startYdirec[1][1]*height;
+
 startypoint[1][1][2] = startYposition[1][1]-startYdirec[1][2]*height;
+
 startypoint[1][2][2] = startYposition[1][2]+startYdirec[1][1]*height;
+
 startXdirec[0][1] = startXdirec[2][1];
+
 startXdirec[0][2] = startXdirec[2][2];
+
 startYdirec[0][1] = startYdirec[2][1];
+
 startYdirec[0][2] = startYdirec[2][2];
+
 startXposition[0][1] = startXposition[2][1] + startXdirec[2][1]*length1;
+
 startXposition[0][2] = startXposition[2][2] + startXdirec[2][2]*length1;
+
 startYposition[0][1] = startYposition[2][1] + startYdirec[2][1]*length1;
+
 startYposition[0][2] = startYposition[2][2] + startYdirec[2][2]*length1;
+
 startxpoint[0][1][1] = startXposition[0][1]+startXdirec[0][2]*0.5*endx1;
+
 startxpoint[0][2][1] = startXposition[0][2]-startXdirec[0][1]*0.5*endx1;
+
 startxpoint[0][1][2] = startXposition[0][1]-startXdirec[0][2]*0.5*endx1;
+
 startxpoint[0][2][2] = startXposition[0][2]+startXdirec[0][1]*0.5*endx1;
+
 startypoint[0][1][1] = startYposition[0][1]+startYdirec[0][2]*0.5*endy1;
+
 startypoint[0][2][1] = startYposition[0][2]-startYdirec[0][1]*0.5*endy1;
+
 startypoint[0][1][2] = startYposition[0][1]-startYdirec[0][2]*0.5*endy1;
+
 startypoint[0][2][2] = startYposition[0][2]+startYdirec[0][1]*0.5*endy1;
 
+
+
 los_logic = 1; // assume line of sight
+
 for (n1=1;n1<6;++n1) {
+
     for (n2=n1+1;n2<7;++n2) {
+
         Z1[1]=startxpoint[n1][1][1];
+
         X1[1]=startxpoint[n1][2][1];
+
         Z2[1]=startxpoint[n2][1][1];
+
         X2[1]=startxpoint[n2][2][1];
+
         Z1[2]=startxpoint[n1][1][2];
+
         X1[2]=startxpoint[n1][2][2];
+
         Z2[2]=startxpoint[n2][1][2];
+
         X2[2]=startxpoint[n2][2][2];
+
         Z1[3]=startxpoint[n1][1][1];
+
         X1[3]=startxpoint[n1][2][1];
+
         Z2[3]=startxpoint[n2][1][2];
+
         X2[3]=startxpoint[n2][2][2];
+
         Z1[4]=startxpoint[n1][1][2];
+
         X1[4]=startxpoint[n1][2][2];
+
         Z2[4]=startxpoint[n2][1][1];
+
         X2[4]=startxpoint[n2][2][1];
+
         for (line=1;line<5;++line) { // 4 lines need to be checked
+
             tmp_double=(Z1[line]-Z2[line])/100;
+
             a[line]=(X1[line]-X2[line])/tmp_double;
+
             tmp_double=a[line]*Z1[line];
+
             b[line]=X1[line]-tmp_double/100;
+
             los_tmp[line]=1;
+
             for (n_check=1;n_check<7;++n_check) {
+
                 // check if the line goes between the points
+
                 if (n_check != n1 && n_check != n2 && ((a[line]*startxpoint[n_check][1][1])/100+b[line]<startxpoint[n_check][2][1] || (a[line]*startxpoint[n_check][1][2])/100+b[line]>startxpoint[n_check][2][2])) {
+
                     los_tmp[line]=0; // line of sight blocked for line l!
+
                 }
+
             }
+
             // x1 and x2 chosen as start and end of curved section
+
             x1_circ = startXposition[3][1] - curveXcenter2[1];
+
             x2_circ = startXposition[2][1] - curveXcenter2[1];
+
             y1_circ = a[line]/100*startXposition[3][1] + b[line] - curveXcenter2[2];
+
             y2_circ = a[line]/100*startXposition[2][1] + b[line] - curveXcenter2[2];
+
             dx_circ = x2_circ - x1_circ;
+
             dy_circ = y2_circ - y1_circ;
+
             dr_circ = sqrt(dx_circ*dx_circ + dy_circ*dy_circ);
+
             D_circ = x1_circ*y2_circ - y1_circ*x2_circ;
+
             if (dy_circ >= 0)
+
               sign_dy = 1;
+
             else
+
               sign_dy = -1;
+
             k_circ = curve_small_radius2*curve_small_radius2* dr_circ * dr_circ - D_circ*D_circ;
 
+
+
             if (k_circ > 0){
+
              x_solution[0] = (D_circ*dy_circ + sign_dy*dx_circ*sqrt(k_circ))/(dr_circ*dr_circ);
+
              x_solution[1] = (D_circ*dy_circ - sign_dy*dx_circ*sqrt(k_circ))/(dr_circ*dr_circ);
+
              y_solution[0] = (-D_circ*dx_circ + fabs(dy_circ)*sqrt(k_circ))/(dr_circ*dr_circ);
+
              y_solution[1] = (-D_circ*dx_circ - fabs(dy_circ)*sqrt(k_circ))/(dr_circ*dr_circ);
 
+
+
              for (ii=0;ii<2;++ii) {
+
               if (x_solution[ii] > x1_circ && x_solution[ii] < x2_circ) {
+
                   los_tmp[line]=0; // line of sight blocked for line l!
+
               }
+
              }
+
             }
+
         }
+
         if (los_tmp[1]+los_tmp[2]+los_tmp[3]+los_tmp[4]==0) {
+
             los_logic_single[n1][n2]=0;
+
         }
+
         else {
+
             los_logic_single[n1][n2]=1;
+
         }
+
     }
+
 }
+
 los_check=0;
+
 for (n1=1;n1<6;++n1) {
+
     for (n2=n1+1;n2<7;++n2) {
+
         los_check=los_check+los_logic_single[n1][n2];
+
     }
+
 }
+
 if (los_check==0) {
+
     los_logic = 0;
+
 }
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -23254,497 +24001,990 @@ if (los_check==0) {
 
 
 startXdirec[7][1] = 1.0;
+
 startXdirec[7][2] = 0.0;
+
 startYdirec[7][1] = 1.0;
+
 startYdirec[7][2] = 0.0;
 
+
+
 startXposition[7][1] = endPoint5 - length5;
+
 startXposition[7][2] = 0.0;
+
 startYposition[7][1] = endPoint5 - length5;
+
 startYposition[7][2] = 0.0;
 
+
+
 startxpoint[7][1][1] = startXposition[7][1]+startXdirec[7][2]*0.5*startx5;
+
 startxpoint[7][2][1] = startXposition[7][2]-startXdirec[7][1]*0.5*startx5;
+
 startxpoint[7][1][2] = startXposition[7][1]-startXdirec[7][2]*0.5*startx5;
+
 startxpoint[7][2][2] = startXposition[7][2]+startXdirec[7][1]*0.5*startx5;
+
 startypoint[7][1][1] = startYposition[7][1]+startYdirec[7][2]*0.5*starty5;
+
 startypoint[7][2][1] = startYposition[7][2]-startYdirec[7][1]*0.5*starty5;
+
 startypoint[7][1][2] = startYposition[7][1]-startYdirec[7][2]*0.5*starty5;
+
 startypoint[7][2][2] = startYposition[7][2]+startYdirec[7][1]*0.5*starty5;
 
 
 
 
+
+
+
+
+
 startXdirec[6][1] = startXdirec[7][1];
+
 startXdirec[6][2] = startXdirec[7][2];
+
 startYdirec[6][1] = startYdirec[7][1];
+
 startYdirec[6][2] = startYdirec[7][2];
+
 startXposition[6][1] = startXposition[7][1] + startXdirec[7][1]*0*length5;
+
 startXposition[6][2] = startXposition[7][2] + startXdirec[7][2]*0*length5;
+
 startYposition[6][1] = startYposition[7][1] + startYdirec[7][1]*0*length5;
+
 startYposition[6][2] = startYposition[7][2] + startYdirec[7][2]*0*length5;
 
+
+
 position = 0*length5;
+
 focus_e = length5 + Loutx5;
+
 elength = focus_e + Linx5;
+
 width  = smallaxis_x5*sqrt(1-(((position+Linx5)-elength/2)/(elength/2))*(((position+Linx5)-elength/2)/(elength/2)));
+
 focus_e = length5 + Louty5;
+
 elength = focus_e + Liny5;
+
 height = smallaxis_y5*sqrt(1-(((position+Liny5)-elength/2)/(elength/2))*(((position+Liny5)-elength/2)/(elength/2)));
+
 startxpoint[6][1][1] = startXposition[6][1]+startXdirec[6][2]*width;
+
 startxpoint[6][2][1] = startXposition[6][2]-startXdirec[6][1]*width;
+
 startxpoint[6][1][2] = startXposition[6][1]-startXdirec[6][2]*width;
+
 startxpoint[6][2][2] = startXposition[6][2]+startXdirec[6][1]*width;
+
 startypoint[6][1][1] = startYposition[6][1]+startYdirec[6][2]*height;
+
 startypoint[6][2][1] = startYposition[6][2]-startYdirec[6][1]*height;
+
 startypoint[6][1][2] = startYposition[6][1]-startYdirec[6][2]*height;
+
 startypoint[6][2][2] = startYposition[6][2]+startYdirec[6][1]*height;
 
 
 
+
+
+
+
 startXdirec[5][1] = startXdirec[7][1];
+
 startXdirec[5][2] = startXdirec[7][2];
+
 startYdirec[5][1] = startYdirec[7][1];
+
 startYdirec[5][2] = startYdirec[7][2];
+
 startXposition[5][1] = startXposition[7][1] + startXdirec[7][1]*length5;
+
 startXposition[5][2] = startXposition[7][2] + startXdirec[7][2]*length5;
+
 startYposition[5][1] = startYposition[7][1] + startYdirec[7][1]*length5;
+
 startYposition[5][2] = startYposition[7][2] + startYdirec[7][2]*length5;
 
+
+
 startxpoint[5][1][1] = startXposition[5][1]+startXdirec[5][2]*0.5*startx4;
+
 startxpoint[5][2][1] = startXposition[5][2]-startXdirec[5][1]*0.5*startx4;
+
 startxpoint[5][1][2] = startXposition[5][1]-startXdirec[5][2]*0.5*startx4;
+
 startxpoint[5][2][2] = startXposition[5][2]+startXdirec[5][1]*0.5*startx4;
+
 startypoint[5][1][1] = startYposition[5][1]+startYdirec[5][2]*0.5*starty4;
+
 startypoint[5][2][1] = startYposition[5][2]-startYdirec[5][1]*0.5*starty4;
+
 startypoint[5][1][2] = startYposition[5][1]-startYdirec[5][2]*0.5*starty4;
+
 startypoint[5][2][2] = startYposition[5][2]+startYdirec[5][1]*0.5*starty4;
 
 
 
 
+
+
+
+
+
 startXdirec[4][1] = startXdirec[5][1];
+
 startXdirec[4][2] = startXdirec[5][2];
+
 startYdirec[4][1] = startYdirec[5][1];
+
 startYdirec[4][2] = startYdirec[5][2];
+
 startXposition[4][1] = startXposition[5][1] + startXdirec[5][1]*length4;
+
 startXposition[4][2] = startXposition[5][2] + startXdirec[5][2]*length4;
+
 startYposition[4][1] = startYposition[5][1] + startYdirec[5][1]*length4;
+
 startYposition[4][2] = startYposition[5][2] + startYdirec[5][2]*length4;
 
+
+
 startxpoint[4][1][1] = startXposition[4][1]+startXdirec[4][2]*0.5*startx3;
+
 startxpoint[4][2][1] = startXposition[4][2]-startXdirec[4][1]*0.5*startx3;
+
 startxpoint[4][1][2] = startXposition[4][1]-startXdirec[4][2]*0.5*startx3;
+
 startxpoint[4][2][2] = startXposition[4][2]+startXdirec[4][1]*0.5*startx3;
+
 startypoint[4][1][1] = startYposition[4][1]+startYdirec[4][2]*0.5*starty3;
+
 startypoint[4][2][1] = startYposition[4][2]-startYdirec[4][1]*0.5*starty3;
+
 startypoint[4][1][2] = startYposition[4][1]-startYdirec[4][2]*0.5*starty3;
+
 startypoint[4][2][2] = startYposition[4][2]+startYdirec[4][1]*0.5*starty3;
 
 
 
 
+
+
+
+
+
 startXdirec[3][1] = startXdirec[4][1];
+
 startXdirec[3][2] = startXdirec[4][2];
+
 startYdirec[3][1] = startYdirec[4][1];
+
 startYdirec[3][2] = startYdirec[4][2];
+
 startXposition[3][1] = startXposition[4][1] + startXdirec[4][1]*length3;
+
 startXposition[3][2] = startXposition[4][2] + startXdirec[4][2]*length3;
+
 startYposition[3][1] = startYposition[4][1] + startYdirec[4][1]*length3;
+
 startYposition[3][2] = startYposition[4][2] + startYdirec[4][2]*length3;
 
+
+
 startxpoint[3][1][1] = startXposition[3][1]+startXdirec[3][2]*0.5*startx2;
+
 startxpoint[3][2][1] = startXposition[3][2]-startXdirec[3][1]*0.5*startx2;
+
 startxpoint[3][1][2] = startXposition[3][1]-startXdirec[3][2]*0.5*startx2;
+
 startxpoint[3][2][2] = startXposition[3][2]+startXdirec[3][1]*0.5*startx2;
+
 startypoint[3][1][1] = startYposition[3][1]+startYdirec[3][2]*0.5*starty2;
+
 startypoint[3][2][1] = startYposition[3][2]-startYdirec[3][1]*0.5*starty2;
+
 startypoint[3][1][2] = startYposition[3][1]-startYdirec[3][2]*0.5*starty2;
+
 startypoint[3][2][2] = startYposition[3][2]+startYdirec[3][1]*0.5*starty2;
 
+
+
 curveXcenter2[1] = startXposition[3][1] + startXdirec[3][2] * curve_radius2;
+
 curveXcenter2[2] = startXposition[3][2] - startXdirec[3][1] * curve_radius2;
+
 curve_small_radius2 = curve_radius2 - 0.5*startx2;
 
 
 
+
+
+
+
 rot_factor_g2 = 1;
+
 cosrot3 = cos(rot2*DEG2RAD);
+
 sinrot3 = sin(rot2*DEG2RAD);
+
 DeltaA2 = curve_radius2*(1-cos(rot2*DEG2RAD));
+
 DeltaB2 = curve_radius2*sin(rot2*DEG2RAD);
+
 startXdirec[2][1] = startXdirec[3][1]*cosrot3 + startXdirec[3][2]*sinrot3;
+
 startXdirec[2][2] = - startXdirec[3][1]*sinrot3 + startXdirec[3][2]*cosrot3;
+
 startXposition[2][1] = startXposition[3][1] + startXdirec[3][2]*DeltaA2 + startXdirec[3][1]*DeltaB2;
+
 startXposition[2][2] = startXposition[3][2] - startXdirec[3][1]*DeltaA2 + startXdirec[3][2]*DeltaB2;
+
 startYdirec[2][1] = startYdirec[3][1];
+
 startYdirec[2][2] = startYdirec[3][2];
+
 startYposition[2][1] = startYposition[3][1] + startYdirec[3][2]*DeltaA2 + startYdirec[3][1]*DeltaB2;
+
 startYposition[2][2] = startYposition[3][2] + startYdirec[3][2]*length2*rot_factor_g2;
 
+
+
 startxpoint[2][1][1] = startXposition[2][1]+startXdirec[2][2]*0.5*startx1;
+
 startxpoint[2][2][1] = startXposition[2][2]-startXdirec[2][1]*0.5*startx1;
+
 startxpoint[2][1][2] = startXposition[2][1]-startXdirec[2][2]*0.5*startx1;
+
 startxpoint[2][2][2] = startXposition[2][2]+startXdirec[2][1]*0.5*startx1;
+
 startypoint[2][1][1] = startYposition[2][1]+startYdirec[2][2]*0.5*starty1;
+
 startypoint[2][2][1] = startYposition[2][2]-startYdirec[2][1]*0.5*starty1;
+
 startypoint[2][1][2] = startYposition[2][1]-startYdirec[2][2]*0.5*starty1;
+
 startypoint[2][2][2] = startYposition[2][2]+startYdirec[2][1]*0.5*starty1;
 
 
 
 
+
+
+
+
+
 startXdirec[1][1] = startXdirec[2][1];
+
 startXdirec[1][2] = startXdirec[2][2];
+
 startYdirec[1][1] = startYdirec[2][1];
+
 startYdirec[1][2] = startYdirec[2][2];
+
 startXposition[1][1] = startXposition[2][1] + startXdirec[2][1]*(length1 - 6);
+
 startXposition[1][2] = startXposition[2][2] + startXdirec[2][2]*(length1 - 6);
+
 startYposition[1][1] = startYposition[2][1] + startYdirec[2][1]*(length1 - 6);
+
 startYposition[1][2] = startYposition[2][2] + startYdirec[2][2]*(length1 - 6);
 
+
+
 position = length1 - 6;
+
 focus_e = length1 + Loutx1;
+
 elength = focus_e + Linx1;
+
 width  = smallaxis_x1*sqrt(1-(((position+Linx1)-elength/2)/(elength/2))*(((position+Linx1)-elength/2)/(elength/2)));
+
 focus_e = length1 + Louty1;
+
 elength = focus_e + Liny1;
+
 height = smallaxis_y1*sqrt(1-(((position+Liny1)-elength/2)/(elength/2))*(((position+Liny1)-elength/2)/(elength/2)));
+
 startxpoint[1][1][1] = startXposition[1][1]+startXdirec[1][2]*width;
+
 startxpoint[1][2][1] = startXposition[1][2]-startXdirec[1][1]*width;
+
 startxpoint[1][1][2] = startXposition[1][1]-startXdirec[1][2]*width;
+
 startxpoint[1][2][2] = startXposition[1][2]+startXdirec[1][1]*width;
+
 startypoint[1][1][1] = startYposition[1][1]+startYdirec[1][2]*height;
+
 startypoint[1][2][1] = startYposition[1][2]-startYdirec[1][1]*height;
+
 startypoint[1][1][2] = startYposition[1][1]-startYdirec[1][2]*height;
+
 startypoint[1][2][2] = startYposition[1][2]+startYdirec[1][1]*height;
+
 startXdirec[0][1] = startXdirec[2][1];
+
 startXdirec[0][2] = startXdirec[2][2];
+
 startYdirec[0][1] = startYdirec[2][1];
+
 startYdirec[0][2] = startYdirec[2][2];
+
 startXposition[0][1] = startXposition[2][1] + startXdirec[2][1]*length1;
+
 startXposition[0][2] = startXposition[2][2] + startXdirec[2][2]*length1;
+
 startYposition[0][1] = startYposition[2][1] + startYdirec[2][1]*length1;
+
 startYposition[0][2] = startYposition[2][2] + startYdirec[2][2]*length1;
+
 startxpoint[0][1][1] = startXposition[0][1]+startXdirec[0][2]*0.5*endx1;
+
 startxpoint[0][2][1] = startXposition[0][2]-startXdirec[0][1]*0.5*endx1;
+
 startxpoint[0][1][2] = startXposition[0][1]-startXdirec[0][2]*0.5*endx1;
+
 startxpoint[0][2][2] = startXposition[0][2]+startXdirec[0][1]*0.5*endx1;
+
 startypoint[0][1][1] = startYposition[0][1]+startYdirec[0][2]*0.5*endy1;
+
 startypoint[0][2][1] = startYposition[0][2]-startYdirec[0][1]*0.5*endy1;
+
 startypoint[0][1][2] = startYposition[0][1]-startYdirec[0][2]*0.5*endy1;
+
 startypoint[0][2][2] = startYposition[0][2]+startYdirec[0][1]*0.5*endy1;
+
+
+
 
 
 fp = fopen(file_name,"w");
 
-fprintf(fp,"E\n");
-fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[7][1][1],startxpoint[7][2][1],startxpoint[7][1][2],startxpoint[7][2][2]);
-fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[6][1][1],startxpoint[6][2][1],startxpoint[6][1][2],startxpoint[6][2][2]);
-fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[7][1][1],startypoint[7][2][1],startypoint[7][1][2],startypoint[7][2][2]);
-fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[6][1][1],startypoint[6][2][1],startypoint[6][1][2],startypoint[6][2][2]);
-fprintf(fp,"xpos: %lf \t %lf\n",startXposition[7][1],startXposition[7][2]);
-fprintf(fp,"ypos: %lf \t %lf\n",startYposition[7][1],startYposition[7][2]);
-fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[7][1],startXdirec[7][2]);
-fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[7][1],startYdirec[7][2]);
-fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length5,smallaxis_x5,Linx5,Loutx5);
-fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length5,smallaxis_y5,Liny5,Louty5);
+
 
 fprintf(fp,"E\n");
-fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[6][1][1],startxpoint[6][2][1],startxpoint[6][1][2],startxpoint[6][2][2]);
-fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[5][1][1],startxpoint[5][2][1],startxpoint[5][1][2],startxpoint[5][2][2]);
-fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[6][1][1],startypoint[6][2][1],startypoint[6][1][2],startypoint[6][2][2]);
-fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[5][1][1],startypoint[5][2][1],startypoint[5][1][2],startypoint[5][2][2]);
-fprintf(fp,"xpos: %lf \t %lf\n",startXposition[6][1],startXposition[6][2]);
-fprintf(fp,"ypos: %lf \t %lf\n",startYposition[6][1],startYposition[6][2]);
-fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[6][1],startXdirec[6][2]);
-fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[6][1],startYdirec[6][2]);
+
+fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[7][1][1],startxpoint[7][2][1],startxpoint[7][1][2],startxpoint[7][2][2]);
+
+fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[6][1][1],startxpoint[6][2][1],startxpoint[6][1][2],startxpoint[6][2][2]);
+
+fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[7][1][1],startypoint[7][2][1],startypoint[7][1][2],startypoint[7][2][2]);
+
+fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[6][1][1],startypoint[6][2][1],startypoint[6][1][2],startypoint[6][2][2]);
+
+fprintf(fp,"xpos: %lf \t %lf\n",startXposition[7][1],startXposition[7][2]);
+
+fprintf(fp,"ypos: %lf \t %lf\n",startYposition[7][1],startYposition[7][2]);
+
+fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[7][1],startXdirec[7][2]);
+
+fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[7][1],startYdirec[7][2]);
+
 fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length5,smallaxis_x5,Linx5,Loutx5);
+
 fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length5,smallaxis_y5,Liny5,Louty5);
+
+
+
+fprintf(fp,"E\n");
+
+fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[6][1][1],startxpoint[6][2][1],startxpoint[6][1][2],startxpoint[6][2][2]);
+
+fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[5][1][1],startxpoint[5][2][1],startxpoint[5][1][2],startxpoint[5][2][2]);
+
+fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[6][1][1],startypoint[6][2][1],startypoint[6][1][2],startypoint[6][2][2]);
+
+fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[5][1][1],startypoint[5][2][1],startypoint[5][1][2],startypoint[5][2][2]);
+
+fprintf(fp,"xpos: %lf \t %lf\n",startXposition[6][1],startXposition[6][2]);
+
+fprintf(fp,"ypos: %lf \t %lf\n",startYposition[6][1],startYposition[6][2]);
+
+fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[6][1],startXdirec[6][2]);
+
+fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[6][1],startYdirec[6][2]);
+
+fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length5,smallaxis_x5,Linx5,Loutx5);
+
+fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length5,smallaxis_y5,Liny5,Louty5);
+
 fprintf(fp,"Los s\n");
 
+
+
 fprintf(fp,"G\n");
+
 fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[5][1][1],startxpoint[5][2][1],startxpoint[5][1][2],startxpoint[5][2][2]);
+
 fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[4][1][1],startxpoint[4][2][1],startxpoint[4][1][2],startxpoint[4][2][2]);
+
 fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[5][1][1],startypoint[5][2][1],startypoint[5][1][2],startypoint[5][2][2]);
+
 fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[4][1][1],startypoint[4][2][1],startypoint[4][1][2],startypoint[4][2][2]);
 
+
+
 fprintf(fp,"E\n");
+
 fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[4][1][1],startxpoint[4][2][1],startxpoint[4][1][2],startxpoint[4][2][2]);
+
 fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[3][1][1],startxpoint[3][2][1],startxpoint[3][1][2],startxpoint[3][2][2]);
+
 fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[4][1][1],startypoint[4][2][1],startypoint[4][1][2],startypoint[4][2][2]);
+
 fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[3][1][1],startypoint[3][2][1],startypoint[3][1][2],startypoint[3][2][2]);
+
 fprintf(fp,"xpos: %lf \t %lf\n",startXposition[4][1],startXposition[4][2]);
+
 fprintf(fp,"ypos: %lf \t %lf\n",startYposition[4][1],startYposition[4][2]);
+
 fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[4][1],startXdirec[4][2]);
+
 fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[4][1],startYdirec[4][2]);
+
 fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length3,smallaxis_x3,Linx3,Loutx3);
+
 fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length3,smallaxis_y3,Liny3,Louty3);
 
+
+
 fprintf(fp,"C\n");
+
 fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[3][1][1],startxpoint[3][2][1],startxpoint[3][1][2],startxpoint[3][2][2]);
+
 fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[2][1][1],startxpoint[2][2][1],startxpoint[2][1][2],startxpoint[2][2][2]);
+
 fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[3][1][1],startypoint[3][2][1],startypoint[3][1][2],startypoint[3][2][2]);
+
 fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[2][1][1],startypoint[2][2][1],startypoint[2][1][2],startypoint[2][2][2]);
+
 fprintf(fp,"x: %lf \t %lf \t %lf \t %lf \t %lf\n",curve_radius2,curve_small_radius2,curveXcenter2[1],curveXcenter2[2],channels2);
 
-fprintf(fp,"E\n");
-fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[2][1][1],startxpoint[2][2][1],startxpoint[2][1][2],startxpoint[2][2][2]);
-fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[1][1][1],startxpoint[1][2][1],startxpoint[1][1][2],startxpoint[1][2][2]);
-fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[2][1][1],startypoint[2][2][1],startypoint[2][1][2],startypoint[2][2][2]);
-fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[1][1][1],startypoint[1][2][1],startypoint[1][1][2],startypoint[1][2][2]);
-fprintf(fp,"xpos: %lf \t %lf\n",startXposition[2][1],startXposition[2][2]);
-fprintf(fp,"ypos: %lf \t %lf\n",startYposition[2][1],startYposition[2][2]);
-fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[2][1],startXdirec[2][2]);
-fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[2][1],startYdirec[2][2]);
-fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length1,smallaxis_x1,Linx1,Loutx1);
-fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length1,smallaxis_y1,Liny1,Louty1);
+
 
 fprintf(fp,"E\n");
-fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[1][1][1],startxpoint[1][2][1],startxpoint[1][1][2],startxpoint[1][2][2]);
-fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[0][1][1],startxpoint[0][2][1],startxpoint[0][1][2],startxpoint[0][2][2]);
-fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[1][1][1],startypoint[1][2][1],startypoint[1][1][2],startypoint[1][2][2]);
-fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[0][1][1],startypoint[0][2][1],startypoint[0][1][2],startypoint[0][2][2]);
-fprintf(fp,"xpos: %lf \t %lf\n",startXposition[1][1],startXposition[1][2]);
-fprintf(fp,"ypos: %lf \t %lf\n",startYposition[1][1],startYposition[1][2]);
-fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[1][1],startXdirec[1][2]);
-fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[1][1],startYdirec[1][2]);
+
+fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[2][1][1],startxpoint[2][2][1],startxpoint[2][1][2],startxpoint[2][2][2]);
+
+fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[1][1][1],startxpoint[1][2][1],startxpoint[1][1][2],startxpoint[1][2][2]);
+
+fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[2][1][1],startypoint[2][2][1],startypoint[2][1][2],startypoint[2][2][2]);
+
+fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[1][1][1],startypoint[1][2][1],startypoint[1][1][2],startypoint[1][2][2]);
+
+fprintf(fp,"xpos: %lf \t %lf\n",startXposition[2][1],startXposition[2][2]);
+
+fprintf(fp,"ypos: %lf \t %lf\n",startYposition[2][1],startYposition[2][2]);
+
+fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[2][1],startXdirec[2][2]);
+
+fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[2][1],startYdirec[2][2]);
+
 fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length1,smallaxis_x1,Linx1,Loutx1);
+
 fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length1,smallaxis_y1,Liny1,Louty1);
+
+
+
+fprintf(fp,"E\n");
+
+fprintf(fp,"x1: %lf \t %lf \t %lf \t %lf\n",startxpoint[1][1][1],startxpoint[1][2][1],startxpoint[1][1][2],startxpoint[1][2][2]);
+
+fprintf(fp,"x2: %lf \t %lf \t %lf \t %lf\n",startxpoint[0][1][1],startxpoint[0][2][1],startxpoint[0][1][2],startxpoint[0][2][2]);
+
+fprintf(fp,"y1: %lf \t %lf \t %lf \t %lf\n",startypoint[1][1][1],startypoint[1][2][1],startypoint[1][1][2],startypoint[1][2][2]);
+
+fprintf(fp,"y2: %lf \t %lf \t %lf \t %lf\n",startypoint[0][1][1],startypoint[0][2][1],startypoint[0][1][2],startypoint[0][2][2]);
+
+fprintf(fp,"xpos: %lf \t %lf\n",startXposition[1][1],startXposition[1][2]);
+
+fprintf(fp,"ypos: %lf \t %lf\n",startYposition[1][1],startYposition[1][2]);
+
+fprintf(fp,"xdir: %lf \t %lf\n",startXdirec[1][1],startXdirec[1][2]);
+
+fprintf(fp,"ydir: %lf \t %lf\n",startYdirec[1][1],startYdirec[1][2]);
+
+fprintf(fp,"xpars: %lf \t %lf \t %lf \t %lf\n",length1,smallaxis_x1,Linx1,Loutx1);
+
+fprintf(fp,"ypars: %lf \t %lf \t %lf \t %lf\n",length1,smallaxis_y1,Liny1,Louty1);
+
 fprintf(fp,"Los e\n");
+
 fprintf(fp,"Sample\n");
+
 fprintf(fp,"%lf \t %lf \t %lf\n",sizeX,sizeY,sample_dist);
+
 fprintf(fp,"xp: %lf \t %lf\n",startXposition[0][1],startXposition[0][2]);
+
 fprintf(fp,"yp: %lf \t %lf\n",startYposition[0][1],startYposition[0][2]);
+
 fprintf(fp,"xd: %lf \t %lf\n",startXdirec[0][1],startXdirec[0][2]);
+
 fprintf(fp,"yd: %lf \t %lf\n",startYdirec[0][1],startYdirec[0][2]);
+
 fprintf(fp,"Moderator\n");
+
 fprintf(fp,"%lf \t %lf\n",mod_x,mod_y);
+
 fclose(fp);
 
+
+
 double BE_THICK = 0.12; // Originally from Secondary Spectrometer
+
 int COARSE = 1;
+
 // Filter length*/
+
 OUTFILTER_THICK = BE_THICK/0.05;
 
 
+
+
+
 // Coarse collimator 
+
 if (COARSE) {coarse = 1;}
+
 else {coarse = 0;}
 
 
+
+
+
 //Pixel start
+
 pixelstart[0]=96;
+
 pixelstart[1]=205;
+
 pixelstart[2]=312;
+
 pixelstart[3]=418;
+
 pixelstart[4]=525;
+
 pixelstart[5]=632;
+
 pixelstart[6]=741;
+
 pixelstart[7]=851;
 
+
+
 pixelstop[0]=178;
+
 pixelstop[1]=285;
+
 pixelstop[2]=392;
+
 pixelstop[3]=498;
+
 pixelstop[4]=605;
+
 pixelstop[5]=713;
+
 pixelstop[6]=823;
+
 pixelstop[7]=935;
 
 
+
+
+
 // Analyzer positions
+
 z_an1[1]=0.9115;
+
 z_an1[2]=0.9209;
+
 z_an1[3]=0.9300;
+
 z_an1[4]=0.9388;
+
 z_an1[5]=0.9474;
+
 y_an1[1]=-0.0275;
+
 y_an1[2]=-0.0140;
+
 y_an1[3]=0.0000;
+
 y_an1[4]=0.0145;
+
 y_an1[5]=0.0297;
+
 thet_an1[1]=47.17;
+
 thet_an1[2]=48.03;
+
 thet_an1[3]=48.90;
+
 thet_an1[4]=49.79;
+
 thet_an1[5]=50.69;
+
 ana_l[1]=0.0720;
 
+
+
 z_an2[1]=0.9744;
+
 z_an2[2]=0.9843;
+
 z_an2[3]=0.9939;
+
 z_an2[4]=1.0033;
+
 z_an2[5]=1.0123;
+
 y_an2[1]=-0.0290;
+
 y_an2[2]=-0.0148;
+
 y_an2[3]=0.0000;
+
 y_an2[4]=0.0153;
+
 y_an2[5]=0.0312;
+
 thet_an2[1]=45.51;
+
 thet_an2[2]=46.35;
+
 thet_an2[3]=47.21;
+
 thet_an2[4]=48.09;
+
 thet_an2[5]=48.98;
+
 ana_l[2]=0.082;
 
+
+
 z_an3[1]=1.0354;
+
 z_an3[2]=1.0462;
+
 z_an3[3]=1.0569;
+
 z_an3[4]=1.0671;
+
 z_an3[5]=1.0771;
+
 y_an3[1]=-0.0311;
+
 y_an3[2]=-0.0160;
+
 y_an3[3]=0.0000;
+
 y_an3[4]=0.0165;
+
 y_an3[5]=0.0338;
+
 thet_an3[1]=43.81;
+
 thet_an3[2]=44.65;
+
 thet_an3[3]=45.53;
+
 thet_an3[4]=46.41;
+
 thet_an3[5]=47.32;
+
 ana_l[3]=0.092;
 
 
+
+
+
 z_an4[1]=1.0959;
+
 z_an4[2]=1.1078;
+
 z_an4[3]=1.1195;
+
 z_an4[4]=1.1309;
+
 z_an4[5]=1.1420;
+
 y_an4[1]=-0.0332;
+
 y_an4[2]=-0.0170;
+
 y_an4[3]=0.0000;
+
 y_an4[4]=0.0177;
+
 y_an4[5]=0.0362;
+
 thet_an4[1]=42.11;
+
 thet_an4[2]=42.96;
+
 thet_an4[3]=43.84;
+
 thet_an4[4]=44.74;
+
 thet_an4[5]=45.66;
+
 ana_l[4]=0.103;
 
 
+
+
+
 z_an5[1]=1.1567;
+
 z_an5[2]=1.1697;
+
 z_an5[3]=1.1827;
+
 z_an5[4]=1.1953;
+
 z_an5[5]=1.2076;
+
 y_an5[1]=-0.0350;
+
 y_an5[2]=-0.0180;
+
 y_an5[3]=0.0000;
+
 y_an5[4]=0.0187;
+
 y_an5[5]=0.0382;
+
 thet_an5[1]=40.42;
+
 thet_an5[2]=41.27;
+
 thet_an5[3]=42.16;
+
 thet_an5[4]=43.05;
+
 thet_an5[5]=43.97;
+
 ana_l[5]=0.113;
 
 
+
+
+
 z_an6[1]=1.2170;
+
 z_an6[2]=1.2313;
+
 z_an6[3]=1.2456;
+
 z_an6[4]=1.2595;
+
 z_an6[5]=1.2732;
+
 y_an6[1]=-0.0365;
+
 y_an6[2]=-0.0188;
+
 y_an6[3]=0.0000;
+
 y_an6[4]=0.0195;
+
 y_an6[5]=0.0402;
+
 thet_an6[1]=38.75;
+
 thet_an6[2]=39.60;
+
 thet_an6[3]=40.47;
+
 thet_an6[4]=41.36;
+
 thet_an6[5]=42.28;
+
 ana_l[6]=0.120;
 
 
+
+
+
 z_an7[1]=1.2775;
+
 z_an7[2]=1.2936;
+
 z_an7[3]=1.3098;
+
 z_an7[4]=1.3256;
+
 z_an7[5]=1.3413;
+
 y_an7[1]=-0.0389;
+
 y_an7[2]=-0.0201;
+
 y_an7[3]=0.0000;
+
 y_an7[4]=0.0209;
+
 y_an7[5]=0.0431;
+
 thet_an7[1]=37.04;
+
 thet_an7[2]=37.90;
+
 thet_an7[3]=38.79;
+
 thet_an7[4]=39.69;
+
 thet_an7[5]=40.63;
+
 ana_l[7]=0.129;
 
 
+
+
+
 z_an8[1]=1.3385;
+
 z_an8[2]=1.3565;
+
 z_an8[3]=1.3747;
+
 z_an8[4]=1.3925;
+
 z_an8[5]=1.4102;
+
 y_an8[1]=-0.0409;
+
 y_an8[2]=-0.0212;
+
 y_an8[3]=0.0000;
+
 y_an8[4]=0.0221;
+
 y_an8[5]=0.0456;
+
 thet_an8[1]=35.35;
+
 thet_an8[2]=36.21;
+
 thet_an8[3]=37.10;
+
 thet_an8[4]=38.01;
+
 thet_an8[5]=38.95;
+
 ana_l[8]=0.140;
 
 
+
+
+
 ana_l[1]=ana_l[1]+ana_l_add;
+
 ana_l[2]=ana_l[2]+ana_l_add;
+
 ana_l[3]=ana_l[3]+ana_l_add;
+
 ana_l[4]=ana_l[4]+ana_l_add;
+
 ana_l[5]=ana_l[5]+ana_l_add;
+
 ana_l[6]=ana_l[6]+ana_l_add;
+
 ana_l[7]=ana_l[7]+ana_l_add;
+
 ana_l[8]=ana_l[8]+ana_l_add;
+
+
+
 
 
 // Detector positions rotation given in degrees
 
+
+
 ang_1[0]=-3.33;
+
 ang_1[1]=-2.22;
+
 ang_1[2]=-1.11;
+
 ang_1[3]=0;
+
 ang_1[4]=1.11;
+
 ang_1[5]=2.22;
+
 ang_1[6]=3.33;
 
+
+
 ang_2[0]=-2.775;
+
 ang_2[1]=-1.665;
+
 ang_2[2]=-0.555;
+
 ang_2[3]=0.555;
+
 ang_2[4]=1.665;
+
 ang_2[5]=2.775;
 
+
+
 dety_1=0.7; //
+
 dety_2=0.71; //
+
 det_cen=DET_cen;
+
+
 
 A3_val = A3;//*3.141592/180.0;
 
+
+
 A4_val = A4;//*3.141592/180.0;
+
 //sourceDivergence = source_DivH;
 
+
+
 for (i=0; i<7; i++){
+
 	detx_1[i] = -sin(ang_1[i]*PI/180)*det_cen;
+
 	detz_1[i] = cos(ang_1[i]*PI/180)*det_cen;
+
 }
 
+
+
 for (i=0; i<6; i++){
+
 	detx_2[i] = -sin(ang_2[i]*PI/180)*det_cen;
+
 	detz_2[i] = cos(ang_2[i]*PI/180)*det_cen;
+
 }
+
+
+
 
 
 RV_mono = 2*1.6*sin(DEG2RAD*thetaA1)*RV_mono_Bool;
+
 RH_mono = 2*1.6/sin(DEG2RAD*thetaA1)*RH_mono_Bool;
+
+
 
 }
   #undef slitwidth
@@ -23774,7 +25014,6 @@ RH_mono = 2*1.6/sin(DEG2RAD*thetaA1)*RH_mono_Bool;
   _EndOfelement_2_setpos(); /* type Arm */
   _elliptical_guide_gravity1_setpos(); /* type Elliptic_guide_gravity */
   _EndOfelement_1_setpos(); /* type Arm */
-  _george_setpos(); /* type Arm */
   _SlitGuideEnd_setpos(); /* type Slit */
   _MonoFLat_setpos(); /* type Monochromator_curved */
   _Mono_setpos(); /* type Monochromator_curved */
@@ -23888,7 +25127,6 @@ RH_mono = 2*1.6/sin(DEG2RAD*thetaA1)*RH_mono_Bool;
 
 
   class_Elliptic_guide_gravity_init(&_elliptical_guide_gravity1_var);
-
 
 
   class_Slit_init(&_SlitGuideEnd_var);
@@ -24085,7 +25323,6 @@ RH_mono = 2*1.6/sin(DEG2RAD*thetaA1)*RH_mono_Bool;
 #pragma acc update device(_EndOfelement_2_var)
 #pragma acc update device(_elliptical_guide_gravity1_var)
 #pragma acc update device(_EndOfelement_1_var)
-#pragma acc update device(_george_var)
 #pragma acc update device(_SlitGuideEnd_var)
 #pragma acc update device(_MonoFLat_var)
 #pragma acc update device(_Mono_var)
@@ -26952,165 +28189,285 @@ _class_Monochromator_flat *class_Monochromator_flat_trace(_class_Monochromator_f
   #define res_rx (_particle->res_rx)
   #define res_ry (_particle->res_ry)
   #define res_rz (_particle->res_rz)
-if (_comp->_index == 38) { // EXTEND 'an111'
+if (_comp->_index == 37) { // EXTEND 'an111'
+
 if(SCATTERED){ Ana1 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 39) { // EXTEND 'an112'
+if (_comp->_index == 38) { // EXTEND 'an112'
+
 if(SCATTERED){ Ana1 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 40) { // EXTEND 'an113'
+if (_comp->_index == 39) { // EXTEND 'an113'
+
 if(SCATTERED){ Ana1 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 41) { // EXTEND 'an114'
+if (_comp->_index == 40) { // EXTEND 'an114'
+
 if(SCATTERED){ Ana1 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 42) { // EXTEND 'an115'
+if (_comp->_index == 41) { // EXTEND 'an115'
+
 if(SCATTERED){ Ana1 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 43) { // EXTEND 'an121'
+if (_comp->_index == 42) { // EXTEND 'an121'
+
 if(SCATTERED){ Ana2 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 44) { // EXTEND 'an122'
+if (_comp->_index == 43) { // EXTEND 'an122'
+
 if(SCATTERED){ Ana2 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 45) { // EXTEND 'an123'
+if (_comp->_index == 44) { // EXTEND 'an123'
+
 if(SCATTERED){ Ana2 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 46) { // EXTEND 'an124'
+if (_comp->_index == 45) { // EXTEND 'an124'
+
 if(SCATTERED){ Ana2 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 47) { // EXTEND 'an125'
+if (_comp->_index == 46) { // EXTEND 'an125'
+
 if(SCATTERED){ Ana2 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 48) { // EXTEND 'an131'
+if (_comp->_index == 47) { // EXTEND 'an131'
+
 if(SCATTERED){ Ana3 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 49) { // EXTEND 'an132'
+if (_comp->_index == 48) { // EXTEND 'an132'
+
 if(SCATTERED){ Ana3 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 50) { // EXTEND 'an133'
+if (_comp->_index == 49) { // EXTEND 'an133'
+
 if(SCATTERED){ Ana3 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 51) { // EXTEND 'an134'
+if (_comp->_index == 50) { // EXTEND 'an134'
+
 if(SCATTERED){ Ana3 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 52) { // EXTEND 'an135'
+if (_comp->_index == 51) { // EXTEND 'an135'
+
 if(SCATTERED){ Ana3 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 53) { // EXTEND 'an141'
+if (_comp->_index == 52) { // EXTEND 'an141'
+
 if(SCATTERED){ Ana4 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 54) { // EXTEND 'an142'
+if (_comp->_index == 53) { // EXTEND 'an142'
+
 if(SCATTERED){ Ana4 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 55) { // EXTEND 'an143'
+if (_comp->_index == 54) { // EXTEND 'an143'
+
 if(SCATTERED){ Ana4 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 56) { // EXTEND 'an144'
+if (_comp->_index == 55) { // EXTEND 'an144'
+
 if(SCATTERED){ Ana4 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 57) { // EXTEND 'an145'
+if (_comp->_index == 56) { // EXTEND 'an145'
+
 if(SCATTERED){ Ana4 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 58) { // EXTEND 'an151'
+if (_comp->_index == 57) { // EXTEND 'an151'
+
 if(SCATTERED){ Ana5 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 59) { // EXTEND 'an152'
+if (_comp->_index == 58) { // EXTEND 'an152'
+
 if(SCATTERED){ Ana5 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 60) { // EXTEND 'an153'
+if (_comp->_index == 59) { // EXTEND 'an153'
+
 if(SCATTERED){ Ana5 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 61) { // EXTEND 'an154'
+if (_comp->_index == 60) { // EXTEND 'an154'
+
 if(SCATTERED){ Ana5 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 62) { // EXTEND 'an155'
+if (_comp->_index == 61) { // EXTEND 'an155'
+
 if(SCATTERED){ Ana5 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 63) { // EXTEND 'an161'
+if (_comp->_index == 62) { // EXTEND 'an161'
+
 if(SCATTERED){ Ana6 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 64) { // EXTEND 'an162'
+if (_comp->_index == 63) { // EXTEND 'an162'
+
 if(SCATTERED){ Ana6 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 65) { // EXTEND 'an163'
+if (_comp->_index == 64) { // EXTEND 'an163'
+
 if(SCATTERED){ Ana6 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 66) { // EXTEND 'an164'
+if (_comp->_index == 65) { // EXTEND 'an164'
+
 if(SCATTERED){ Ana6 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 67) { // EXTEND 'an165'
+if (_comp->_index == 66) { // EXTEND 'an165'
+
 if(SCATTERED){ Ana6 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 68) { // EXTEND 'an171'
+if (_comp->_index == 67) { // EXTEND 'an171'
+
 if(SCATTERED){ Ana7 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 69) { // EXTEND 'an172'
+if (_comp->_index == 68) { // EXTEND 'an172'
+
 if(SCATTERED){ Ana7 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 70) { // EXTEND 'an173'
+if (_comp->_index == 69) { // EXTEND 'an173'
+
 if(SCATTERED){ Ana7 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 71) { // EXTEND 'an174'
+if (_comp->_index == 70) { // EXTEND 'an174'
+
 if(SCATTERED){ Ana7 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 72) { // EXTEND 'an175'
+if (_comp->_index == 71) { // EXTEND 'an175'
+
 if(SCATTERED){ Ana7 = 5;
+
  scat=1;} 
+
 }
-if (_comp->_index == 73) { // EXTEND 'an181'
+if (_comp->_index == 72) { // EXTEND 'an181'
+
 if(SCATTERED){ Ana8 = 1;
+
  scat=1;} 
+
 }
-if (_comp->_index == 74) { // EXTEND 'an182'
+if (_comp->_index == 73) { // EXTEND 'an182'
+
 if(SCATTERED){ Ana8 = 2;
+
  scat=1;} 
+
 }
-if (_comp->_index == 75) { // EXTEND 'an183'
+if (_comp->_index == 74) { // EXTEND 'an183'
+
 if(SCATTERED){ Ana8 = 3;
+
  scat=1;} 
+
 }
-if (_comp->_index == 76) { // EXTEND 'an184'
+if (_comp->_index == 75) { // EXTEND 'an184'
+
 if(SCATTERED){ Ana8 = 4;
+
  scat=1;} 
+
 }
-if (_comp->_index == 77) { // EXTEND 'an185'
+if (_comp->_index == 76) { // EXTEND 'an185'
+
 if(SCATTERED){ Ana8 = 5;
+
  scat=1;} 
+
 }
   #undef x_div
   #undef y_div
@@ -28259,25 +29616,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
     } /* end component EndOfelement_1 [12] */
-    /* begin component george=Arm() [13] */
-    if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
-      if (_george_var._rotation_is_identity) {
-        if(!_george_var._position_relative_is_zero) {
-          coords_get(coords_add(coords_set(x,y,z), _george_var._position_relative),&x, &y, &z);
-        }
-      } else {
-          mccoordschange(_george_var._position_relative, _george_var._rotation_relative, _particle);
-      }
-    }
-    if (!ABSORBED && _particle->_index == 13) {
-      _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
-      _particle_save = *_particle;
-      DEBUG_COMP(_george_var._name);
-      DEBUG_STATE();
-      _particle->_index++;
-      if (!ABSORBED) DEBUG_STATE();
-    } /* end component george [13] */
-    /* begin component SlitGuideEnd=Slit() [14] */
+    /* begin component SlitGuideEnd=Slit() [13] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_SlitGuideEnd_var._rotation_is_identity) {
         if(!_SlitGuideEnd_var._position_relative_is_zero) {
@@ -28287,7 +29626,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_SlitGuideEnd_var._position_relative, _SlitGuideEnd_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 14) {
+    if (!ABSORBED && _particle->_index == 13) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_SlitGuideEnd_var._name);
@@ -28297,8 +29636,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component SlitGuideEnd [14] */
-    /* begin component MonoFLat=Monochromator_curved() [15] */
+    } /* end component SlitGuideEnd [13] */
+    /* begin component MonoFLat=Monochromator_curved() [14] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_MonoFLat_var._rotation_is_identity) {
         if(!_MonoFLat_var._position_relative_is_zero) {
@@ -28308,7 +29647,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_MonoFLat_var._position_relative, _MonoFLat_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 15) {
+    if (!ABSORBED && _particle->_index == 14) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_MonoFLat_var._name);
@@ -28319,8 +29658,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component MonoFLat [15] */
-    /* begin component Mono=Monochromator_curved() [16] */
+    } /* end component MonoFLat [14] */
+    /* begin component Mono=Monochromator_curved() [15] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_Mono_var._rotation_is_identity) {
         if(!_Mono_var._position_relative_is_zero) {
@@ -28330,7 +29669,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_Mono_var._position_relative, _Mono_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 16) {
+    if (!ABSORBED && _particle->_index == 15) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_Mono_var._name);
@@ -28341,8 +29680,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component Mono [16] */
-    /* begin component A2=Arm() [17] */
+    } /* end component Mono [15] */
+    /* begin component A2=Arm() [16] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_A2_var._rotation_is_identity) {
         if(!_A2_var._position_relative_is_zero) {
@@ -28352,15 +29691,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_A2_var._position_relative, _A2_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 17) {
+    if (!ABSORBED && _particle->_index == 16) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_A2_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component A2 [17] */
-    /* begin component slit=Slit() [18] */
+    } /* end component A2 [16] */
+    /* begin component slit=Slit() [17] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_slit_var._rotation_is_identity) {
         if(!_slit_var._position_relative_is_zero) {
@@ -28370,7 +29709,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_slit_var._position_relative, _slit_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 18) {
+    if (!ABSORBED && _particle->_index == 17) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_slit_var._name);
@@ -28380,8 +29719,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component slit [18] */
-    /* begin component SlitMonitor=PSD_monitor() [19] */
+    } /* end component slit [17] */
+    /* begin component SlitMonitor=PSD_monitor() [18] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_SlitMonitor_var._rotation_is_identity) {
         if(!_SlitMonitor_var._position_relative_is_zero) {
@@ -28391,7 +29730,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_SlitMonitor_var._position_relative, _SlitMonitor_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 19) {
+    if (!ABSORBED && _particle->_index == 18) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_SlitMonitor_var._name);
@@ -28401,8 +29740,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component SlitMonitor [19] */
-    /* begin component SamplePos=Arm() [20] */
+    } /* end component SlitMonitor [18] */
+    /* begin component SamplePos=Arm() [19] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_SamplePos_var._rotation_is_identity) {
         if(!_SamplePos_var._position_relative_is_zero) {
@@ -28412,15 +29751,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_SamplePos_var._position_relative, _SamplePos_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 20) {
+    if (!ABSORBED && _particle->_index == 19) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_SamplePos_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component SamplePos [20] */
-    /* begin component a41=Arm() [21] */
+    } /* end component SamplePos [19] */
+    /* begin component a41=Arm() [20] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a41_var._rotation_is_identity) {
         if(!_a41_var._position_relative_is_zero) {
@@ -28430,15 +29769,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a41_var._position_relative, _a41_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 21) {
+    if (!ABSORBED && _particle->_index == 20) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a41_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a41 [21] */
-    /* begin component a42=Arm() [22] */
+    } /* end component a41 [20] */
+    /* begin component a42=Arm() [21] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a42_var._rotation_is_identity) {
         if(!_a42_var._position_relative_is_zero) {
@@ -28448,15 +29787,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a42_var._position_relative, _a42_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 22) {
+    if (!ABSORBED && _particle->_index == 21) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a42_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a42 [22] */
-    /* begin component a43=Arm() [23] */
+    } /* end component a42 [21] */
+    /* begin component a43=Arm() [22] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a43_var._rotation_is_identity) {
         if(!_a43_var._position_relative_is_zero) {
@@ -28466,15 +29805,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a43_var._position_relative, _a43_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 23) {
+    if (!ABSORBED && _particle->_index == 22) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a43_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a43 [23] */
-    /* begin component a44=Arm() [24] */
+    } /* end component a43 [22] */
+    /* begin component a44=Arm() [23] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a44_var._rotation_is_identity) {
         if(!_a44_var._position_relative_is_zero) {
@@ -28484,15 +29823,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a44_var._position_relative, _a44_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 24) {
+    if (!ABSORBED && _particle->_index == 23) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a44_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a44 [24] */
-    /* begin component a45=Arm() [25] */
+    } /* end component a44 [23] */
+    /* begin component a45=Arm() [24] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a45_var._rotation_is_identity) {
         if(!_a45_var._position_relative_is_zero) {
@@ -28502,15 +29841,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a45_var._position_relative, _a45_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 25) {
+    if (!ABSORBED && _particle->_index == 24) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a45_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a45 [25] */
-    /* begin component a46=Arm() [26] */
+    } /* end component a45 [24] */
+    /* begin component a46=Arm() [25] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a46_var._rotation_is_identity) {
         if(!_a46_var._position_relative_is_zero) {
@@ -28520,15 +29859,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a46_var._position_relative, _a46_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 26) {
+    if (!ABSORBED && _particle->_index == 25) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a46_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a46 [26] */
-    /* begin component a47=Arm() [27] */
+    } /* end component a46 [25] */
+    /* begin component a47=Arm() [26] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a47_var._rotation_is_identity) {
         if(!_a47_var._position_relative_is_zero) {
@@ -28538,15 +29877,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a47_var._position_relative, _a47_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 27) {
+    if (!ABSORBED && _particle->_index == 26) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a47_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a47 [27] */
-    /* begin component a48=Arm() [28] */
+    } /* end component a47 [26] */
+    /* begin component a48=Arm() [27] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_a48_var._rotation_is_identity) {
         if(!_a48_var._position_relative_is_zero) {
@@ -28556,15 +29895,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_a48_var._position_relative, _a48_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 28) {
+    if (!ABSORBED && _particle->_index == 27) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_a48_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component a48 [28] */
-    /* begin component AMidt=Arm() [29] */
+    } /* end component a48 [27] */
+    /* begin component AMidt=Arm() [28] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_AMidt_var._rotation_is_identity) {
         if(!_AMidt_var._position_relative_is_zero) {
@@ -28574,14 +29913,14 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_AMidt_var._position_relative, _AMidt_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 29) {
+    if (!ABSORBED && _particle->_index == 28) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_AMidt_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component AMidt [29] */
+    } /* end component AMidt [28] */
 #ifndef NOSPLIT
     /* start SPLIT at VanSample */
     if (!ABSORBED) {
@@ -28592,10 +29931,10 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       randstate_t randbackup = *_particle->randstate;
       *_particle=Split_VanSample_particle;
       *_particle->randstate = randbackup;
-      srandom(_hash(_particle->_uid* 30 *(1+Split_VanSample_counter)));
+      srandom(_hash(_particle->_uid* 29 *(1+Split_VanSample_counter)));
       p /= SplitS_VanSample > 0 ? SplitS_VanSample : 1;
 #endif
-    /* begin component VanSample=Incoherent() [30] */
+    /* begin component VanSample=Incoherent() [29] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_VanSample_var._rotation_is_identity) {
         if(!_VanSample_var._position_relative_is_zero) {
@@ -28605,7 +29944,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_VanSample_var._position_relative, _VanSample_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 30) {
+    if (!ABSORBED && _particle->_index == 29) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_VanSample_var._name);
@@ -28616,8 +29955,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component VanSample [30] */
-    /* begin component sample=Phonon_simple() [31] */
+    } /* end component VanSample [29] */
+    /* begin component sample=Phonon_simple() [30] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_sample_var._rotation_is_identity) {
         if(!_sample_var._position_relative_is_zero) {
@@ -28627,7 +29966,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_sample_var._position_relative, _sample_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 31) {
+    if (!ABSORBED && _particle->_index == 30) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_sample_var._name);
@@ -28638,8 +29977,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component sample [31] */
-    /* begin component powder1=Powder1() [32] */
+    } /* end component sample [30] */
+    /* begin component powder1=Powder1() [31] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_powder1_var._rotation_is_identity) {
         if(!_powder1_var._position_relative_is_zero) {
@@ -28649,7 +29988,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_powder1_var._position_relative, _powder1_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 32) {
+    if (!ABSORBED && _particle->_index == 31) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_powder1_var._name);
@@ -28660,8 +29999,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component powder1 [32] */
-    /* begin component res_sample=Res_sample() [33] */
+    } /* end component powder1 [31] */
+    /* begin component res_sample=Res_sample() [32] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_sample_var._rotation_is_identity) {
         if(!_res_sample_var._position_relative_is_zero) {
@@ -28671,7 +30010,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_sample_var._position_relative, _res_sample_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 33) {
+    if (!ABSORBED && _particle->_index == 32) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_sample_var._name);
@@ -28682,8 +30021,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_sample [33] */
-    /* begin component e_monitor_sample=E_monitor() [34] */
+    } /* end component res_sample [32] */
+    /* begin component e_monitor_sample=E_monitor() [33] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_e_monitor_sample_var._rotation_is_identity) {
         if(!_e_monitor_sample_var._position_relative_is_zero) {
@@ -28693,7 +30032,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_e_monitor_sample_var._position_relative, _e_monitor_sample_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 34) {
+    if (!ABSORBED && _particle->_index == 33) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_e_monitor_sample_var._name);
@@ -28704,8 +30043,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component e_monitor_sample [34] */
-    /* begin component BackEndMonitor=PSD_monitor() [35] */
+    } /* end component e_monitor_sample [33] */
+    /* begin component BackEndMonitor=PSD_monitor() [34] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_BackEndMonitor_var._rotation_is_identity) {
         if(!_BackEndMonitor_var._position_relative_is_zero) {
@@ -28715,7 +30054,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_BackEndMonitor_var._position_relative, _BackEndMonitor_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 35) {
+    if (!ABSORBED && _particle->_index == 34) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_BackEndMonitor_var._name);
@@ -28725,8 +30064,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component BackEndMonitor [35] */
-    /* begin component slitBackEnd=Slit() [36] */
+    } /* end component BackEndMonitor [34] */
+    /* begin component slitBackEnd=Slit() [35] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_slitBackEnd_var._rotation_is_identity) {
         if(!_slitBackEnd_var._position_relative_is_zero) {
@@ -28736,7 +30075,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_slitBackEnd_var._position_relative, _slitBackEnd_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 36) {
+    if (!ABSORBED && _particle->_index == 35) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_slitBackEnd_var._name);
@@ -28746,8 +30085,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component slitBackEnd [36] */
-    /* begin component BeFilter=PowderN() [37] */
+    } /* end component slitBackEnd [35] */
+    /* begin component BeFilter=PowderN() [36] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_BeFilter_var._rotation_is_identity) {
         if(!_BeFilter_var._position_relative_is_zero) {
@@ -28757,7 +30096,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_BeFilter_var._position_relative, _BeFilter_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 37) {
+    if (!ABSORBED && _particle->_index == 36) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_BeFilter_var._name);
@@ -28768,8 +30107,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component BeFilter [37] */
-    /* begin component an111=Monochromator_flat() [38] */
+    } /* end component BeFilter [36] */
+    /* begin component an111=Monochromator_flat() [37] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an111_var._rotation_is_identity) {
         if(!_an111_var._position_relative_is_zero) {
@@ -28779,7 +30118,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an111_var._position_relative, _an111_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 38) {
+    if (!ABSORBED && _particle->_index == 37) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an111_var._name);
@@ -28787,13 +30126,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an111_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an111 [38] */
-    /* begin component an112=Monochromator_flat() [39] */
+    } /* end component an111 [37] */
+    /* begin component an112=Monochromator_flat() [38] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an112_var._rotation_is_identity) {
         if(!_an112_var._position_relative_is_zero) {
@@ -28803,7 +30142,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an112_var._position_relative, _an112_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 39) {
+    if (!ABSORBED && _particle->_index == 38) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an112_var._name);
@@ -28811,13 +30150,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an112_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an112 [39] */
-    /* begin component an113=Monochromator_flat() [40] */
+    } /* end component an112 [38] */
+    /* begin component an113=Monochromator_flat() [39] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an113_var._rotation_is_identity) {
         if(!_an113_var._position_relative_is_zero) {
@@ -28827,7 +30166,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an113_var._position_relative, _an113_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 40) {
+    if (!ABSORBED && _particle->_index == 39) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an113_var._name);
@@ -28835,13 +30174,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an113_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an113 [40] */
-    /* begin component an114=Monochromator_flat() [41] */
+    } /* end component an113 [39] */
+    /* begin component an114=Monochromator_flat() [40] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an114_var._rotation_is_identity) {
         if(!_an114_var._position_relative_is_zero) {
@@ -28851,7 +30190,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an114_var._position_relative, _an114_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 41) {
+    if (!ABSORBED && _particle->_index == 40) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an114_var._name);
@@ -28859,13 +30198,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an114_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an114 [41] */
-    /* begin component an115=Monochromator_flat() [42] */
+    } /* end component an114 [40] */
+    /* begin component an115=Monochromator_flat() [41] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an115_var._rotation_is_identity) {
         if(!_an115_var._position_relative_is_zero) {
@@ -28875,7 +30214,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an115_var._position_relative, _an115_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 42) {
+    if (!ABSORBED && _particle->_index == 41) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an115_var._name);
@@ -28883,13 +30222,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an115_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an115 [42] */
-    /* begin component an121=Monochromator_flat() [43] */
+    } /* end component an115 [41] */
+    /* begin component an121=Monochromator_flat() [42] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an121_var._rotation_is_identity) {
         if(!_an121_var._position_relative_is_zero) {
@@ -28899,7 +30238,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an121_var._position_relative, _an121_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 43) {
+    if (!ABSORBED && _particle->_index == 42) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an121_var._name);
@@ -28907,13 +30246,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an121_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an121 [43] */
-    /* begin component an122=Monochromator_flat() [44] */
+    } /* end component an121 [42] */
+    /* begin component an122=Monochromator_flat() [43] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an122_var._rotation_is_identity) {
         if(!_an122_var._position_relative_is_zero) {
@@ -28923,7 +30262,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an122_var._position_relative, _an122_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 44) {
+    if (!ABSORBED && _particle->_index == 43) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an122_var._name);
@@ -28931,13 +30270,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an122_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an122 [44] */
-    /* begin component an123=Monochromator_flat() [45] */
+    } /* end component an122 [43] */
+    /* begin component an123=Monochromator_flat() [44] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an123_var._rotation_is_identity) {
         if(!_an123_var._position_relative_is_zero) {
@@ -28947,7 +30286,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an123_var._position_relative, _an123_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 45) {
+    if (!ABSORBED && _particle->_index == 44) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an123_var._name);
@@ -28955,13 +30294,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an123_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an123 [45] */
-    /* begin component an124=Monochromator_flat() [46] */
+    } /* end component an123 [44] */
+    /* begin component an124=Monochromator_flat() [45] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an124_var._rotation_is_identity) {
         if(!_an124_var._position_relative_is_zero) {
@@ -28971,7 +30310,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an124_var._position_relative, _an124_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 46) {
+    if (!ABSORBED && _particle->_index == 45) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an124_var._name);
@@ -28979,13 +30318,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an124_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an124 [46] */
-    /* begin component an125=Monochromator_flat() [47] */
+    } /* end component an124 [45] */
+    /* begin component an125=Monochromator_flat() [46] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an125_var._rotation_is_identity) {
         if(!_an125_var._position_relative_is_zero) {
@@ -28995,7 +30334,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an125_var._position_relative, _an125_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 47) {
+    if (!ABSORBED && _particle->_index == 46) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an125_var._name);
@@ -29003,13 +30342,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an125_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an125 [47] */
-    /* begin component an131=Monochromator_flat() [48] */
+    } /* end component an125 [46] */
+    /* begin component an131=Monochromator_flat() [47] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an131_var._rotation_is_identity) {
         if(!_an131_var._position_relative_is_zero) {
@@ -29019,7 +30358,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an131_var._position_relative, _an131_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 48) {
+    if (!ABSORBED && _particle->_index == 47) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an131_var._name);
@@ -29027,13 +30366,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an131_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an131 [48] */
-    /* begin component an132=Monochromator_flat() [49] */
+    } /* end component an131 [47] */
+    /* begin component an132=Monochromator_flat() [48] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an132_var._rotation_is_identity) {
         if(!_an132_var._position_relative_is_zero) {
@@ -29043,7 +30382,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an132_var._position_relative, _an132_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 49) {
+    if (!ABSORBED && _particle->_index == 48) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an132_var._name);
@@ -29051,13 +30390,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an132_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an132 [49] */
-    /* begin component an133=Monochromator_flat() [50] */
+    } /* end component an132 [48] */
+    /* begin component an133=Monochromator_flat() [49] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an133_var._rotation_is_identity) {
         if(!_an133_var._position_relative_is_zero) {
@@ -29067,7 +30406,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an133_var._position_relative, _an133_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 50) {
+    if (!ABSORBED && _particle->_index == 49) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an133_var._name);
@@ -29075,13 +30414,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an133_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an133 [50] */
-    /* begin component an134=Monochromator_flat() [51] */
+    } /* end component an133 [49] */
+    /* begin component an134=Monochromator_flat() [50] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an134_var._rotation_is_identity) {
         if(!_an134_var._position_relative_is_zero) {
@@ -29091,7 +30430,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an134_var._position_relative, _an134_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 51) {
+    if (!ABSORBED && _particle->_index == 50) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an134_var._name);
@@ -29099,13 +30438,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an134_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an134 [51] */
-    /* begin component an135=Monochromator_flat() [52] */
+    } /* end component an134 [50] */
+    /* begin component an135=Monochromator_flat() [51] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an135_var._rotation_is_identity) {
         if(!_an135_var._position_relative_is_zero) {
@@ -29115,7 +30454,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an135_var._position_relative, _an135_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 52) {
+    if (!ABSORBED && _particle->_index == 51) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an135_var._name);
@@ -29123,13 +30462,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an135_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an135 [52] */
-    /* begin component an141=Monochromator_flat() [53] */
+    } /* end component an135 [51] */
+    /* begin component an141=Monochromator_flat() [52] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an141_var._rotation_is_identity) {
         if(!_an141_var._position_relative_is_zero) {
@@ -29139,7 +30478,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an141_var._position_relative, _an141_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 53) {
+    if (!ABSORBED && _particle->_index == 52) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an141_var._name);
@@ -29147,13 +30486,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an141_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an141 [53] */
-    /* begin component an142=Monochromator_flat() [54] */
+    } /* end component an141 [52] */
+    /* begin component an142=Monochromator_flat() [53] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an142_var._rotation_is_identity) {
         if(!_an142_var._position_relative_is_zero) {
@@ -29163,7 +30502,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an142_var._position_relative, _an142_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 54) {
+    if (!ABSORBED && _particle->_index == 53) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an142_var._name);
@@ -29171,13 +30510,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an142_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an142 [54] */
-    /* begin component an143=Monochromator_flat() [55] */
+    } /* end component an142 [53] */
+    /* begin component an143=Monochromator_flat() [54] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an143_var._rotation_is_identity) {
         if(!_an143_var._position_relative_is_zero) {
@@ -29187,7 +30526,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an143_var._position_relative, _an143_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 55) {
+    if (!ABSORBED && _particle->_index == 54) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an143_var._name);
@@ -29195,13 +30534,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an143_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an143 [55] */
-    /* begin component an144=Monochromator_flat() [56] */
+    } /* end component an143 [54] */
+    /* begin component an144=Monochromator_flat() [55] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an144_var._rotation_is_identity) {
         if(!_an144_var._position_relative_is_zero) {
@@ -29211,7 +30550,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an144_var._position_relative, _an144_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 56) {
+    if (!ABSORBED && _particle->_index == 55) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an144_var._name);
@@ -29219,13 +30558,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an144_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an144 [56] */
-    /* begin component an145=Monochromator_flat() [57] */
+    } /* end component an144 [55] */
+    /* begin component an145=Monochromator_flat() [56] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an145_var._rotation_is_identity) {
         if(!_an145_var._position_relative_is_zero) {
@@ -29235,7 +30574,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an145_var._position_relative, _an145_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 57) {
+    if (!ABSORBED && _particle->_index == 56) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an145_var._name);
@@ -29243,13 +30582,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an145_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an145 [57] */
-    /* begin component an151=Monochromator_flat() [58] */
+    } /* end component an145 [56] */
+    /* begin component an151=Monochromator_flat() [57] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an151_var._rotation_is_identity) {
         if(!_an151_var._position_relative_is_zero) {
@@ -29259,7 +30598,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an151_var._position_relative, _an151_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 58) {
+    if (!ABSORBED && _particle->_index == 57) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an151_var._name);
@@ -29267,13 +30606,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an151_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an151 [58] */
-    /* begin component an152=Monochromator_flat() [59] */
+    } /* end component an151 [57] */
+    /* begin component an152=Monochromator_flat() [58] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an152_var._rotation_is_identity) {
         if(!_an152_var._position_relative_is_zero) {
@@ -29283,7 +30622,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an152_var._position_relative, _an152_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 59) {
+    if (!ABSORBED && _particle->_index == 58) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an152_var._name);
@@ -29291,13 +30630,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an152_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an152 [59] */
-    /* begin component an153=Monochromator_flat() [60] */
+    } /* end component an152 [58] */
+    /* begin component an153=Monochromator_flat() [59] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an153_var._rotation_is_identity) {
         if(!_an153_var._position_relative_is_zero) {
@@ -29307,7 +30646,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an153_var._position_relative, _an153_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 60) {
+    if (!ABSORBED && _particle->_index == 59) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an153_var._name);
@@ -29315,13 +30654,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an153_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an153 [60] */
-    /* begin component an154=Monochromator_flat() [61] */
+    } /* end component an153 [59] */
+    /* begin component an154=Monochromator_flat() [60] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an154_var._rotation_is_identity) {
         if(!_an154_var._position_relative_is_zero) {
@@ -29331,7 +30670,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an154_var._position_relative, _an154_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 61) {
+    if (!ABSORBED && _particle->_index == 60) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an154_var._name);
@@ -29339,13 +30678,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an154_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an154 [61] */
-    /* begin component an155=Monochromator_flat() [62] */
+    } /* end component an154 [60] */
+    /* begin component an155=Monochromator_flat() [61] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an155_var._rotation_is_identity) {
         if(!_an155_var._position_relative_is_zero) {
@@ -29355,7 +30694,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an155_var._position_relative, _an155_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 62) {
+    if (!ABSORBED && _particle->_index == 61) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an155_var._name);
@@ -29363,13 +30702,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an155_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an155 [62] */
-    /* begin component an161=Monochromator_flat() [63] */
+    } /* end component an155 [61] */
+    /* begin component an161=Monochromator_flat() [62] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an161_var._rotation_is_identity) {
         if(!_an161_var._position_relative_is_zero) {
@@ -29379,7 +30718,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an161_var._position_relative, _an161_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 63) {
+    if (!ABSORBED && _particle->_index == 62) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an161_var._name);
@@ -29387,13 +30726,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an161_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an161 [63] */
-    /* begin component an162=Monochromator_flat() [64] */
+    } /* end component an161 [62] */
+    /* begin component an162=Monochromator_flat() [63] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an162_var._rotation_is_identity) {
         if(!_an162_var._position_relative_is_zero) {
@@ -29403,7 +30742,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an162_var._position_relative, _an162_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 64) {
+    if (!ABSORBED && _particle->_index == 63) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an162_var._name);
@@ -29411,13 +30750,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an162_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an162 [64] */
-    /* begin component an163=Monochromator_flat() [65] */
+    } /* end component an162 [63] */
+    /* begin component an163=Monochromator_flat() [64] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an163_var._rotation_is_identity) {
         if(!_an163_var._position_relative_is_zero) {
@@ -29427,7 +30766,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an163_var._position_relative, _an163_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 65) {
+    if (!ABSORBED && _particle->_index == 64) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an163_var._name);
@@ -29435,13 +30774,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an163_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an163 [65] */
-    /* begin component an164=Monochromator_flat() [66] */
+    } /* end component an163 [64] */
+    /* begin component an164=Monochromator_flat() [65] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an164_var._rotation_is_identity) {
         if(!_an164_var._position_relative_is_zero) {
@@ -29451,7 +30790,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an164_var._position_relative, _an164_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 66) {
+    if (!ABSORBED && _particle->_index == 65) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an164_var._name);
@@ -29459,13 +30798,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an164_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an164 [66] */
-    /* begin component an165=Monochromator_flat() [67] */
+    } /* end component an164 [65] */
+    /* begin component an165=Monochromator_flat() [66] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an165_var._rotation_is_identity) {
         if(!_an165_var._position_relative_is_zero) {
@@ -29475,7 +30814,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an165_var._position_relative, _an165_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 67) {
+    if (!ABSORBED && _particle->_index == 66) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an165_var._name);
@@ -29483,13 +30822,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an165_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an165 [67] */
-    /* begin component an171=Monochromator_flat() [68] */
+    } /* end component an165 [66] */
+    /* begin component an171=Monochromator_flat() [67] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an171_var._rotation_is_identity) {
         if(!_an171_var._position_relative_is_zero) {
@@ -29499,7 +30838,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an171_var._position_relative, _an171_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 68) {
+    if (!ABSORBED && _particle->_index == 67) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an171_var._name);
@@ -29507,13 +30846,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an171_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an171 [68] */
-    /* begin component an172=Monochromator_flat() [69] */
+    } /* end component an171 [67] */
+    /* begin component an172=Monochromator_flat() [68] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an172_var._rotation_is_identity) {
         if(!_an172_var._position_relative_is_zero) {
@@ -29523,7 +30862,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an172_var._position_relative, _an172_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 69) {
+    if (!ABSORBED && _particle->_index == 68) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an172_var._name);
@@ -29531,13 +30870,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an172_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an172 [69] */
-    /* begin component an173=Monochromator_flat() [70] */
+    } /* end component an172 [68] */
+    /* begin component an173=Monochromator_flat() [69] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an173_var._rotation_is_identity) {
         if(!_an173_var._position_relative_is_zero) {
@@ -29547,7 +30886,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an173_var._position_relative, _an173_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 70) {
+    if (!ABSORBED && _particle->_index == 69) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an173_var._name);
@@ -29555,13 +30894,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an173_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an173 [70] */
-    /* begin component an174=Monochromator_flat() [71] */
+    } /* end component an173 [69] */
+    /* begin component an174=Monochromator_flat() [70] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an174_var._rotation_is_identity) {
         if(!_an174_var._position_relative_is_zero) {
@@ -29571,7 +30910,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an174_var._position_relative, _an174_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 71) {
+    if (!ABSORBED && _particle->_index == 70) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an174_var._name);
@@ -29579,13 +30918,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an174_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an174 [71] */
-    /* begin component an175=Monochromator_flat() [72] */
+    } /* end component an174 [70] */
+    /* begin component an175=Monochromator_flat() [71] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an175_var._rotation_is_identity) {
         if(!_an175_var._position_relative_is_zero) {
@@ -29595,7 +30934,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an175_var._position_relative, _an175_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 72) {
+    if (!ABSORBED && _particle->_index == 71) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an175_var._name);
@@ -29603,13 +30942,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an175_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an175 [72] */
-    /* begin component an181=Monochromator_flat() [73] */
+    } /* end component an175 [71] */
+    /* begin component an181=Monochromator_flat() [72] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an181_var._rotation_is_identity) {
         if(!_an181_var._position_relative_is_zero) {
@@ -29619,7 +30958,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an181_var._position_relative, _an181_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 73) {
+    if (!ABSORBED && _particle->_index == 72) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an181_var._name);
@@ -29627,13 +30966,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an181_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an181 [73] */
-    /* begin component an182=Monochromator_flat() [74] */
+    } /* end component an181 [72] */
+    /* begin component an182=Monochromator_flat() [73] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an182_var._rotation_is_identity) {
         if(!_an182_var._position_relative_is_zero) {
@@ -29643,7 +30982,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an182_var._position_relative, _an182_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 74) {
+    if (!ABSORBED && _particle->_index == 73) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an182_var._name);
@@ -29651,13 +30990,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an182_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an182 [74] */
-    /* begin component an183=Monochromator_flat() [75] */
+    } /* end component an182 [73] */
+    /* begin component an183=Monochromator_flat() [74] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an183_var._rotation_is_identity) {
         if(!_an183_var._position_relative_is_zero) {
@@ -29667,7 +31006,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an183_var._position_relative, _an183_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 75) {
+    if (!ABSORBED && _particle->_index == 74) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an183_var._name);
@@ -29675,13 +31014,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an183_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an183 [75] */
-    /* begin component an184=Monochromator_flat() [76] */
+    } /* end component an183 [74] */
+    /* begin component an184=Monochromator_flat() [75] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an184_var._rotation_is_identity) {
         if(!_an184_var._position_relative_is_zero) {
@@ -29691,7 +31030,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an184_var._position_relative, _an184_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 76) {
+    if (!ABSORBED && _particle->_index == 75) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an184_var._name);
@@ -29699,13 +31038,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an184_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an184 [76] */
-    /* begin component an185=Monochromator_flat() [77] */
+    } /* end component an184 [75] */
+    /* begin component an185=Monochromator_flat() [76] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_an185_var._rotation_is_identity) {
         if(!_an185_var._position_relative_is_zero) {
@@ -29715,7 +31054,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_an185_var._position_relative, _an185_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 77) {
+    if (!ABSORBED && _particle->_index == 76) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_an185_var._name);
@@ -29723,13 +31062,13 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
       class_Monochromator_flat_trace(&_an185_var, _particle); /* contains EXTEND code */
       if (_particle->_restore)
         *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORB;     // not SCATTERED at end of GROUP: removes left events
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component an185 [77] */
-    /* begin component arm_res_mon_edge=Arm() [78] */
+    } /* end component an185 [76] */
+    /* begin component arm_res_mon_edge=Arm() [77] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_arm_res_mon_edge_var._rotation_is_identity) {
         if(!_arm_res_mon_edge_var._position_relative_is_zero) {
@@ -29739,15 +31078,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_arm_res_mon_edge_var._position_relative, _arm_res_mon_edge_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 78) {
+    if (!ABSORBED && _particle->_index == 77) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_arm_res_mon_edge_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component arm_res_mon_edge [78] */
-    /* begin component res_monitor_edge_0=Res_monitor() [79] */
+    } /* end component arm_res_mon_edge [77] */
+    /* begin component res_monitor_edge_0=Res_monitor() [78] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_0_var._rotation_is_identity) {
         if(!_res_monitor_edge_0_var._position_relative_is_zero) {
@@ -29757,7 +31096,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_0_var._position_relative, _res_monitor_edge_0_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 79) {
+    if (!ABSORBED && _particle->_index == 78) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_0_var._name);
@@ -29768,8 +31107,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_0 [79] */
-    /* begin component res_monitor_edge_1=Res_monitor() [80] */
+    } /* end component res_monitor_edge_0 [78] */
+    /* begin component res_monitor_edge_1=Res_monitor() [79] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_1_var._rotation_is_identity) {
         if(!_res_monitor_edge_1_var._position_relative_is_zero) {
@@ -29779,7 +31118,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_1_var._position_relative, _res_monitor_edge_1_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 80) {
+    if (!ABSORBED && _particle->_index == 79) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_1_var._name);
@@ -29790,8 +31129,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_1 [80] */
-    /* begin component res_monitor_edge_2=Res_monitor() [81] */
+    } /* end component res_monitor_edge_1 [79] */
+    /* begin component res_monitor_edge_2=Res_monitor() [80] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_2_var._rotation_is_identity) {
         if(!_res_monitor_edge_2_var._position_relative_is_zero) {
@@ -29801,7 +31140,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_2_var._position_relative, _res_monitor_edge_2_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 81) {
+    if (!ABSORBED && _particle->_index == 80) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_2_var._name);
@@ -29812,8 +31151,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_2 [81] */
-    /* begin component res_monitor_edge_3=Res_monitor() [82] */
+    } /* end component res_monitor_edge_2 [80] */
+    /* begin component res_monitor_edge_3=Res_monitor() [81] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_3_var._rotation_is_identity) {
         if(!_res_monitor_edge_3_var._position_relative_is_zero) {
@@ -29823,7 +31162,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_3_var._position_relative, _res_monitor_edge_3_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 82) {
+    if (!ABSORBED && _particle->_index == 81) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_3_var._name);
@@ -29834,8 +31173,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_3 [82] */
-    /* begin component res_monitor_edge_4=Res_monitor() [83] */
+    } /* end component res_monitor_edge_3 [81] */
+    /* begin component res_monitor_edge_4=Res_monitor() [82] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_4_var._rotation_is_identity) {
         if(!_res_monitor_edge_4_var._position_relative_is_zero) {
@@ -29845,7 +31184,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_4_var._position_relative, _res_monitor_edge_4_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 83) {
+    if (!ABSORBED && _particle->_index == 82) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_4_var._name);
@@ -29856,8 +31195,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_4 [83] */
-    /* begin component res_monitor_edge_5=Res_monitor() [84] */
+    } /* end component res_monitor_edge_4 [82] */
+    /* begin component res_monitor_edge_5=Res_monitor() [83] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_5_var._rotation_is_identity) {
         if(!_res_monitor_edge_5_var._position_relative_is_zero) {
@@ -29867,7 +31206,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_5_var._position_relative, _res_monitor_edge_5_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 84) {
+    if (!ABSORBED && _particle->_index == 83) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_5_var._name);
@@ -29878,8 +31217,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_5 [84] */
-    /* begin component res_monitor_edge_6=Res_monitor() [85] */
+    } /* end component res_monitor_edge_5 [83] */
+    /* begin component res_monitor_edge_6=Res_monitor() [84] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_6_var._rotation_is_identity) {
         if(!_res_monitor_edge_6_var._position_relative_is_zero) {
@@ -29889,7 +31228,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_6_var._position_relative, _res_monitor_edge_6_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 85) {
+    if (!ABSORBED && _particle->_index == 84) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_6_var._name);
@@ -29900,8 +31239,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_6 [85] */
-    /* begin component res_monitor_edge_7=Res_monitor() [86] */
+    } /* end component res_monitor_edge_6 [84] */
+    /* begin component res_monitor_edge_7=Res_monitor() [85] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_edge_7_var._rotation_is_identity) {
         if(!_res_monitor_edge_7_var._position_relative_is_zero) {
@@ -29911,7 +31250,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_edge_7_var._position_relative, _res_monitor_edge_7_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 86) {
+    if (!ABSORBED && _particle->_index == 85) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_edge_7_var._name);
@@ -29922,8 +31261,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_edge_7 [86] */
-    /* begin component psd_tube1_1_1=PSD_Detector() [87] */
+    } /* end component res_monitor_edge_7 [85] */
+    /* begin component psd_tube1_1_1=PSD_Detector() [86] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_1_var._rotation_is_identity) {
         if(!_psd_tube1_1_1_var._position_relative_is_zero) {
@@ -29933,7 +31272,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_1_var._position_relative, _psd_tube1_1_1_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 87) {
+    if (!ABSORBED && _particle->_index == 86) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_1_var._name);
@@ -29943,8 +31282,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_1 [87] */
-    /* begin component psd_tube1_1_2=PSD_Detector() [88] */
+    } /* end component psd_tube1_1_1 [86] */
+    /* begin component psd_tube1_1_2=PSD_Detector() [87] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_2_var._rotation_is_identity) {
         if(!_psd_tube1_1_2_var._position_relative_is_zero) {
@@ -29954,7 +31293,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_2_var._position_relative, _psd_tube1_1_2_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 88) {
+    if (!ABSORBED && _particle->_index == 87) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_2_var._name);
@@ -29964,8 +31303,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_2 [88] */
-    /* begin component psd_tube1_1_3=PSD_Detector() [89] */
+    } /* end component psd_tube1_1_2 [87] */
+    /* begin component psd_tube1_1_3=PSD_Detector() [88] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_3_var._rotation_is_identity) {
         if(!_psd_tube1_1_3_var._position_relative_is_zero) {
@@ -29975,7 +31314,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_3_var._position_relative, _psd_tube1_1_3_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 89) {
+    if (!ABSORBED && _particle->_index == 88) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_3_var._name);
@@ -29985,8 +31324,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_3 [89] */
-    /* begin component arm_res_mon_mid=Arm() [90] */
+    } /* end component psd_tube1_1_3 [88] */
+    /* begin component arm_res_mon_mid=Arm() [89] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_arm_res_mon_mid_var._rotation_is_identity) {
         if(!_arm_res_mon_mid_var._position_relative_is_zero) {
@@ -29996,15 +31335,15 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_arm_res_mon_mid_var._position_relative, _arm_res_mon_mid_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 90) {
+    if (!ABSORBED && _particle->_index == 89) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_arm_res_mon_mid_var._name);
       DEBUG_STATE();
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component arm_res_mon_mid [90] */
-    /* begin component res_monitor_mid_0=Res_monitor() [91] */
+    } /* end component arm_res_mon_mid [89] */
+    /* begin component res_monitor_mid_0=Res_monitor() [90] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_0_var._rotation_is_identity) {
         if(!_res_monitor_mid_0_var._position_relative_is_zero) {
@@ -30014,7 +31353,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_0_var._position_relative, _res_monitor_mid_0_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 91) {
+    if (!ABSORBED && _particle->_index == 90) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_0_var._name);
@@ -30025,8 +31364,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_0 [91] */
-    /* begin component res_monitor_mid_1=Res_monitor() [92] */
+    } /* end component res_monitor_mid_0 [90] */
+    /* begin component res_monitor_mid_1=Res_monitor() [91] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_1_var._rotation_is_identity) {
         if(!_res_monitor_mid_1_var._position_relative_is_zero) {
@@ -30036,7 +31375,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_1_var._position_relative, _res_monitor_mid_1_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 92) {
+    if (!ABSORBED && _particle->_index == 91) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_1_var._name);
@@ -30047,8 +31386,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_1 [92] */
-    /* begin component res_monitor_mid_2=Res_monitor() [93] */
+    } /* end component res_monitor_mid_1 [91] */
+    /* begin component res_monitor_mid_2=Res_monitor() [92] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_2_var._rotation_is_identity) {
         if(!_res_monitor_mid_2_var._position_relative_is_zero) {
@@ -30058,7 +31397,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_2_var._position_relative, _res_monitor_mid_2_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 93) {
+    if (!ABSORBED && _particle->_index == 92) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_2_var._name);
@@ -30069,8 +31408,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_2 [93] */
-    /* begin component res_monitor_mid_3=Res_monitor() [94] */
+    } /* end component res_monitor_mid_2 [92] */
+    /* begin component res_monitor_mid_3=Res_monitor() [93] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_3_var._rotation_is_identity) {
         if(!_res_monitor_mid_3_var._position_relative_is_zero) {
@@ -30080,7 +31419,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_3_var._position_relative, _res_monitor_mid_3_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 94) {
+    if (!ABSORBED && _particle->_index == 93) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_3_var._name);
@@ -30091,8 +31430,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_3 [94] */
-    /* begin component res_monitor_mid_4=Res_monitor() [95] */
+    } /* end component res_monitor_mid_3 [93] */
+    /* begin component res_monitor_mid_4=Res_monitor() [94] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_4_var._rotation_is_identity) {
         if(!_res_monitor_mid_4_var._position_relative_is_zero) {
@@ -30102,7 +31441,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_4_var._position_relative, _res_monitor_mid_4_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 95) {
+    if (!ABSORBED && _particle->_index == 94) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_4_var._name);
@@ -30113,8 +31452,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_4 [95] */
-    /* begin component res_monitor_mid_5=Res_monitor() [96] */
+    } /* end component res_monitor_mid_4 [94] */
+    /* begin component res_monitor_mid_5=Res_monitor() [95] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_5_var._rotation_is_identity) {
         if(!_res_monitor_mid_5_var._position_relative_is_zero) {
@@ -30124,7 +31463,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_5_var._position_relative, _res_monitor_mid_5_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 96) {
+    if (!ABSORBED && _particle->_index == 95) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_5_var._name);
@@ -30135,8 +31474,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_5 [96] */
-    /* begin component res_monitor_mid_6=Res_monitor() [97] */
+    } /* end component res_monitor_mid_5 [95] */
+    /* begin component res_monitor_mid_6=Res_monitor() [96] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_6_var._rotation_is_identity) {
         if(!_res_monitor_mid_6_var._position_relative_is_zero) {
@@ -30146,7 +31485,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_6_var._position_relative, _res_monitor_mid_6_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 97) {
+    if (!ABSORBED && _particle->_index == 96) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_6_var._name);
@@ -30157,8 +31496,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_6 [97] */
-    /* begin component res_monitor_mid_7=Res_monitor() [98] */
+    } /* end component res_monitor_mid_6 [96] */
+    /* begin component res_monitor_mid_7=Res_monitor() [97] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_res_monitor_mid_7_var._rotation_is_identity) {
         if(!_res_monitor_mid_7_var._position_relative_is_zero) {
@@ -30168,7 +31507,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_res_monitor_mid_7_var._position_relative, _res_monitor_mid_7_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 98) {
+    if (!ABSORBED && _particle->_index == 97) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_res_monitor_mid_7_var._name);
@@ -30179,8 +31518,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component res_monitor_mid_7 [98] */
-    /* begin component psd_tube1_1_4=PSD_Detector() [99] */
+    } /* end component res_monitor_mid_7 [97] */
+    /* begin component psd_tube1_1_4=PSD_Detector() [98] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_4_var._rotation_is_identity) {
         if(!_psd_tube1_1_4_var._position_relative_is_zero) {
@@ -30190,7 +31529,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_4_var._position_relative, _psd_tube1_1_4_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 99) {
+    if (!ABSORBED && _particle->_index == 98) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_4_var._name);
@@ -30200,8 +31539,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_4 [99] */
-    /* begin component psd_tube1_1_5=PSD_Detector() [100] */
+    } /* end component psd_tube1_1_4 [98] */
+    /* begin component psd_tube1_1_5=PSD_Detector() [99] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_5_var._rotation_is_identity) {
         if(!_psd_tube1_1_5_var._position_relative_is_zero) {
@@ -30211,7 +31550,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_5_var._position_relative, _psd_tube1_1_5_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 100) {
+    if (!ABSORBED && _particle->_index == 99) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_5_var._name);
@@ -30221,8 +31560,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_5 [100] */
-    /* begin component psd_tube1_1_6=PSD_Detector() [101] */
+    } /* end component psd_tube1_1_5 [99] */
+    /* begin component psd_tube1_1_6=PSD_Detector() [100] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_6_var._rotation_is_identity) {
         if(!_psd_tube1_1_6_var._position_relative_is_zero) {
@@ -30232,7 +31571,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_6_var._position_relative, _psd_tube1_1_6_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 101) {
+    if (!ABSORBED && _particle->_index == 100) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_6_var._name);
@@ -30242,8 +31581,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_6 [101] */
-    /* begin component psd_tube1_1_7=PSD_Detector() [102] */
+    } /* end component psd_tube1_1_6 [100] */
+    /* begin component psd_tube1_1_7=PSD_Detector() [101] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_1_7_var._rotation_is_identity) {
         if(!_psd_tube1_1_7_var._position_relative_is_zero) {
@@ -30253,7 +31592,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_1_7_var._position_relative, _psd_tube1_1_7_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 102) {
+    if (!ABSORBED && _particle->_index == 101) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_1_7_var._name);
@@ -30263,8 +31602,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_1_7 [102] */
-    /* begin component psd_tube1_2_1=PSD_Detector() [103] */
+    } /* end component psd_tube1_1_7 [101] */
+    /* begin component psd_tube1_2_1=PSD_Detector() [102] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_2_1_var._rotation_is_identity) {
         if(!_psd_tube1_2_1_var._position_relative_is_zero) {
@@ -30274,7 +31613,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_2_1_var._position_relative, _psd_tube1_2_1_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 103) {
+    if (!ABSORBED && _particle->_index == 102) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_2_1_var._name);
@@ -30284,8 +31623,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_2_1 [103] */
-    /* begin component psd_tube1_2_2=PSD_Detector() [104] */
+    } /* end component psd_tube1_2_1 [102] */
+    /* begin component psd_tube1_2_2=PSD_Detector() [103] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_2_2_var._rotation_is_identity) {
         if(!_psd_tube1_2_2_var._position_relative_is_zero) {
@@ -30295,7 +31634,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_2_2_var._position_relative, _psd_tube1_2_2_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 104) {
+    if (!ABSORBED && _particle->_index == 103) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_2_2_var._name);
@@ -30305,8 +31644,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_2_2 [104] */
-    /* begin component psd_tube1_2_3=PSD_Detector() [105] */
+    } /* end component psd_tube1_2_2 [103] */
+    /* begin component psd_tube1_2_3=PSD_Detector() [104] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_2_3_var._rotation_is_identity) {
         if(!_psd_tube1_2_3_var._position_relative_is_zero) {
@@ -30316,7 +31655,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_2_3_var._position_relative, _psd_tube1_2_3_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 105) {
+    if (!ABSORBED && _particle->_index == 104) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_2_3_var._name);
@@ -30326,8 +31665,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_2_3 [105] */
-    /* begin component psd_tube1_2_4=PSD_Detector() [106] */
+    } /* end component psd_tube1_2_3 [104] */
+    /* begin component psd_tube1_2_4=PSD_Detector() [105] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_2_4_var._rotation_is_identity) {
         if(!_psd_tube1_2_4_var._position_relative_is_zero) {
@@ -30337,7 +31676,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_2_4_var._position_relative, _psd_tube1_2_4_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 106) {
+    if (!ABSORBED && _particle->_index == 105) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_2_4_var._name);
@@ -30347,8 +31686,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_2_4 [106] */
-    /* begin component psd_tube1_2_5=PSD_Detector() [107] */
+    } /* end component psd_tube1_2_4 [105] */
+    /* begin component psd_tube1_2_5=PSD_Detector() [106] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_2_5_var._rotation_is_identity) {
         if(!_psd_tube1_2_5_var._position_relative_is_zero) {
@@ -30358,7 +31697,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_2_5_var._position_relative, _psd_tube1_2_5_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 107) {
+    if (!ABSORBED && _particle->_index == 106) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_2_5_var._name);
@@ -30368,8 +31707,8 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_2_5 [107] */
-    /* begin component psd_tube1_2_6=PSD_Detector() [108] */
+    } /* end component psd_tube1_2_5 [106] */
+    /* begin component psd_tube1_2_6=PSD_Detector() [107] */
     if (!_particle->flag_nocoordschange) { // flag activated by JUMP to pass coords change
       if (_psd_tube1_2_6_var._rotation_is_identity) {
         if(!_psd_tube1_2_6_var._position_relative_is_zero) {
@@ -30379,7 +31718,7 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
           mccoordschange(_psd_tube1_2_6_var._position_relative, _psd_tube1_2_6_var._rotation_relative, _particle);
       }
     }
-    if (!ABSORBED && _particle->_index == 108) {
+    if (!ABSORBED && _particle->_index == 107) {
       _particle->flag_nocoordschange=0; /* Reset if we came here from a JUMP */
       _particle_save = *_particle;
       DEBUG_COMP(_psd_tube1_2_6_var._name);
@@ -30389,12 +31728,12 @@ int raytrace(_class_particle* _particle) { /* single event propagation, called b
         *_particle = _particle_save;
       _particle->_index++;
       if (!ABSORBED) DEBUG_STATE();
-    } /* end component psd_tube1_2_6 [108] */
+    } /* end component psd_tube1_2_6 [107] */
 #ifndef NOSPLIT
     } /* end SPLIT at VanSample */
     } /* if (!ABSORBED) relating to SPLIT at VanSample */
 #endif
-    if (_particle->_index > 108)
+    if (_particle->_index > 107)
       ABSORBED++; /* absorbed when passed all components */
   } /* while !ABSORBED */
 
@@ -30666,18 +32005,8 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         _particle->_index++;
       }
 
-      // george
-    if (!ABSORBED && _particle->_index == 13) {
-        if (_george_var._rotation_is_identity)
-          coords_get(coords_add(coords_set(x,y,z), _george_var._position_relative),&x, &y, &z);
-        else
-          mccoordschange(_george_var._position_relative, _george_var._rotation_relative, _particle);
-        _particle_save = *_particle;
-        _particle->_index++;
-      }
-
       // SlitGuideEnd
-    if (!ABSORBED && _particle->_index == 14) {
+    if (!ABSORBED && _particle->_index == 13) {
         if (_SlitGuideEnd_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _SlitGuideEnd_var._position_relative),&x, &y, &z);
         else
@@ -30690,7 +32019,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // MonoFLat
-    if (!ABSORBED && _particle->_index == 15) {
+    if (!ABSORBED && _particle->_index == 14) {
         if (_MonoFLat_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _MonoFLat_var._position_relative),&x, &y, &z);
         else
@@ -30704,7 +32033,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // Mono
-    if (!ABSORBED && _particle->_index == 16) {
+    if (!ABSORBED && _particle->_index == 15) {
         if (_Mono_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _Mono_var._position_relative),&x, &y, &z);
         else
@@ -30718,7 +32047,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // A2
-    if (!ABSORBED && _particle->_index == 17) {
+    if (!ABSORBED && _particle->_index == 16) {
         if (_A2_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _A2_var._position_relative),&x, &y, &z);
         else
@@ -30728,7 +32057,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // slit
-    if (!ABSORBED && _particle->_index == 18) {
+    if (!ABSORBED && _particle->_index == 17) {
         if (_slit_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _slit_var._position_relative),&x, &y, &z);
         else
@@ -30741,7 +32070,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // SlitMonitor
-    if (!ABSORBED && _particle->_index == 19) {
+    if (!ABSORBED && _particle->_index == 18) {
         if (_SlitMonitor_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _SlitMonitor_var._position_relative),&x, &y, &z);
         else
@@ -30754,7 +32083,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // SamplePos
-    if (!ABSORBED && _particle->_index == 20) {
+    if (!ABSORBED && _particle->_index == 19) {
         if (_SamplePos_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _SamplePos_var._position_relative),&x, &y, &z);
         else
@@ -30764,7 +32093,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a41
-    if (!ABSORBED && _particle->_index == 21) {
+    if (!ABSORBED && _particle->_index == 20) {
         if (_a41_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a41_var._position_relative),&x, &y, &z);
         else
@@ -30774,7 +32103,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a42
-    if (!ABSORBED && _particle->_index == 22) {
+    if (!ABSORBED && _particle->_index == 21) {
         if (_a42_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a42_var._position_relative),&x, &y, &z);
         else
@@ -30784,7 +32113,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a43
-    if (!ABSORBED && _particle->_index == 23) {
+    if (!ABSORBED && _particle->_index == 22) {
         if (_a43_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a43_var._position_relative),&x, &y, &z);
         else
@@ -30794,7 +32123,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a44
-    if (!ABSORBED && _particle->_index == 24) {
+    if (!ABSORBED && _particle->_index == 23) {
         if (_a44_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a44_var._position_relative),&x, &y, &z);
         else
@@ -30804,7 +32133,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a45
-    if (!ABSORBED && _particle->_index == 25) {
+    if (!ABSORBED && _particle->_index == 24) {
         if (_a45_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a45_var._position_relative),&x, &y, &z);
         else
@@ -30814,7 +32143,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a46
-    if (!ABSORBED && _particle->_index == 26) {
+    if (!ABSORBED && _particle->_index == 25) {
         if (_a46_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a46_var._position_relative),&x, &y, &z);
         else
@@ -30824,7 +32153,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a47
-    if (!ABSORBED && _particle->_index == 27) {
+    if (!ABSORBED && _particle->_index == 26) {
         if (_a47_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a47_var._position_relative),&x, &y, &z);
         else
@@ -30834,7 +32163,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // a48
-    if (!ABSORBED && _particle->_index == 28) {
+    if (!ABSORBED && _particle->_index == 27) {
         if (_a48_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _a48_var._position_relative),&x, &y, &z);
         else
@@ -30844,7 +32173,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // AMidt
-    if (!ABSORBED && _particle->_index == 29) {
+    if (!ABSORBED && _particle->_index == 28) {
         if (_AMidt_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _AMidt_var._position_relative),&x, &y, &z);
         else
@@ -30865,7 +32194,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       _class_particle _particle_save;
 
       // VanSample
-    if (!ABSORBED && _particle->_index == 30) {
+    if (!ABSORBED && _particle->_index == 29) {
         if (_VanSample_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _VanSample_var._position_relative),&x, &y, &z);
         else
@@ -30879,7 +32208,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // sample
-    if (!ABSORBED && _particle->_index == 31) {
+    if (!ABSORBED && _particle->_index == 30) {
         if (_sample_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _sample_var._position_relative),&x, &y, &z);
         else
@@ -30893,7 +32222,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // powder1
-    if (!ABSORBED && _particle->_index == 32) {
+    if (!ABSORBED && _particle->_index == 31) {
         if (_powder1_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _powder1_var._position_relative),&x, &y, &z);
         else
@@ -30907,7 +32236,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_sample
-    if (!ABSORBED && _particle->_index == 33) {
+    if (!ABSORBED && _particle->_index == 32) {
         if (_res_sample_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_sample_var._position_relative),&x, &y, &z);
         else
@@ -30921,7 +32250,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // e_monitor_sample
-    if (!ABSORBED && _particle->_index == 34) {
+    if (!ABSORBED && _particle->_index == 33) {
         if (_e_monitor_sample_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _e_monitor_sample_var._position_relative),&x, &y, &z);
         else
@@ -30935,7 +32264,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // BackEndMonitor
-    if (!ABSORBED && _particle->_index == 35) {
+    if (!ABSORBED && _particle->_index == 34) {
         if (_BackEndMonitor_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _BackEndMonitor_var._position_relative),&x, &y, &z);
         else
@@ -30948,7 +32277,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // slitBackEnd
-    if (!ABSORBED && _particle->_index == 36) {
+    if (!ABSORBED && _particle->_index == 35) {
         if (_slitBackEnd_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _slitBackEnd_var._position_relative),&x, &y, &z);
         else
@@ -30961,7 +32290,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // BeFilter
-    if (!ABSORBED && _particle->_index == 37) {
+    if (!ABSORBED && _particle->_index == 36) {
         if (_BeFilter_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _BeFilter_var._position_relative),&x, &y, &z);
         else
@@ -30975,7 +32304,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // an111
-    if (!ABSORBED && _particle->_index == 38) {
+    if (!ABSORBED && _particle->_index == 37) {
         if (_an111_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an111_var._position_relative),&x, &y, &z);
         else
@@ -30984,14 +32313,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an111_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an112
-    if (!ABSORBED && _particle->_index == 39) {
+    if (!ABSORBED && _particle->_index == 38) {
         if (_an112_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an112_var._position_relative),&x, &y, &z);
         else
@@ -31000,14 +32329,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an112_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an113
-    if (!ABSORBED && _particle->_index == 40) {
+    if (!ABSORBED && _particle->_index == 39) {
         if (_an113_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an113_var._position_relative),&x, &y, &z);
         else
@@ -31016,14 +32345,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an113_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an114
-    if (!ABSORBED && _particle->_index == 41) {
+    if (!ABSORBED && _particle->_index == 40) {
         if (_an114_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an114_var._position_relative),&x, &y, &z);
         else
@@ -31032,14 +32361,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an114_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an115
-    if (!ABSORBED && _particle->_index == 42) {
+    if (!ABSORBED && _particle->_index == 41) {
         if (_an115_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an115_var._position_relative),&x, &y, &z);
         else
@@ -31048,14 +32377,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an115_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an121
-    if (!ABSORBED && _particle->_index == 43) {
+    if (!ABSORBED && _particle->_index == 42) {
         if (_an121_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an121_var._position_relative),&x, &y, &z);
         else
@@ -31064,14 +32393,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an121_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an122
-    if (!ABSORBED && _particle->_index == 44) {
+    if (!ABSORBED && _particle->_index == 43) {
         if (_an122_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an122_var._position_relative),&x, &y, &z);
         else
@@ -31080,14 +32409,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an122_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an123
-    if (!ABSORBED && _particle->_index == 45) {
+    if (!ABSORBED && _particle->_index == 44) {
         if (_an123_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an123_var._position_relative),&x, &y, &z);
         else
@@ -31096,14 +32425,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an123_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an124
-    if (!ABSORBED && _particle->_index == 46) {
+    if (!ABSORBED && _particle->_index == 45) {
         if (_an124_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an124_var._position_relative),&x, &y, &z);
         else
@@ -31112,14 +32441,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an124_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an125
-    if (!ABSORBED && _particle->_index == 47) {
+    if (!ABSORBED && _particle->_index == 46) {
         if (_an125_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an125_var._position_relative),&x, &y, &z);
         else
@@ -31128,14 +32457,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an125_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an131
-    if (!ABSORBED && _particle->_index == 48) {
+    if (!ABSORBED && _particle->_index == 47) {
         if (_an131_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an131_var._position_relative),&x, &y, &z);
         else
@@ -31144,14 +32473,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an131_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an132
-    if (!ABSORBED && _particle->_index == 49) {
+    if (!ABSORBED && _particle->_index == 48) {
         if (_an132_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an132_var._position_relative),&x, &y, &z);
         else
@@ -31160,14 +32489,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an132_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an133
-    if (!ABSORBED && _particle->_index == 50) {
+    if (!ABSORBED && _particle->_index == 49) {
         if (_an133_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an133_var._position_relative),&x, &y, &z);
         else
@@ -31176,14 +32505,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an133_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an134
-    if (!ABSORBED && _particle->_index == 51) {
+    if (!ABSORBED && _particle->_index == 50) {
         if (_an134_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an134_var._position_relative),&x, &y, &z);
         else
@@ -31192,14 +32521,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an134_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an135
-    if (!ABSORBED && _particle->_index == 52) {
+    if (!ABSORBED && _particle->_index == 51) {
         if (_an135_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an135_var._position_relative),&x, &y, &z);
         else
@@ -31208,14 +32537,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an135_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an141
-    if (!ABSORBED && _particle->_index == 53) {
+    if (!ABSORBED && _particle->_index == 52) {
         if (_an141_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an141_var._position_relative),&x, &y, &z);
         else
@@ -31224,14 +32553,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an141_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an142
-    if (!ABSORBED && _particle->_index == 54) {
+    if (!ABSORBED && _particle->_index == 53) {
         if (_an142_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an142_var._position_relative),&x, &y, &z);
         else
@@ -31240,14 +32569,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an142_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an143
-    if (!ABSORBED && _particle->_index == 55) {
+    if (!ABSORBED && _particle->_index == 54) {
         if (_an143_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an143_var._position_relative),&x, &y, &z);
         else
@@ -31256,14 +32585,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an143_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an144
-    if (!ABSORBED && _particle->_index == 56) {
+    if (!ABSORBED && _particle->_index == 55) {
         if (_an144_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an144_var._position_relative),&x, &y, &z);
         else
@@ -31272,14 +32601,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an144_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an145
-    if (!ABSORBED && _particle->_index == 57) {
+    if (!ABSORBED && _particle->_index == 56) {
         if (_an145_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an145_var._position_relative),&x, &y, &z);
         else
@@ -31288,14 +32617,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an145_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an151
-    if (!ABSORBED && _particle->_index == 58) {
+    if (!ABSORBED && _particle->_index == 57) {
         if (_an151_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an151_var._position_relative),&x, &y, &z);
         else
@@ -31304,14 +32633,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an151_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an152
-    if (!ABSORBED && _particle->_index == 59) {
+    if (!ABSORBED && _particle->_index == 58) {
         if (_an152_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an152_var._position_relative),&x, &y, &z);
         else
@@ -31320,14 +32649,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an152_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an153
-    if (!ABSORBED && _particle->_index == 60) {
+    if (!ABSORBED && _particle->_index == 59) {
         if (_an153_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an153_var._position_relative),&x, &y, &z);
         else
@@ -31336,14 +32665,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an153_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an154
-    if (!ABSORBED && _particle->_index == 61) {
+    if (!ABSORBED && _particle->_index == 60) {
         if (_an154_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an154_var._position_relative),&x, &y, &z);
         else
@@ -31352,14 +32681,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an154_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an155
-    if (!ABSORBED && _particle->_index == 62) {
+    if (!ABSORBED && _particle->_index == 61) {
         if (_an155_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an155_var._position_relative),&x, &y, &z);
         else
@@ -31368,14 +32697,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an155_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an161
-    if (!ABSORBED && _particle->_index == 63) {
+    if (!ABSORBED && _particle->_index == 62) {
         if (_an161_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an161_var._position_relative),&x, &y, &z);
         else
@@ -31384,14 +32713,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an161_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an162
-    if (!ABSORBED && _particle->_index == 64) {
+    if (!ABSORBED && _particle->_index == 63) {
         if (_an162_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an162_var._position_relative),&x, &y, &z);
         else
@@ -31400,14 +32729,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an162_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an163
-    if (!ABSORBED && _particle->_index == 65) {
+    if (!ABSORBED && _particle->_index == 64) {
         if (_an163_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an163_var._position_relative),&x, &y, &z);
         else
@@ -31416,14 +32745,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an163_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an164
-    if (!ABSORBED && _particle->_index == 66) {
+    if (!ABSORBED && _particle->_index == 65) {
         if (_an164_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an164_var._position_relative),&x, &y, &z);
         else
@@ -31432,14 +32761,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an164_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an165
-    if (!ABSORBED && _particle->_index == 67) {
+    if (!ABSORBED && _particle->_index == 66) {
         if (_an165_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an165_var._position_relative),&x, &y, &z);
         else
@@ -31448,14 +32777,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an165_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an171
-    if (!ABSORBED && _particle->_index == 68) {
+    if (!ABSORBED && _particle->_index == 67) {
         if (_an171_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an171_var._position_relative),&x, &y, &z);
         else
@@ -31464,14 +32793,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an171_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an172
-    if (!ABSORBED && _particle->_index == 69) {
+    if (!ABSORBED && _particle->_index == 68) {
         if (_an172_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an172_var._position_relative),&x, &y, &z);
         else
@@ -31480,14 +32809,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an172_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an173
-    if (!ABSORBED && _particle->_index == 70) {
+    if (!ABSORBED && _particle->_index == 69) {
         if (_an173_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an173_var._position_relative),&x, &y, &z);
         else
@@ -31496,14 +32825,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an173_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an174
-    if (!ABSORBED && _particle->_index == 71) {
+    if (!ABSORBED && _particle->_index == 70) {
         if (_an174_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an174_var._position_relative),&x, &y, &z);
         else
@@ -31512,14 +32841,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an174_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an175
-    if (!ABSORBED && _particle->_index == 72) {
+    if (!ABSORBED && _particle->_index == 71) {
         if (_an175_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an175_var._position_relative),&x, &y, &z);
         else
@@ -31528,14 +32857,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an175_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an181
-    if (!ABSORBED && _particle->_index == 73) {
+    if (!ABSORBED && _particle->_index == 72) {
         if (_an181_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an181_var._position_relative),&x, &y, &z);
         else
@@ -31544,14 +32873,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an181_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an182
-    if (!ABSORBED && _particle->_index == 74) {
+    if (!ABSORBED && _particle->_index == 73) {
         if (_an182_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an182_var._position_relative),&x, &y, &z);
         else
@@ -31560,14 +32889,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an182_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an183
-    if (!ABSORBED && _particle->_index == 75) {
+    if (!ABSORBED && _particle->_index == 74) {
         if (_an183_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an183_var._position_relative),&x, &y, &z);
         else
@@ -31576,14 +32905,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an183_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an184
-    if (!ABSORBED && _particle->_index == 76) {
+    if (!ABSORBED && _particle->_index == 75) {
         if (_an184_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an184_var._position_relative),&x, &y, &z);
         else
@@ -31592,14 +32921,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an184_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORBED=0; // not SCATTERED within GROUP: always tries next
         _particle->_index++;
       }
 
       // an185
-    if (!ABSORBED && _particle->_index == 77) {
+    if (!ABSORBED && _particle->_index == 76) {
         if (_an185_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _an185_var._position_relative),&x, &y, &z);
         else
@@ -31608,14 +32937,14 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
         class_Monochromator_flat_trace(&_an185_var, _particle); /* contains EXTEND code */
         if (_particle->_restore)
           *_particle = _particle_save;
-      // GROUP Analyzer: from an111 [38] to an185 [77]
-      if (SCATTERED) _particle->_index = 77; // when SCATTERED in GROUP: reach exit of GROUP after an185
+      // GROUP Analyzer: from an111 [37] to an185 [76]
+      if (SCATTERED) _particle->_index = 76; // when SCATTERED in GROUP: reach exit of GROUP after an185
       else ABSORB;     // not SCATTERED at end of GROUP: removes left events
         _particle->_index++;
       }
 
       // arm_res_mon_edge
-    if (!ABSORBED && _particle->_index == 78) {
+    if (!ABSORBED && _particle->_index == 77) {
         if (_arm_res_mon_edge_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _arm_res_mon_edge_var._position_relative),&x, &y, &z);
         else
@@ -31625,7 +32954,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_0
-    if (!ABSORBED && _particle->_index == 79) {
+    if (!ABSORBED && _particle->_index == 78) {
         if (_res_monitor_edge_0_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_0_var._position_relative),&x, &y, &z);
         else
@@ -31639,7 +32968,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_1
-    if (!ABSORBED && _particle->_index == 80) {
+    if (!ABSORBED && _particle->_index == 79) {
         if (_res_monitor_edge_1_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_1_var._position_relative),&x, &y, &z);
         else
@@ -31653,7 +32982,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_2
-    if (!ABSORBED && _particle->_index == 81) {
+    if (!ABSORBED && _particle->_index == 80) {
         if (_res_monitor_edge_2_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_2_var._position_relative),&x, &y, &z);
         else
@@ -31667,7 +32996,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_3
-    if (!ABSORBED && _particle->_index == 82) {
+    if (!ABSORBED && _particle->_index == 81) {
         if (_res_monitor_edge_3_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_3_var._position_relative),&x, &y, &z);
         else
@@ -31681,7 +33010,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_4
-    if (!ABSORBED && _particle->_index == 83) {
+    if (!ABSORBED && _particle->_index == 82) {
         if (_res_monitor_edge_4_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_4_var._position_relative),&x, &y, &z);
         else
@@ -31695,7 +33024,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_5
-    if (!ABSORBED && _particle->_index == 84) {
+    if (!ABSORBED && _particle->_index == 83) {
         if (_res_monitor_edge_5_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_5_var._position_relative),&x, &y, &z);
         else
@@ -31709,7 +33038,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_6
-    if (!ABSORBED && _particle->_index == 85) {
+    if (!ABSORBED && _particle->_index == 84) {
         if (_res_monitor_edge_6_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_6_var._position_relative),&x, &y, &z);
         else
@@ -31723,7 +33052,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_edge_7
-    if (!ABSORBED && _particle->_index == 86) {
+    if (!ABSORBED && _particle->_index == 85) {
         if (_res_monitor_edge_7_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_edge_7_var._position_relative),&x, &y, &z);
         else
@@ -31737,7 +33066,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_1
-    if (!ABSORBED && _particle->_index == 87) {
+    if (!ABSORBED && _particle->_index == 86) {
         if (_psd_tube1_1_1_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_1_var._position_relative),&x, &y, &z);
         else
@@ -31750,7 +33079,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_2
-    if (!ABSORBED && _particle->_index == 88) {
+    if (!ABSORBED && _particle->_index == 87) {
         if (_psd_tube1_1_2_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_2_var._position_relative),&x, &y, &z);
         else
@@ -31763,7 +33092,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_3
-    if (!ABSORBED && _particle->_index == 89) {
+    if (!ABSORBED && _particle->_index == 88) {
         if (_psd_tube1_1_3_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_3_var._position_relative),&x, &y, &z);
         else
@@ -31776,7 +33105,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // arm_res_mon_mid
-    if (!ABSORBED && _particle->_index == 90) {
+    if (!ABSORBED && _particle->_index == 89) {
         if (_arm_res_mon_mid_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _arm_res_mon_mid_var._position_relative),&x, &y, &z);
         else
@@ -31786,7 +33115,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_0
-    if (!ABSORBED && _particle->_index == 91) {
+    if (!ABSORBED && _particle->_index == 90) {
         if (_res_monitor_mid_0_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_0_var._position_relative),&x, &y, &z);
         else
@@ -31800,7 +33129,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_1
-    if (!ABSORBED && _particle->_index == 92) {
+    if (!ABSORBED && _particle->_index == 91) {
         if (_res_monitor_mid_1_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_1_var._position_relative),&x, &y, &z);
         else
@@ -31814,7 +33143,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_2
-    if (!ABSORBED && _particle->_index == 93) {
+    if (!ABSORBED && _particle->_index == 92) {
         if (_res_monitor_mid_2_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_2_var._position_relative),&x, &y, &z);
         else
@@ -31828,7 +33157,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_3
-    if (!ABSORBED && _particle->_index == 94) {
+    if (!ABSORBED && _particle->_index == 93) {
         if (_res_monitor_mid_3_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_3_var._position_relative),&x, &y, &z);
         else
@@ -31842,7 +33171,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_4
-    if (!ABSORBED && _particle->_index == 95) {
+    if (!ABSORBED && _particle->_index == 94) {
         if (_res_monitor_mid_4_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_4_var._position_relative),&x, &y, &z);
         else
@@ -31856,7 +33185,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_5
-    if (!ABSORBED && _particle->_index == 96) {
+    if (!ABSORBED && _particle->_index == 95) {
         if (_res_monitor_mid_5_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_5_var._position_relative),&x, &y, &z);
         else
@@ -31870,7 +33199,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_6
-    if (!ABSORBED && _particle->_index == 97) {
+    if (!ABSORBED && _particle->_index == 96) {
         if (_res_monitor_mid_6_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_6_var._position_relative),&x, &y, &z);
         else
@@ -31884,7 +33213,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // res_monitor_mid_7
-    if (!ABSORBED && _particle->_index == 98) {
+    if (!ABSORBED && _particle->_index == 97) {
         if (_res_monitor_mid_7_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _res_monitor_mid_7_var._position_relative),&x, &y, &z);
         else
@@ -31898,7 +33227,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_4
-    if (!ABSORBED && _particle->_index == 99) {
+    if (!ABSORBED && _particle->_index == 98) {
         if (_psd_tube1_1_4_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_4_var._position_relative),&x, &y, &z);
         else
@@ -31911,7 +33240,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_5
-    if (!ABSORBED && _particle->_index == 100) {
+    if (!ABSORBED && _particle->_index == 99) {
         if (_psd_tube1_1_5_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_5_var._position_relative),&x, &y, &z);
         else
@@ -31924,7 +33253,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_6
-    if (!ABSORBED && _particle->_index == 101) {
+    if (!ABSORBED && _particle->_index == 100) {
         if (_psd_tube1_1_6_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_6_var._position_relative),&x, &y, &z);
         else
@@ -31937,7 +33266,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_1_7
-    if (!ABSORBED && _particle->_index == 102) {
+    if (!ABSORBED && _particle->_index == 101) {
         if (_psd_tube1_1_7_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_1_7_var._position_relative),&x, &y, &z);
         else
@@ -31950,7 +33279,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_2_1
-    if (!ABSORBED && _particle->_index == 103) {
+    if (!ABSORBED && _particle->_index == 102) {
         if (_psd_tube1_2_1_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_2_1_var._position_relative),&x, &y, &z);
         else
@@ -31963,7 +33292,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_2_2
-    if (!ABSORBED && _particle->_index == 104) {
+    if (!ABSORBED && _particle->_index == 103) {
         if (_psd_tube1_2_2_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_2_2_var._position_relative),&x, &y, &z);
         else
@@ -31976,7 +33305,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_2_3
-    if (!ABSORBED && _particle->_index == 105) {
+    if (!ABSORBED && _particle->_index == 104) {
         if (_psd_tube1_2_3_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_2_3_var._position_relative),&x, &y, &z);
         else
@@ -31989,7 +33318,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_2_4
-    if (!ABSORBED && _particle->_index == 106) {
+    if (!ABSORBED && _particle->_index == 105) {
         if (_psd_tube1_2_4_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_2_4_var._position_relative),&x, &y, &z);
         else
@@ -32002,7 +33331,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_2_5
-    if (!ABSORBED && _particle->_index == 107) {
+    if (!ABSORBED && _particle->_index == 106) {
         if (_psd_tube1_2_5_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_2_5_var._position_relative),&x, &y, &z);
         else
@@ -32015,7 +33344,7 @@ void raytrace_all_funnel(unsigned long long ncount, unsigned long seed) {
       }
 
       // psd_tube1_2_6
-    if (!ABSORBED && _particle->_index == 108) {
+    if (!ABSORBED && _particle->_index == 107) {
         if (_psd_tube1_2_6_var._rotation_is_identity)
           coords_get(coords_add(coords_set(x,y,z), _psd_tube1_2_6_var._position_relative),&x, &y, &z);
         else
@@ -32495,7 +33824,6 @@ int save(FILE *handle) { /* called by mccode_main for PSI_CAMEA:SAVE */
 
   /* call iteratively all components SAVE */
   class_Progress_bar_save(&_Origin_var);
-
 
 
 
@@ -33219,7 +34547,6 @@ int finally(void) { /* called by mccode_main for PSI_CAMEA:FINALLY */
 #pragma acc update host(_EndOfelement_2_var)
 #pragma acc update host(_elliptical_guide_gravity1_var)
 #pragma acc update host(_EndOfelement_1_var)
-#pragma acc update host(_george_var)
 #pragma acc update host(_SlitGuideEnd_var)
 #pragma acc update host(_MonoFLat_var)
 #pragma acc update host(_Mono_var)
@@ -33320,11 +34647,45 @@ int finally(void) { /* called by mccode_main for PSI_CAMEA:FINALLY */
   siminfo_init(NULL);
   save(siminfo_file); /* save data when simulation ends */
 
+  /* Instrument 'PSI_CAMEA' FINALLY */
+  SIG_MESSAGE("[PSI_CAMEA] FINALLY [FullInstrument_v4_elastic_resolution.instr:4831]");
+  #define slitwidth (instrument->_parameters.slitwidth)
+  #define SourceE (instrument->_parameters.SourceE)
+  #define DeltaSourceE (instrument->_parameters.DeltaSourceE)
+  #define EI (instrument->_parameters.EI)
+  #define A3 (instrument->_parameters.A3)
+  #define A4 (instrument->_parameters.A4)
+  #define SAMPLE (instrument->_parameters.SAMPLE)
+  #define file_name (instrument->_parameters.file_name)
+  #define RV_mono_Bool (instrument->_parameters.RV_mono_Bool)
+  #define RH_mono_Bool (instrument->_parameters.RH_mono_Bool)
+  #define Be_filter (instrument->_parameters.Be_filter)
+  #define old_mono (instrument->_parameters.old_mono)
+  #define sampleHeight (instrument->_parameters.sampleHeight)
+  #define sampleRadius (instrument->_parameters.sampleRadius)
+  #define samplePosY (instrument->_parameters.samplePosY)
+{
+
+}
+  #undef slitwidth
+  #undef SourceE
+  #undef DeltaSourceE
+  #undef EI
+  #undef A3
+  #undef A4
+  #undef SAMPLE
+  #undef file_name
+  #undef RV_mono_Bool
+  #undef RH_mono_Bool
+  #undef Be_filter
+  #undef old_mono
+  #undef sampleHeight
+  #undef sampleRadius
+  #undef samplePosY
   /* call iteratively all components FINALLY */
   class_Progress_bar_finally(&_Origin_var);
 
   class_Source_gen4_finally(&_source_var);
-
 
 
 
@@ -35020,8 +36381,6 @@ int display(void) { /* called by mccode_main for PSI_CAMEA:DISPLAY */
 
   class_Arm_display(&_EndOfelement_1_var);
 
-  class_Arm_display(&_george_var);
-
   class_Slit_display(&_SlitGuideEnd_var);
 
   class_Monochromator_curved_display(&_MonoFLat_var);
@@ -35235,7 +36594,6 @@ void* _getvar_parameters(char* compname)
   if (!strcmp(compname, "EndOfelement_2")) return (void *) &(_EndOfelement_2_var._parameters);
   if (!strcmp(compname, "elliptical_guide_gravity1")) return (void *) &(_elliptical_guide_gravity1_var._parameters);
   if (!strcmp(compname, "EndOfelement_1")) return (void *) &(_EndOfelement_1_var._parameters);
-  if (!strcmp(compname, "george")) return (void *) &(_george_var._parameters);
   if (!strcmp(compname, "SlitGuideEnd")) return (void *) &(_SlitGuideEnd_var._parameters);
   if (!strcmp(compname, "MonoFLat")) return (void *) &(_MonoFLat_var._parameters);
   if (!strcmp(compname, "Mono")) return (void *) &(_Mono_var._parameters);

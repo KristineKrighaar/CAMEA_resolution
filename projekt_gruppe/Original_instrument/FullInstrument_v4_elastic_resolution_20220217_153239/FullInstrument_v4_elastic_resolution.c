@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v4_elastic_resolution.instr (PSI_CAMEA)
- * Date:       Thu Feb 17 15:34:11 2022
+ * Date:       Tue Feb 22 12:40:37 2022
  * File:       FullInstrument_v4_elastic_resolution.c
  * CFLAGS=
  */
@@ -15119,15 +15119,15 @@ int _george_setpos(void)
     Rotation tr1;
     rot_set_rotation(tr1,
       (0.0)*DEG2RAD, (0.0)*DEG2RAD, (0.0)*DEG2RAD);
-    rot_mul(tr1, _EndOfelement_1_var._rotation_absolute, _george_var._rotation_absolute);
+    rot_mul(tr1, _EndOfelement_2_var._rotation_absolute, _george_var._rotation_absolute);
     rot_transpose(_EndOfelement_1_var._rotation_absolute, tr1);
     rot_mul(_george_var._rotation_absolute, tr1, _george_var._rotation_relative);
     _george_var._rotation_is_identity =  rot_test_identity(_george_var._rotation_relative);
     tc1 = coords_set(
-      0, 0, 0.8);
-    rot_transpose(_EndOfelement_1_var._rotation_absolute, tr1);
+      0, 0, 2);
+    rot_transpose(_EndOfelement_2_var._rotation_absolute, tr1);
     tc2 = rot_apply(tr1, tc1);
-    _george_var._position_absolute = coords_add(_EndOfelement_1_var._position_absolute, tc2);
+    _george_var._position_absolute = coords_add(_EndOfelement_2_var._position_absolute, tc2);
     tc1 = coords_sub(_EndOfelement_1_var._position_absolute, _george_var._position_absolute);
     _george_var._position_relative = rot_apply(_george_var._rotation_absolute, tc1);
   } /* george=Arm() AT ROTATED */
