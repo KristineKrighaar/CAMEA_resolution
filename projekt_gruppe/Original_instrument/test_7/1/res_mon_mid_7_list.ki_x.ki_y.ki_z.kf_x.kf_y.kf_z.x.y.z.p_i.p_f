@@ -1,0 +1,51 @@
+# Format: McCode list with text headers
+# URL: http://www.mccode.org
+# Creator: McStas 3.1 - Nov. 24, 2021
+# Instrument: FullInstrument_v4_elastic_resolution.instr
+# Ncount: 20000000
+# Trace: no
+# Gravitation: no
+# Seed: -758583218
+# Directory: test_7/1
+# Param: slitwidth=0.5
+# Param: SourceE=5
+# Param: DeltaSourceE=0.3
+# Param: EI=5
+# Param: A3=0
+# Param: A4=-90
+# Param: SAMPLE=3
+# Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+# Param: RV_mono_Bool=0.5
+# Param: RH_mono_Bool=0.5
+# Param: Be_filter=1
+# Param: old_mono=0
+# Param: sampleHeight=0.01
+# Param: sampleRadius=0.005
+# Param: samplePosY=0
+# Param: simon=1.4
+# Date: Tue Feb 22 13:54:14 2022 (1645534454)
+# type: array_2d(11, 6)
+# Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+# component: res_monitor_mid_7
+# position: 0 0 0
+# title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+# Ncount: 20000000
+# filename: res_mon_mid_7_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+# statistics: X0=0; dX=0; Y0=0; dY=0;
+# signal: Min=0.0140679; Max=0.0140679; Mean=0;
+# values: 0 0 0
+# xvar: Li
+# yvar: ki
+# xlabel: List of neutron events
+# ylabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+# zvar: I
+# zlabel: Signal per bin
+# xylimits: 1 6 1 11
+# variables: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+# Data [res_monitor_mid_7/res_mon_mid_7_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f] I:
+0.01406789762 -0.04966699404 1.543987503 -1.572289418 0.03047810858 -8.595586642e-005 0.00364806917 -0.001532898326 -0.001098611872 0.6478609927 1.885254223 
+0.02742320453 -0.03475840572 1.555170152 -1.575011919 0.02385471885 0.002306232284 0.004657630834 -0.002090861696 -0.001695370992 0.7008581649 1.883540482 
+0.005009703329 0.01037862661 1.562940778 -1.571907335 0.001608946894 0.001507020965 -0.002573019681 -0.0002855508538 -0.000109962455 1.415701726 1.883730052 
+-0.01245461723 0.005276123273 1.54695253 -1.565148949 0.004580338161 0.001331098458 0.00105151864 -0.001184489683 0.00324329233 2.189518681 1.88893758 
+-0.03553685479 0.004862320896 1.543079222 -1.559173147 0.02652117474 -0.0003583920251 -0.0006664179246 0.0004377958762 0.004823523633 1.811664302 1.887547514 
+0.04954805688 -0.02628593135 1.541735377 -1.556626504 0.05321987699 0.004320354075 0.004743921662 -0.003762032191 1.71092023e-005 0.3931998445 1.888733222 

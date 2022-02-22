@@ -1,0 +1,16 @@
+# Instrument-source: 'FullInstrument_v4_elastic_resolution.instr'
+# Date: Tue Feb 22 13 52 2022
+# Ncount: 10000000
+# Numpoints: 2
+# Param: simon = 0.3
+# type: multiarray_1d(2)
+# title: Scan of simon
+# xlabel: 'simon'
+# ylabel: 'Intensity'
+# xvars: simon
+# yvars: (kim_I,kim_ERR) (SlitMonitor_I,SlitMonitor_ERR) (e_monitor_sample_I,e_monitor_sample_ERR) (BackEndMonitor_I,BackEndMonitor_ERR) (psd_tube1_1_1_I,psd_tube1_1_1_ERR) (psd_tube1_1_2_I,psd_tube1_1_2_ERR) (psd_tube1_1_3_I,psd_tube1_1_3_ERR) (psd_tube1_1_4_I,psd_tube1_1_4_ERR) (psd_tube1_1_5_I,psd_tube1_1_5_ERR) (psd_tube1_1_6_I,psd_tube1_1_6_ERR) (psd_tube1_1_7_I,psd_tube1_1_7_ERR) (psd_tube1_2_1_I,psd_tube1_2_1_ERR) (psd_tube1_2_2_I,psd_tube1_2_2_ERR) (psd_tube1_2_3_I,psd_tube1_2_3_ERR) (psd_tube1_2_4_I,psd_tube1_2_4_ERR) (psd_tube1_2_5_I,psd_tube1_2_5_ERR) (psd_tube1_2_6_I,psd_tube1_2_6_ERR)
+# xlimits: 0.3 1.4
+# filename: mccode.dat
+# variables: simon kim_I kim_ERR SlitMonitor_I SlitMonitor_ERR e_monitor_sample_I e_monitor_sample_ERR BackEndMonitor_I BackEndMonitor_ERR psd_tube1_1_1_I psd_tube1_1_1_ERR psd_tube1_1_2_I psd_tube1_1_2_ERR psd_tube1_1_3_I psd_tube1_1_3_ERR psd_tube1_1_4_I psd_tube1_1_4_ERR psd_tube1_1_5_I psd_tube1_1_5_ERR psd_tube1_1_6_I psd_tube1_1_6_ERR psd_tube1_1_7_I psd_tube1_1_7_ERR psd_tube1_2_1_I psd_tube1_2_1_ERR psd_tube1_2_2_I psd_tube1_2_2_ERR psd_tube1_2_3_I psd_tube1_2_3_ERR psd_tube1_2_4_I psd_tube1_2_4_ERR psd_tube1_2_5_I psd_tube1_2_5_ERR psd_tube1_2_6_I psd_tube1_2_6_ERR
+0.3 5.03919E+8 303765 9.33727E+6 41183.8 0 0 87534.6 374.998 48.1874 12.0874 45.3198 12.0128 34.2706 10.62 56.6525 13.3047 18.249 6.49072 27.4529 8.96447 20.5314 7.44852 15.7891 7.29973 26.6695 8.72623 24.4097 8.61873 46.6433 12.0456 24.124 7.98692 27.6301 9.66009
+1.4 5.03399E+8 303627 9.43804E+6 41472.4 0 0 88795.2 378.097 35.4642 11.0702 18.8436 7.644 26.7177 8.39798 43.2426 11.5122 31.8794 9.25912 61.0551 14.1297 36.2876 10.4064 16.0579 7.55595 15.7862 6.42472 27.596 9.00252 43.4785 11.9666 38.4056 11.5743 30.0473 9.73975
