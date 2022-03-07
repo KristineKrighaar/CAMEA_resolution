@@ -1478,8 +1478,8 @@ COMPONENT kim = PSD_monitor(
     nx=100, 
     ny=100, 
     filename="kristine", 
-    xwidth=0.5, 
-    yheight=0.5, 
+    xwidth=0.14, 
+    yheight=0.14, 
     restore_neutron=1)
 AT (0, 0, 0) RELATIVE george
 
