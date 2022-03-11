@@ -1,0 +1,706 @@
+McStas simulation description file for PSI_CAMEA.
+Date:    Tue Mar 08 12:49:58 2022
+Program: McStas 3.1 - Nov. 24, 2021
+
+begin instrument: PSI_CAMEA
+  File: Geo1/43/mccode
+  Source: FullInstrument_v4_elastic_resolution.instr
+  Parameters:  slitwidth(double) SourceE(double) DeltaSourceE(double) EI(double) A3(double) A4(double) SAMPLE(double) file_name(string) RV_mono_Bool(double) RH_mono_Bool(double) Be_filter(double) old_mono(double) sampleHeight(double) sampleRadius(double) samplePosY(double) simon(double)
+  Trace_enabled: yes
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation: Geo1/43
+  Format: McCode with text headers
+  URL: http://www.mccode.org
+  Creator: McStas 3.1 - Nov. 24, 2021
+  Instrument: FullInstrument_v4_elastic_resolution.instr
+  Ncount: 1000000
+  Trace: no
+  Gravitation: no
+  Seed: -1801933739
+  Directory: Geo1/43
+  Param: slitwidth=0.5
+  Param: SourceE=5
+  Param: DeltaSourceE=0.3
+  Param: EI=5
+  Param: A3=0
+  Param: A4=-90
+  Param: SAMPLE=3
+  Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+  Param: RV_mono_Bool=0.5
+  Param: RH_mono_Bool=0.5
+  Param: Be_filter=1
+  Param: old_mono=0
+  Param: sampleHeight=0.01
+  Param: sampleRadius=0.005
+  Param: samplePosY=0
+  Param: simon=43
+end simulation
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: kim
+  position: 0 0 78.6
+  title: PSD monitor
+  Ncount: 2000000
+  filename: kristine.dat
+  statistics: X0=-0.0445667; dX=3.93145; Y0=0.176095; dY=4.07901;
+  signal: Min=0; Max=7816.35; Mean=190.062;
+  values: 1.90062e+006 65134.8 858
+  xvar: X 
+  yvar: Y 
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -7 7 -7 7
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: SlitMonitor
+  position: 1.44271 0 37.6106
+  title: PSD monitor
+  Ncount: 2000000
+  filename: SlitMonitor.dat
+  statistics: X0=-0.00664652; dX=0.288314; Y0=-0.00546177; dY=0.285512;
+  signal: Min=0; Max=15366; Mean=941.994;
+  values: 9.41994e+006 130949 7312
+  xvar: X 
+  yvar: Y 
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -1 1 -1 1
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1000)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: e_monitor_sample
+  position: 1.5389 0 37.638
+  title: Energy monitor
+  Ncount: 2000000
+  filename: Energy_sample_pos.dat
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: E
+  yvar: (I,I_err)
+  xlabel: Energy [meV]
+  ylabel: Intensity
+  xlimits: 2.5 6
+  variables: E I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_2d(100, 100)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: BackEndMonitor
+  position: 1.64684 0 38.2282
+  title: PSD monitor
+  Ncount: 2000000
+  filename: BackEndMonitor.dat
+  statistics: X0=-0.26787; dX=28.6371; Y0=0.0207805; dY=2.91219;
+  signal: Min=0; Max=83.9647; Mean=8.9217;
+  values: 89217 1198.76 7549
+  xvar: X 
+  yvar: Y 
+  xlabel: X position [cm]
+  ylabel: Y position [cm]
+  zvar: I
+  zlabel: Signal per bin
+  xylimits: -50 50 -5 5
+  variables: I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_0
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_0_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_1
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_1_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_2
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_2_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_3
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_3_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_4
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_4_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_5
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_5_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_6
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_6_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_edge_7
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_edge_7_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_1
+  position: 1.27803 0.7 38.8093
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_1.psd
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_2
+  position: 1.25539 0.7 38.804
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_2.psd
+  statistics: X0=-0.10518; dX=0.123351;
+  signal: Min=0; Max=39.4295; Mean=0.121662;
+  values: 124.582 66.0552 4
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_3
+  position: 1.23285 0.7 38.7983
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_3.psd
+  statistics: X0=-0.0571289; dX=0;
+  signal: Min=0; Max=40.2855; Mean=0.0393413;
+  values: 40.2855 40.2855 1
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_0
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_0_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_1
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_1_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_2
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_2_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_3
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_3_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_4
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_4_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_5
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_5_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_6
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_6_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(11)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: res_monitor_mid_7
+  position: 0 0 0
+  title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+  Ncount: 2000000
+  filename: res_mon_mid_7_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+  statistics: X0=0; dX=0;
+  signal: Min=0; Max=0; Mean=0;
+  values: 0 0 0
+  xvar: ki
+  yvar: (I,Ierr)
+  xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+  ylabel: Y
+  xlimits: 1 11
+  variables: Y
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_4
+  position: 1.21043 0.7 38.7921
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_4.psd
+  statistics: X0=0.0366211; dX=0;
+  signal: Min=0; Max=36.7308; Mean=0.0358699;
+  values: 36.7308 36.7308 1
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_5
+  position: 1.18814 0.7 38.7855
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_5.psd
+  statistics: X0=0.270996; dX=0;
+  signal: Min=0; Max=30.4528; Mean=0.0297391;
+  values: 30.4528 30.4528 1
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_6
+  position: 1.16597 0.7 38.7785
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_6.psd
+  statistics: X0=0.133483; dX=0.293986;
+  signal: Min=0; Max=30.9787; Mean=0.0572529;
+  values: 58.6269 38.0082 3
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_1_7
+  position: 1.14395 0.7 38.7711
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes11_7.psd
+  statistics: X0=-0.149902; dX=0;
+  signal: Min=0; Max=0.00145061; Mean=1.41661e-006;
+  values: 0.00145061 0.00145061 1
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_2_1
+  position: 1.2667 0.71 38.8067
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes12_1.psd
+  statistics: X0=0.108311; dX=0.275815;
+  signal: Min=0; Max=33.5762; Mean=0.0641948;
+  values: 65.7354 46.5036 2
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_2_2
+  position: 1.24411 0.71 38.8012
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes12_2.psd
+  statistics: X0=-0.0620121; dX=0.00026176;
+  signal: Min=0; Max=33.9062; Mean=0.0331116;
+  values: 33.9063 41.5264 2
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_2_3
+  position: 1.22163 0.71 38.7952
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes12_3.psd
+  statistics: X0=0.294806; dX=0.0977946;
+  signal: Min=0; Max=38.9967; Mean=0.0640037;
+  values: 65.5398 47.9877 2
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_2_4
+  position: 1.19927 0.71 38.7889
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes12_4.psd
+  statistics: X0=0.320703; dX=0.0623166;
+  signal: Min=0; Max=32.7802; Mean=0.059471;
+  values: 60.8983 43.3132 2
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_2_5
+  position: 1.17704 0.71 38.7821
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes12_5.psd
+  statistics: X0=-0.276855; dX=0;
+  signal: Min=0; Max=4.19334; Mean=0.00409506;
+  values: 4.19334 4.19334 1
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data
+
+begin data
+  Date: Tue Mar 08 12:50:06 2022 (1646740206)
+  type: array_1d(1024)
+  Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+  component: psd_tube1_2_6
+  position: 1.15494 0.71 38.7749
+  title: PSD Detector
+  Ncount: 2000000
+  filename: ReuterStokes12_6.psd
+  statistics: X0=0.385254; dX=7.50274e-007;
+  signal: Min=0; Max=30.83; Mean=0.0301074;
+  values: 30.83 35.5994 3
+  xvar: Y
+  yvar: (I,I_err)
+  xlabel: Y position [m]
+  ylabel: Counts
+  xlimits: -0.5 0.5
+  variables: Y I I_err N
+end data

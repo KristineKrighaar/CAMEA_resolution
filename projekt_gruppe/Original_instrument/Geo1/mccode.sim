@@ -1,0 +1,27 @@
+begin instrument:
+  Creator: mcstas 3.1
+  Source: FullInstrument_v4_elastic_resolution.instr
+  Parameters:  simon
+  Trace_enabled: no
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation
+Date: Tue Mar 08 12 44 2022
+Ncount: 1000000
+Numpoints: 2
+Param: simon = 0, simon = 140
+end simulation
+
+begin data
+type: multiarray_1d(2)
+title: Scan of simon
+xvars: simon
+yvars: (kim_I,kim_ERR) (SlitMonitor_I,SlitMonitor_ERR) (e_monitor_sample_I,e_monitor_sample_ERR) (BackEndMonitor_I,BackEndMonitor_ERR) (psd_tube1_1_1_I,psd_tube1_1_1_ERR) (psd_tube1_1_2_I,psd_tube1_1_2_ERR) (psd_tube1_1_3_I,psd_tube1_1_3_ERR) (psd_tube1_1_4_I,psd_tube1_1_4_ERR) (psd_tube1_1_5_I,psd_tube1_1_5_ERR) (psd_tube1_1_6_I,psd_tube1_1_6_ERR) (psd_tube1_1_7_I,psd_tube1_1_7_ERR) (psd_tube1_2_1_I,psd_tube1_2_1_ERR) (psd_tube1_2_2_I,psd_tube1_2_2_ERR) (psd_tube1_2_3_I,psd_tube1_2_3_ERR) (psd_tube1_2_4_I,psd_tube1_2_4_ERR) (psd_tube1_2_5_I,psd_tube1_2_5_ERR) (psd_tube1_2_6_I,psd_tube1_2_6_ERR)
+xlabel: 'simon'
+ylabel: 'Intensity'
+xlimits: 0 140
+filename: mccode.dat
+variables: simon kim_I kim_ERR SlitMonitor_I SlitMonitor_ERR e_monitor_sample_I e_monitor_sample_ERR BackEndMonitor_I BackEndMonitor_ERR psd_tube1_1_1_I psd_tube1_1_1_ERR psd_tube1_1_2_I psd_tube1_1_2_ERR psd_tube1_1_3_I psd_tube1_1_3_ERR psd_tube1_1_4_I psd_tube1_1_4_ERR psd_tube1_1_5_I psd_tube1_1_5_ERR psd_tube1_1_6_I psd_tube1_1_6_ERR psd_tube1_1_7_I psd_tube1_1_7_ERR psd_tube1_2_1_I psd_tube1_2_1_ERR psd_tube1_2_2_I psd_tube1_2_2_ERR psd_tube1_2_3_I psd_tube1_2_3_ERR psd_tube1_2_4_I psd_tube1_2_4_ERR psd_tube1_2_5_I psd_tube1_2_5_ERR psd_tube1_2_6_I psd_tube1_2_6_ERR
+end data

@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v4_elastic_resolution.instr (PSI_CAMEA)
- * Date:       Tue Feb 22 13:40:01 2022
+ * Date:       Tue Mar 08 12:41:47 2022
  * File:       FullInstrument_v4_elastic_resolution.c
  * CFLAGS=
  */
@@ -15204,8 +15204,8 @@ int _kim_setpos(void)
   _kim_var._parameters.xmax = 0.05;
   _kim_var._parameters.ymin = -0.05;
   _kim_var._parameters.ymax = 0.05;
-  _kim_var._parameters.xwidth = 0.5;
-  _kim_var._parameters.yheight = 0.5;
+  _kim_var._parameters.xwidth = 0.14;
+  _kim_var._parameters.yheight = 0.14;
   _kim_var._parameters.restore_neutron = 1;
   _kim_var._parameters.nowritefile = 0;
 
