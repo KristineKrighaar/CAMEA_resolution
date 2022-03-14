@@ -1013,8 +1013,6 @@ COMPONENT SlitGuideEnd = Slit(
     xwidth = slitwidth, yheight = slitheight)
   AT (0, 0,u) RELATIVE PREVIOUS
 
-
-
 /*
 
 COMPONENT Emon_MonoPos = E_monitor(

@@ -1,0 +1,41 @@
+McStas simulation description file for PSI_CAMEA.
+Date:    Mon Mar 14 10:48:46 2022
+Program: McStas 3.1 - Nov. 24, 2021
+
+begin instrument: PSI_CAMEA
+  File: C:\Users\georg\OneDrive\Documents\GitHub\CAMEA_resolution\projekt_gruppe\Original_instrument\FullInstrument_v5_20220314_094331\FullInstrument_v5_20220314_104846/mccode
+  Source: FullInstrument_v5.instr
+  Parameters:  SourceE(double) DeltaSourceE(double) guideMonitors(double) EI(double) A3(double) A4(double) SAMPLE(double) RV_mono_Bool(double) RH_mono_Bool(double) monoShieldingWidth(double) monoShieldingHeight(double) monoShieldingDistance(double) MonoShielding(double) Be_filter(double) sampleHeight(double) sampleRadius(double) samplePosY(double)
+  Trace_enabled: yes
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+
+begin simulation: C:\Users\georg\OneDrive\Documents\GitHub\CAMEA_resolution\projekt_gruppe\Original_instrument\FullInstrument_v5_20220314_094331\FullInstrument_v5_20220314_104846
+  Format: McCode with text headers
+  URL: http://www.mccode.org
+  Creator: McStas 3.1 - Nov. 24, 2021
+  Instrument: FullInstrument_v5.instr
+  Ncount: 1000
+  Trace: no
+  Gravitation: no
+  Seed: -1775319694
+  Directory: C:\Users\georg\OneDrive\Documents\GitHub\CAMEA_resolution\projekt_gruppe\Original_instrument\FullInstrument_v5_20220314_094331\FullInstrument_v5_20220314_104846
+  Param: SourceE=5
+  Param: DeltaSourceE=0.3
+  Param: guideMonitors=1
+  Param: EI=5
+  Param: A3=0
+  Param: A4=-45
+  Param: SAMPLE=0
+  Param: RV_mono_Bool=1
+  Param: RH_mono_Bool=1
+  Param: monoShieldingWidth=0.062
+  Param: monoShieldingHeight=0.14
+  Param: monoShieldingDistance=0.235
+  Param: MonoShielding=1
+  Param: Be_filter=1
+  Param: sampleHeight=0.01
+  Param: sampleRadius=0.005
+  Param: samplePosY=0
+end simulation
