@@ -2,8 +2,8 @@
  * Format:     ANSI C source code
  * Creator:    McStas <http://www.mcstas.org>
  * Instrument: FullInstrument_v5.instr (PSI_CAMEA)
- * Date:       Mon Mar 14 16:36:43 2022
- * File:       FullInstrument_v5.c
+ * Date:       Tue Mar 15 13:17:23 2022
+ * File:       ./FullInstrument_v5.c
  * CFLAGS=
  */
 
@@ -5958,7 +5958,7 @@ int traceenabled = 1;
 #else
 int traceenabled = 0;
 #endif
-#define MCSTAS "C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\"
+#define MCSTAS "/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../"
 int   defaultmain         = 1;
 char  instrument_name[]   = "PSI_CAMEA";
 char  instrument_source[] = "FullInstrument_v5.instr";
@@ -13533,7 +13533,7 @@ double RH_mono;
 /* component Origin=Progress_bar() SETTING, POSITION/ROTATION */
 int _Origin_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_Origin_setpos] component Origin=Progress_bar() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\misc\\Progress_bar.comp:57]");
+  SIG_MESSAGE("[_Origin_setpos] component Origin=Progress_bar() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../misc/Progress_bar.comp:57]");
   stracpy(_Origin_var._name, "Origin", 16384);
   stracpy(_Origin_var._type, "Progress_bar", 16384);
   _Origin_var._index=1;
@@ -13571,7 +13571,7 @@ int _Origin_setpos(void)
 /* component source=Source_gen4() SETTING, POSITION/ROTATION */
 int _source_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_source_setpos] component source=Source_gen4() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\Source_gen4.comp:196]");
+  SIG_MESSAGE("[_source_setpos] component source=Source_gen4() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/Source_gen4.comp:196]");
   stracpy(_source_var._name, "source", 16384);
   stracpy(_source_var._type, "Source_gen4", 16384);
   _source_var._index=2;
@@ -13639,7 +13639,7 @@ int _source_setpos(void)
 /* component StartOfGuideMonitor=PSD_monitor() SETTING, POSITION/ROTATION */
 int _StartOfGuideMonitor_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_StartOfGuideMonitor_setpos] component StartOfGuideMonitor=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_StartOfGuideMonitor_setpos] component StartOfGuideMonitor=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_StartOfGuideMonitor_var._name, "StartOfGuideMonitor", 16384);
   stracpy(_StartOfGuideMonitor_var._type, "PSD_monitor", 16384);
   _StartOfGuideMonitor_var._index=3;
@@ -13723,7 +13723,7 @@ int _StartOfGuide_setpos(void)
 /* component Insert=Elliptic_guide_gravity() SETTING, POSITION/ROTATION */
 int _Insert_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_Insert_setpos] component Insert=Elliptic_guide_gravity() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:817]");
+  SIG_MESSAGE("[_Insert_setpos] component Insert=Elliptic_guide_gravity() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:817]");
   stracpy(_Insert_var._name, "Insert", 16384);
   stracpy(_Insert_var._type, "Elliptic_guide_gravity", 16384);
   _Insert_var._index=5;
@@ -13805,7 +13805,7 @@ int _Insert_setpos(void)
 /* component EndOfInsertPSD=PSD_monitor() SETTING, POSITION/ROTATION */
 int _EndOfInsertPSD_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_EndOfInsertPSD_setpos] component EndOfInsertPSD=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_EndOfInsertPSD_setpos] component EndOfInsertPSD=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_EndOfInsertPSD_var._name, "EndOfInsertPSD", 16384);
   stracpy(_EndOfInsertPSD_var._type, "PSD_monitor", 16384);
   _EndOfInsertPSD_var._index=6;
@@ -13855,7 +13855,7 @@ int _EndOfInsertPSD_setpos(void)
 /* component E2=Elliptic_guide_gravity() SETTING, POSITION/ROTATION */
 int _E2_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_E2_setpos] component E2=Elliptic_guide_gravity() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:817]");
+  SIG_MESSAGE("[_E2_setpos] component E2=Elliptic_guide_gravity() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:817]");
   stracpy(_E2_var._name, "E2", 16384);
   stracpy(_E2_var._type, "Elliptic_guide_gravity", 16384);
   _E2_var._index=7;
@@ -13971,7 +13971,7 @@ int _EndOfelement_5_setpos(void)
 /* component E2PSD=PSD_monitor() SETTING, POSITION/ROTATION */
 int _E2PSD_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_E2PSD_setpos] component E2PSD=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_E2PSD_setpos] component E2PSD=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_E2PSD_var._name, "E2PSD", 16384);
   stracpy(_E2PSD_var._type, "PSD_monitor", 16384);
   _E2PSD_var._index=9;
@@ -14055,7 +14055,7 @@ int _EndOfelement_4_setpos(void)
 /* component C1=Bender() SETTING, POSITION/ROTATION */
 int _C1_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_C1_setpos] component C1=Bender() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Bender.comp:113]");
+  SIG_MESSAGE("[_C1_setpos] component C1=Bender() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Bender.comp:113]");
   stracpy(_C1_var._name, "C1", 16384);
   stracpy(_C1_var._type, "Bender", 16384);
   _C1_var._index=11;
@@ -14147,7 +14147,7 @@ int _EndOfelement_2_setpos(void)
 /* component C1End=PSD_monitor() SETTING, POSITION/ROTATION */
 int _C1End_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_C1End_setpos] component C1End=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_C1End_setpos] component C1End=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_C1End_var._name, "C1End", 16384);
   stracpy(_C1End_var._type, "PSD_monitor", 16384);
   _C1End_var._index=13;
@@ -14197,7 +14197,7 @@ int _C1End_setpos(void)
 /* component E3a=Elliptic_guide_gravity() SETTING, POSITION/ROTATION */
 int _E3a_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_E3a_setpos] component E3a=Elliptic_guide_gravity() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:817]");
+  SIG_MESSAGE("[_E3a_setpos] component E3a=Elliptic_guide_gravity() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:817]");
   stracpy(_E3a_var._name, "E3a", 16384);
   stracpy(_E3a_var._type, "Elliptic_guide_gravity", 16384);
   _E3a_var._index=14;
@@ -14279,7 +14279,7 @@ int _E3a_setpos(void)
 /* component E3aEnd=PSD_monitor() SETTING, POSITION/ROTATION */
 int _E3aEnd_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_E3aEnd_setpos] component E3aEnd=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_E3aEnd_setpos] component E3aEnd=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_E3aEnd_var._name, "E3aEnd", 16384);
   stracpy(_E3aEnd_var._type, "PSD_monitor", 16384);
   _E3aEnd_var._index=15;
@@ -14329,7 +14329,7 @@ int _E3aEnd_setpos(void)
 /* component E3b=Elliptic_guide_gravity() SETTING, POSITION/ROTATION */
 int _E3b_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_E3b_setpos] component E3b=Elliptic_guide_gravity() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:817]");
+  SIG_MESSAGE("[_E3b_setpos] component E3b=Elliptic_guide_gravity() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:817]");
   stracpy(_E3b_var._name, "E3b", 16384);
   stracpy(_E3b_var._type, "Elliptic_guide_gravity", 16384);
   _E3b_var._index=16;
@@ -14411,7 +14411,7 @@ int _E3b_setpos(void)
 /* component E3bEnd=PSD_monitor() SETTING, POSITION/ROTATION */
 int _E3bEnd_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_E3bEnd_setpos] component E3bEnd=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_E3bEnd_setpos] component E3bEnd=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_E3bEnd_var._name, "E3bEnd", 16384);
   stracpy(_E3bEnd_var._type, "PSD_monitor", 16384);
   _E3bEnd_var._index=17;
@@ -14461,7 +14461,7 @@ int _E3bEnd_setpos(void)
 /* component SlitGuideEnd=Slit() SETTING, POSITION/ROTATION */
 int _SlitGuideEnd_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_SlitGuideEnd_setpos] component SlitGuideEnd=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
+  SIG_MESSAGE("[_SlitGuideEnd_setpos] component SlitGuideEnd=Slit() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:50]");
   stracpy(_SlitGuideEnd_var._name, "SlitGuideEnd", 16384);
   stracpy(_SlitGuideEnd_var._type, "Slit", 16384);
   _SlitGuideEnd_var._index=18;
@@ -14537,7 +14537,7 @@ int _george_setpos(void)
 /* component kim=PSD_monitor() SETTING, POSITION/ROTATION */
 int _kim_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_kim_setpos] component kim=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_kim_setpos] component kim=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_kim_var._name, "kim", 16384);
   stracpy(_kim_var._type, "PSD_monitor", 16384);
   _kim_var._index=20;
@@ -14587,7 +14587,7 @@ int _kim_setpos(void)
 /* component Mono=Monochromator_curved() SETTING, POSITION/ROTATION */
 int _Mono_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_Mono_setpos] component Mono=Monochromator_curved() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:130]");
+  SIG_MESSAGE("[_Mono_setpos] component Mono=Monochromator_curved() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_curved.comp:130]");
   stracpy(_Mono_var._name, "Mono", 16384);
   stracpy(_Mono_var._type, "Monochromator_curved", 16384);
   _Mono_var._index=21;
@@ -14683,7 +14683,7 @@ int _A2_setpos(void)
 /* component monochromatorShielding=Slit() SETTING, POSITION/ROTATION */
 int _monochromatorShielding_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_monochromatorShielding_setpos] component monochromatorShielding=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
+  SIG_MESSAGE("[_monochromatorShielding_setpos] component monochromatorShielding=Slit() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:50]");
   stracpy(_monochromatorShielding_var._name, "monochromatorShielding", 16384);
   stracpy(_monochromatorShielding_var._type, "Slit", 16384);
   _monochromatorShielding_var._index=23;
@@ -14725,7 +14725,7 @@ int _monochromatorShielding_setpos(void)
 /* component slit=Slit() SETTING, POSITION/ROTATION */
 int _slit_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_slit_setpos] component slit=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
+  SIG_MESSAGE("[_slit_setpos] component slit=Slit() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:50]");
   stracpy(_slit_var._name, "slit", 16384);
   stracpy(_slit_var._type, "Slit", 16384);
   _slit_var._index=24;
@@ -14767,7 +14767,7 @@ int _slit_setpos(void)
 /* component SlitMonitor=PSD_monitor() SETTING, POSITION/ROTATION */
 int _SlitMonitor_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_SlitMonitor_setpos] component SlitMonitor=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_SlitMonitor_setpos] component SlitMonitor=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_SlitMonitor_var._name, "SlitMonitor", 16384);
   stracpy(_SlitMonitor_var._type, "PSD_monitor", 16384);
   _SlitMonitor_var._index=25;
@@ -15157,7 +15157,7 @@ int _a48_setpos(void)
 /* component VanSample=Incoherent() SETTING, POSITION/ROTATION */
 int _VanSample_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_VanSample_setpos] component VanSample=Incoherent() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Incoherent.comp:152]");
+  SIG_MESSAGE("[_VanSample_setpos] component VanSample=Incoherent() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Incoherent.comp:152]");
   stracpy(_VanSample_var._name, "VanSample", 16384);
   stracpy(_VanSample_var._type, "Incoherent", 16384);
   _VanSample_var._index=36;
@@ -15219,7 +15219,7 @@ int _VanSample_setpos(void)
 /* component sample=Phonon_simple() SETTING, POSITION/ROTATION */
 int _sample_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_sample_setpos] component sample=Phonon_simple() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Phonon_simple.comp:333]");
+  SIG_MESSAGE("[_sample_setpos] component sample=Phonon_simple() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Phonon_simple.comp:333]");
   stracpy(_sample_var._name, "sample", 16384);
   stracpy(_sample_var._type, "Phonon_simple", 16384);
   _sample_var._index=37;
@@ -15275,7 +15275,7 @@ int _sample_setpos(void)
 /* component powder1=Powder1() SETTING, POSITION/ROTATION */
 int _powder1_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_powder1_setpos] component powder1=Powder1() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Powder1.comp:83]");
+  SIG_MESSAGE("[_powder1_setpos] component powder1=Powder1() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Powder1.comp:83]");
   stracpy(_powder1_var._name, "powder1", 16384);
   stracpy(_powder1_var._type, "Powder1", 16384);
   _powder1_var._index=38;
@@ -15324,7 +15324,7 @@ int _powder1_setpos(void)
 /* component res_sample=Res_sample() SETTING, POSITION/ROTATION */
 int _res_sample_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_res_sample_setpos] component res_sample=Res_sample() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Res_sample.comp:108]");
+  SIG_MESSAGE("[_res_sample_setpos] component res_sample=Res_sample() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:108]");
   stracpy(_res_sample_var._name, "res_sample", 16384);
   stracpy(_res_sample_var._type, "Res_sample", 16384);
   _res_sample_var._index=39;
@@ -15376,7 +15376,7 @@ int _res_sample_setpos(void)
 /* component BackEndMonitor=PSD_monitor() SETTING, POSITION/ROTATION */
 int _BackEndMonitor_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_BackEndMonitor_setpos] component BackEndMonitor=PSD_monitor() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_BackEndMonitor_setpos] component BackEndMonitor=PSD_monitor() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
   stracpy(_BackEndMonitor_var._name, "BackEndMonitor", 16384);
   stracpy(_BackEndMonitor_var._type, "PSD_monitor", 16384);
   _BackEndMonitor_var._index=40;
@@ -15426,7 +15426,7 @@ int _BackEndMonitor_setpos(void)
 /* component slitBackEnd=Slit() SETTING, POSITION/ROTATION */
 int _slitBackEnd_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_slitBackEnd_setpos] component slitBackEnd=Slit() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
+  SIG_MESSAGE("[_slitBackEnd_setpos] component slitBackEnd=Slit() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:50]");
   stracpy(_slitBackEnd_var._name, "slitBackEnd", 16384);
   stracpy(_slitBackEnd_var._type, "Slit", 16384);
   _slitBackEnd_var._index=41;
@@ -15468,7 +15468,7 @@ int _slitBackEnd_setpos(void)
 /* component BeFilter=PowderN() SETTING, POSITION/ROTATION */
 int _BeFilter_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_BeFilter_setpos] component BeFilter=PowderN() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\PowderN.comp:551]");
+  SIG_MESSAGE("[_BeFilter_setpos] component BeFilter=PowderN() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/PowderN.comp:551]");
   stracpy(_BeFilter_var._name, "BeFilter", 16384);
   stracpy(_BeFilter_var._type, "PowderN", 16384);
   _BeFilter_var._index=42;
@@ -15546,7 +15546,7 @@ int _BeFilter_setpos(void)
 /* component an111=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an111_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an111_setpos] component an111=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an111_setpos] component an111=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an111_var._name, "an111", 16384);
   stracpy(_an111_var._type, "Monochromator_flat", 16384);
   _an111_var._index=43;
@@ -15593,7 +15593,7 @@ int _an111_setpos(void)
 /* component an112=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an112_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an112_setpos] component an112=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an112_setpos] component an112=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an112_var._name, "an112", 16384);
   stracpy(_an112_var._type, "Monochromator_flat", 16384);
   _an112_var._index=44;
@@ -15640,7 +15640,7 @@ int _an112_setpos(void)
 /* component an113=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an113_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an113_setpos] component an113=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an113_setpos] component an113=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an113_var._name, "an113", 16384);
   stracpy(_an113_var._type, "Monochromator_flat", 16384);
   _an113_var._index=45;
@@ -15687,7 +15687,7 @@ int _an113_setpos(void)
 /* component an114=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an114_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an114_setpos] component an114=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an114_setpos] component an114=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an114_var._name, "an114", 16384);
   stracpy(_an114_var._type, "Monochromator_flat", 16384);
   _an114_var._index=46;
@@ -15734,7 +15734,7 @@ int _an114_setpos(void)
 /* component an115=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an115_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an115_setpos] component an115=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an115_setpos] component an115=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an115_var._name, "an115", 16384);
   stracpy(_an115_var._type, "Monochromator_flat", 16384);
   _an115_var._index=47;
@@ -15781,7 +15781,7 @@ int _an115_setpos(void)
 /* component an121=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an121_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an121_setpos] component an121=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an121_setpos] component an121=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an121_var._name, "an121", 16384);
   stracpy(_an121_var._type, "Monochromator_flat", 16384);
   _an121_var._index=48;
@@ -15828,7 +15828,7 @@ int _an121_setpos(void)
 /* component an122=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an122_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an122_setpos] component an122=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an122_setpos] component an122=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an122_var._name, "an122", 16384);
   stracpy(_an122_var._type, "Monochromator_flat", 16384);
   _an122_var._index=49;
@@ -15875,7 +15875,7 @@ int _an122_setpos(void)
 /* component an123=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an123_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an123_setpos] component an123=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an123_setpos] component an123=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an123_var._name, "an123", 16384);
   stracpy(_an123_var._type, "Monochromator_flat", 16384);
   _an123_var._index=50;
@@ -15922,7 +15922,7 @@ int _an123_setpos(void)
 /* component an124=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an124_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an124_setpos] component an124=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an124_setpos] component an124=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an124_var._name, "an124", 16384);
   stracpy(_an124_var._type, "Monochromator_flat", 16384);
   _an124_var._index=51;
@@ -15969,7 +15969,7 @@ int _an124_setpos(void)
 /* component an125=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an125_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an125_setpos] component an125=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an125_setpos] component an125=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an125_var._name, "an125", 16384);
   stracpy(_an125_var._type, "Monochromator_flat", 16384);
   _an125_var._index=52;
@@ -16016,7 +16016,7 @@ int _an125_setpos(void)
 /* component an131=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an131_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an131_setpos] component an131=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an131_setpos] component an131=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an131_var._name, "an131", 16384);
   stracpy(_an131_var._type, "Monochromator_flat", 16384);
   _an131_var._index=53;
@@ -16063,7 +16063,7 @@ int _an131_setpos(void)
 /* component an132=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an132_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an132_setpos] component an132=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an132_setpos] component an132=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an132_var._name, "an132", 16384);
   stracpy(_an132_var._type, "Monochromator_flat", 16384);
   _an132_var._index=54;
@@ -16110,7 +16110,7 @@ int _an132_setpos(void)
 /* component an133=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an133_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an133_setpos] component an133=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an133_setpos] component an133=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an133_var._name, "an133", 16384);
   stracpy(_an133_var._type, "Monochromator_flat", 16384);
   _an133_var._index=55;
@@ -16157,7 +16157,7 @@ int _an133_setpos(void)
 /* component an134=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an134_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an134_setpos] component an134=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an134_setpos] component an134=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an134_var._name, "an134", 16384);
   stracpy(_an134_var._type, "Monochromator_flat", 16384);
   _an134_var._index=56;
@@ -16204,7 +16204,7 @@ int _an134_setpos(void)
 /* component an135=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an135_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an135_setpos] component an135=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an135_setpos] component an135=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an135_var._name, "an135", 16384);
   stracpy(_an135_var._type, "Monochromator_flat", 16384);
   _an135_var._index=57;
@@ -16251,7 +16251,7 @@ int _an135_setpos(void)
 /* component an141=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an141_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an141_setpos] component an141=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an141_setpos] component an141=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an141_var._name, "an141", 16384);
   stracpy(_an141_var._type, "Monochromator_flat", 16384);
   _an141_var._index=58;
@@ -16298,7 +16298,7 @@ int _an141_setpos(void)
 /* component an142=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an142_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an142_setpos] component an142=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an142_setpos] component an142=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an142_var._name, "an142", 16384);
   stracpy(_an142_var._type, "Monochromator_flat", 16384);
   _an142_var._index=59;
@@ -16345,7 +16345,7 @@ int _an142_setpos(void)
 /* component an143=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an143_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an143_setpos] component an143=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an143_setpos] component an143=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an143_var._name, "an143", 16384);
   stracpy(_an143_var._type, "Monochromator_flat", 16384);
   _an143_var._index=60;
@@ -16392,7 +16392,7 @@ int _an143_setpos(void)
 /* component an144=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an144_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an144_setpos] component an144=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an144_setpos] component an144=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an144_var._name, "an144", 16384);
   stracpy(_an144_var._type, "Monochromator_flat", 16384);
   _an144_var._index=61;
@@ -16439,7 +16439,7 @@ int _an144_setpos(void)
 /* component an145=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an145_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an145_setpos] component an145=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an145_setpos] component an145=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an145_var._name, "an145", 16384);
   stracpy(_an145_var._type, "Monochromator_flat", 16384);
   _an145_var._index=62;
@@ -16486,7 +16486,7 @@ int _an145_setpos(void)
 /* component an151=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an151_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an151_setpos] component an151=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an151_setpos] component an151=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an151_var._name, "an151", 16384);
   stracpy(_an151_var._type, "Monochromator_flat", 16384);
   _an151_var._index=63;
@@ -16533,7 +16533,7 @@ int _an151_setpos(void)
 /* component an152=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an152_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an152_setpos] component an152=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an152_setpos] component an152=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an152_var._name, "an152", 16384);
   stracpy(_an152_var._type, "Monochromator_flat", 16384);
   _an152_var._index=64;
@@ -16580,7 +16580,7 @@ int _an152_setpos(void)
 /* component an153=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an153_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an153_setpos] component an153=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an153_setpos] component an153=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an153_var._name, "an153", 16384);
   stracpy(_an153_var._type, "Monochromator_flat", 16384);
   _an153_var._index=65;
@@ -16627,7 +16627,7 @@ int _an153_setpos(void)
 /* component an154=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an154_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an154_setpos] component an154=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an154_setpos] component an154=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an154_var._name, "an154", 16384);
   stracpy(_an154_var._type, "Monochromator_flat", 16384);
   _an154_var._index=66;
@@ -16674,7 +16674,7 @@ int _an154_setpos(void)
 /* component an155=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an155_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an155_setpos] component an155=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an155_setpos] component an155=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an155_var._name, "an155", 16384);
   stracpy(_an155_var._type, "Monochromator_flat", 16384);
   _an155_var._index=67;
@@ -16721,7 +16721,7 @@ int _an155_setpos(void)
 /* component an161=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an161_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an161_setpos] component an161=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an161_setpos] component an161=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an161_var._name, "an161", 16384);
   stracpy(_an161_var._type, "Monochromator_flat", 16384);
   _an161_var._index=68;
@@ -16768,7 +16768,7 @@ int _an161_setpos(void)
 /* component an162=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an162_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an162_setpos] component an162=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an162_setpos] component an162=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an162_var._name, "an162", 16384);
   stracpy(_an162_var._type, "Monochromator_flat", 16384);
   _an162_var._index=69;
@@ -16815,7 +16815,7 @@ int _an162_setpos(void)
 /* component an163=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an163_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an163_setpos] component an163=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an163_setpos] component an163=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an163_var._name, "an163", 16384);
   stracpy(_an163_var._type, "Monochromator_flat", 16384);
   _an163_var._index=70;
@@ -16862,7 +16862,7 @@ int _an163_setpos(void)
 /* component an164=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an164_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an164_setpos] component an164=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an164_setpos] component an164=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an164_var._name, "an164", 16384);
   stracpy(_an164_var._type, "Monochromator_flat", 16384);
   _an164_var._index=71;
@@ -16909,7 +16909,7 @@ int _an164_setpos(void)
 /* component an165=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an165_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an165_setpos] component an165=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an165_setpos] component an165=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an165_var._name, "an165", 16384);
   stracpy(_an165_var._type, "Monochromator_flat", 16384);
   _an165_var._index=72;
@@ -16956,7 +16956,7 @@ int _an165_setpos(void)
 /* component an171=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an171_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an171_setpos] component an171=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an171_setpos] component an171=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an171_var._name, "an171", 16384);
   stracpy(_an171_var._type, "Monochromator_flat", 16384);
   _an171_var._index=73;
@@ -17003,7 +17003,7 @@ int _an171_setpos(void)
 /* component an172=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an172_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an172_setpos] component an172=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an172_setpos] component an172=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an172_var._name, "an172", 16384);
   stracpy(_an172_var._type, "Monochromator_flat", 16384);
   _an172_var._index=74;
@@ -17050,7 +17050,7 @@ int _an172_setpos(void)
 /* component an173=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an173_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an173_setpos] component an173=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an173_setpos] component an173=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an173_var._name, "an173", 16384);
   stracpy(_an173_var._type, "Monochromator_flat", 16384);
   _an173_var._index=75;
@@ -17097,7 +17097,7 @@ int _an173_setpos(void)
 /* component an174=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an174_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an174_setpos] component an174=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an174_setpos] component an174=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an174_var._name, "an174", 16384);
   stracpy(_an174_var._type, "Monochromator_flat", 16384);
   _an174_var._index=76;
@@ -17144,7 +17144,7 @@ int _an174_setpos(void)
 /* component an175=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an175_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an175_setpos] component an175=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an175_setpos] component an175=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an175_var._name, "an175", 16384);
   stracpy(_an175_var._type, "Monochromator_flat", 16384);
   _an175_var._index=77;
@@ -17191,7 +17191,7 @@ int _an175_setpos(void)
 /* component an181=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an181_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an181_setpos] component an181=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an181_setpos] component an181=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an181_var._name, "an181", 16384);
   stracpy(_an181_var._type, "Monochromator_flat", 16384);
   _an181_var._index=78;
@@ -17238,7 +17238,7 @@ int _an181_setpos(void)
 /* component an182=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an182_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an182_setpos] component an182=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an182_setpos] component an182=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an182_var._name, "an182", 16384);
   stracpy(_an182_var._type, "Monochromator_flat", 16384);
   _an182_var._index=79;
@@ -17285,7 +17285,7 @@ int _an182_setpos(void)
 /* component an183=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an183_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an183_setpos] component an183=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an183_setpos] component an183=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an183_var._name, "an183", 16384);
   stracpy(_an183_var._type, "Monochromator_flat", 16384);
   _an183_var._index=80;
@@ -17332,7 +17332,7 @@ int _an183_setpos(void)
 /* component an184=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an184_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an184_setpos] component an184=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an184_setpos] component an184=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an184_var._name, "an184", 16384);
   stracpy(_an184_var._type, "Monochromator_flat", 16384);
   _an184_var._index=81;
@@ -17379,7 +17379,7 @@ int _an184_setpos(void)
 /* component an185=Monochromator_flat() SETTING, POSITION/ROTATION */
 int _an185_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_an185_setpos] component an185=Monochromator_flat() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an185_setpos] component an185=Monochromator_flat() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
   stracpy(_an185_var._name, "an185", 16384);
   stracpy(_an185_var._type, "Monochromator_flat", 16384);
   _an185_var._index=82;
@@ -17426,7 +17426,7 @@ int _an185_setpos(void)
 /* component psd_tube1_1_1=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_1_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_1_setpos] component psd_tube1_1_1=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_1_setpos] component psd_tube1_1_1=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_1_var._name, "psd_tube1_1_1", 16384);
   stracpy(_psd_tube1_1_1_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_1_var._index=83;
@@ -17497,7 +17497,7 @@ int _psd_tube1_1_1_setpos(void)
 /* component psd_tube1_1_2=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_2_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_2_setpos] component psd_tube1_1_2=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_2_setpos] component psd_tube1_1_2=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_2_var._name, "psd_tube1_1_2", 16384);
   stracpy(_psd_tube1_1_2_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_2_var._index=84;
@@ -17568,7 +17568,7 @@ int _psd_tube1_1_2_setpos(void)
 /* component psd_tube1_1_3=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_3_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_3_setpos] component psd_tube1_1_3=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_3_setpos] component psd_tube1_1_3=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_3_var._name, "psd_tube1_1_3", 16384);
   stracpy(_psd_tube1_1_3_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_3_var._index=85;
@@ -17639,7 +17639,7 @@ int _psd_tube1_1_3_setpos(void)
 /* component psd_tube1_1_4=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_4_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_4_setpos] component psd_tube1_1_4=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_4_setpos] component psd_tube1_1_4=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_4_var._name, "psd_tube1_1_4", 16384);
   stracpy(_psd_tube1_1_4_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_4_var._index=86;
@@ -17710,7 +17710,7 @@ int _psd_tube1_1_4_setpos(void)
 /* component psd_tube1_1_5=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_5_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_5_setpos] component psd_tube1_1_5=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_5_setpos] component psd_tube1_1_5=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_5_var._name, "psd_tube1_1_5", 16384);
   stracpy(_psd_tube1_1_5_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_5_var._index=87;
@@ -17781,7 +17781,7 @@ int _psd_tube1_1_5_setpos(void)
 /* component psd_tube1_1_6=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_6_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_6_setpos] component psd_tube1_1_6=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_6_setpos] component psd_tube1_1_6=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_6_var._name, "psd_tube1_1_6", 16384);
   stracpy(_psd_tube1_1_6_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_6_var._index=88;
@@ -17852,7 +17852,7 @@ int _psd_tube1_1_6_setpos(void)
 /* component psd_tube1_1_7=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_1_7_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_1_7_setpos] component psd_tube1_1_7=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_7_setpos] component psd_tube1_1_7=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_1_7_var._name, "psd_tube1_1_7", 16384);
   stracpy(_psd_tube1_1_7_var._type, "PSD_Detector", 16384);
   _psd_tube1_1_7_var._index=89;
@@ -17923,7 +17923,7 @@ int _psd_tube1_1_7_setpos(void)
 /* component psd_tube1_2_1=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_2_1_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_2_1_setpos] component psd_tube1_2_1=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_2_1_setpos] component psd_tube1_2_1=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_2_1_var._name, "psd_tube1_2_1", 16384);
   stracpy(_psd_tube1_2_1_var._type, "PSD_Detector", 16384);
   _psd_tube1_2_1_var._index=90;
@@ -17994,7 +17994,7 @@ int _psd_tube1_2_1_setpos(void)
 /* component psd_tube1_2_2=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_2_2_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_2_2_setpos] component psd_tube1_2_2=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_2_2_setpos] component psd_tube1_2_2=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_2_2_var._name, "psd_tube1_2_2", 16384);
   stracpy(_psd_tube1_2_2_var._type, "PSD_Detector", 16384);
   _psd_tube1_2_2_var._index=91;
@@ -18065,7 +18065,7 @@ int _psd_tube1_2_2_setpos(void)
 /* component psd_tube1_2_3=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_2_3_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_2_3_setpos] component psd_tube1_2_3=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_2_3_setpos] component psd_tube1_2_3=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_2_3_var._name, "psd_tube1_2_3", 16384);
   stracpy(_psd_tube1_2_3_var._type, "PSD_Detector", 16384);
   _psd_tube1_2_3_var._index=92;
@@ -18136,7 +18136,7 @@ int _psd_tube1_2_3_setpos(void)
 /* component psd_tube1_2_4=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_2_4_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_2_4_setpos] component psd_tube1_2_4=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_2_4_setpos] component psd_tube1_2_4=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_2_4_var._name, "psd_tube1_2_4", 16384);
   stracpy(_psd_tube1_2_4_var._type, "PSD_Detector", 16384);
   _psd_tube1_2_4_var._index=93;
@@ -18207,7 +18207,7 @@ int _psd_tube1_2_4_setpos(void)
 /* component psd_tube1_2_5=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_2_5_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_2_5_setpos] component psd_tube1_2_5=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_2_5_setpos] component psd_tube1_2_5=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_2_5_var._name, "psd_tube1_2_5", 16384);
   stracpy(_psd_tube1_2_5_var._type, "PSD_Detector", 16384);
   _psd_tube1_2_5_var._index=94;
@@ -18278,7 +18278,7 @@ int _psd_tube1_2_5_setpos(void)
 /* component psd_tube1_2_6=PSD_Detector() SETTING, POSITION/ROTATION */
 int _psd_tube1_2_6_setpos(void)
 { /* sets initial component parameters, position and rotation */
-  SIG_MESSAGE("[_psd_tube1_2_6_setpos] component psd_tube1_2_6=PSD_Detector() SETTING [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_2_6_setpos] component psd_tube1_2_6=PSD_Detector() SETTING [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
   stracpy(_psd_tube1_2_6_var._name, "psd_tube1_2_6", 16384);
   stracpy(_psd_tube1_2_6_var._type, "PSD_Detector", 16384);
   _psd_tube1_2_6_var._index=95;
@@ -18356,7 +18356,7 @@ _class_Progress_bar *class_Progress_bar_init(_class_Progress_bar *_comp
   #define StartTime (_comp->_parameters.StartTime)
   #define EndTime (_comp->_parameters.EndTime)
   #define CurrentTime (_comp->_parameters.CurrentTime)
-  SIG_MESSAGE("[_Origin_init] component Origin=Progress_bar() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\misc\\Progress_bar.comp:57]");
+  SIG_MESSAGE("[_Origin_init] component Origin=Progress_bar() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../misc/Progress_bar.comp:57]");
 
 IntermediateCnts=0;
 StartTime=0;
@@ -18438,7 +18438,7 @@ _class_Source_gen4 *class_Source_gen4_init(_class_Source_gen4 *_comp
   #define pTable_dxmax (_comp->_parameters.pTable_dxmax)
   #define pTable_dymin (_comp->_parameters.pTable_dymin)
   #define pTable_dymax (_comp->_parameters.pTable_dymax)
-  SIG_MESSAGE("[_source_init] component source=Source_gen4() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\Source_gen4.comp:196]");
+  SIG_MESSAGE("[_source_init] component source=Source_gen4() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/Source_gen4.comp:196]");
 
   double source_area, k;
   pTable_xsum=pTable_ysum=0;
@@ -18772,7 +18772,7 @@ _class_PSD_monitor *class_PSD_monitor_init(_class_PSD_monitor *_comp
   #define PSD_N (_comp->_parameters.PSD_N)
   #define PSD_p (_comp->_parameters.PSD_p)
   #define PSD_p2 (_comp->_parameters.PSD_p2)
-  SIG_MESSAGE("[_StartOfGuideMonitor_init] component StartOfGuideMonitor=PSD_monitor() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:62]");
+  SIG_MESSAGE("[_StartOfGuideMonitor_init] component StartOfGuideMonitor=PSD_monitor() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:62]");
 
   if (xwidth  > 0) { xmax = xwidth/2;  xmin = -xmax; }
   if (yheight > 0) { ymax = yheight/2; ymin = -ymax; }
@@ -18850,7 +18850,7 @@ _class_Elliptic_guide_gravity *class_Elliptic_guide_gravity_init(_class_Elliptic
   #define Gz0 (_comp->_parameters.Gz0)
   #define Circ (_comp->_parameters.Circ)
   #define dynamicalSegLength (_comp->_parameters.dynamicalSegLength)
-  SIG_MESSAGE("[_Insert_init] component Insert=Elliptic_guide_gravity() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:817]");
+  SIG_MESSAGE("[_Insert_init] component Insert=Elliptic_guide_gravity() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:817]");
 
 	///////////////////////////////////////////////////////////////////////////
 	/////////////// Test user input
@@ -19517,7 +19517,7 @@ _class_Bender *class_Bender_init(_class_Bender *_comp
   #define Ws (_comp->_parameters.Ws)
   #define bk (_comp->_parameters.bk)
   #define mWin (_comp->_parameters.mWin)
-  SIG_MESSAGE("[_C1_init] component C1=Bender() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Bender.comp:113]");
+  SIG_MESSAGE("[_C1_init] component C1=Bender() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Bender.comp:113]");
 
 if (r <0)
       { fprintf(stderr,"Bender: error: %s: to bend in the other direction\n", NAME_CURRENT_COMP);
@@ -19572,7 +19572,7 @@ _class_Slit *class_Slit_init(_class_Slit *_comp
   #define radius (_comp->_parameters.radius)
   #define xwidth (_comp->_parameters.xwidth)
   #define yheight (_comp->_parameters.yheight)
-  SIG_MESSAGE("[_SlitGuideEnd_init] component SlitGuideEnd=Slit() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:50]");
+  SIG_MESSAGE("[_SlitGuideEnd_init] component SlitGuideEnd=Slit() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:50]");
 
 if (xwidth > 0)  { 
   if (!xmin && !xmax) {
@@ -19635,7 +19635,7 @@ _class_Monochromator_curved *class_Monochromator_curved_init(_class_Monochromato
   #define tTableFlag (_comp->_parameters.tTableFlag)
   #define tiltH (_comp->_parameters.tiltH)
   #define tiltV (_comp->_parameters.tiltV)
-  SIG_MESSAGE("[_Mono_init] component Mono=Monochromator_curved() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:130]");
+  SIG_MESSAGE("[_Mono_init] component Mono=Monochromator_curved() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_curved.comp:130]");
 
   int i;
 
@@ -19783,7 +19783,7 @@ _class_Incoherent *class_Incoherent_init(_class_Incoherent *_comp
   #define order (_comp->_parameters.order)
   #define VarsInc (_comp->_parameters.VarsInc)
   #define offdata (_comp->_parameters.offdata)
-  SIG_MESSAGE("[_VanSample_init] component VanSample=Incoherent() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Incoherent.comp:152]");
+  SIG_MESSAGE("[_VanSample_init] component VanSample=Incoherent() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Incoherent.comp:152]");
 
   VarsInc.shape=-1; /* -1:no shape, 0:cyl, 1:box, 2:sphere, 3:any-shape  */
   if (geometry && strlen(geometry) && strcmp(geometry, "NULL") && strcmp(geometry, "0")) {
@@ -19919,7 +19919,7 @@ _class_Phonon_simple *class_Phonon_simple_init(_class_Phonon_simple *_comp
   #define V_my_s (_comp->_parameters.V_my_s)
   #define V_my_a_v (_comp->_parameters.V_my_a_v)
   #define DV (_comp->_parameters.DV)
-  SIG_MESSAGE("[_sample_init] component sample=Phonon_simple() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Phonon_simple.comp:333]");
+  SIG_MESSAGE("[_sample_init] component sample=Phonon_simple() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Phonon_simple.comp:333]");
 
   V_rho = 4/(a*a*a);
   V_my_s = (V_rho * 100 * sigma_inc);
@@ -19985,7 +19985,7 @@ _class_Powder1 *class_Powder1_init(_class_Powder1 *_comp
   #define my_a_v (_comp->_parameters.my_a_v)
   #define q_v (_comp->_parameters.q_v)
   #define isrect (_comp->_parameters.isrect)
-  SIG_MESSAGE("[_powder1_init] component powder1=Powder1() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Powder1.comp:83]");
+  SIG_MESSAGE("[_powder1_init] component powder1=Powder1() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Powder1.comp:83]");
 
 isrect=0;
 
@@ -20039,7 +20039,7 @@ _class_Res_sample *class_Res_sample_init(_class_Res_sample *_comp
   #define zdepth (_comp->_parameters.zdepth)
   #define target_index (_comp->_parameters.target_index)
   #define vars (_comp->_parameters.vars)
-  SIG_MESSAGE("[_res_sample_init] component res_sample=Res_sample() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Res_sample.comp:108]");
+  SIG_MESSAGE("[_res_sample_init] component res_sample=Res_sample() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:108]");
 
   if (!radius || !yheight) {
     if (!xwidth || !yheight || !zdepth)
@@ -20134,7 +20134,7 @@ _class_PowderN *class_PowderN_init(_class_PowderN *_comp
   #define tgt_x (_comp->_parameters.tgt_x)
   #define tgt_y (_comp->_parameters.tgt_y)
   #define tgt_z (_comp->_parameters.tgt_z)
-  SIG_MESSAGE("[_BeFilter_init] component BeFilter=PowderN() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\PowderN.comp:551]");
+  SIG_MESSAGE("[_BeFilter_init] component BeFilter=PowderN() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/PowderN.comp:551]");
 
   /* We ought to clean up the columns variable as format is now a proper vector/array */
   columns = format;
@@ -20400,7 +20400,7 @@ _class_Monochromator_flat *class_Monochromator_flat_init(_class_Monochromator_fl
   #define mos_rms_z (_comp->_parameters.mos_rms_z)
   #define mos_rms_max (_comp->_parameters.mos_rms_max)
   #define mono_Q (_comp->_parameters.mono_Q)
-  SIG_MESSAGE("[_an111_init] component an111=Monochromator_flat() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:103]");
+  SIG_MESSAGE("[_an111_init] component an111=Monochromator_flat() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:103]");
 
   mos_rms_y = MIN2RAD*mosaicv/sqrt(8*log(2));
   mos_rms_z = MIN2RAD*mosaich/sqrt(8*log(2));
@@ -20488,7 +20488,7 @@ _class_PSD_Detector *class_PSD_Detector_init(_class_PSD_Detector *_comp
   #define VariousErrors (_comp->_parameters.VariousErrors)
   #define DetectorType (_comp->_parameters.DetectorType)
   #define rb (_comp->_parameters.rb)
-  SIG_MESSAGE("[_psd_tube1_1_1_init] component psd_tube1_1_1=PSD_Detector() INITIALISE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:252]");
+  SIG_MESSAGE("[_psd_tube1_1_1_init] component psd_tube1_1_1=PSD_Detector() INITIALISE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:252]");
 
   CountNeutrons=0;
   GeomCumul=0;
@@ -21791,7 +21791,7 @@ _class_Progress_bar *class_Progress_bar_trace(_class_Progress_bar *_comp
   #define StartTime (_comp->_parameters.StartTime)
   #define EndTime (_comp->_parameters.EndTime)
   #define CurrentTime (_comp->_parameters.CurrentTime)
-  SIG_MESSAGE("[_Origin_trace] component Origin=Progress_bar() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\misc\\Progress_bar.comp:73]");
+  SIG_MESSAGE("[_Origin_trace] component Origin=Progress_bar() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../misc/Progress_bar.comp:73]");
 
 #ifndef OPENACC
   double ncount;
@@ -21926,7 +21926,7 @@ _class_Source_gen4 *class_Source_gen4_trace(_class_Source_gen4 *_comp
   #define pTable_dxmax (_comp->_parameters.pTable_dxmax)
   #define pTable_dymin (_comp->_parameters.pTable_dymin)
   #define pTable_dymax (_comp->_parameters.pTable_dymax)
-  SIG_MESSAGE("[_source_trace] component source=Source_gen4() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\Source_gen4.comp:458]");
+  SIG_MESSAGE("[_source_trace] component source=Source_gen4() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/Source_gen4.comp:458]");
 
   double theta0,phi0,theta1,phi1,chi,theta,phi,v,r, lambda;
   double tan_h, tan_v, Maxwell, lambda2, lambda5;
@@ -22133,7 +22133,7 @@ _class_PSD_monitor *class_PSD_monitor_trace(_class_PSD_monitor *_comp
   #define PSD_N (_comp->_parameters.PSD_N)
   #define PSD_p (_comp->_parameters.PSD_p)
   #define PSD_p2 (_comp->_parameters.PSD_p2)
-  SIG_MESSAGE("[_StartOfGuideMonitor_trace] component StartOfGuideMonitor=PSD_monitor() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:80]");
+  SIG_MESSAGE("[_StartOfGuideMonitor_trace] component StartOfGuideMonitor=PSD_monitor() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:80]");
 
   PROP_Z0;
   if (x>xmin && x<xmax && y>ymin && y<ymax){
@@ -22239,7 +22239,7 @@ _class_Elliptic_guide_gravity *class_Elliptic_guide_gravity_trace(_class_Ellipti
   #define Gz0 (_comp->_parameters.Gz0)
   #define Circ (_comp->_parameters.Circ)
   #define dynamicalSegLength (_comp->_parameters.dynamicalSegLength)
-  SIG_MESSAGE("[_Insert_trace] component Insert=Elliptic_guide_gravity() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:1424]");
+  SIG_MESSAGE("[_Insert_trace] component Insert=Elliptic_guide_gravity() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:1424]");
 
   struct Intersection latestParticleCollision;
   latestParticleCollision.delta_time_to_next_collision=0;
@@ -22409,7 +22409,7 @@ _class_Bender *class_Bender_trace(_class_Bender *_comp
   #define Ws (_comp->_parameters.Ws)
   #define bk (_comp->_parameters.bk)
   #define mWin (_comp->_parameters.mWin)
-  SIG_MESSAGE("[_C1_trace] component C1=Bender() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Bender.comp:134]");
+  SIG_MESSAGE("[_C1_trace] component C1=Bender() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Bender.comp:134]");
 
     int i,num,numa,numi;
     double dru,ab,dab,R,Q,Ta,vpl;
@@ -22601,7 +22601,7 @@ _class_Slit *class_Slit_trace(_class_Slit *_comp
   #define radius (_comp->_parameters.radius)
   #define xwidth (_comp->_parameters.xwidth)
   #define yheight (_comp->_parameters.yheight)
-  SIG_MESSAGE("[_SlitGuideEnd_trace] component SlitGuideEnd=Slit() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:71]");
+  SIG_MESSAGE("[_SlitGuideEnd_trace] component SlitGuideEnd=Slit() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:71]");
 
     PROP_Z0;
     if (((radius == 0) && (x<xmin || x>xmax || y<ymin || y>ymax))
@@ -22675,7 +22675,7 @@ _class_Monochromator_curved *class_Monochromator_curved_trace(_class_Monochromat
   #define tTableFlag (_comp->_parameters.tTableFlag)
   #define tiltH (_comp->_parameters.tiltH)
   #define tiltV (_comp->_parameters.tiltV)
-  SIG_MESSAGE("[_Mono_trace] component Mono=Monochromator_curved() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:215]");
+  SIG_MESSAGE("[_Mono_trace] component Mono=Monochromator_curved() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_curved.comp:215]");
 
   double dt;
   double Gauss_X[] = {-0.987992518020485, -0.937273392400706, -0.848206583410427,
@@ -23015,7 +23015,7 @@ _class_Incoherent *class_Incoherent_trace(_class_Incoherent *_comp
   #define order (_comp->_parameters.order)
   #define VarsInc (_comp->_parameters.VarsInc)
   #define offdata (_comp->_parameters.offdata)
-  SIG_MESSAGE("[_VanSample_trace] component VanSample=Incoherent() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Incoherent.comp:233]");
+  SIG_MESSAGE("[_VanSample_trace] component VanSample=Incoherent() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Incoherent.comp:233]");
 
   double t0, t3;                /* Entry/exit time for outer surface */
   double t1, t2;                /* Entry/exit time for inner surface */
@@ -23310,7 +23310,7 @@ _class_Phonon_simple *class_Phonon_simple_trace(_class_Phonon_simple *_comp
   #define V_my_s (_comp->_parameters.V_my_s)
   #define V_my_a_v (_comp->_parameters.V_my_a_v)
   #define DV (_comp->_parameters.DV)
-  SIG_MESSAGE("[_sample_trace] component sample=Phonon_simple() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Phonon_simple.comp:354]");
+  SIG_MESSAGE("[_sample_trace] component sample=Phonon_simple() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Phonon_simple.comp:354]");
 
   double t0, t1;                /* Entry/exit time for cylinder */
   double v_i, v_f;               /* Neutron velocities: initial, final */
@@ -23487,7 +23487,7 @@ _class_Powder1 *class_Powder1_trace(_class_Powder1 *_comp
   #define my_a_v (_comp->_parameters.my_a_v)
   #define q_v (_comp->_parameters.q_v)
   #define isrect (_comp->_parameters.isrect)
-  SIG_MESSAGE("[_powder1_trace] component powder1=Powder1() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Powder1.comp:99]");
+  SIG_MESSAGE("[_powder1_trace] component powder1=Powder1() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Powder1.comp:99]");
 
   double t0, t1, v, l_full, l, l_1, dt, dphi_in,d_phi0, theta, my_s;
   double arg, tmp_vx, tmp_vy, tmp_vz, vout_x, vout_y, vout_z;
@@ -23630,7 +23630,7 @@ _class_Res_sample *class_Res_sample_trace(_class_Res_sample *_comp
   #define zdepth (_comp->_parameters.zdepth)
   #define target_index (_comp->_parameters.target_index)
   #define vars (_comp->_parameters.vars)
-  SIG_MESSAGE("[_res_sample_trace] component res_sample=Res_sample() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Res_sample.comp:149]");
+  SIG_MESSAGE("[_res_sample_trace] component res_sample=Res_sample() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:149]");
 
   double t0, t3;                /* Entry/exit time for outer cylinder */
   double t1, t2;                /* Entry/exit time for inner cylinder */
@@ -23790,7 +23790,7 @@ _class_PowderN *class_PowderN_trace(_class_PowderN *_comp
   #define tgt_x (_comp->_parameters.tgt_x)
   #define tgt_y (_comp->_parameters.tgt_y)
   #define tgt_z (_comp->_parameters.tgt_z)
-  SIG_MESSAGE("[_BeFilter_trace] component BeFilter=PowderN() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\PowderN.comp:764]");
+  SIG_MESSAGE("[_BeFilter_trace] component BeFilter=PowderN() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/PowderN.comp:764]");
 
   double t0, t1, t2, t3, v, v1,l_full, l, l_1, dt, alpha0, alpha, theta, my_s, my_s_n, sg;
   double solid_angle, neutrontype, ntype;
@@ -24237,7 +24237,7 @@ _class_Monochromator_flat *class_Monochromator_flat_trace(_class_Monochromator_f
   #define mos_rms_z (_comp->_parameters.mos_rms_z)
   #define mos_rms_max (_comp->_parameters.mos_rms_max)
   #define mono_Q (_comp->_parameters.mono_Q)
-  SIG_MESSAGE("[_an111_trace] component an111=Monochromator_flat() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:119]");
+  SIG_MESSAGE("[_an111_trace] component an111=Monochromator_flat() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:119]");
 
   double y1,z1,t1,dt,kix,kiy,kiz,ratio,order,q0x,k,q0,theta;
   double bx,by,bz,kux,kuy,kuz,ax,ay,az,phi;
@@ -24631,7 +24631,7 @@ _class_PSD_Detector *class_PSD_Detector_trace(_class_PSD_Detector *_comp
   #define VariousErrors (_comp->_parameters.VariousErrors)
   #define DetectorType (_comp->_parameters.DetectorType)
   #define rb (_comp->_parameters.rb)
-  SIG_MESSAGE("[_psd_tube1_1_1_trace] component psd_tube1_1_1=PSD_Detector() TRACE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:616]");
+  SIG_MESSAGE("[_psd_tube1_1_1_trace] component psd_tube1_1_1=PSD_Detector() TRACE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:616]");
 
 
   long   i,j;
@@ -28901,7 +28901,7 @@ _class_Progress_bar *class_Progress_bar_save(_class_Progress_bar *_comp
   #define StartTime (_comp->_parameters.StartTime)
   #define EndTime (_comp->_parameters.EndTime)
   #define CurrentTime (_comp->_parameters.CurrentTime)
-  SIG_MESSAGE("[_Origin_save] component Origin=Progress_bar() SAVE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\misc\\Progress_bar.comp:120]");
+  SIG_MESSAGE("[_Origin_save] component Origin=Progress_bar() SAVE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../misc/Progress_bar.comp:120]");
 
   MPI_MASTER(fprintf(stdout, "\nSave [%s]\n", instrument_name););
   if (profile && strlen(profile) && strcmp(profile,"NULL") && strcmp(profile,"0")) {
@@ -28944,7 +28944,7 @@ _class_PSD_monitor *class_PSD_monitor_save(_class_PSD_monitor *_comp
   #define PSD_N (_comp->_parameters.PSD_N)
   #define PSD_p (_comp->_parameters.PSD_p)
   #define PSD_p2 (_comp->_parameters.PSD_p2)
-  SIG_MESSAGE("[_StartOfGuideMonitor_save] component StartOfGuideMonitor=PSD_monitor() SAVE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:104]");
+  SIG_MESSAGE("[_StartOfGuideMonitor_save] component StartOfGuideMonitor=PSD_monitor() SAVE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:104]");
 
     if (!nowritefile) {
       DETECTOR_OUT_2D(
@@ -29029,7 +29029,7 @@ _class_PSD_Detector *class_PSD_Detector_save(_class_PSD_Detector *_comp
   #define VariousErrors (_comp->_parameters.VariousErrors)
   #define DetectorType (_comp->_parameters.DetectorType)
   #define rb (_comp->_parameters.rb)
-  SIG_MESSAGE("[_psd_tube1_1_1_save] component psd_tube1_1_1=PSD_Detector() SAVE [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:1143]");
+  SIG_MESSAGE("[_psd_tube1_1_1_save] component psd_tube1_1_1=PSD_Detector() SAVE [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:1143]");
 
   char   file[128];
   if (type && strlen(type) && strcmp(type, "NULL") && strcmp(type, "0")) {
@@ -29302,7 +29302,7 @@ _class_Progress_bar *class_Progress_bar_finally(_class_Progress_bar *_comp
   #define StartTime (_comp->_parameters.StartTime)
   #define EndTime (_comp->_parameters.EndTime)
   #define CurrentTime (_comp->_parameters.CurrentTime)
-  SIG_MESSAGE("[_Origin_finally] component Origin=Progress_bar() FINALLY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\misc\\Progress_bar.comp:138]");
+  SIG_MESSAGE("[_Origin_finally] component Origin=Progress_bar() FINALLY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../misc/Progress_bar.comp:138]");
 
   time_t NowTime;
   time(&NowTime);
@@ -29382,7 +29382,7 @@ _class_Source_gen4 *class_Source_gen4_finally(_class_Source_gen4 *_comp
   #define pTable_dxmax (_comp->_parameters.pTable_dxmax)
   #define pTable_dymin (_comp->_parameters.pTable_dymin)
   #define pTable_dymax (_comp->_parameters.pTable_dymax)
-  SIG_MESSAGE("[_source_finally] component source=Source_gen4() FINALLY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\Source_gen4.comp:571]");
+  SIG_MESSAGE("[_source_finally] component source=Source_gen4() FINALLY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/Source_gen4.comp:571]");
 
   Table_Free(&pTable);
   Table_Free(&pTable_x);
@@ -29479,7 +29479,7 @@ _class_Monochromator_curved *class_Monochromator_curved_finally(_class_Monochrom
   #define tTableFlag (_comp->_parameters.tTableFlag)
   #define tiltH (_comp->_parameters.tiltH)
   #define tiltV (_comp->_parameters.tiltV)
-  SIG_MESSAGE("[_Mono_finally] component Mono=Monochromator_curved() FINALLY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:470]");
+  SIG_MESSAGE("[_Mono_finally] component Mono=Monochromator_curved() FINALLY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_curved.comp:470]");
 
   if(rTableFlag){
     Table_Free(&rTable);
@@ -29560,7 +29560,7 @@ _class_PowderN *class_PowderN_finally(_class_PowderN *_comp
   #define tgt_x (_comp->_parameters.tgt_x)
   #define tgt_y (_comp->_parameters.tgt_y)
   #define tgt_z (_comp->_parameters.tgt_z)
-  SIG_MESSAGE("[_BeFilter_finally] component BeFilter=PowderN() FINALLY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\PowderN.comp:1137]");
+  SIG_MESSAGE("[_BeFilter_finally] component BeFilter=PowderN() FINALLY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/PowderN.comp:1137]");
 
   free(line_info.list);
   free(line_info.q_v);
@@ -29677,7 +29677,7 @@ _class_PSD_Detector *class_PSD_Detector_finally(_class_PSD_Detector *_comp
   #define VariousErrors (_comp->_parameters.VariousErrors)
   #define DetectorType (_comp->_parameters.DetectorType)
   #define rb (_comp->_parameters.rb)
-  SIG_MESSAGE("[_psd_tube1_1_1_finally] component psd_tube1_1_1=PSD_Detector() FINALLY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:1218]");
+  SIG_MESSAGE("[_psd_tube1_1_1_finally] component psd_tube1_1_1=PSD_Detector() FINALLY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:1218]");
 
   /* free pointers */
   if (type && strlen(type) && strcmp(type, "NULL") && strcmp(type, "0")) {
@@ -29996,7 +29996,7 @@ _class_Progress_bar *class_Progress_bar_display(_class_Progress_bar *_comp
   #define StartTime (_comp->_parameters.StartTime)
   #define EndTime (_comp->_parameters.EndTime)
   #define CurrentTime (_comp->_parameters.CurrentTime)
-  SIG_MESSAGE("[_Origin_display] component Origin=Progress_bar() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\misc\\Progress_bar.comp:152]");
+  SIG_MESSAGE("[_Origin_display] component Origin=Progress_bar() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../misc/Progress_bar.comp:152]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
 
@@ -30068,7 +30068,7 @@ _class_Source_gen4 *class_Source_gen4_display(_class_Source_gen4 *_comp
   #define pTable_dxmax (_comp->_parameters.pTable_dxmax)
   #define pTable_dymin (_comp->_parameters.pTable_dymin)
   #define pTable_dymax (_comp->_parameters.pTable_dymax)
-  SIG_MESSAGE("[_source_display] component source=Source_gen4() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\Source_gen4.comp:578]");
+  SIG_MESSAGE("[_source_display] component source=Source_gen4() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/Source_gen4.comp:578]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   double xmin;
@@ -30171,7 +30171,7 @@ _class_PSD_monitor *class_PSD_monitor_display(_class_PSD_monitor *_comp
   #define PSD_N (_comp->_parameters.PSD_N)
   #define PSD_p (_comp->_parameters.PSD_p)
   #define PSD_p2 (_comp->_parameters.PSD_p2)
-  SIG_MESSAGE("[_StartOfGuideMonitor_display] component StartOfGuideMonitor=PSD_monitor() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\monitors\\PSD_monitor.comp:118]");
+  SIG_MESSAGE("[_StartOfGuideMonitor_display] component StartOfGuideMonitor=PSD_monitor() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../monitors/PSD_monitor.comp:118]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   
@@ -30199,7 +30199,7 @@ _class_PSD_monitor *class_PSD_monitor_display(_class_PSD_monitor *_comp
 
 _class_Arm *class_Arm_display(_class_Arm *_comp
 ) {
-  SIG_MESSAGE("[_StartOfGuide_display] component StartOfGuide=Arm() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Arm.comp:40]");
+  SIG_MESSAGE("[_StartOfGuide_display] component StartOfGuide=Arm() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Arm.comp:40]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   /* A bit ugly; hard-coded dimensions. */
@@ -30255,7 +30255,7 @@ _class_Elliptic_guide_gravity *class_Elliptic_guide_gravity_display(_class_Ellip
   #define Gz0 (_comp->_parameters.Gz0)
   #define Circ (_comp->_parameters.Circ)
   #define dynamicalSegLength (_comp->_parameters.dynamicalSegLength)
-  SIG_MESSAGE("[_Insert_display] component Insert=Elliptic_guide_gravity() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Elliptic_guide_gravity.comp:1507]");
+  SIG_MESSAGE("[_Insert_display] component Insert=Elliptic_guide_gravity() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Elliptic_guide_gravity.comp:1507]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
 
@@ -30517,7 +30517,7 @@ _class_Bender *class_Bender_display(_class_Bender *_comp
   #define Ws (_comp->_parameters.Ws)
   #define bk (_comp->_parameters.bk)
   #define mWin (_comp->_parameters.mWin)
-  SIG_MESSAGE("[_C1_display] component C1=Bender() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Bender.comp:270]");
+  SIG_MESSAGE("[_C1_display] component C1=Bender() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Bender.comp:270]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   int i;
@@ -30581,7 +30581,7 @@ _class_Slit *class_Slit_display(_class_Slit *_comp
   #define radius (_comp->_parameters.radius)
   #define xwidth (_comp->_parameters.xwidth)
   #define yheight (_comp->_parameters.yheight)
-  SIG_MESSAGE("[_SlitGuideEnd_display] component SlitGuideEnd=Slit() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Slit.comp:81]");
+  SIG_MESSAGE("[_SlitGuideEnd_display] component SlitGuideEnd=Slit() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Slit.comp:81]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   
@@ -30648,7 +30648,7 @@ _class_Monochromator_curved *class_Monochromator_curved_display(_class_Monochrom
   #define tTableFlag (_comp->_parameters.tTableFlag)
   #define tiltH (_comp->_parameters.tiltH)
   #define tiltV (_comp->_parameters.tiltV)
-  SIG_MESSAGE("[_Mono_display] component Mono=Monochromator_curved() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_curved.comp:482]");
+  SIG_MESSAGE("[_Mono_display] component Mono=Monochromator_curved() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_curved.comp:482]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   int ih;
@@ -30743,7 +30743,7 @@ _class_Incoherent *class_Incoherent_display(_class_Incoherent *_comp
   #define order (_comp->_parameters.order)
   #define VarsInc (_comp->_parameters.VarsInc)
   #define offdata (_comp->_parameters.offdata)
-  SIG_MESSAGE("[_VanSample_display] component VanSample=Incoherent() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Incoherent.comp:451]");
+  SIG_MESSAGE("[_VanSample_display] component VanSample=Incoherent() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Incoherent.comp:451]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   if (geometry && strlen(geometry) && strcmp(geometry, "NULL") && strcmp(geometry, "0")) {	/* OFF file */
@@ -30817,7 +30817,7 @@ _class_Phonon_simple *class_Phonon_simple_display(_class_Phonon_simple *_comp
   #define V_my_s (_comp->_parameters.V_my_s)
   #define V_my_a_v (_comp->_parameters.V_my_a_v)
   #define DV (_comp->_parameters.DV)
-  SIG_MESSAGE("[_sample_display] component sample=Phonon_simple() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Phonon_simple.comp:465]");
+  SIG_MESSAGE("[_sample_display] component sample=Phonon_simple() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Phonon_simple.comp:465]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   
@@ -30873,7 +30873,7 @@ _class_Powder1 *class_Powder1_display(_class_Powder1 *_comp
   #define my_a_v (_comp->_parameters.my_a_v)
   #define q_v (_comp->_parameters.q_v)
   #define isrect (_comp->_parameters.isrect)
-  SIG_MESSAGE("[_powder1_display] component powder1=Powder1() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Powder1.comp:183]");
+  SIG_MESSAGE("[_powder1_display] component powder1=Powder1() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Powder1.comp:183]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   
@@ -30945,7 +30945,7 @@ _class_Res_sample *class_Res_sample_display(_class_Res_sample *_comp
   #define zdepth (_comp->_parameters.zdepth)
   #define target_index (_comp->_parameters.target_index)
   #define vars (_comp->_parameters.vars)
-  SIG_MESSAGE("[_res_sample_display] component res_sample=Res_sample() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\Res_sample.comp:233]");
+  SIG_MESSAGE("[_res_sample_display] component res_sample=Res_sample() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/Res_sample.comp:233]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   if(vars.isrect) { /* Flat sample. */
@@ -31042,7 +31042,7 @@ _class_PowderN *class_PowderN_display(_class_PowderN *_comp
   #define tgt_x (_comp->_parameters.tgt_x)
   #define tgt_y (_comp->_parameters.tgt_y)
   #define tgt_z (_comp->_parameters.tgt_z)
-  SIG_MESSAGE("[_BeFilter_display] component BeFilter=PowderN() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\samples\\PowderN.comp:1163]");
+  SIG_MESSAGE("[_BeFilter_display] component BeFilter=PowderN() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../samples/PowderN.comp:1163]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   if (line_info.V_0) {
@@ -31173,7 +31173,7 @@ _class_Monochromator_flat *class_Monochromator_flat_display(_class_Monochromator
   #define mos_rms_z (_comp->_parameters.mos_rms_z)
   #define mos_rms_max (_comp->_parameters.mos_rms_max)
   #define mono_Q (_comp->_parameters.mono_Q)
-  SIG_MESSAGE("[_an111_display] component an111=Monochromator_flat() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\optics\\Monochromator_flat.comp:255]");
+  SIG_MESSAGE("[_an111_display] component an111=Monochromator_flat() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../optics/Monochromator_flat.comp:255]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   
@@ -31256,7 +31256,7 @@ _class_PSD_Detector *class_PSD_Detector_display(_class_PSD_Detector *_comp
   #define VariousErrors (_comp->_parameters.VariousErrors)
   #define DetectorType (_comp->_parameters.DetectorType)
   #define rb (_comp->_parameters.rb)
-  SIG_MESSAGE("[_psd_tube1_1_1_display] component psd_tube1_1_1=PSD_Detector() DISPLAY [C:\\mcstas-3.1\\lib\\tools\\Python\\mcrun\\..\\mccodelib\\..\\..\\..\\contrib\\PSD_Detector.comp:1238]");
+  SIG_MESSAGE("[_psd_tube1_1_1_display] component psd_tube1_1_1=PSD_Detector() DISPLAY [/usr/share/mcstas/3.1/tools/Python/mcrun/../mccodelib/../../../contrib/PSD_Detector.comp:1238]");
 
   printf("MCDISPLAY: component %s\n", _comp->_name);
   double h;
@@ -31922,4 +31922,4 @@ int mccode_main(int argc, char *argv[])
 } /* mccode_main */
 /* End of file "mccode_main.c". */
 
-/* end of generated C code FullInstrument_v5.c */
+/* end of generated C code ./FullInstrument_v5.c */
