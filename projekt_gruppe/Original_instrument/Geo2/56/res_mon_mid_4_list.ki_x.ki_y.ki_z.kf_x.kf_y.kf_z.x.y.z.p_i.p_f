@@ -1,0 +1,54 @@
+# Format: McCode list with text headers
+# URL: http://www.mccode.org
+# Creator: McStas 3.1 - Nov. 24, 2021
+# Instrument: FullInstrument_v4_elastic_resolution.instr
+# Ncount: 2000000
+# Trace: no
+# Gravitation: no
+# Seed: 435679271
+# Directory: Geo2/56
+# Param: slitwidth=0.5
+# Param: SourceE=5
+# Param: DeltaSourceE=0.3
+# Param: EI=5
+# Param: A3=0
+# Param: A4=-90
+# Param: SAMPLE=3
+# Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+# Param: RV_mono_Bool=0.5
+# Param: RH_mono_Bool=0.5
+# Param: Be_filter=1
+# Param: old_mono=0
+# Param: sampleHeight=0.01
+# Param: sampleRadius=0.005
+# Param: samplePosY=0
+# Param: simon=5.6
+# Date: Thu Mar 17 20:33:22 2022 (1647545602)
+# type: array_1d(11)
+# Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+# component: res_monitor_mid_4
+# position: 0 0 0
+# title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+# Ncount: 2000000
+# filename: res_mon_mid_4_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+# statistics: X0=0; dX=0;
+# signal: Min=0; Max=0; Mean=0;
+# values: 0 0 0
+# xvar: ki
+# yvar: (I,Ierr)
+# xlabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+# ylabel: Y
+# xlimits: 1 11
+# variables: Y
+# Data [res_monitor_mid_4/res_mon_mid_4_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f] I:
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 

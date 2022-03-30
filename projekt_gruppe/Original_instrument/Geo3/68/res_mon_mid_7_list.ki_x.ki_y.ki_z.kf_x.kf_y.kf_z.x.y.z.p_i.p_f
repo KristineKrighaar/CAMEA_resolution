@@ -1,0 +1,47 @@
+# Format: McCode list with text headers
+# URL: http://www.mccode.org
+# Creator: McStas 3.1 - Nov. 24, 2021
+# Instrument: FullInstrument_v4_elastic_resolution.instr
+# Ncount: 2000000
+# Trace: no
+# Gravitation: no
+# Seed: 1450414235
+# Directory: Geo3/68
+# Param: slitwidth=0.5
+# Param: SourceE=5
+# Param: DeltaSourceE=0.3
+# Param: EI=5
+# Param: A3=0
+# Param: A4=-90
+# Param: SAMPLE=3
+# Param: file_name=EGECE_13WaveLmax1_geometry.dat.txt
+# Param: RV_mono_Bool=0.5
+# Param: RH_mono_Bool=0.5
+# Param: Be_filter=1
+# Param: old_mono=0
+# Param: sampleHeight=0.01
+# Param: sampleRadius=0.005
+# Param: samplePosY=0
+# Param: simon=0.068
+# Date: Thu Mar 17 20:50:17 2022 (1647546617)
+# type: array_2d(11, 2)
+# Source: PSI_CAMEA (FullInstrument_v4_elastic_resolution.instr)
+# component: res_monitor_mid_7
+# position: 0 0 0
+# title:  Intensity Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Unknown Monitor (Square)
+# Ncount: 2000000
+# filename: res_mon_mid_7_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f
+# statistics: X0=0; dX=0; Y0=0; dY=0;
+# signal: Min=-0.00365633; Max=-0.00365633; Mean=0;
+# values: 0 0 0
+# xvar: Li
+# yvar: ki
+# xlabel: List of neutron events
+# ylabel: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+# zvar: I
+# zlabel: Signal per bin
+# xylimits: 1 2 1 11
+# variables: ki_x ki_y ki_z kf_x kf_y kf_z x y z p_i p_f 
+# Data [res_monitor_mid_7/res_mon_mid_7_list.ki_x.ki_y.ki_z.kf_x.kf_y.kf_z.x.y.z.p_i.p_f] I:
+-0.003656330596 0.008468411353 1.562403522 -1.556532593 -0.0004933505752 0.0005486167239 0.0001920204949 0.004977928145 -0.004870145996 7.936562427 1.887398956 
+0.02046246459 -0.01172587934 1.555282625 -1.529639549 -0.03022321734 0.006338568699 -0.0005412753767 0.004052451612 -0.004353467688 21.61092465 1.888465319 
